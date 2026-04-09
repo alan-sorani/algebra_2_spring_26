@@ -1,0 +1,216 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - נספח לגיליון תרגילים 1 \\
+הגדרות וסימונים עבור מטריצות מייצגות
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{definition}[וקטור קואורדינטות לפי בסיס]
+יהי
+$V$
+מרחב וקטורי ממימד
+$n \in \mbb{N}$
+מעל שדה
+$\mbb{F}$,
+ויהי
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+בסיס של
+$V$.
+כל
+$v \in V$
+ניתן לכתוב בצורה יחידה בתור
+\[v = \alpha_1 v_1 + \ldots + \alpha_n v_n\]
+עבור
+$\alpha_i \in \mbb{F}$.
+נגדיר את
+\emph{וקטור הקואורדינטות של
+$v$
+כזה לפי הבסיס
+$\mcal{B}$}
+בתור
+\[\text{.} \brs{v}_{\mcal{B}} = \pmat{\alpha_1 \\ \vdots \\ \alpha_n}\]
+\end{definition}
+
+\begin{definition}[מטריצה מייצגת]
+יהיו
+$V,W$
+מרחבים וקטוריים ממימדים
+$n,m \in \mbb{N}$
+בהתאמה מעל אותו שדה
+$\mbb{F}$,
+ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$
+העתקה לינארית מ־%
+$V$
+ל־%
+$W$.
+יהיו
+\begin{align*}
+\mcal{B} = \prs{v_1, \ldots, v_n}
+\end{align*}
+ו־%
+$\mcal{C}$
+בסיסים של
+$V$
+ו־%
+$W$
+בהתאמה.
+
+נגדיר את
+\emph{המטריצה המייצגת}
+$\brs{T}^\mcal{B}_\mcal{C}$
+בתור
+\begin{align*}
+\text{.} \brs{T}^\mcal{B}_\mcal{C} \coloneqq \pmat{\vert & & \vert \\ \brs{T\prs{v_1}}_C & \cdots & \brs{T\prs{v_n}}_C \\ \vert & & \vert}
+\end{align*}
+
+אם
+$V = W$
+וכן
+$\mcal{B} = \mcal{C}$,
+נסמן
+\begin{align*}
+\text{.} \brs{T}_\mcal{B} \coloneqq \brs{T}^{\mcal{B}}_{\mcal{B}}
+\end{align*}
+\end{definition}
+
+\begin{proposition} \label{proposition:matrix-of-composition}
+יהיו
+$U,V,W$
+מרחבים וקטוריים סוף־מימדיים מעל שדה
+$\mbb{F}$,
+עם בסיסים
+$\mcal{B}, \mcal{C}, \mcal{D}$
+בהתאמה,
+ותהיינה
+$S \in \Hom_{\mbb{F}}\prs{U,V}$
+ו־%
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+
+אז
+\begin{align*}
+\text{.} \brs{T \circ S}^\mcal{B}_\mcal{D} = \brs{T}^\mcal{C}_\mcal{D} \brs{S}^\mcal{B}_\mcal{C}
+\end{align*}
+\end{proposition}
+
+\begin{definition}[מטריצת מעבר בסיס]
+יהי
+$V$
+מרחב וקטורי ממימד
+$n \in \mbb{N}$,
+עם בסיסים
+$\mcal{B},\mcal{C}$,
+ותהי
+$\id_V$
+העתקת הזהות על
+$V$.
+נגדיר
+\begin{align*}
+\text{.} M^\mcal{B}_\mcal{C} = \brs{\id_V}^\mcal{B}_\mcal{C}
+\end{align*}
+\end{definition}
+
+\begin{proposition} \label{proposition:change-of-basis-matrices}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\mbb{F}$,
+ויהיו
+$\mcal{B}, \mcal{C}, \mcal{D}$
+שלושה בסיסים של
+$V$.
+
+אז:
+\begin{enumerate}
+\item $M^\mcal{B}_\mcal{C}$
+מטריצה הפיכה, ומתקיים
+$\prs{M^\mcal{B}_\mcal{C}}^{-1} = M^\mcal{C}_\mcal{B}$.
+\item $M^\mcal{B}_\mcal{C} = M^\mcal{D}_\mcal{C} M^\mcal{B}_\mcal{D}$.
+\end{enumerate}
+\end{proposition}
+
+\newpage
+
+\begin{remark}
+למטריצה
+$M^{\mcal{B}}_{\mcal{C}}$
+\emph{לא נקרא}
+מטריצת מעבר מהבסיס
+$\mcal{B}$
+לבסיס
+$\mcal{C}$
+או להיפך.
+
+מצד אחד, היא מקיימת
+\[\text{,} \forall v \in V : M^{\mcal{B}}_{\mcal{C}} \brs{v}_{\mcal{B}} = \brs{v}_{\mcal{C}}\]
+ולכן יש הקוראים לה מטריצת מעבר מהבסיס
+$\mcal{B}$
+לבסיס
+$\mcal{C}$.
+
+מצד שני, אם
+$V = \mbb{F}^n$,
+\[\mcal{E} = \prs{e_1, \ldots, e_n}\]
+הבסיס הסטנדרטי של
+$V$,
+ונכתוב
+\begin{align*}
+\mcal{B} &= \mcal{E} \\
+\text{,} \mcal{C} &= \prs{c_1, \ldots, c_n}
+\end{align*}
+נקבל כי
+\begin{align*}
+M^{\mcal{B}}_{\mcal{C}} c_i &= M^{\mcal{E}}_{\mcal{C}} \brs{c_i}_{\mcal{E}}
+\\&= \brs{c_i}_{\mcal{C}}
+\\&= e_i
+\end{align*}
+כלומר
+\begin{align*}
+\text{.} \prs{M^{\mcal{B}}_{\mcal{C}} c_1, \ldots, M^{\mcal{B}}_{\mcal{C}} c_n} = \mcal{B}
+\end{align*}
+לכן, יש הקוראים למטריצה
+$M^\mcal{B}_\mcal{C}$
+מטריצת מעבר מהבסיס
+$\mcal{C}$
+לבסיס
+$\mcal{B}$.
+
+כדי למנוע בלבול, במקום להתייחס למטריצה כזאת כמטריצת מעבר מבסיס זה או אחר, נכתוב תמיד מפורשות
+$M^\mcal{B}_\mcal{C}$.
+\end{remark}
+
+\end{document}

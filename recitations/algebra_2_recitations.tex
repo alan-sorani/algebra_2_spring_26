@@ -1,0 +1,698 @@
+\documentclass[a4paper,10pt,twoside,openany]{book}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{polynom}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\renewcommand{\Mat}{\mathrm{M}}
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+\title{
+\includegraphics[width=6in]{images/front.png}\\
+\vspace{30pt}
+\Huge
+אלגברה ב' (01040168)
+\\
+אביב 2026
+\\
+רשימות תרגולים
+\vspace{30pt}
+\\
+\huge
+אלן סורני
+\vspace{30pt}
+\\
+\Large
+הרשימות עודכנו לאחרונה בתאריך ה־%
+\today
+}
+\date{}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\section*{סימונים}
+
+\begin{itemize}
+\item[-]
+$\brs{n} = \set{1, \ldots, n}$.
+\item[-]
+$\sum_{i \in \brs{n}} a_i = \sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n$
+\item[-] $\Mat_{m \times n}\prs{\mbb{F}}$ הוא מרחב המטריצות עם
+$m$
+שורות ו־%
+$n$
+עמודות, עם מקדמים בשדה
+$\mbb{F}$.
+\item[-]
+$\mbb{F}^n = \Mat_{n \times 1}\prs{\mbb{F}}$
+\item[-]
+$\Mat_{n}\prs{\mbb{F}} = \Mat_{n \times n}\prs{\mbb{F}}$
+\item[-]
+$\hom_{\mbb{F}}\prs{V,W}$
+הוא מרחב ההעתקות הלינאריות
+$V \to W$
+כאשר
+$V,W$
+מרחבים וקטוריים מעל
+$\mbb{F}$.
+\item[-]
+$\End_{\mbb{F}}\prs{V} = \hom_{\mbb{F}}\prs{V,V}$
+\item[-]
+אותיות בפונט
+\textenglish{mathcal}
+עבור בסיסים -
+$\mcal{B}, \mcal{C}, \mcal{D}$
+וכו'
+\end{itemize}
+
+\part{חלק ראשון - מרחבים שמורים}
+
+\chapter{חזרה על מטריצות מייצגות}
+
+\section{הגדרות ותכונות בסיסיות}
+
+\begin{definition}[וקטור קואורדינטות]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\mbb{F}$,
+יהי
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+בסיס של
+$V$
+ויהי
+$v \in V$.
+\emph{וקטור הקואורדינטות של
+$v$
+לפי הבסיס
+$B$}
+הוא הוקטור
+$\brs{v}_\mcal{B} = \pmat{\alpha_1 \\ \vdots \\ \alpha_n}$
+כאשר
+$\alpha_1, \ldots, \alpha_n \in \mbb{F}$
+היחידים עבורם
+\[\text{.}v = \sum_{i \in [n]} \alpha_i v_i \coloneqq \alpha_1 v_1 + \ldots + \alpha_n v_n\]
+\end{definition}
+
+\begin{remark}
+ההעתקה
+\begin{align*}
+\rho_\mcal{B} \colon V &\to \mbb{F}^n \\
+v &\mapsto \brs{v}_\mcal{B}
+\end{align*}
+היא איזומורפיזם לינארי.
+\end{remark}
+
+\begin{definition}[מטריצה מייצגת]
+יהיו
+$V,W$
+מרחבים וקטורים סוף־מימדיים מעל אותו שדה
+$\mbb{F}$
+עם בסיסים
+$\mcal{B}, \mcal{C}$
+בהתאמה, ונסמן
+\[\text{.} \mcal{B} = \prs{v_1, \ldots, v_n}\]
+נסמן גם
+$n \coloneqq \dim\prs{V}$
+ו־%
+$m \coloneqq \dim\prs{W}$.
+עבור
+$T \in \Hom_{\mbb{F}}\prs{V,W}$
+נגדיר
+\[\text{.} \brs{T}^\mcal{B}_\mcal{C} = \pmat{\vert & & \vert \\ \brs{T\prs{v_1}}_\mcal{C} & \cdots & \brs{T\prs{v_n}}_\mcal{C} \\ \vert & & \vert} \in \Mat_{m \times n}\prs{\mbb{F}}\]
+\end{definition}
+
+\begin{theorem}[כפל מטריצות]
+תהי
+$A \in \Mat_{m \times n}\prs{\mbb{F}}$
+ויהי
+$\mcal{E} = \prs{e_1, \ldots, e_m}$
+הבסיס הסטנדרטי של
+$\mbb{F}^n$.
+אז:
+\begin{enumerate}[label = (\roman*)]
+\item
+לכל
+$i \in [m]$
+מתקיים כי
+$A e_i$
+העמודה ה־%
+$i$
+של
+$A$.
+\item
+לכל
+$B = \pmat{\vert & & \vert \\ b_1 & \cdots & b_\ell \\ \vert & & \vert} \in \Mat_{n \times \ell}\prs{\mbb{F}}$
+מתקיים
+$AB = \pmat{\vert & & \vert \\ A b_1 & \cdots & A b_\ell \\ \vert & & \vert}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{exercisechap}
+הראו שניתן לשחזר את ההגדרה של כפל מטריצות משתי התכונות במשפט.
+\end{exercisechap}
+
+\begin{remark}
+ההעתקה
+\begin{align*}
+\eta^\mcal{B}_\mcal{C} \colon \Hom_{\mbb{F}}\prs{V,B} &\to \Mat_{m \times n}\prs{\mbb{F}} \\
+T &\mapsto \brs{T}^\mcal{B}_\mcal{C}
+\end{align*}
+היא איזומורפיזם לינארי.
+\end{remark}
+
+\begin{proposition}
+תהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$
+ויהיו
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+בסיס של
+$V$
+ו־%
+$\mcal{C}$
+בסיס של
+$W$.
+אז
+\[\brs{T}^\mcal{B}_\mcal{C} \brs{v}_\mcal{B} = \brs{T\prs{v}}_\mcal{C}\]
+לכל
+$v \in V$.
+\end{proposition}
+
+\begin{notation}
+אם
+$\mcal{B}$
+בסיס של מרחב וקטורי סוף־מימדי
+$V$
+ואם
+$T \in \End\prs{V}$,
+נסמן
+$\brs{T}_\mcal{B} \coloneqq \brs{T}^\mcal{B}_\mcal{B}$
+ונקרא למטריצה זאת
+\emph{המטריצה המייצגת של
+$T$
+לפי הבסיס
+$\mcal{B}$}.
+\end{notation}
+
+\begin{notation}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי עם בסיסים
+$\mcal{B},\mcal{C}$.
+נסמן
+$M^\mcal{B}_\mcal{C} \coloneqq \brs{\id_V}^\mcal{B}_\mcal{C}$.
+\end{notation}
+
+\begin{notation}
+אם
+$A \in \Mat_{n\times n}\prs{\mbb{F}}$,
+נסמן
+\begin{align*}
+T_A \colon \mbb{F}^n &\to \mbb{F}^n \\
+\text{.} \hphantom{lalala} v &\mapsto Av
+\end{align*}
+\end{notation}
+
+\section{תרגילים}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\FF}$
+ויהי
+$\mcal{E} = \prs{e_1, \ldots, e_n}$
+הבסיס הסטנדרטי של
+$\FF^n$.
+הראו כי
+$\brs{T_A}_{\mcal{E}} = A$.
+\end{exercisechap}
+
+\begin{solution}
+לפי הגדרת מטריצה מייצגת, העמודה ה־%
+$i$
+של
+$\brs{T_A}_{\mcal{E}}$
+היא
+$T_A \prs{e_i} = A e_i$.
+לפי הגדרת כפל מטריצות, וכפי שראינו באלגברה א', זאת בדיוק העמודה ה־%
+$i$
+של
+$A$.
+\end{solution}
+
+\begin{exercisechap}\label{ex:p(x+1)}
+יהי
+$V = \mbb{R}_3\brs{x}$
+מרחב הפולינום הממשיים ממעלה לכל היותר
+$3$,
+תהי
+\begin{align*}
+T \colon \mbb{R}_3\brs{x} &\to \mbb{R}_3\brs{x} \\
+p\prs{x} &\mapsto p\prs{x+1}
+\end{align*}
+ויהי
+$\mcal{B} = \prs{1,x,x^2,x^3}$
+בסיס של
+$V$.
+כיתבו את
+$\brs{T}_\mcal{B}$.
+\end{exercisechap}
+
+\begin{solution}
+לפי הגדרת המטריצה המייצגת,
+עמודות
+$\brs{T}_\mcal{B}$
+הן
+$\brs{T\prs{x^i}}_B$
+עבור
+$i \in \set{0,1,2,3}$.
+מתקיים
+\begin{align*}
+T\prs{1} &= 1 \\
+T\prs{x} &= x+1 = 1 + x \\
+T\prs{x^2} &= \prs{x+1}^2 = 1 + 2x + x^2 \\
+T\prs{x^3} &= \prs{x+1}^3 = 1 + 3x + 3x^2 + x^3
+\end{align*}
+ולכן
+\begin{align*}
+\brs{T\prs{1}}_\mcal{B} &= e_1 \\
+\brs{T\prs{x}}_\mcal{B} &= e_1 + e_2 \\
+\brs{T\prs{x^2}}_\mcal{B} &= e_1 + 2 e_2 + e_3 \\
+\brs{T\prs{x^3}}_\mcal{B} &= e_1 + 3 e_2 + 3 e_3 + e_4
+\end{align*}
+ואז
+\begin{align*}
+\text{.} \brs{T}_\mcal{B} &= \pmat{1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1}
+\end{align*}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V = \Mat_{2 \times 2}\prs{\mbb{C}}$,
+תהי
+\begin{align*}
+T \colon V &\to V \\
+A &\mapsto \frac{1}{2} \prs{A - A^t}
+\end{align*}
+ויהי
+\[\mcal{E} = \prs{E_{1,1}, E_{1,2}, E_{2,1}, E_{2,2}} \coloneqq \pmat{\pmat{1 & 0 \\ 0 & 0}, \pmat{0 & 1 \\ 0 & 0}, \pmat{0 & 0 \\ 1 & 0}, \pmat{0 & 0 \\ 0 & 1}}\]
+\emph{הבסיס הסטנדרטי של
+$V$}.
+כיתבו את
+$\brs{T}_\mcal{E}$.
+\end{exercisechap}
+
+\begin{solution}
+כמו מקודם, נחשב את
+$\brs{T\prs{E_{i,j}}}_\mcal{E}$
+כיוון שאלו עמודות
+$\brs{T}_\mcal{E}$.
+מתקיים
+\begin{align*}
+T\prs{E_{1,1}} &= \frac{1}{2} \prs{E_{1,1} - E_{1,1}} = 0 \\
+T\prs{E_{1,2}} &= \frac{1}{2} \prs{\pmat{0 & 1 \\ 0 & 0} - \pmat{0 & 0 \\ 1 & 0}} = \frac{1}{2} E_{1,2} - \frac{1}{2} E_{2,1} \\
+T\prs{E_{2,1}} &= \frac{1}{2} \prs{E_{2,1} - E_{1,2}} = \frac{1}{2} E_{2,1} - \frac{1}{2} E_{1,2} \\
+\text{,} T\prs{E_{2,2}} &= \frac{1}{2} \prs{E_{2,2} - E_{2,2}} = 0 \\
+\end{align*}
+לכן
+\begin{align*}
+\brs{T\prs{E_{1,1}}}_\mcal{E} &= 0 \\
+\brs{T\prs{E_{1,2}}}_\mcal{E} &= \frac{1}{2} e_2 - \frac{1}{2} e_3 \\
+\brs{T\prs{E_{2,1}}}_\mcal{E} &= -\frac{1}{2} e_2 + \frac{1}{2} e_3 \\
+\brs{T\prs{E_{2,2}}}_\mcal{E} &= 0
+\end{align*}
+ואז
+\begin{align*}
+\text{,} \brs{T}_\mcal{E} &= \pmat{0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & -\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+תהיינה
+$A,B \in \Mat_{m \times n}\prs{\mbb{F}}$
+ונניח כי לכל
+$v \in \mbb{F}^n$
+מתקיים
+$Av = Bv$.
+אז
+$A = B$.
+\end{exercisechap}
+
+\begin{solution}
+מהנתון, מתקיים
+$\prs{A - B}v = 0$
+לכל
+$v \in \mbb{F}^n$.
+בפרט העמודה ה־%
+$i$
+של
+$A-B$,
+שהינה
+$\prs{A - B}e_i$,
+שווה ל־%
+$0$.
+לכן
+$A - B = 0$.
+\end{solution}
+
+\begin{proposition}
+יהיו
+$U,V,W$
+מרחבים וקטוריים סוף־מימדיים מעל אותו שדה
+$\mbb{F}$
+עם בסיסים
+$\mcal{B},\mcal{C},\mcal{D}$
+בהתאמה,
+ותהיינה
+\begin{align*}
+S \in \Hom_{\mbb{F}}\prs{U,V} \\
+\text{.} T \in \Hom_{\mbb{F}}\prs{V,W}
+\end{align*}
+אז
+\[\text{.} \brs{T \circ S}^\mcal{B}_\mcal{D} = \brs{T}^\mcal{C}_\mcal{D} \brs{S}^\mcal{B}_\mcal{C}\]
+\end{proposition}
+
+\begin{exercisechap}
+תהיינה
+\begin{align*}
+A &\coloneqq \pmat{0 & 1 \\ -1 & 0} \in \Mat_2\prs{\RR} \\
+\text{.} B &\coloneqq \pmat{1 & 0 \\ 0 & -1} \in \Mat_2\prs{\RR}
+\end{align*}
+מבלי לכפול מטריצות, מיצאו העתקה לינארית
+$T \in \End_{\RR}\prs{\RR^2}$
+עבורה
+$\brs{T}_{\mcal{E}} = AB$.
+\end{exercisechap}
+
+\begin{solution}
+יהי
+$\mcal{E}$
+הבסיס הסטנדרטי של
+$\RR^2$.
+לפי הטענה האחרונה, מתקיים
+\begin{align*}
+\brs{T_A \circ T_B}_{\mcal{E}} = \brs{T_A}_{\mcal{E}} \brs{T_B}_{\mcal{E}}
+\end{align*}
+אך כפי שראינו מתקיים
+\begin{align*}
+\brs{T_A}_{\mcal{E}} = A \\ \brs{T_B}_{\mcal{E}} = B
+\end{align*}
+ולכן בסך הכל
+\begin{align*}
+\brs{T_A \circ T_B} = AB
+\end{align*}
+ונבחר את האופרטור
+$T = T_A \circ T_B$
+שיקיים
+$\brs{T}_{\mcal{E}} = AB$
+כנדרש.
+
+נחשב אותו מפורשות. מתקיים
+\begin{align*}
+T_A \pmat{x \\ y} &= \pmat{0 & 1 \\ -1 & 0} \pmat{x \\ y}
+\\&=
+\pmat{0 & 1 \\ -1 & 0} \prs{x e_1 + y e_2}
+\\&=
+x \pmat{0 & 1 \\ -1 & 0} e_1 + y \pmat{0 & 1 \\ -1 & 0} e_2
+\\&=
+x \pmat{0 \\ -1} + y \pmat{1 \\ 0}
+\\&= 
+\pmat{y \\ -x}
+\end{align*}
+וכן
+\begin{align*}
+T_B\pmat{x \\ y} &= \pmat{1 & 0 \\ 0 & -1} \pmat{x \\ y}
+\\&=
+x \pmat{1 & 0 \\ 0 & -1} e_1 + y \pmat{1 & 0 \\ 0 & -1} e_2
+\\&=
+x \pmat{1 \\ 0} + y \pmat{0 \\ -1}
+\\&=
+\pmat{x \\ -y}
+\end{align*}
+ולכן
+\begin{align*}
+T\pmat{x \\ y} &= \prs{T_A \circ T_B} \pmat{x \\ y}
+\\&=
+T_A\prs{T_B\pmat{x \\ y}}
+\\&=
+T_A\pmat{x \\ -y}
+\\&=
+\pmat{-y \\ -x}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\chapter{הדטרמיננטה}
+
+\section{הגדרות ותכונות בסיסיות}
+
+\begin{definition}[דטרמיננטה]
+תהי
+$A \in \Mat_{n \times n}\prs{\mbb{F}}$
+מטריצה עם מקדמים בשדה
+$\mbb{F}$.
+נגדיר את
+\emph{הדטרמיננטה}
+$\det\prs{A}$
+של
+$A$
+באופן הרקורסיבי הבא.
+
+תהי
+$A_{\prs{i,j}}$
+המטריצה המתקבלת מ־%
+$A$
+על ידי הסרת השורה ה־%
+$i$
+והעמודה ה־%
+$j$.
+המספר
+$\det\prs{A_{\prs{i,j}}}$
+נקרא
+\emph{המינור}
+ה־$\prs{i,j}$ של
+$A$
+והדטרמיננטה של
+$A$
+שווה
+\begin{align*}
+\det\prs{A} &= \sum_{i \in \brs{n}} \prs{-1}^{i+j} a_{i,j} \det\prs{A_{\prs{i,j}}}
+\end{align*}
+עבור כל
+$j \in \brs{n}$
+קבוע, ושווה
+\begin{align*}
+\det\prs{A} &= \sum_{j \in \brs{n}} \prs{-1}^{i+j} a_{i,j} \det\prs{A_{\prs{i,j}}}
+\end{align*}
+עבור כל
+$i \in \brs{n}$
+קבוע.
+\end{definition}
+
+\begin{theorem}
+תהיינה
+$A, B, C \in \Mat_{n \times n}\prs{\mbb{F}}$
+ונניח כי
+$C$
+הפיכה.
+מתקיימות התכונות הבאות.
+\begin{enumerate}
+\item $\det\prs{AB} = \det\prs{A} \cdot \det\prs{B}$
+\item $\det\prs{C^{-1}} = \prs{\det\prs{C}}^{-1}$
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+\begin{enumerate}
+\item החלפת שתי שורות או עמודות במטריצה כופלת את הדטרמיננטה ב־%
+$\prs{-1}$.
+\item כפל שורה או עמודה במטריצה בסקלר
+$\alpha$
+כופל את הדטרמיננטה ב־%
+$\alpha$.
+\item הוספת כפולה שורה או עמודה לשורה או עמודה במטריצה אינה משנה את הדטרמיננטה.
+\end{enumerate}
+\end{theorem}
+
+\section{תרגילים}
+
+\begin{exercisechap}
+חשבו את הדטרמיננטות של המטריצות הבאות.
+
+\begin{enumerate}
+\item \[\pmat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} \in \Mat_{3}\prs{\mbb{R}}\]
+\item \[\pmat{0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0} \in \Mat_{4}\prs{\mbb{R}}\]
+\item \[\pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 1 & 1} \in \Mat_{3}\prs{\mbb{R}}\]
+\item \[\pmat{1 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 1 & 1} \in \Mat_{3}\prs{\mbb{R}}\]
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נחשב לפי השורה הראשונה.
+\begin{align*}
+\det \pmat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} &= 1 \cdot \det\pmat{5 & 6 \\ 8 & 9} - 2 \cdot \det \pmat{4 & 6 \\ 7 & 9} + 3 \cdot \det \pmat{4 & 5 \\ 7 & 8}
+\\&=
+1 \cdot \prs{5 \cdot 9 - 6 \cdot 8} - 2 \cdot \prs{4 \cdot 9 - 6 \cdot 7} + 3 \cdot \prs{4 \cdot 8 - 5 \cdot 7}
+\\&=
+1 \cdot \prs{-3} -2 \cdot \prs{-6} + 3 \cdot \prs{-3}
+\\&=
+-3 + 12 - 9
+\\&= 0
+\end{align*}
+\item החלפת שורות כופלת את הדטרמיננטה ב־%
+$\prs{-1}$.
+כיוון שניתן לקבל את המטריצה ממטריצת היחידה על ידי החלפת השורות
+$1,4$
+והשורות
+$2,3$,
+נקבל כי הדטרמיננטה שווה לזאת של היחידה. לכן
+\[\text{.} \det \pmat{0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0} = 1\]
+\item
+הוספת כפולה של השורות הראשונה והשנייה ב־%
+$\prs{-1}$
+לשורה השלישית לא משנה את הדרמיננטה. לכן הדטמיננטה של המטריצה שווה לזאת של היחידה, ולכן
+\[\text{.} \det \pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 1 & 1} = 1\]
+\item
+הוספת כפולה של השורות הראשונה והשנייה ב־%
+$\prs{-1}$
+לשורה השלישית לא משנה את הדרמיננטה. לכן הדטמיננטה של המטריצה שווה לזאת של
+\begin{align*}
+\text{.} \pmat{1 & 0 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 0}
+\end{align*}
+כיוון שהשורה השלישית היא שורת אפסים, אם נפתח את הדטרמיננטה לפיה נקבל שהדטרמיננטה שווה
+$0$.
+זה נכון באופן כללי יותר אם השורות תלויות לינארית, כי נוכל לקבל שורת אפסים מצירוף לינארי של השורות.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$T \in \End_{\mbb{F}}\prs{V}$
+העתקה לינארית ויהי
+$\mcal{B}$
+בסיס של
+$V$.
+הראו כי ניתן להגדיר
+$\det\prs{T} = \det\prs{\brs{T}_\mcal{B}}$.
+כלומר, הראו שאם
+$\mcal{C}$
+בסיס נוסף של
+$V$
+מתקיים
+$\det\prs{\brs{T}_\mcal{B}} = \det\prs{\brs{T}_\mcal{C}}$.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+\brs{T}_\mcal{B} = \prs{M^\mcal{B}_\mcal{C}}^{-1} \brs{T}_\mcal{C} M^\mcal{B}_\mcal{C}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \det\prs{\brs{T}_\mcal{B}} &= \det\prs{\prs{M^\mcal{B}_\mcal{C}}^{-1}} \det\prs{\brs{T}_\mcal{C}} \det\prs{M^\mcal{B}_\mcal{C}}
+\end{align*}
+כיוון ש־%
+$\det\prs{A^{-1}} = \frac{1}{\det\prs{A}}$
+ לכל מטריצה
+ $A$,
+ מתקיים
+ $\det\prs{\prs{M^\mcal{B}_\mcal{C}}^{-1}} = \frac{1}{\det\prs{M^\mcal{B}_\mcal{C}}}$.
+ לכן, נקבל בסה"כ כי
+ \[\text{,} \det\prs{\brs{T}_\mcal{B}} = \det\prs{\brs{T}_\mcal{C}}\]
+ כנדרש.
+\end{solution}
+
+\begin{comment}
+\section{הדטרמיננטה לפי תמורות}
+
+\begin{notation}
+נסמן תמורה
+$\sigma \in S_n$
+בתור
+$\sigma = \prs{\sigma\prs{1}, \ldots, \sigma\prs{n}}$,
+וחילוף
+$\tau$
+בין איברים
+$n,m$
+בתור
+$\prs{n;m}$.
+\end{notation}
+
+\begin{proposition}
+תהי
+$A = \prs{a_{i,j}}_{i,j \in \brs{n}} \in \Mat_n\prs{\mbb{F}}$.
+מתקיים
+\[\text{.} \det\prs{A} = \sum_{\sigma \in S_n} \sgn{\sigma} \prod_{i \in \brs{n}} a_{i,\sigma\prs{i}}\]
+\end{proposition}
+
+\begin{exercisechap}
+חשבו את הדטרמיננטה של המטריצה הבאה לפי תמורות.
+
+\begin{align*}
+\text{.} A = \pmat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9}
+\end{align*}
+\end{exercisechap}
+
+\begin{solution}
+נרשום את כל איברי
+$S_3$.
+הם
+\begin{align*}
+\id_{S_3} = \prs{1, 2, 3}, \\
+\prs{1, 3, 2}, \\
+\prs{2, 1, 3}, \\
+\prs{2, 3, 1}, \\
+\prs{3, 1, 2}, \\
+\text{.} \prs{3, 2, 1}
+\end{align*}
+עבור כל אחד מהאיברים, נפעיל חילופים משמאל כדי להביא אותו ליחידה, ומספר החילופים יהיה החזקה של $\prs{-1}$ בסימן של התמורה. אם הגענו לתמורה קודמת, מספר החילופים שנותרו משלב זה הוא מספר החילופים שכבר מצאנו בחישוב קודם.
+\begin{align*}
+\id_{S_3} = \id_{S_3} &\implies \sgn\prs{\id_{S_3}} = 1\\
+\prs{2;3} \circ \prs{\prs{1, 3, 2}} = \prs{\prs{1, 2, 3}} = \id_{S_3} &\implies \sgn\prs{\prs{1, 3, 2}} = -1 \\
+\prs{1;2} \circ \prs{\prs{2, 1, 3}} = \prs{\prs{1, 2, 3}} = \id_{S_3} &\implies \sgn\prs{\prs{2,1,3}} = -1 \\
+\prs{1;2} \circ \prs{\prs{2, 3, 1}} = \prs{\prs{1, 3, 2}} &\implies \sgn\prs{\prs{2, 3, 1}} = -1 \cdot \sgn\prs{\prs{1, 3, 2}} = 1 \\
+\prs{1;3} \circ \prs{\prs{3, 1, 2}} = \prs{\prs{1, 3, 2}} &\implies \sgn\prs{\prs{3, 1, 2}} = \prs{-1} \cdot \sgn\prs{\prs{1, 3, 2}} = 1 \\
+\text{.} \prs{1;3} \circ \prs{\prs{3,2,1}} = \prs{\prs{1,2,3}} = \id_{S_3} &\implies \sgn\prs{\prs{3,2,1}} = -1
+\end{align*}
+
+לכן נקבל
+\begin{align*}
+\det\prs{A} &= 1\cdot 5 \cdot 9 - 1 \cdot 6 \cdot 8 - 2 \cdot 4 \cdot 9 + 2 \cdot 6 \cdot 7 + 3 \cdot 4 \cdot 8 - 3 \cdot 5 \cdot 7
+\\&= 45 - 48 - 72 + 84 + 96 - 105
+\\ \text{.} \hphantom{\det\prs{A}} &= 0
+\end{align*}
+\end{solution}
+\end{comment}
+
+\printbibliography
+\end{document}
