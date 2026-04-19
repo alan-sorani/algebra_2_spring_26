@@ -22,6 +22,21 @@
 %%%%%%%%%%%%%
 
 \setcounter{section}{1}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boxes around matrix elements  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{matrix,fit}
+\pgfkeys{tikz/mymatrix/.style={matrix of math nodes,inner sep=0pt,row sep=0em,column sep=0em,nodes={inner sep=6pt}}}
+
+\newcommand*\mymatrixbox[5][]{\node [fit= (m-#2-#3) (m-#4-#5)] [draw=blue,thick,dashed,rounded corners,inner sep=-2pt,#1] {};}            
+
+\newcommand{\highlightcells}[2][]{%
+  \foreach \r/\c in {#2} {%
+    \mymatrixbox[#1]{\r}{\c}{\r}{\c}%
+  }%
+}
             
 %BIBLIOGRAPHY
 \usepackage[
@@ -632,8 +647,40 @@ $\det\prs{A^{-1}} = \frac{1}{\det\prs{A}}$
  כנדרש.
 \end{solution}
 
-\begin{comment}
 \section{הדטרמיננטה לפי תמורות}
+
+\begin{definition}[תמורות על $n$ איברים]
+העתקה
+\[\sigma \colon [n] \to [n]\]
+נקראת
+\emph{תמורה על $[n]$}
+אם היא חד־חד־ערכית ועל.
+
+אוסף כל התמורות על
+$[n]$
+מסומן
+$S_n$,
+ונסמן
+$\sigma \tau$
+עבור ההרכבה
+$\sigma \circ \tau$
+של איברים בו.
+\end{definition}
+
+\begin{definition}[חילוף]
+תמורה
+$\sigma \in S_n$
+נקראת
+\emph{חילוף}
+אם קיימים
+$i,j \in [n]$
+שונים עבורם
+\begin{align*}
+\sigma\prs{i} &= j \\
+\sigma\prs{j} &= i \\
+\text{.} \forall k \in [n] \setminus \set{i,j} : \sigma\prs{k} &= k
+\end{align*}
+\end{definition}
 
 \begin{notation}
 נסמן תמורה
@@ -648,12 +695,129 @@ $n,m$
 $\prs{n;m}$.
 \end{notation}
 
+\begin{definition}[סימן של תמורה]
+ראיתן בהרצאה כי כל תמורה
+$\sigma$
+ניתן לכתיבה כהרכבה של חילופים
+$\tau_1, \ldots, \tau_m$,
+וכי אם היא הרכבה גם של חילופים
+$\tau_1', \ldots, \tau_k'$
+אז
+$\prs{-1}^m = \prs{-1}^k$.
+
+לכן, ניתן להגדיר את
+\emph{הסימן של תמורה
+$\sigma$}
+בתור
+$\prs{-1}^k$
+כאשר
+$k$
+מספר החילופים בהצגת
+$\sigma$
+כהרכבת חילופים.
+נסמנו
+$\sgn\prs{\sigma}$.
+\end{definition}
+
+\begin{exercisechap}
+חשבו את הסימן של התמורה
+\[\text{.} \sigma \coloneqq \prs{n, 1, 2, \ldots, \prs{n-1}} \in S_n\]
+\end{exercisechap}
+
+\begin{solution}
+הסימן של
+$\sigma$
+הוא
+$\prs{-1}$
+בחזקת מספר החילופים בהצגת
+$\sigma$
+כהרכבת חילופים.
+
+אם נמצא חילופים
+$\tau_1, \ldots, \tau_k$
+עבורם
+\[\tau_k \circ \ldots \circ \tau_1 \sigma = \id_{[n]}\]
+נקבל כי
+\[\sigma^{-1} = \tau_k \circ \ldots \circ \tau_1\]
+ולכן
+\begin{align*}
+\sigma &= \prs{\tau_k \circ \ldots \circ \tau_1}^{-1}
+\\&= \tau_1^{-1} \circ \ldots \circ \tau_k^{-1}
+\\&= \tau_1 \circ \ldots \circ \tau_k
+\end{align*}
+ואז
+$\sgn\prs{\sigma} = \prs{-1}^k$.
+
+נבצע חילופים כאלו כאשר נדאג, משמאל לימין, שהערכים של התמורה החדשה נשלחים לעצמם.
+מתקיים
+\begin{align*}
+\prs{1;n} \sigma &= \prs{1, n, 2, 3, \ldots, \prs{n-1}} \\
+\prs{2;n} \prs{1;n} \sigma &= \prs{1, 2, n, 3, \ldots, \prs{n-1}} \\
+\vdots \\
+\prs{n-1;n} \circ \ldots \circ \prs{1;n} \sigma &= \id_{[n]}
+\end{align*}
+ולכן
+\[\sigma = \prs{1;n} \prs{2;n} \circ \ldots \circ \prs{n-1;n}\]
+ואז
+\[\text{,} \sgn\prs{\sigma} = \prs{-1}^{n-1}\]
+כנדרש.
+\end{solution}
+
+בהרצאות הקרובות, תיראו כי ניתן לחשב דטרמיננטה בעזרת תמורות באופן הבא.
+
 \begin{proposition}
 תהי
 $A = \prs{a_{i,j}}_{i,j \in \brs{n}} \in \Mat_n\prs{\mbb{F}}$.
 מתקיים
 \[\text{.} \det\prs{A} = \sum_{\sigma \in S_n} \sgn{\sigma} \prod_{i \in \brs{n}} a_{i,\sigma\prs{i}}\]
 \end{proposition}
+
+\begin{remark}
+כל תמורה ב־%
+$S_n$
+מתאימה לבחירה של סדר על איברי
+$[n]$,
+ולכן בסכום מתאימה לבחירה של מקדם מכל שורה, כך שמכל עמודה נבחר רק מקדם אחד.
+נסכום את מכפלות המקדמים מהבחירות השונות, כאשר חלק מהמכפלות האלו יסכמו בסימן שלילי, לפי סימן התמורות המתאימות להן.
+
+למשל, אם
+\[A = \pmat{1 & 2 \\ 3 & 4}\]
+נסתכל על התמורות ב־%
+$S_2$:
+\[\sigma_1 \coloneqq \prs{1; 2}, \sigma_2 \coloneqq \prs{2; 1}\]
+ומתקיים
+\begin{align*}
+\sgn\prs{\sigma_1} &= \sgn\prs{\prs{1; 2}} = \sgn\prs{\id_{[2]}} = \prs{-1}^0 = 1 \\
+\text{.} \sgn\prs{\sigma_2} &= \sgn\prs{\prs{2; 1}} = \prs{-1}^1 = -1
+\end{align*}
+הדטרמיננטה, לפי ההגדרה, היא
+\begin{align*}
+\prs{\sgn\prs{\sigma_1} \prod_{i \in [2]} a_{i, \sigma_1\prs{i}}} + \prs{\sgn\prs{\sigma_2} \prod_{i \in [2]} a_{i, \sigma_2\prs{i}} }
+&=
+a_{1, \sigma_1\prs{1}} a_{2, \sigma_1\prs{2}} - a_{1, \sigma_2(1)} a_{2, \sigma_2(2)}
+\\&=
+a_{1,1} a_{2,2} - a_{1,2} a_{2,1}
+\\&= 1 \cdot 4 - 2 \cdot 3
+\\&= -2
+\end{align*}
+כאשר הגורם בסכום הנ"ל שמתאים לתמורה
+$\prs{1 2}$
+הוא המכפלה של המקדם ה־%
+$1$
+בשורה הראשונה והמקדם ה־%
+$2$
+בשורה השנייה, והגורם המתאים לתמורה
+$\prs{2 1}$
+הוא (מינוס) המכפלה של המקדם ה־%
+$2$
+בשורה ה־%
+$1$
+והמקדם ה־%
+$1$
+בשורה השנייה, כפול סימן התמורה שהוא
+$-1$.
+
+\end{remark}
 
 \begin{exercisechap}
 חשבו את הדטרמיננטה של המטריצה הבאה לפי תמורות.
@@ -668,12 +832,12 @@ $A = \prs{a_{i,j}}_{i,j \in \brs{n}} \in \Mat_n\prs{\mbb{F}}$.
 $S_3$.
 הם
 \begin{align*}
-\id_{S_3} = \prs{1, 2, 3}, \\
-\prs{1, 3, 2}, \\
-\prs{2, 1, 3}, \\
-\prs{2, 3, 1}, \\
-\prs{3, 1, 2}, \\
-\text{.} \prs{3, 2, 1}
+\id_{S_3} &= \prs{1, 2, 3}, \\
+&\hphantom{=} \prs{1, 3, 2}, \\
+&\hphantom{=} \prs{2, 1, 3}, \\
+&\hphantom{=} \prs{2, 3, 1}, \\
+&\hphantom{=} \prs{3, 1, 2}, \\
+\text{.} \hphantom{\id_{S_3}} &\hphantom{=} \prs{3, 2, 1}
 \end{align*}
 עבור כל אחד מהאיברים, נפעיל חילופים משמאל כדי להביא אותו ליחידה, ומספר החילופים יהיה החזקה של $\prs{-1}$ בסימן של התמורה. אם הגענו לתמורה קודמת, מספר החילופים שנותרו משלב זה הוא מספר החילופים שכבר מצאנו בחישוב קודם.
 \begin{align*}
@@ -692,7 +856,378 @@ $S_3$.
 \\ \text{.} \hphantom{\det\prs{A}} &= 0
 \end{align*}
 \end{solution}
-\end{comment}
+
+\begin{exercisechap}
+חשבו בעזרת תמורות את הדטרמיננטות של המטריצות הבאות.
+
+\begin{align*}
+A &= \pmat{
+	1 & 0 & 1 & 0 \\
+	0 & 1 & 0 & 1 \\
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0
+}
+\\
+B &= \pmat{
+	1 & 0 & 0 & 1 \\
+	1 & 1 & 0 & 0 \\
+	0 & 1 & 1 & 0 \\
+	0 & 0 & 1 & 1
+}
+\\
+C &= \pmat{X & 0_{m \times k} \\ 0_{k \times m} & Y}
+\end{align*}
+עבור
+$X \in \Mat_m\prs{\FF}, Y \in \Mat_k\prs{\FF}$.
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item במטריצה
+$A$,
+הדרך היחידה לבחור מקדם מכל שורה כך שאין שני שני מקדמים באותה עמודה היא זאת:
+
+\begin{center}
+\begin{tikzpicture}[baseline=0cm]
+    \matrix [mymatrix] (m)  
+    {
+    1 & 0 & 1 & 0 \\ 
+    0 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    };
+
+% parentheses
+\coordinate (NW) at (m-1-1.north west);
+\coordinate (SE) at (m-4-4.south east);
+
+\node[xshift=4pt, fit=(NW)(SE), inner sep=0pt, left delimiter=(] {};
+\node[xshift=-4pt, fit=(NW)(SE), inner sep=0pt, right delimiter=)] {};
+
+\highlightcells[red]{1/3, 2/4, 3/1, 4/2}
+
+\end{tikzpicture}
+\end{center}
+
+לכן,
+\begin{align*}
+\text{.} \det\prs{A} = \sgn\prs{\prs{3,4,1,2}} \cdot 1^4
+\end{align*}
+מתקיים
+$\prs{3,4,1,2} = \prs{1;3} \prs{2;4}$
+ולכן
+\begin{align*}
+\text{.} \det\prs{A} &= \sgn\prs{\prs{3,4,1,2}} = \prs{-1}^2 = 1
+\end{align*}
+
+\item במטריצה
+$B$
+אם נבחר את המקדם ה־%
+$1$
+בשורה הראשונה, נצטרך לבחור את המקדם ה־%
+$4$
+בשורה האחרונה (כי צריך להיות מקדם בעמודה ה־$4$, ואז את המקדם ה־%
+$3$
+בשורה השלישית (כי צריך להיות מקדם בעמודה ה־$3$), ואת המקדם ה־%
+$2$
+בשורה השנייה. כלומר, התמורה
+$\sigma_1$
+היחידה עבורה
+$\sigma_1\prs{1} = 1$
+שנצטרך להסתכל עליה בסכום היא
+$\sigma_1 = \prs{1, 2, 3, 4} = \id_{[4]}$,
+והגורם המתאים בחישוב הדטרמיננטה הוא
+\[\text{.} \sgn\prs{\id_{[4]}} \prod_{i \in [4]} b_{i,i} = 1\]
+
+\begin{center}
+\begin{tikzpicture}[baseline=0cm]
+    \matrix [mymatrix] (m)  
+    {
+    1 & 0 & 0 & 1 \\ 
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 \\
+    };
+
+% parentheses
+\coordinate (NW) at (m-1-1.north west);
+\coordinate (SE) at (m-4-4.south east);
+
+\node[xshift=4pt, fit=(NW)(SE), inner sep=0pt, left delimiter=(] {};
+\node[xshift=-4pt, fit=(NW)(SE), inner sep=0pt, right delimiter=)] {};
+
+\highlightcells[red]{1/1, 2/2, 3/3, 4/4}
+
+\end{tikzpicture}
+\end{center}
+
+באופן דומה, אם בשורה הראשונה נבחר את המקדם ה־%
+$1$,
+נצטרך בשורה האחרונה לבחור את המקדם ה־%
+$3$
+ונקבל בסוף את בחירת המקדמים הבאה, המתאימה לתמורה
+$\sigma_2 \coloneqq \prs{4, 1, 2, 3}$.
+
+\begin{center}
+\begin{tikzpicture}[baseline=0cm]
+    \matrix [mymatrix] (m)  
+    {
+    1 & 0 & 0 & 1 \\ 
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 \\
+    };
+
+% parentheses
+\coordinate (NW) at (m-1-1.north west);
+\coordinate (SE) at (m-4-4.south east);
+
+\node[xshift=4pt, fit=(NW)(SE), inner sep=0pt, left delimiter=(] {};
+\node[xshift=-4pt, fit=(NW)(SE), inner sep=0pt, right delimiter=)] {};
+
+\highlightcells[blue]{1/4, 2/1, 3/2, 4/3}
+
+\end{tikzpicture}
+\end{center}
+
+ראינו בתרגיל קודם שסימן תמורה זאת הוא
+$\sgn{\sigma_2} = \prs{-1}^{4-1} = -1$,
+ולכן בסך הכל נקבל כי
+\begin{align*}
+\text{.} \det\prs{B} = \textcolor{red}{1} + \textcolor{blue}{\prs{-1}} = 0
+\end{align*}
+
+\item
+נסמן
+$n = m+k$.
+לפי ההגדרה,
+\begin{align*}
+\text{.} \det\prs{C} = \sum_{\sigma \in S_n} \sgn\prs{\sigma} \prod_{i \in [n]} c_{i, \sigma\prs{i}}
+\end{align*}
+נשים לב כי אם
+$\sigma\prs{i} = j$
+עבור
+$1 \leq i \leq m$
+ועבור
+$m+1 \leq j \leq m+k$,
+המקדם
+$c_{i,j}$
+הוא מקדם של המטריצה
+$0_{m \times k}$,
+שהוא
+$0$.
+באופן דומה,
+$c_{i,j} = 0$
+כאשר
+$m+1 \leq i \leq m+k$
+וגם
+$1 \leq j \leq m$.
+לכן, כל תמורה שתורמת לסכום בדטרמיננטה היא הרכבה של תמורה על
+$m$
+האיברים הראשונים של
+$[n]$
+שמקבעת את שאר האיברים,
+ותמורה של
+$k$
+האיברים שאחריהם שמקבעת את האיברים הראשונים.
+
+נסמן
+\begin{align*}
+S &\coloneqq \set{\sigma \in S_n}{\forall i > m: \sigma\prs{i} = i} \\
+S' &\coloneqq \set{\sigma \in S_n}{\forall i \leq m}{\sigma\prs{i} = i}
+\end{align*}
+ואז נקבל כי
+\begin{align*}
+\det\prs{C} &= \sum_{\substack{\sigma_1 \in S \\ \sigma_2 \in S'}} \sgn\prs{\sigma_1 \sigma_2} \prs{\prod_{i = 1}^m c_{i, \sigma_1\prs{i}}} \prs{\prod_{i = m+1}^{m+k} c_{i, \sigma_2\prs{i}}}
+\\&=
+\sum_{\substack{\sigma_1 \in S_m \\ \sigma_2 \in S_k}} \sgn\prs{\sigma_1}\sgn\prs{\sigma_2} \prs{\prod_{i = 1}^m x_{i, \sigma_1\prs{i}}} \prs{\prod_{i = 1}^{k} y_{i, \sigma_2\prs{i}}}
+\\&=
+\sum_{\sigma_1 \in S_m} \sgn\prs{\sigma_1} \prs{\prod_{i = 1}^m x_{i, \sigma_1\prs{i}}} \underbrace{\sum_{\sigma_2 \in S_k} \sgn\prs{\sigma_2} \prs{\prod_{i = 1}^{k} y_{i, \sigma_2\prs{i}}}}_{\det\prs{Y}}
+\\&=
+\det\prs{Y} \underbrace{\sum_{\sigma_1 \in S_m} \sgn\prs{\sigma_1} \prs{\prod_{i = 1}^m x_{i, \sigma_1\prs{i}}}}_{\det\prs{X}}
+\\&=
+\det\prs{Y} \det{X}
+\\&= \det\prs{X} \det{Y}
+\end{align*}
+כנדרש.
+\end{enumerate}
+\end{solution}
+
+\begin{remark}
+שימו לב כי נובע באינדוקציה מהסעיף האחרון כי עבור מטריצה
+\emph{אלכסונית בלוקים},
+כלומר כזאת מהצורה
+\[\pmat{
+A_1 & 0 & \cdots & 0 & 0 \\
+0 & A_2 & \ddots & \ddots & 0 \\
+\vdots & \ddots & \ddots & \ddots & \vdots \\
+0 & \ddots & \ddots & A_{n-1} & 0 \\
+0 & 0 & \cdots & 0 & A_k
+}\]
+עבור
+$A_i \in \Mat_{m_i}\prs{\FF}$
+ועבור
+$m_i \in \NN_+$,
+מתקיים כי
+\[\text{.} \det\prs{A} = \prod_{i \in [k]} \det\prs{A_i}\]
+\end{remark}
+
+\begin{exercisechap}
+הראו לפי נוסחת הדטרמיננטה לפי תמורות כי הדטרמיננטה של מטריצה משולשת עליונה היא מכפלת איברי האלכסון.
+\end{exercisechap}
+
+\begin{solution}
+תהי
+$A \coloneqq \prs{a_{i,j}}_{i,j \in [n]} \in \Mat_n\prs{\FF}$
+מטריצה משולשת עליונה. כלומר,
+\[\text{.} \forall i > j: a_{i,j} = 0\]
+אם
+$\sigma \in S_n$
+תמורה כך שיש
+$i_0 \in [n]$
+עם
+$\sigma\prs{i_0} < i_0$,
+נקבל כי
+$a_{i_0, \sigma\prs{i_0}} = 0$
+ולכן
+$\prod_{i \in [n]} a_{i, \sigma\prs{i}} = 0$.
+לכן, לפי הגדרת הדטרמיננטה,
+$\det\prs{A}$
+היא סכום הגורמים
+$\sgn \sigma \prod_{i \in [n]} a_{i, \sigma\prs{i}}$
+עבור התמורות
+$\sigma$
+עבורן
+$\sigma\prs{i} \geq i$
+לכל
+$i \in [n]$.
+אבל, תמורה היא חד־חד ערכית ועל, ולכן התמורה היחידה המקיימת זאת היא הזהות. לכן
+\[det\prs{A} = \sgn\prs{\id_{[n]}} \prod_{i \in [n]} a_{i,i} = \prod_{i \in [n]} a_{i,i}\]
+כנדרש.
+\end{solution}
+
+\begin{definition}[ערכים עצמיים ופולינום אופייני]
+ניזכר מאלגברה א' כי
+$\alpha \in \FF$
+הינו
+\emph{ערך עצמי}
+של מטריצה
+$A \in \Mat_n\prs{\FF}$
+אם קיים
+$v \in \FF^n$
+עבורו
+$Av = \alpha v$,
+וכי הערכים העצמיים של
+$A$
+הם שורשי
+\emph{הפולינום האופייני}
+$p_A\prs{x} = \det\prs{x I - A}$.
+\end{definition}
+
+\begin{remark}
+המטריצה
+$xI - A$
+אינה ב־%
+$\Mat_n\prs{\FF}$,
+כיוון ש־%
+$x$
+אינו איבר ב־%
+$\FF$.
+
+נחשב את הדטרמיננטה
+$\det\prs{xI - A}$
+באותו אופן שאנו מחשבות את הדטרמיננטה של מטריצה עם מקדמים בשדה
+$\FF$.
+\end{remark}
+
+\begin{definition}[פולינום מתוקן]
+פולינום
+\[p\prs{x} = \sum_{i = 0}^n c_i x^i\]
+נקרא
+\emph{מתוקן}
+אם עבור
+$i \in \set{0, \ldots, n}$
+המקסימלי כך ש־%
+$c_i \neq 0$,
+מתקיים כי
+$c_i = 1$.
+כלומר, אם המקדם של החזקה הגדולה ביותר שווה
+$1$.
+\end{definition}
+
+בתרגיל הבא, ניעזר בדטרמיננטות כדי להראות שכל פולינום הינו פולינום אופייני של מטריצה.
+
+\begin{exercisechap}
+עבור פולינום מתוקן
+$p \in \mbb{F}\brs{x}$
+נכתוב
+\[p\prs{x} = \sum_{i = 0}^n c_i x^i\]
+כאשר
+$c_n = 1$,
+ונגדיר את
+\emph{המטריצה המלווה של
+$p$}
+על ידי
+\[\text{.} C\prs{p} \ceq \pmat{0 & 0 & \cdots & 0 & -c_0 \\ 1 & 0 & \cdots & 0 & -c_1 \\ 0 & 1 & \cdots & 0 & -c_2 \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & \dots & 1 & -c_{n-1}} \in M_n\prs{\mbb{F}}\]
+
+יהי
+$p \in \mbb{F}\brs{x}$
+ממעלה
+$n$.
+הראו כי הפולינום האופייני של
+$C\prs{p}$
+הוא
+$p$.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+\text{.} p_{C\prs{p}} &= \det\prs{I - xC\prs{p}}
+= \det\pmat{x & 0 & \cdots & 0 & c_0 \\ -1 & x & \cdots & 0 & c_1 \\ 0 & -1 & \cdots & 0 & -c_2 \\ \vdots & \vdots & \ddots & \ddots & \vdots \\ 0 & 0 & \dots & -1 & x + c_{n-1}}
+\end{align*}
+ניעזר בכך שהטרמיננטה אינווריאנטית תחת הוספת כפולה של שורה לשורה אחרת.
+נוסיף את השורה האחרונה כפול
+$x$
+לזאת שלפניה. לאחר מכן נוסיף את השורה ה־%
+$n-1$
+כפול
+$x$
+לזאת שלפניה ונמשיך כך עד שנקבל מטריצה
+\begin{align*}
+A \coloneqq \pmat{0 & 0 & \cdots & 0 & y \\ -1 & 0 & \cdots & 0 & * \\ 0 & -1 & \cdots & 0 & * \\ \vdots & \vdots & \ddots & \ddots & \vdots \\ 0 & 0 & \dots & -1 & *}
+\end{align*}
+כאשר
+\[\text{.} y = a_0 + x\prs{a_1 + x\prs{a_2 + x\prs{\ldots \prs{a_{n-2} + x\prs{a_{n-1} + x}} \ldots}}} = \sum_{i=0}^n c_i x^i = p\]
+נחשב כעת את הדטרמיננטה של
+$A$
+בעזרת תמורות. נשים לב כי לכל תמורה
+$\sigma$
+שאינה מקיימת
+$\sigma\prs{1} = n$,
+נקבל כי
+$a_{1, \sigma\prs{1}} = 0$,
+ולכן הגורם
+$\sgn\prs{\sigma} \prod_{i = 0}^n a_{i, \sigma\prs{i}}$
+יתאפס.
+באותו אופן, לכל תמורה כזאת שאינה מקיימת
+$\sigma\prs{i} = i-1$
+לכל
+$i \in \set{2, \ldots, n}$,
+נקבל שהגורם המתאים לה בדטרמיננטה מתאפס, בגלל האפסים בשורות ה־%
+$2, \ldots, n$.
+לכן, אם נסמן
+$\sigma \coloneqq \prs{n, 1, 2, \ldots, n-1}$
+נקבל כי
+\[\text{.} \det\prs{A} = \sgn\prs{\sigma} \cdot \prs{-1}^{n-1} p(x)\]
+ראינו בתרגיל קודם כי
+$\sgn\prs{\sigma} = \prs{-1}^{n-1}$
+ולכן נקבל כי
+\begin{align*}
+\det\prs{C\prs{p}} = \det\prs{A} = \prs{-1}^{n-1} \prs{-1}^{n-1} p(x) = p(x)
+\end{align*}
+כנדרש.
+\end{solution}
 
 \printbibliography
 \end{document}
