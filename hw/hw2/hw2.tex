@@ -1,0 +1,215 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 2 \\
+הדטרמיננטה
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 30.4.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+חשבו את הדטרמיננטות של המטריצות הבאות.
+
+\begin{enumerate}
+\item
+\begin{align*}
+A &\coloneqq \pmat{
+0 & 0 & 1 & 2 \\
+0 & 0 & 3 & 4 \\
+1 & 2 & 0 & 0 \\
+3 & 4 & 0 & 0
+} \in \Mat_4\prs{\RR}
+\\
+B &\coloneqq \pmat{
+1 & 1 & 2 & 2 \\
+1 & 0 & 2 & 0 \\
+3 & 3 & 0 & 0 \\
+3 & 0 & 0 & 0
+} \in \Mat_4\prs{\RR}
+\\
+C &\coloneqq \pmat{
+0 & \cdots & \cdots & 0 & 1 \\
+1 & 0 & \ddots & \ddots & 0 \\
+0 & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & 0 & \vdots \\
+0 & \cdots & 0 & 1 & 0
+} \in \Mat_n\prs{\RR}
+\\
+D &\coloneqq \pmat{
+1 & 1 & 1 \\
+1 & i & i^2 \\
+1 & -i & \prs{-i}^2
+} \in \Mat_3\prs{\CC}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+חשבו את הדטרמיננטות של האופרטורים הבאים.
+\begin{enumerate}
+\item
+\begin{align*}
+T \colon \Mat_2\prs{\RR} &\to \Mat_2\prs{\RR} \\
+A &\mapsto A^t
+\end{align*}
+\item
+\begin{align*}
+T \colon \Mat_2\prs{\RR} &\to \Mat_2\prs{\RR} \\
+A &\mapsto \pmat{0 & 1 \\ 1 & 0} A
+\end{align*}
+\item
+\begin{align*}
+T \colon \CC_2\brs{x} &\to \CC_2\brs{x} \\
+p\prs{x} &\mapsto p'(x)
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\begin{enumerate}
+\item
+תהי
+\begin{equation}\label{eq:block-diag}
+A = \pmat{
+A_1 & 0 & \cdots & 0 & 0 \\
+0 & A_2 & \ddots & \ddots & 0 \\
+\vdots & \ddots & \ddots & \ddots & \vdots \\
+0 & \ddots & \ddots & A_{n-1} & 0 \\
+0 & 0 & \cdots & 0 & A_k
+} \in \Mat_n\prs{\FF}
+\end{equation}
+עבור
+$A_i \in \Mat_{m_i}\prs{\FF}$
+ועבור
+$m_i \in \NN_+$.
+נזכיר, מהתרגול, כי
+\begin{align*}
+\text{.} \det\prs{A} = \prod_{i \in [k]} \det\prs{A_i}
+\end{align*}
+חשבו את הדטרמיננטות של המטריצות הבאות.
+\begin{enumerate}
+\item
+\[A_i\prs{\alpha} \coloneqq \pmat{
+A_1 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & 0 \\
+0 & A_2 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots &  0 \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & A_{i-1} & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \alpha A_i & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & A_{i+1} & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+0 & \ddots & \ddots &\ddots & \ddots & \ddots & \ddots & A_{n-1} & 0 \\
+0 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & A_k
+}
+\in \Mat_n\prs{\FF}\]
+עבור
+$\alpha \in \FF$.
+\item
+\[A_{i \leftrightarrow j} \coloneqq \pmat{
+A_1 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & 0 \\
+0 & A_2 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots &  0 \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & A_{i-1} & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & 0 & A_{i+1} & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & A_{i} & 0 & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & A_{i+2} & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+0 & \ddots & \ddots &\ddots & \ddots & \ddots & \ddots & \ddots & A_{n-1} & 0 \\
+0 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & A_k
+}
+\in \Mat_n\prs{\FF}\]
+המתקבלת על ידי החלפת השורות ה־%
+$i,i+1$
+ב־%
+\eqref{eq:block-diag}.
+
+\textbf{רמז:}
+חשבו את הדטרמיננטה של המטריצה
+$\pmat{0 & A_{i+1} \\
+A_i & 0}$.
+
+\item
+\[A_{i,j}\prs{\alpha} \coloneqq \pmat{
+A_1 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & 0 \\
+0 & A_2 & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots &  0 \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & A_{i} & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \alpha A_i & \ddots & A_{j} & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \ddots & \vdots \\
+0 & \ddots & \ddots &\ddots & \ddots & \ddots & \ddots & A_{n-1} & 0 \\
+0 & 0 & \cdots & \cdots & \cdots & \cdots & \cdots & 0 & A_k
+}
+\in \Mat_n\prs{\FF}\]
+המתקבלת על ידי הוספת
+$\alpha$
+כפול השורה ה־%
+$i$
+ב־%
+\eqref{eq:block-diag}
+לשורה ה־%
+$j$.
+\end{enumerate}
+\item
+היעזרו בסעיף הקודם כדי לחשב את הדטרמיננטות של המטריצות הבאות מהתרגיל הראשון.
+\begin{align*}
+A &= \pmat{
+0 & 0 & 1 & 2 \\
+0 & 0 & 3 & 4 \\
+1 & 2 & 0 & 0 \\
+3 & 4 & 0 & 0
+} \in \Mat_4\prs{\RR}
+\\
+B &= \pmat{
+1 & 1 & 2 & 2 \\
+1 & 0 & 2 & 0 \\
+3 & 3 & 0 & 0 \\
+3 & 0 & 0 & 0
+} \in \Mat_4\prs{\RR}
+\\
+C &= \pmat{
+0 & \cdots & \cdots & 0 & 1 \\
+1 & 0 & \ddots & \ddots & 0 \\
+0 & \ddots & \ddots & \ddots & \vdots \\
+\vdots & \ddots & \ddots & 0 & \vdots \\
+0 & \cdots & 0 & 1 & 0
+} \in \Mat_n\prs{\RR}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\end{document}
