@@ -100,6 +100,7 @@ p\prs{x} &\mapsto p'(x)
 \end{enumerate}
 \end{exercise}
 
+\begin{comment}
 \begin{exercise}
 \begin{enumerate}
 \item
@@ -210,6 +211,53 @@ C &= \pmat{
 } \in \Mat_n\prs{\RR}
 \end{align*}
 \end{enumerate}
+\end{exercise}
+\end{comment}
+
+\begin{exercise}
+קיבעו אילו מהטענות הבאות נכונה. הוכיחו את קביעתכן, ועבור טענות שאינן נכונות מיצאו דוגמה נגדית.
+
+\begin{enumerate}
+\item עבור מטריצה
+$A \in \Mat_n\prs{\CC}$
+המקיימת
+$A^* \coloneqq \bar{A}^t = A$,
+מתקיים
+$\det\prs{A} \in \RR$.
+
+\item לכל
+$A,B \in \Mat_n\prs{\FF}$
+מתקיים
+$\det\prs{A+B} = \det\prs{A} + \det\prs{B}$.
+
+\item
+הדטרמיננטה של מטריצה
+$A$
+שמקדמיה
+$a_{i,j}$
+מקיימים
+\[\forall i,j \in [n]: \prs{i+j > n \implies a_{i,j} = 0}\]
+היא מכפלת המקדמים
+$\set{a_{i,j}}{i+j = n}$.
+
+\item
+הקבוצה
+\[W \coloneqq \set{A \in \Mat_3\prs{\CC}}{\abs{\det\prs{A}} = 1}\]
+סגורה לכפל. כלומר, לכל
+$A,B \in W$
+מתקיים
+$AB \in W$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+מיצאו את כל הערכים
+$\alpha$
+עבורם
+\begin{align*}
+W_\alpha \coloneqq \set{A \in \Mat_3\prs{\RR}}{\det\prs{A} = \alpha}
+\end{align*}
+הינו מרחב וקטורי.
 \end{exercise}
 
 \end{document}

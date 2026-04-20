@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  19 APR 2026 14:58
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  20 APR 2026 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1921,13 +1921,13 @@ LaTeX Warning: No \author given.
 
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 46.
-[1
+Excluding 'comment' comment. [1
 
-] [2]
+]
 \tf@thm=\write7
 \openout7 = `hw2.thm'.
 
- [3] (hw2.aux)
+ [2] (hw2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1939,12 +1939,12 @@ Package logreq Info: Writing requests to 'hw2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43290 strings out of 402983
- 913664 string characters out of 5448068
- 2000989 words of memory out of 5000000
- 71346 multiletter control sequences out of 15000+600000
- 635638 words of font info for 101 fonts, out of 8000000 for 9000
+ 43285 strings out of 402983
+ 913535 string characters out of 5448068
+ 1970965 words of memory out of 5000000
+ 71343 multiletter control sequences out of 15000+600000
+ 635622 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,19n,121p,1215b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hw2.pdf (3 pages).
+Output written on hw2.pdf (2 pages).
