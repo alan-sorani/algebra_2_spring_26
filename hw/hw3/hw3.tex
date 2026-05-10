@@ -1,0 +1,151 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 3 \\
+כלל קרמר, והמטריצה המצורפת
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 21.5.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+יהי
+$V = \RR_3\brs{x}$
+ותהי
+\begin{align*}
+D \colon V &\to V \\
+p\prs{x} &\mapsto p'\prs{x}
+\end{align*}
+העתקת הנגזרת.
+תהי
+$T \coloneqq \id_V + D$.
+
+\begin{enumerate}
+\item הראו כי
+$T$
+הפיכה.
+
+\item מיצאו בעזרת כלל קרמר פולינום
+$p\prs{x}$
+עבורו
+$T\prs{p} = x^3$.
+
+\item מיצאו פולינום
+$p\prs{x}$
+עבורו
+$T\prs{p} = x^3$
+בלי להיעזר בכלל קרמר, והשוו את תשובתכן לסעיף הקודם.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+תהי
+$A \in \Mat_n\prs{\FF}$.
+\begin{enumerate}
+\item הוכיחו כי
+\[\text{.} \adj\prs{\adj\prs{A}} = \det\prs{A}^{n-2} A\]
+
+\item הוכיחו כי
+\[\text{.} \det\prs{\adj\prs{A}} = \det\prs{A}^{n-1}\]
+
+\item נניח כי
+$A$
+הפיכה ודומה למטריצה אלכסונית
+$D \coloneqq \diag\prs{\lambda_1, \ldots, \lambda_n}$,
+כלומר
+$\prs{D}_{i,j} = \delta_{i,j} \lambda_i$
+כאשר
+\begin{align*}
+\text{.} \delta_{i,j} = \begin{cases}
+0 & i \neq j \\
+1 & i = j
+\end{cases}
+\end{align*}
+מיצאו מטריצה אלכסונית
+$D^{\mathrm{adj}}$
+הדומה ל־%
+$\adj\prs{A}$,
+והוכיחו כי הן דומות.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+הוכיחו או הפריכו את כל אחת מהטענות הבאות. עבור הטענות שאינן נכונות, מיצאו דוגמה נגדית.
+
+\begin{enumerate}
+\item ההעתקה
+\begin{align*}
+\adj \colon \Mat_n\prs{\FF} &\to \Mat_n\prs{\FF} \\
+A &\mapsto \adj\prs{A}
+\end{align*}
+הינה לינארית.
+
+\item לכל
+$A,B \in \Mat_n\prs{\FF}$
+מתקיים
+\[\text{.} \adj\prs{AB} = \adj\prs{A} \adj\prs{B}\]
+
+\item לכל
+$A \in \Mat_n\prs{\FF}$
+מתקיים
+\[\text{.} \adj\prs{A^t} = \prs{\adj\prs{A}}^t\]
+
+\item לכל
+$A \in \Mat_n\prs{\FF}$
+הפיכה מתקיים
+\[\text{.} \adj\prs{A^{-1}} = \prs{\adj\prs{A}}^{-1}\]
+
+\item אם
+$A \in \Mat_n\prs{\FF}$
+סימטרית, גם
+$\adj\prs{A}$
+סימטרית.
+
+\item אם
+$A \in \Mat_n\prs{\FF}$
+אלכסונית גם
+$\adj\prs{A}$
+אלכסונית.
+\end{enumerate}
+\end{exercise}
+
+\end{document}

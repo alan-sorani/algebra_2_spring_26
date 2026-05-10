@@ -1229,5 +1229,577 @@ $\sgn\prs{\sigma} = \prs{-1}^{n-1}$
 כנדרש.
 \end{solution}
 
+\section{כלל קרמר}
+
+\subsection{מוטיבציה}
+
+כלל קרמר מציג לנו דרך, בעזרת דטרמיננטות, לפתירה של מערכת משוואות לינארית
+$Ax = b$.
+תהי
+$A \in \Mat_n\prs{\FF}$
+הפיכה
+ונסמן את העמודה ה־%
+$i$
+של
+$A$
+בתור
+$v_i$.
+
+כדי למצוא את המקדמים
+$x_i$
+של
+$x$
+ניזכר כי כפל של עמודה של
+$A$
+ב־%
+$x_i$
+כופל את הדטרמיננטה ב־%
+$x_i$.
+למשל, אם
+$i=1, n=2$,
+\begin{align}\label{eq:cramer-matrix}
+\text{.} \det\pmat{\vert & \vert \\ x_1 v_1 & v_2 \\ \vert & \vert} = x_1 \det \pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert}
+\end{align}
+אם כן, נרצה לתאר את הדטרמיננטה שבאגף שמאל באופן אחר.
+
+אבל, לפי הגדרת כפל מטריצות, מתקיים
+$b = x_1 v_1 + x_2 v_2$
+עבור
+$\alpha_i \in \FF$
+ונקבל כי
+\begin{align*}
+\det\pmat{\vert & \vert \\ b & v_2 \\ \vert & \vert} &=
+\det\pmat{\vert & \vert \\ x_1 v_1 + x_2 v_2 & v_2 \\ \vert & \vert}
+\\&=
+x_1 \det\pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert}
++ x_2 \cancelto{0}{\det\prs{\pmat{\vert & \vert \\ v_2 & v_2 \\ \vert & \vert}}}
+\\&=
+x_1 \det\pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert}
+\end{align*}
+וזה בדיוק הביטוי שקיבלנו קודם ב־%
+\eqref{eq:cramer-matrix}.
+נקבל בסך הכל כי
+\begin{align*}
+\det\pmat{\vert & \vert \\ b & v_2 \\ \vert & \vert} = x_1 \det \pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} x_1 = \frac{\det\pmat{\vert & \vert \\ b & v_2 \\ \vert & \vert}}{\det \pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert}}
+\end{align*}
+נקבל שוויון דומה עבור
+$x_2$.
+
+ראו איור
+\ref{fig:cramer}
+או עבור המחשה אינטרקטיבית, את
+\href{https://colab.research.google.com/drive/1iqHCNg8T6HNnXnBdAzGhBw4rgD4fPG_L?usp=sharing#scrollTo=f9876309}{המחברת ב־\textenglish{Google Colab}}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{images/cramer}
+\caption{ויזואליזציה של כלל קרמר. שטח המקבילית הכחולה שווה $\det\prs{A_1}$, וזה שווה לשטח המקבילית הירוקה, השווה
+$x_1 \det\prs{A}$.}
+\label{fig:cramer}
+\end{figure}
+
+\begin{notation}
+תהי
+$A \in \Mat_n\prs{\FF}$
+ויהי
+$b \in \FF^n$.
+עבור
+$i \in [n]$,
+נסמן ב־%
+$A_i$
+את המטריצה המתקבלת על ידי החלפת העמודה ה־%
+$i$
+של
+$A$
+ב־%
+$b$.
+\end{notation}
+
+\begin{proposition}[כלל קרמר]
+תהי
+$A \in \Mat_n\prs{\FF}$
+הפיכה
+ויהי
+$b \in \FF^n$.
+למערכת המשוואות
+\[Ax = b\]
+קיים פתרון יחיד המתקבל על ידי
+\begin{align*}
+\text{.} \forall i \in [n]: x_i = \frac{\det\prs{A_i}}{\det\prs{A}}
+\end{align*}
+\end{proposition}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+תהי
+\begin{align*}
+T \colon \RR_2\brs{x} &\to \RR_2\brs{x} \\
+p\prs{x} &\mapsto p\prs{x} + p\prs{x+1}
+\end{align*}
+ויהי
+\[\text{.} q\prs{x} = x^2 + x + 1 \in \RR_2\brs{x}\]
+מיצאו
+$p \in \RR_2\brs{x}$
+עבורו
+$T\prs{p} = q$.
+\end{exercisechap}
+
+\begin{solution}
+יהי
+$\mcal{E} = \pmat{x^2, x, 1}$.
+כיוון שההעתקה
+\begin{align*}
+\rho_\mcal{E} \colon \RR_2\brs{x} &\to \RR^3 \\
+v &\mapsto \brs{v}_\mcal{E}
+\end{align*}
+הינה חד־חד ערכית, מתקיים
+\[T\prs{p} = q\]
+אם ורק אם
+\[\text{.} \brs{T\prs{p}}_{\mcal{E}} = \brs{q}_\mcal{E}\]
+ניזכר כי מתקיים תמיד
+\[\brs{S\prs{v}}_{\mcal{B}} = \brs{S}_{\mcal{B}} \brs{v}_{\mcal{B}}\]
+ולכן השוויון הנ"ל מתקיים בדיוק כאשר מתקיים השוויון
+\[\text{.} \brs{T}_{\mcal{E}} \brs{p}_{\mcal{E}} = \brs{q}_{\mcal{E}}\]
+כעת,
+\begin{align*}
+\brs{q}_\mcal{E} = \pmat{1 \\ 1 \\ 1}
+\end{align*}
+וכן
+\begin{align*}
+\brs{T}_{\mcal{E}} &= \pmat{\vert & \vert & \vert \\ \brs{T\prs{x^2}}_{\mcal{E}} & \brs{T\prs{x}}_{\mcal{E}} & \brs{T\prs{1}}_{\mcal{E}} \\ \vert & \vert & \vert}
+\\&=
+\pmat{\vert & \vert & \vert \\
+\brs{2x^2 + 2x + 1}_{\mcal{E}} & \brs{2x + 1}_{\mcal{E}} & \brs{2}_{\mcal{E}} \\
+\vert & \vert & \vert}
+\\&=
+\pmat{2 & 0 & 0 \\
+2 & 2 & 0 \\
+1 & 1 & 2}
+\end{align*}
+נסמן
+\[A \coloneqq \pmat{2 & 0 & 0 \\
+2 & 2 & 0 \\
+1 & 1 & 2}\]
+וגם
+$b = \pmat{1 \\ 1 \\ 1}$
+ואז מתקיים
+$T\prs{p} = q$
+אם ורק אם
+$A \brs{p}_{\mcal{E}} = b$.
+לפי כלל קרמר, זה מתקיים בדיוק כאשר
+\begin{align*}
+\text{.} \brs{p}_{\mcal{E}} &= \frac{1}{\det\prs{A}} \cdot \pmat{\det\prs{A_1} \\ \det\prs{A_2} \\ \det\prs{A_3}}
+\end{align*}
+כעת
+\begin{align*}
+\det\prs{A} &= \det \pmat{2 & 0 & 0 \\ 2 & 2 & 0 \\ 1 & 1 & 2} = 8 \\
+\det\prs{A_1} &= \det\pmat{1 & 0 & 0 \\ 1 & 2 & 0 \\ 1 & 1 & 2} = 4 \\
+\det\prs{A_2} &= \det\pmat{2 & 1 & 0 \\ 2 & 1 & 0 \\ 1 & 1 & 2} = 0 \\
+\det\prs{A_3} &= \det\pmat{2 & 0 & 1 \\ 2 & 2 & 1 \\ 1 & 1 & 1} = 2 \det\pmat{2 & 1 \\ 1 & 1} + 1 \cancelto{0}{\det\pmat{2 & 2 \\ 1 & 1}}
+\\&= 2 \prs{2 - 1}
+\\&= 2
+\end{align*}
+כאשר שתי הדטרמיננטות הראשונות הן מכפלות איברי האלכסון כדטרמיננטות של מטריצות משולשות עליונות, והדטרמיננטה של
+$A_2$
+היא
+$0$
+כי יש שתי שורות שוות, ולכן השורות תלויות לינארית.
+
+נקבל בסך הכל כי
+\[ \brs{p}_{\mcal{E}} = \frac{1}{8} \pmat{4 \\ 0 \\ 2} = \pmat{1/2 \\ 0 \\ 1/4} \]
+ולכן
+\begin{align*}
+\text{.} p\prs{x} = \frac{1}{2} \cdot x^2 + 0 \cdot x + \frac{1}{4} \cdot 1 = \frac{x^2}{2} + \frac{1}{4}
+\end{align*}
+
+נשים לב כי אכן
+\begin{align*}
+T\prs{p} &= p\prs{x} + p\prs{x+1} = \frac{x^2}{2} + \frac{1}{4} + \frac{\prs{x+1}^2}{2} + \frac{1}{4}
+\\&= \frac{x^2}{2} + \frac{1}{2} + \frac{x^2 + 2x + 1}{2}
+\\&= x^2 + x + 1
+\\&= q\prs{x}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\RR}$
+הפיכה עם מקדמים שלמים
+ויהי
+$b \in \RR^n$
+וקטור עם מקדמים שלמים.
+קבעו האם לפתרון המשוואה
+$Ax = b$
+יש מקדמים שלמים במקרים הבאים. הוכיחו או הפריכו את טענתכן.
+
+\begin{enumerate}
+\item $\det\prs{A} = 1$.
+\item $\det\prs{A} = 2$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+ראשית, ניזכר כי לפי כלל קרמר, פתרון המשוואה
+$x$
+מתקבל על ידי
+\begin{align*}
+\forall i \in [n]: x_i = \frac{\det\prs{A_i}}{\det\prs{A}}
+\end{align*}
+ונשים לב כי
+$\det\prs{A_i} \in \ZZ$
+כיוון שמקדמי
+$A_i$
+שלמים, והדטרמיננטה היא סכום של מכפלות של המקדמים. נעבור לדון בשני המקרים.
+
+\begin{enumerate}
+\item
+במקרה בו
+$\det\prs{A} = 1$,
+נקבל כי
+$x_i = \det\prs{A_i} \in \ZZ$
+לכל
+$i \in [n]$,
+ולכן הוקטור
+$x$
+בעל מקדמים שלמים.
+
+\item
+במקרה בו
+$\det\prs{A} = 2$,
+אלא אם כל הדטרמיננטות
+$\det\prs{A_i}$
+מתחלקות ב־%
+$2$,
+לא כל מקדמי
+$x$
+יהיו שלמים. נמצא דוגמה נגדית.
+
+תהי
+$A = \pmat{1 & 1 \\ 2 & 4} \in \Mat_3\prs{\RR}$,
+שמקדמיה אכן שלמים, ויהי
+$b = \pmat{1 \\ 1} \in \RR^2$
+שאכן מקדמיו שלמים.
+נשים לב שגם אכן מתקיים
+\begin{align*}
+\text{.} \det\prs{A} = 1 \cdot 4 - 1 \cdot 2 = 4 - 2 = 2
+\end{align*}
+
+לפי כלל קרמר, פתרון
+$Ax = b$
+מתקבל על ידי
+\begin{align*}
+x_1 &= \frac{\det\pmat{1 & 1 \\ 1 & 4}}{\det\prs{A}} = \frac{4 - 1}{2} = \frac{3}{2} \notin \ZZ \\
+x_2 &= \frac{\det\pmat{1 & 1 \\ 2 & 1}}{\det\prs{A}} = \frac{1 \cdot 1 - 1 \cdot 2}{2} = - \frac{1}{2} \notin \ZZ
+\end{align*}
+ולכן מקדמי
+$x$
+אינם כולם שלמים (ובעצם, אף אחד מהם אינו שלם).
+
+יכולנו בעצם לבנות דוגמה בלי לנחש מקדמים. למשל, כדי למצוא
+$A = \pmat{\vert & \vert \\ v_1 & v_2 \\ \vert & \vert} \in \Mat_2\prs{\RR}$
+עבורה מקדמי הפתרון למערכת
+$Ax = \pmat{1 \\ 1}$
+אינם שלמים, נרצה
+$x_1, x_2 \in \RR$
+שאינם שלמים
+עבורם
+$x_1 v_1 + x_2 v_2 = \pmat{1 \\ 1}$.
+נבחר למשל
+$x_1 = x_2 = \frac{1}{2}$
+ונקבל כי
+$\frac{1}{2} \prs{v_1 + v_2} = \pmat{1 \\ 1}$
+ואז
+$v_1 + v_2 = \pmat{2 \\ 2}$.
+נקבל כי אם
+$A = \pmat{a & b \\ c & d}$,
+מתקיים
+\begin{align*}
+2 &= \det\prs{A} = ad - bc \\
+2 &= a + b \\
+2 &= c + d
+\end{align*}
+ומכאן
+\begin{align*}
+b &= 2 - a \\
+d &= 2 - c
+\end{align*}
+ואז
+\begin{align*}
+2 &= \det\prs{A}
+\\&= a \prs{2-c} - \prs{2-a}c
+\\&= 2a - ac - 2c + ac
+\\&= 2a - 2c
+\end{align*}
+ולכן
+$a-c = 1$.
+נבחר למשל
+$c = 1, a = 2$
+ונקבל
+$b = 2 - 2 = 0, d = 2 - 1 = 1$
+כלומר
+$A = \pmat{2 & 0 \\ 1 & 1}$
+שמקדמיה אכן שלמים, והדטרמיננטה שלה אכן שווה
+$2$
+כמכפלת איברי האלכסון של מטריצה משולשת תחתונה.
+אכן מתקיים
+$A \pmat{1/2 \\ 1/2} = \pmat{1 \\ 1}$,
+ולכן זאת דוגמה נגדית לסעיף.
+\end{enumerate}
+\end{solution}
+
+\section{המטריצה המצורפת}
+
+\subsection{מוטיבציה}
+
+ניזכר כי כלל קרמר אומר שהפתרון של המערכת
+$Ax = b$
+עבור
+$A \in \Mat_n\prs{\FF}$
+הפיכה
+ועבור
+$b \in \FF^n$
+מתקבל על ידי
+\[\text{.} \forall i \in [n]: x_i = \frac{\det\prs{A_i}}{\det\prs{A}}\]
+אם
+$b = \pmat{b_1 \\ \vdots \\ b_n}$
+עבור
+$b_1, \ldots, b_n \in \FF$,
+מתקיים לפי פיתוח דטרמיננטה לפי עמודה כי
+\begin{align*}
+\det\prs{A_i} &= b_1 \det\prs{A_{\prs{1,i}}} + \ldots + b_n \det\prs{A_{\prs{n,i}}}
+\\&= \sum_{j \in [n]} b_j \det\prs{A_{\prs{j,i}}}
+\\&= \pmat{\det\prs{A_{\prs{1,i}}} & \cdots & \det\prs{A_{\prs{n,i}}}} b
+\end{align*}
+לכן אם נגדיר מטריצה
+$\adj\prs{A} \in \Mat_n\prs{\FF}$
+שמקיימת
+$\prs{\adj\prs{A}}_{i,j} = \det\prs{A_{\prs{j,i}}}$
+לכל
+$i,j \in [n]$,
+נקבל כי
+\[\adj\prs{A} b = \pmat{\det\prs{A_1} \\ \vdots \\ \det\prs{A_n}} = \det\prs{A} x\]
+כאשר
+$x$
+הפתרון היחיד של המערכת
+$Ax = b$.
+נכתוב במקום זאת
+$x = A^{-1} b$
+ונקבל כי
+$\adj\prs{A} b = \det\prs{A} A^{-1} b$.
+כיוון שלא נעזרנו ב־%
+$b$
+בבניית
+$\adj\prs{A}$,
+המשוואה הזאת מתקיימת לכל
+$b \in \FF^n$,
+ולכן
+$\adj\prs{A} = \det\prs{A} A^{-1}$.
+אם נרצה לכתוב זאת אחרת, נכפול ב־%
+$A$
+מימין ונקבל
+$\adj\prs{A} A = \det\prs{A}$.
+
+\begin{definition}
+תהי
+$A \in \Mat_n\prs{\FF}$.
+נגדיר
+$\adj\prs{A} \in \Mat_n\prs{\FF}$
+על ידי
+\[\text{.} \forall i,j \in [n]: \prs{\adj\prs{A}}_{i,j} = \det\prs{A_{\prs{j,i}}}\]
+\end{definition}
+
+\begin{proposition}
+לכל
+$A \in \Mat_n\prs{\FF}$
+הפיכה מתקיים
+\[\adj\prs{A} = \det\prs{A} A^{-1}\]
+ובאופן שקול
+\[\text{.} \adj\prs{A} A = A \adj\prs{A} = \det\prs{A} I\]
+\end{proposition}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+תהי
+\begin{align*}
+T \colon \Mat_2\prs{\CC} &\to \Mat_2\prs{\CC} \\
+A &\mapsto i A + A^t
+\end{align*}
+מיצאו בעזרת המטריצה המצורפת את
+$T^{-1}$.
+\end{exercisechap}
+
+\begin{solution}
+יהי
+$\mcal{E} = \prs{E_{1,1}, E_{1,2}, E_{2,1}, E_{2,2}}$
+בסיס של
+$V \coloneqq \Mat_2\prs{\CC}$
+ונסמן
+\begin{align*}
+\text{.} A \coloneqq \brs{T}_{\mcal{E}} =
+\pmat{
+	1 + i & 0 & 0 & 0
+	\\
+	0 & i & 1 & 0
+	\\
+	0 & 1 & i & 0 \\
+	0 & 0 & 0 & 1 + i
+}
+\end{align*}
+אז לפי הטענה על המטריצה המשוכלפת מתקיים
+\begin{align*}
+\text{.} A^{-1} = \frac{\adj\prs{A}}{\det\prs{A}}
+\end{align*}
+נחשב את
+$\adj\prs{A}, \det\prs{A}$
+ונקבל מכך את
+$A^{-1}$.
+מתקיים
+\begin{align*}
+\det\prs{A} &= \prs{1+i}^2 \det\pmat{i & 1 \\ 1 & i}
+\\&= \prs{1+i}^2 \prs{i^2 - 1^2}
+\\&= \prs{1^2 + 2i + i^2} \prs{-2}
+\\&= 2i \cdot \prs{-2}
+\\ \text{.} \phantom{\det\prs{A}} &= -4i
+\end{align*}
+לכל
+$j \neq 1$
+מתקיים
+$\det\prs{A_{\prs{1,j}}} = 0$
+כי העמודה הראשונה של
+$A_{\prs{1,j}}$
+היא עמודת אפסים.
+באותו אופן
+$\det\prs{A_{\prs{i,1}}} = 0$
+לכל
+$i \neq 1$
+כי אז השורה הראשונה במטריצה היא שורת אפסים.
+מתקיים
+\begin{align*}
+\text{.} \det\prs{A_{1,1}} &= \det\pmat{i & 1 & 0 \\ 1 & i & 0 \\ 0 & 0 & 1+i}
+\\&= \prs{i^2 - 1} \prs{1+i}
+\\&= -2 - 2i
+\end{align*}
+באותו אופן,
+$\det\prs{A_{\prs{4,j}}} = 0$
+לכל
+$j \neq 4$
+וגם
+$\det\prs{A_{\prs{i,4}}} = 0$
+לכל
+$i = 4$,
+וכן
+\begin{align*}
+\text{.} \det\prs{A_{4,4}} &= \det\pmat{1+i & 0 & 0 \\ 0 & 1 & i \\ 0 & i & 1}
+\\&= \prs{1+i} \prs{i^2 - 1}
+\\&= -2 - 2i
+\end{align*}
+לכן
+\begin{align*}
+\adj\prs{A} &= \pmat{-2-2i & 0 & 0 \\ 0 & X & 0 \\ 0 & 0 & -2-2i}
+\end{align*}
+עבור מטריצה
+$X \in \Mat_2\prs{\CC}$.
+
+נחשב את שאר המקדמים.
+\begin{align*}
+\det\prs{A_{\prs{2,2}}} &= \det\pmat{1+i & 0 & 0 \\ 0 & i & 0 \\ 0 & 0 & 1+i}
+\\&= \prs{1+i}^2 i \\&= 2i^2 \\&= -2 \\
+\det\prs{A_{\prs{2,3}}} &= \det\pmat{1+i & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1+i}
+\\&=
+\prs{1+i}^2 \\&= 2i \\
+\det\prs{A_{\prs{3,2}}} &= \det\pmat{1+i & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1+i}
+\\&= \prs{1+i}^2
+\\&= 2i \\
+\det\prs{A_{\prs{3,3}}} &= \det\pmat{1+i & 0 & 0 \\ 0 & i & 0 \\ 0 & 0 & 1+i}
+\\&=
+\prs{1+i}^2 i
+\\&= 2i \cdot i
+\\&= -2
+\end{align*}
+לכן
+\begin{align*}
+\adj\prs{A} &= \pmat{
+	-2-2i & 0 & 0 & 0 \\
+	0 & -2 & -2i & 0 \\
+	0 & -2i & -2 & 0 \\
+	0 & 0 & 0 & -2-2i
+}
+\end{align*}
+ולכן
+\[\text{.} A^{-1} = \frac{1}{\det\prs{A}} \adj\prs{A} = \frac{1}{-4i} \pmat{
+	-2-2i & 0 & 0 & 0 \\
+	0 & -2 & -2i & 0 \\
+	0 & -2i & -2 & 0 \\
+	0 & 0 & 0 & -2-2i
+}\]
+
+אז, לכל
+$a,b,c,d \in \CC$,
+\begin{align*}
+\text{.} T^{-1}\pmat{a & b \\ c & d} &= - \frac{1}{4i} \pmat{\prs{-2-2i}a & -2b - 2ic \\ - 2ib - 2c & \prs{-2-2i}d}
+\end{align*}
+ואז נוכל לשים לב שלכל
+$X \in \Mat_2\prs{\CC}$
+מתקיים
+\[\text{.} T^{-1}\prs{X} = \frac{X + iX^t}{2i}\]
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\RR}$
+הפיכה עם מקדמים שלמים.
+הוכיחו כי למטריצה
+$A^{-1}$
+מקדמים שלמים אם ורק אם
+$\det\prs{A} \in \set{\pm 1}$.
+מטריצה המקיימת זאת נקראת
+\emph{אונימודולרית}.
+\end{exercisechap}
+
+\begin{solution}
+\begin{itemize}
+\item אם למטריצה
+$A^{-1}$
+מקדמים שלמים, מתקיים כי
+$\det\prs{A}, \det\prs{A^{-1}} \in \ZZ$,
+אבל אז
+$\det\prs{A^{-1}} = \frac{1}{\det\prs{A}} \in \ZZ$
+ולכן
+$\det\prs{A}$
+הינו מספר שלם שההופכי שלו גם הוא שלם, כלומר
+$1$
+או
+$-1$.
+
+\item נניח כי
+$\det\prs{A} \in \set{\pm 1}$.
+מתקיים
+\begin{align*}
+A^{-1} = \frac{1}{\det\prs{A}} \adj\prs{A}
+\end{align*}
+ולכן
+\[\text{.} A^{-1} \in \set{\adj\prs{A}, -\adj\prs{A}}\]
+אבל, מקדמי
+$\adj\prs{A}$
+הם סכומים של מכפלות של מקדמים של
+$A$,
+שהינם מספרים שלמים, ולכן גם מקדמי
+$\adj\prs{A}$
+שלמים, ואז גם מקדמי
+$A^{-1}$.
+\end{itemize}
+\end{solution}
+
+\begin{exercisechap}
+
+\end{exercisechap}
+
 \printbibliography
 \end{document}

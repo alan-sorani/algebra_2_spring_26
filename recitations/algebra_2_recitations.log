@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  20 APR 2026 13:28
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  10 MAY 2026 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1971,31 +1971,40 @@ ut line 273.
 פרק 2.
 [7
 
-] [8] [9] [10] [11] [12] [13]
+] [8] [9] [10] [11] [12] [13] [14]
+File: images/cramer.png Graphic file (type bmp)
+<images/cramer.png>
+ [15] [16]
+Overfull \hbox (3.59714pt too wide) in paragraph at lines 1406--1412
+[]\TU/Calibri(0)/m/n/10 כאשר שתי הדטרמיננטות הראשונות הן מכפלות איברי האלכסון כ
+דטרמיננטות של מטריצות משולשות עליונות, והדטרמיננטה[]
+ []
 
-LaTeX Warning: Empty bibliography on input line 1232.
+[17] [18] [19] [20]
+
+LaTeX Warning: Empty bibliography on input line 1800.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
 
-[14] (algebra_2_recitations.aux)
+[21] (algebra_2_recitations.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: A2B8770E18500BE876FB44A2330A9AF5;1515.
+(rerunfilecheck)             Checksum: 2CC2B4DD75149C00FEDBADBAF2E01B02;2296.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44126 strings out of 402983
- 928758 string characters out of 5448068
- 1998309 words of memory out of 5000000
- 72145 multiletter control sequences out of 15000+600000
+ 44160 strings out of 402983
+ 929461 string characters out of 5448068
+ 1999347 words of memory out of 5000000
+ 72178 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,19n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (16 pages).
+Output written on algebra_2_recitations.pdf (23 pages).

@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  23 APR 2026 09:53
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  10 MAY 2026 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./hw2.tex
-(hw2.tex
+**./hw3.tex
+(hw3.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1495,72 +1495,131 @@ Package caption Info: New subtype `subfigure' on input line 238.
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count579
 )
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-04-15 v3.5.4 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count580
+\l__siunitx_number_exponent_fixed_int=\count581
+\l__siunitx_number_min_decimal_int=\count582
+\l__siunitx_number_min_integer_int=\count583
+\l__siunitx_number_round_precision_int=\count584
+\l__siunitx_number_lower_threshold_int=\count585
+\l__siunitx_number_upper_threshold_int=\count586
+\l__siunitx_number_group_first_int=\count587
+\l__siunitx_number_group_size_int=\count588
+\l__siunitx_number_group_min_int=\count589
+\l__siunitx_number_group_minimum_int=\count590
+\l__siunitx_compound_count_int=\count591
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/translations\translat
+ions.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box92
+\l__siunitx_table_tmp_dim=\dimen328
+\l__siunitx_table_column_width_dim=\dimen329
+\l__siunitx_table_integer_box=\box93
+\l__siunitx_table_decimal_box=\box94
+\l__siunitx_table_uncert_box=\box95
+\l__siunitx_table_before_box=\box96
+\l__siunitx_table_after_box=\box97
+\l__siunitx_table_before_dim=\dimen330
+\l__siunitx_table_carry_dim=\dimen331
+\l__siunitx_unit_tmp_int=\count592
+\l__siunitx_unit_position_int=\count593
+\l__siunitx_unit_total_int=\count594
+\l__siunitx_sexagesimal_tmp_dim=\dimen332
+\l__siunitx_sexagesimal_marker_box=\box98
+\l__siunitx_sexagesimal_unit_box=\box99
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen333
+\ar@mcellbox=\box100
+\extrarowheight=\dimen334
+\NC@list=\toks69
+\extratabsurround=\skip84
+\backup@length=\skip85
+\ar@cellbox=\box101
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\array-xetex-bidi
+.def
+File: array-xetex-bidi.def 2025/12/06 v0.8 bidi adaptations for array package f
+or XeTeX engine
+))
+
+Package siunitx Info: Option "group-digits = false" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "group-digits = none" as a replacement.
+
+
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count580
+\lrq@indent=\count595
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count581
-\c@listtotal=\count582
-\c@listcount=\count583
-\c@liststart=\count584
-\c@liststop=\count585
-\c@citecount=\count586
-\c@citetotal=\count587
-\c@multicitecount=\count588
-\c@multicitetotal=\count589
-\c@instcount=\count590
-\c@maxnames=\count591
-\c@minnames=\count592
-\c@maxitems=\count593
-\c@minitems=\count594
-\c@citecounter=\count595
-\c@maxcitecounter=\count596
-\c@savedcitecounter=\count597
-\c@uniquelist=\count598
-\c@uniquename=\count599
-\c@refsection=\count600
-\c@refsegment=\count601
-\c@maxextratitle=\count602
-\c@maxextratitleyear=\count603
-\c@maxextraname=\count604
-\c@maxextradate=\count605
-\c@maxextraalpha=\count606
-\c@abbrvpenalty=\count607
-\c@highnamepenalty=\count608
-\c@lownamepenalty=\count609
-\c@maxparens=\count610
-\c@parenlevel=\count611
-\blx@tempcnta=\count612
-\blx@tempcntb=\count613
-\blx@tempcntc=\count614
-\c@blx@maxsection=\count615
-\blx@maxsegment@0=\count616
-\blx@notetype=\count617
-\blx@parenlevel@text=\count618
-\blx@parenlevel@foot=\count619
-\blx@sectionciteorder@0=\count620
-\blx@sectionciteorderinternal@0=\count621
-\blx@entrysetcounter=\count622
-\blx@biblioinstance=\count623
-\labelnumberwidth=\skip84
-\labelalphawidth=\skip85
-\biblabelsep=\skip86
-\bibitemsep=\skip87
-\bibnamesep=\skip88
-\bibinitsep=\skip89
-\bibparsep=\skip90
-\bibhang=\skip91
+\c@tabx@nest=\count596
+\c@listtotal=\count597
+\c@listcount=\count598
+\c@liststart=\count599
+\c@liststop=\count600
+\c@citecount=\count601
+\c@citetotal=\count602
+\c@multicitecount=\count603
+\c@multicitetotal=\count604
+\c@instcount=\count605
+\c@maxnames=\count606
+\c@minnames=\count607
+\c@maxitems=\count608
+\c@minitems=\count609
+\c@citecounter=\count610
+\c@maxcitecounter=\count611
+\c@savedcitecounter=\count612
+\c@uniquelist=\count613
+\c@uniquename=\count614
+\c@refsection=\count615
+\c@refsegment=\count616
+\c@maxextratitle=\count617
+\c@maxextratitleyear=\count618
+\c@maxextraname=\count619
+\c@maxextradate=\count620
+\c@maxextraalpha=\count621
+\c@abbrvpenalty=\count622
+\c@highnamepenalty=\count623
+\c@lownamepenalty=\count624
+\c@maxparens=\count625
+\c@parenlevel=\count626
+\blx@tempcnta=\count627
+\blx@tempcntb=\count628
+\blx@tempcntc=\count629
+\c@blx@maxsection=\count630
+\blx@maxsegment@0=\count631
+\blx@notetype=\count632
+\blx@parenlevel@text=\count633
+\blx@parenlevel@foot=\count634
+\blx@sectionciteorder@0=\count635
+\blx@sectionciteorderinternal@0=\count636
+\blx@entrysetcounter=\count637
+\blx@biblioinstance=\count638
+\labelnumberwidth=\skip86
+\labelalphawidth=\skip87
+\biblabelsep=\skip88
+\bibitemsep=\skip89
+\bibnamesep=\skip90
+\bibinitsep=\skip91
+\bibparsep=\skip92
+\bibhang=\skip93
 \blx@bcfin=\read3
 \blx@bcfout=\write5
 \blx@langwohyphens=\language79
-\c@mincomprange=\count624
-\c@maxcomprange=\count625
-\c@mincompwidth=\count626
+\c@mincomprange=\count639
+\c@maxcomprange=\count640
+\c@mincompwidth=\count641
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1571,88 +1630,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count627
-\c@savedafterword=\count628
-\c@annotator=\count629
-\c@savedannotator=\count630
-\c@author=\count631
-\c@savedauthor=\count632
-\c@bookauthor=\count633
-\c@savedbookauthor=\count634
-\c@commentator=\count635
-\c@savedcommentator=\count636
-\c@editor=\count637
-\c@savededitor=\count638
-\c@editora=\count639
-\c@savededitora=\count640
-\c@editorb=\count641
-\c@savededitorb=\count642
-\c@editorc=\count643
-\c@savededitorc=\count644
-\c@foreword=\count645
-\c@savedforeword=\count646
-\c@holder=\count647
-\c@savedholder=\count648
-\c@introduction=\count649
-\c@savedintroduction=\count650
-\c@namea=\count651
-\c@savednamea=\count652
-\c@nameb=\count653
-\c@savednameb=\count654
-\c@namec=\count655
-\c@savednamec=\count656
-\c@translator=\count657
-\c@savedtranslator=\count658
-\c@shortauthor=\count659
-\c@savedshortauthor=\count660
-\c@shorteditor=\count661
-\c@savedshorteditor=\count662
-\c@labelname=\count663
-\c@savedlabelname=\count664
-\c@institution=\count665
-\c@savedinstitution=\count666
-\c@lista=\count667
-\c@savedlista=\count668
-\c@listb=\count669
-\c@savedlistb=\count670
-\c@listc=\count671
-\c@savedlistc=\count672
-\c@listd=\count673
-\c@savedlistd=\count674
-\c@liste=\count675
-\c@savedliste=\count676
-\c@listf=\count677
-\c@savedlistf=\count678
-\c@location=\count679
-\c@savedlocation=\count680
-\c@organization=\count681
-\c@savedorganization=\count682
-\c@origlocation=\count683
-\c@savedoriglocation=\count684
-\c@origpublisher=\count685
-\c@savedorigpublisher=\count686
-\c@publisher=\count687
-\c@savedpublisher=\count688
-\c@language=\count689
-\c@savedlanguage=\count690
-\c@origlanguage=\count691
-\c@savedoriglanguage=\count692
-\c@pageref=\count693
-\c@savedpageref=\count694
-\shorthandwidth=\skip92
-\shortjournalwidth=\skip93
-\shortserieswidth=\skip94
-\shorttitlewidth=\skip95
-\shortauthorwidth=\skip96
-\shorteditorwidth=\skip97
-\locallabelnumberwidth=\skip98
-\locallabelalphawidth=\skip99
-\localshorthandwidth=\skip100
-\localshortjournalwidth=\skip101
-\localshortserieswidth=\skip102
-\localshorttitlewidth=\skip103
-\localshortauthorwidth=\skip104
-\localshorteditorwidth=\skip105
+\c@afterword=\count642
+\c@savedafterword=\count643
+\c@annotator=\count644
+\c@savedannotator=\count645
+\c@author=\count646
+\c@savedauthor=\count647
+\c@bookauthor=\count648
+\c@savedbookauthor=\count649
+\c@commentator=\count650
+\c@savedcommentator=\count651
+\c@editor=\count652
+\c@savededitor=\count653
+\c@editora=\count654
+\c@savededitora=\count655
+\c@editorb=\count656
+\c@savededitorb=\count657
+\c@editorc=\count658
+\c@savededitorc=\count659
+\c@foreword=\count660
+\c@savedforeword=\count661
+\c@holder=\count662
+\c@savedholder=\count663
+\c@introduction=\count664
+\c@savedintroduction=\count665
+\c@namea=\count666
+\c@savednamea=\count667
+\c@nameb=\count668
+\c@savednameb=\count669
+\c@namec=\count670
+\c@savednamec=\count671
+\c@translator=\count672
+\c@savedtranslator=\count673
+\c@shortauthor=\count674
+\c@savedshortauthor=\count675
+\c@shorteditor=\count676
+\c@savedshorteditor=\count677
+\c@labelname=\count678
+\c@savedlabelname=\count679
+\c@institution=\count680
+\c@savedinstitution=\count681
+\c@lista=\count682
+\c@savedlista=\count683
+\c@listb=\count684
+\c@savedlistb=\count685
+\c@listc=\count686
+\c@savedlistc=\count687
+\c@listd=\count688
+\c@savedlistd=\count689
+\c@liste=\count690
+\c@savedliste=\count691
+\c@listf=\count692
+\c@savedlistf=\count693
+\c@location=\count694
+\c@savedlocation=\count695
+\c@organization=\count696
+\c@savedorganization=\count697
+\c@origlocation=\count698
+\c@savedoriglocation=\count699
+\c@origpublisher=\count700
+\c@savedorigpublisher=\count701
+\c@publisher=\count702
+\c@savedpublisher=\count703
+\c@language=\count704
+\c@savedlanguage=\count705
+\c@origlanguage=\count706
+\c@savedoriglanguage=\count707
+\c@pageref=\count708
+\c@savedpageref=\count709
+\shorthandwidth=\skip94
+\shortjournalwidth=\skip95
+\shortserieswidth=\skip96
+\shorttitlewidth=\skip97
+\shortauthorwidth=\skip98
+\shorteditorwidth=\skip99
+\locallabelnumberwidth=\skip100
+\locallabelalphawidth=\skip101
+\localshorthandwidth=\skip102
+\localshortjournalwidth=\skip103
+\localshortserieswidth=\skip104
+\localshorttitlewidth=\skip105
+\localshortauthorwidth=\skip106
+\localshorteditorwidth=\skip107
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1670,19 +1729,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count695
-\c@textcitetotal=\count696
-\c@textcitemaxnames=\count697
-\c@biburlbigbreakpenalty=\count698
-\c@biburlbreakpenalty=\count699
-\c@biburlnumpenalty=\count700
-\c@biburlucpenalty=\count701
-\c@biburllcpenalty=\count702
+\c@textcitecount=\count710
+\c@textcitetotal=\count711
+\c@textcitemaxnames=\count712
+\c@biburlbigbreakpenalty=\count713
+\c@biburlbreakpenalty=\count714
+\c@biburlnumpenalty=\count715
+\c@biburlucpenalty=\count716
+\c@biburllcpenalty=\count717
 \biburlbigskip=\muskip22
 \biburlnumskip=\muskip23
 \biburlucskip=\muskip24
 \biburllcskip=\muskip25
-\c@smartand=\count703
+\c@smartand=\count718
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1696,8 +1755,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard
 .bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count704
-\c@bbx:relatedtotal=\count705
+\c@bbx:relatedcount=\count719
+\c@bbx:relatedtotal=\count720
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1738,29 +1797,29 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 LaTeX Warning: Unused global option(s):
     [openany].
 
-(hw2.aux)
-\openout1 = `hw2.aux'.
+(hw3.aux)
+\openout1 = `hw3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1799,10 +1858,10 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 42.
-(hw2.out) (hw2.out)
+Package hyperref Info: Link coloring ON on input line 47.
+(hw3.out) (hw3.out)
 \@outlinefile=\write6
-\openout6 = `hw2.out'.
+\openout6 = `hw3.out'.
 
 
 Package fontspec Info: 
@@ -1811,56 +1870,66 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 42.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 42.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 42.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 42.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 42.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 42.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 42.
-LaTeX Font Info:    Redeclaring math accent \check on input line 42.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 42.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 42.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 42.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 42.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 42.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 47.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 47.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 47.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 47.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 47.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 47.
+LaTeX Font Info:    Redeclaring math accent \check on input line 47.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 47.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 47.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 47.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 42.
+(Font)              `operators' in the math version `normal' on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 42.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 42.
+(Font)              `operators' in the math version `bold' on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 42.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 42.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 42.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 42.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 42.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 42.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 42.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 42.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 42.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 47.
+Package translations Info: no dictionary file `translations-basic-dictionary-he
+brew.trsl' found. on input line 47.
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tr
+anslations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 47.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1886,31 +1955,31 @@ Package biblatex Info: ... file 'hebrew.lbx' not found.
 
 
 Package biblatex Warning: Language 'hebrew' not supported.
-(biblatex)                Using dummy definitions on input line 42.
+(biblatex)                Using dummy definitions on input line 47.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `hw2.bcf'.
+\openout5 = `hw3.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'hw2.bbl' not found.
-No file hw2.bbl.
-Package biblatex Info: Reference section=0 on input line 42.
-Package biblatex Info: Reference segment=0 on input line 42.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+Package biblatex Info: ... file 'hw3.bbl' not found.
+No file hw3.bbl.
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 44
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49
 .
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1920,31 +1989,30 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 LaTeX Warning: No \author given.
 
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 46.
-Excluding 'comment' comment. [1
-
-]
+ut line 51.
 \tf@thm=\write7
-\openout7 = `hw2.thm'.
+\openout7 = `hw3.thm'.
 
- [2] (hw2.aux)
+[1
+
+] (hw3.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `hw2.out' has not changed.
+Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'hw2.run.xml'.
-\openout1 = `hw2.run.xml'.
+Package logreq Info: Writing requests to 'hw3.run.xml'.
+\openout1 = `hw3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43285 strings out of 402983
- 913535 string characters out of 5448068
- 1970965 words of memory out of 5000000
- 71343 multiletter control sequences out of 15000+600000
- 635622 words of font info for 99 fonts, out of 8000000 for 9000
+ 47306 strings out of 402983
+ 1040304 string characters out of 5448068
+ 2059067 words of memory out of 5000000
+ 75347 multiletter control sequences out of 15000+600000
+ 635638 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,19n,121p,1215b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,13n,121p,1215b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hw2.pdf (2 pages).
+Output written on hw3.pdf (1 page).
