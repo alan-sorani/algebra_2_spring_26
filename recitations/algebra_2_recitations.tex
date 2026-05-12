@@ -1572,14 +1572,14 @@ $b = \pmat{b_1 \\ \vdots \\ b_n}$
 $b_1, \ldots, b_n \in \FF$,
 מתקיים לפי פיתוח דטרמיננטה לפי עמודה כי
 \begin{align*}
-\det\prs{A_i} &= b_1 \det\prs{A_{\prs{1,i}}} + \ldots + b_n \det\prs{A_{\prs{n,i}}}
-\\&= \sum_{j \in [n]} b_j \det\prs{A_{\prs{j,i}}}
-\\&= \pmat{\det\prs{A_{\prs{1,i}}} & \cdots & \det\prs{A_{\prs{n,i}}}} b
+\det\prs{A_i} &= \prs{-1}^{i+1} b_1 \det\prs{A_{\prs{1,i}}} + \ldots + \prs{-1}^{i+n} b_n \det\prs{A_{\prs{n,i}}}
+\\&= \sum_{j \in [n]} \prs{-1}^{i+j} b_j \det\prs{A_{\prs{j,i}}}
+\\&= \pmat{\prs{-1}^{i+1} \det\prs{A_{\prs{1,i}}} & \cdots & \prs{-1}^{i+n} \det\prs{A_{\prs{n,i}}}} b
 \end{align*}
 לכן אם נגדיר מטריצה
 $\adj\prs{A} \in \Mat_n\prs{\FF}$
 שמקיימת
-$\prs{\adj\prs{A}}_{i,j} = \det\prs{A_{\prs{j,i}}}$
+$\prs{\adj\prs{A}}_{i,j} = \prs{-1}^{i+j} \det\prs{A_{\prs{j,i}}}$
 לכל
 $i,j \in [n]$,
 נקבל כי
@@ -1798,8 +1798,71 @@ $A^{-1}$.
 \end{solution}
 
 \begin{exercisechap}
+הוכיחו או הפריכו את הטענה הבא.
 
+אם
+$A \in \Mat_n\prs{\FF}$
+אלכסונית, גם
+$\adj\prs{A}$
+אלכסונית.
 \end{exercisechap}
+
+\begin{solution}
+נסתכל על דוגמה לצורך כיוון. אם
+$A = \pmat{1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3}$,
+לכל אחת מבין
+$A_{\prs{1,i}}$
+עבור
+$i \neq 1$
+יש עמודת אפסים בתור העמודה הראשונה, ולכן
+$\adj\prs{A}_{i,1} = 0$
+לכל
+$i \neq 1$.
+באותו אופן,
+$\adj\prs{A}_{1,j} = 0$
+לכל
+$j \neq 1$,
+כיוון שהמקדם הוא דטרמיננטה של מטריצה שהשורה הראשונה שלה היא שורת אפסים.
+
+נעבור למקרה הכללי. אם
+$A$
+אלכסונית, ו־%
+$i,j \in [n]$
+שונים, מתקיים כי
+\[\text{.} \adj\prs{A}_{i,j} = \prs{-1}^{i+j} \det\prs{A_{\prs{i,j}}}\]
+אם
+$j > i$,
+העמודה ה־%
+$i$
+של
+$A_{\prs{i,j}}$
+היא זאת של
+$A$
+בלי המקדם ה-%
+$i,i$
+(כיוון שחיסרנו מ־$A$ רק עמודה שלאחר העמודה ה־%
+$i$).
+אבל,
+$A_{k,i} = 0$
+לכל
+$k \neq i$,
+כיוון ש־%
+$A$
+אלכסונית, ולכן זאת עמודת אפסים.
+אחרת,
+$j < i$
+ואז באותו אופן השורה ה־%
+$j$
+של
+$A_{\prs{i,j}}$
+היא שורת אפסים. בכל מקרה, נקבל כי
+$\adj\prs{A}_{i,j} = 0$
+לכל
+$i,j \in [n]$
+שונים, ולכן
+$\adj\prs{A}$
+אלכסונית.
+\end{solution}
 
 \printbibliography
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  10 MAY 2026 13:23
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  12 MAY 2026 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1982,7 +1982,7 @@ Overfull \hbox (3.59714pt too wide) in paragraph at lines 1406--1412
 
 [17] [18] [19] [20]
 
-LaTeX Warning: Empty bibliography on input line 1800.
+LaTeX Warning: Empty bibliography on input line 1867.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
