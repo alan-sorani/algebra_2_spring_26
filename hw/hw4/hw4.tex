@@ -1,0 +1,130 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 4 \\
+הפולינום האופייני, ולכסינות
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 28.5.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+עבור כל אחת מההעתקות הבאות $T \in \End\prs{V}$, קיבעו האם היא לכסינה. עבור אלו שהינן לכסינות, מיצאו בסיס
+$\mcal{B}$
+של $V$
+ומטריצה אלכסונית
+$D$
+עבורם
+$\brs{T}_\mcal{B} = D$. עבור אלו שאינן לכסינות, הוכיחו את טענתכן.
+
+\begin{enumerate}
+\item
+\begin{align*}
+T \colon \RR^2 &\to \RR^2 \\
+\pmat{x \\ y} &\mapsto \pmat{-y \\ x}
+\end{align*}
+
+\item
+\begin{align*}
+T \colon \CC^2 \to \CC^2 \\
+\pmat{x \\ y} &\mapsto \pmat{-y \\ x}
+\end{align*}
+
+\item
+\begin{align*}
+T \colon \Mat_2\prs{\RR} &\to \Mat_2\prs{\RR} \\
+A &\mapsto A^t
+\end{align*}
+
+\item
+\begin{align*}
+T \colon \CC_2\brs{x} &\to \CC_2\brs{x} \\
+p\prs{x} &\mapsto p'\prs{x}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+תהי
+$A \in \Mat_n\prs{\FF}$
+עם פולינום אופייני
+\begin{align*}
+\text{.} p_A\prs{x} = \sum_{i=0}^n a_i x^i
+\end{align*}
+הוכיחו כי
+$a_{n-1} = -\tr\prs{A}$.
+\end{exercise}
+
+\begin{exercise}
+יהי
+$T \in \End_{\FF}\prs{V}$
+אופרטור לינארי, ויהי
+$\lambda \in \FF$.
+הוכיחו כי
+\begin{align*}
+\text{.} p_{\lambda T}\prs{x} = \lambda^{\dim_\FF\prs{V}} p_T\prs{\frac{x}{\lambda}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+תהיינה
+$A,B \in \Mat_n\prs{\FF}$.
+הוכיחו או הפריכו את הטענות הבאות. עבור הטענות שאינן נכונות, מיצאו דוגמה נגדית.
+
+\begin{enumerate}
+\item $p_{AB}\prs{x} = p_{A}\prs{x} p_{B}\prs{x}$.
+\item $p_{AB}\prs{x} = p_{BA}\prs{x}$.
+\item $p_{A+B}\prs{x} = p_A\prs{x} + p_B\prs{x}$.
+\item אם
+$A,B$
+לכסינות, גם
+$AB$
+לכסינה.
+\item אם
+$A,B$
+לכסינות, גם
+$A+B$
+לכסינה.
+\end{enumerate}
+\end{exercise}
+
+\end{document}
