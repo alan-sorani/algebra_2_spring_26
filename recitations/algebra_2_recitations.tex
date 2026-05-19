@@ -1864,5 +1864,626 @@ $\adj\prs{A}$
 אלכסונית.
 \end{solution}
 
+\section{הפולינום האופייני, ולכסינות}
+
+\subsection{הגדרות ותכונות בסיסיות}
+
+\begin{definition}[אופרטור לכסין]
+אופרטור
+$T \in \End\prs{V}$
+נקרא
+\emph{לכסין}
+אם קיים בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+$\brs{T}_{\mcal{B}}$
+מטריצה אלכסונית.
+\end{definition}
+
+נתעניין באלגברה לינארית הרבה באופרטורים לכסינים. יתרון אחד של לכסינות, היא חישוב יעיל של חזקות. אם
+$D = \diag\prs{\lambda_1, \ldots, \lambda_n}$
+מטריצה לכסינה, ו־%
+$\mcal{B}$
+בסיס עבורו
+$\brs{T}_{\mcal{B}} = D$,
+נקבל כי לכל
+$m \in \NN$
+מתקיים
+\[\brs{T^m}_{\mcal{B}} = D^n = \diag\prs{\lambda_1^m, \ldots, \lambda_n^m}\]
+ולכן מצאנו בקלות מטריצה מייצגת של
+$T^m$.
+
+אם נכתוב
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+נשים לב מהגדרת מטריצה מייצגת שמתקיים
+$T\prs{v_i} = \lambda_i v_i$.
+
+\begin{definition}[ערכים ווקטורים עצמיים]
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+נגיד כי
+$\lambda$
+הינו
+\emph{ערך עצמי של
+$T$}
+אם קיים
+$v \in V \setminus \set{0}$
+עבורו
+$T\prs{v} = \lambda v$.
+נקרא לוקטור
+$v$
+כזה
+\emph{וקטור עצמי של
+$T$
+עבור הערך העצמי
+$\lambda$}.
+\end{definition}
+
+נרצה לכמת ערכים עצמיים באופן שיגיד לנו, במקרה של אופרטורים לכסינים, כמה פעמים כל ערך מופיע על האלכסון. נשים לב כי עבור מטריצה לכסינה
+$D = \diag\prs{\lambda_1, \ldots, \lambda_n}$,
+מספר הפעמים ש־%
+$\lambda$
+מופיע על האלכסון, הוא הריבוי שלו כשורש של הפולינום
+\[\text{.} p_D\prs{x} \coloneqq \det\prs{xI - D} = \prs{x - \lambda_1} \cdot \ldots \cdot \prs{x - \lambda_n}\]
+לא כל פולינום יתפרק באופן כזה למכפלה של גורמים לינאריים, אבל נוכל תמיד להגדיר פולינום כזה.
+
+\begin{definition}[פולינום אופייני]
+תהי
+$A \in \Mat_n\prs{\FF}$.
+נגדיר את
+\emph{הפולינום האופייני של
+$A$}
+בתור
+\begin{align*}
+\text{.} p_A\prs{x} = \det\prs{x I - A}
+\end{align*}
+
+נגדיר את
+\emph{הפולינום האופייני}
+של
+$T \in \End_\FF\prs{V}$
+בתור
+$p_T\prs{x} = p_{\brs{T}_{\mcal{B}}}\prs{x}$
+עבור
+$\mcal{B}$
+בסיס של
+$V$.
+\end{definition}
+
+\begin{remark}
+יתכן שבמהלך הקורס לא נציין כל הגדרה או טענה גם עבור אופרטורים וגם עבור מטריצות. הרבה מהטענות ניתן לתרגם בין אופרטורים ומטריצות באופן מיידי, וכאשר לא נציין את התרגום במפורש כדאי לנסות לחשוב עליו לבד.
+\end{remark}
+
+\begin{remark}
+עבור
+$T \in \End_\FF\prs{V}$
+מתקיים
+\[\text{.} p_T\prs{x} = \det\prs{x \id_V - T}\]
+\end{remark}
+
+\begin{proposition}
+הערכים העצמיים של
+$T \in \End_\FF\prs{V}$
+הם שורשי הפולינום האופייני
+$p_T\prs{x}$.
+\end{proposition}
+
+\begin{definition}[ריבוי אלגברי]
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+\emph{הריבוי האלגברי של
+$\lambda$ ביחס ל־%
+$T$}
+הוא הריבוי של
+$\lambda$
+כשורש של
+$p_T\prs{x}$.
+
+נסמנו
+$r_a^T\prs{\lambda}$,
+או כאשר האופרטור ברור מההקשר, לעתים
+$r_a\prs{\lambda}$.
+\end{definition}
+
+נוכל לחשב את מספר הפעמים שמופיע
+$\lambda \in \FF$
+על האלכסון של
+המטריצה
+$D \coloneqq \diag\prs{\lambda_1, \ldots, \lambda_n}$
+באופן נוסף, בתור
+$\dim \ker\prs{\lambda I - D}$,
+כיוון שהמטריצה
+$\lambda I - D$
+היא מטריצה אלכסונית עם מספר אפסים על האלכסון השווה למספר הפעמים שמופיע
+$\lambda$
+על האלכסון של
+$D$.
+
+באופן כללי, הגרעין
+$\ker\prs{\lambda \id_V - T}$
+הוא אוסף כל הוקטורים העצמיים עם הערך העצמי
+$\lambda$,
+יחד עם וקטור האפס.
+
+\begin{definition}[מרחב עצמי]
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+נסמן
+\[V_\lambda^T \coloneqq \ker\prs{\lambda \id_V - T}\]
+ונקרא לו
+\emph{המרחב העצמי של
+$T$
+המתאים לערך העצמי
+$\lambda$}.
+
+כאשר האופרטור ברור מההקשר, נסמן לעתים
+$V_\lambda$
+עבור מרחב זה.
+\end{definition}
+
+\begin{definition}[ריבוי גיאומטרי]
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+
+\emph{הריבוי הגיאומטרי של
+$\lambda$
+כערך עצמי של
+$T$}
+הוא
+\begin{align*}
+\text{.} r^T_g\prs{\lambda} \coloneqq \dim V^T_{\lambda}
+\end{align*}
+כאשר האופרטור ברור מההקשר נסמן לעתים
+$r_g\prs{\lambda}$
+במקום זאת.
+\end{definition}
+
+\begin{proposition}
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+אז
+\[\text{.} r_g^T\prs{\lambda} \leq r_a^T\prs{\lambda}\]
+\end{proposition}
+
+\begin{proposition} \label{proposition:diag-equivalence}
+יהי
+$T \in \End_\FF\prs{V}$.
+התנאים הבאים שקולים.
+
+\begin{enumerate}[label = (\alph*)]
+\item $T$ לכסין.
+\item הפולינום
+$p_T\prs{x}$
+מתפצל כמכפלה של גורמים לינאריים, ולכל ערך עצמי
+$\lambda \in \FF$
+מתקיים
+$r_a\prs{\lambda} = r_g\prs{\lambda}$.
+\item אם הערכים העצמיים השונים של
+$T$
+הם
+$\lambda_1, \ldots, \lambda_k$
+ואם
+$\mcal{B}_1, \ldots, \mcal{B}_k$
+בסיסים של
+$V_{\lambda_1}, \ldots, V_{\lambda_k}$
+בהתאמה, אז
+\[\mcal{B} \coloneqq \bigcup_{i \in [k]} \mcal{B}_i\]
+הוא בסיס של
+$V$.
+\end{enumerate}
+\end{proposition}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+הוכיחו כי המטריצה
+\[A = \pmat{a & b \\ 0 & c} \in \Mat_2\prs{\RR}\]
+הינה לכסינה אם ורק אם
+$b = 0$
+או
+$a \neq c$.
+\end{exercisechap}
+
+\begin{solution}
+ניזכר ראשית שהערכים העצמיים של מטריצה משולשת עליונה הינם איברי האלכסון, וכי הריבוי האלגברי של כל ערך עצמי הוא מספר הפעמים שהוא מופיע על האלכסון. לכן הערכים העצמיים של
+$A$
+הם
+$a,c$
+כאשר אם
+$a = c$,
+זהו ערך עצמי מריבוי אלגברי
+$2$
+ואחרת כל אחד מריבוי אלגברי
+$1$.
+
+נניח כעת כי
+$A$
+לכסינה וכי
+$a=c$,
+ונראה כי
+$b \neq 0$.
+
+$a$
+ערך עצמי מריבוי אלגברי
+$2$.
+הריבוי האלגברי של ערך עצמי במטריצה לכסינה הוא מספר הפעמים שהוא מופיע על האלכסון במטריצה אלכסונית הדומה לה, ולכן
+$A$
+דומה ל־%
+$a I$.
+אבל, המטריצה היחידה הדומה ל־%
+$a I$
+היא עצמה, כיוון שלכל
+$P \in \Mat_2\prs{\RR}$
+הפיכה מתקיים
+\[\text{.} P^{-1} a I P = a P^{-1} I P = a P^{-1} P = a I\]
+לכן
+$A = aI$
+ולכן
+$b = 0$.
+
+נניח בכיוון השני כי
+$a \neq c$
+או
+$b = 0$,
+ונוכיח כי
+$A$
+לכסינה.
+
+אם
+$b = 0$,
+המטריצה
+$A$
+אלכסונית בעצמה, ואין מה להראות. נניח אם כן כי
+$a \neq c$.
+אז
+\begin{align*}
+p_A\prs{x} &= \det\pmat{x - a & -b \\ 0 & x - c}
+\\&= \prs{x-a}\prs{x-c}
+\end{align*}
+מתפצל לגורמים לינאריים ובנוסף
+\begin{align*}
+1 \leq r_g\prs{a} \leq r_a\prs{a} = 1 \\
+1 \leq r_g\prs{c} \leq r_a\prs{c} = 1
+\end{align*}
+ולכן
+$r_g\prs{a} = r_a\prs{a} = 1$
+וכן
+$r_g\prs{c} = r_a\prs{c} = 1$.
+לכן מטענה
+\ref{proposition:diag-equivalence}
+המטריצה
+$A$
+לכסינה.
+\end{solution}
+
+\begin{exercisechap}
+נסתכל על מטריצת הסיבוב הבאה, התלויה בפרמטר
+$\theta \in \RR$.
+
+\begin{align*}
+\text{.} \rho_\theta \coloneqq \pmat{\cos\prs{\theta} & -\sin\prs{\theta} \\ \sin\prs{\theta} & \cos\prs{\theta}} \in \Mat_2\prs{\RR}
+\end{align*}
+
+\begin{enumerate}
+\item קיבעו עבור אילו ערכי
+$\theta$
+המטריצה
+$\rho_\theta$
+לכסינה. עבור הערכים שעבורם היא לכסינה, מיצאו מטריצה
+$2 \times 2$
+הפיכה
+$P$
+ומטריצה אלכסונית
+$D$
+עבורן
+\[\text{.} P^{-1} \rho_\theta P = D\]
+
+\item איך תשתנה תשובתכן לסעיף הקודם אם נסתכל על
+$\rho_\theta$
+כעל מטריצה ב־%
+$\Mat_2\prs{\CC}$?
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נחשב ערכים עצמיים, שהם שורשי הפולינום האופייני.
+\begin{align*}
+p_{\rho_\theta}\prs{x} &= \det\prs{xI - \rho_\theta}
+\\&= \det\pmat{x - \cos\prs{\theta} & \sin\prs{\theta} \\
+- \sin\prs{\theta} & x - \cos\prs{\theta}}
+\\&=
+\prs{x-\cos\prs{\theta}}^2 + \sin\prs{\theta}^2
+\\&= x^2 - 2 \cos\prs{\theta} x + \cos\prs{\theta}^2 \sin\prs{\theta}^2
+\\&= x^2 - 2 \cos\prs{\theta} x + 1
+\end{align*}
+שורשי הפולינום, לפי נוסחת השורשים של פולינום ריבועי, הם
+\begin{align*}
+x_{1,2} &\coloneqq \frac{2 \cos\prs{\theta} \pm \sqrt{\prs{2\cos\prs{\theta}}^2 - 4}}{2}
+\\&=
+\frac{2 \cos\prs{\theta} \pm 2 \sqrt{\cos\prs{\theta}^2 - 1}}{2}
+\\&=
+\cos\prs{\theta} \pm \sqrt{- \sin\prs{\theta}^2}
+\\&=
+\cos\prs{\theta} \pm i \sin\prs{\theta}
+\end{align*}
+ונסמן
+\begin{align*}
+x_1 &= \cos\prs{\theta} + i \sin\prs{\theta} \\
+\text{.} x_2 &= \cos\prs{\theta} - i \sin\prs{\theta}
+\end{align*}
+
+אם
+$\sin\prs{\theta} \neq 0$
+נקבל כי אין ערכים עצמיים ממשיים. לכן אין שורשים ממשיים לפולינום
+$p_{\rho_\theta}$,
+לכן הוא אינו מתפצל כמכפלה של גורמים לינאריים, ולכן לפי טענה
+\ref{proposition:diag-equivalence}
+המטריצה
+$\rho_\theta$
+אינה לכסינה.
+
+אחרת,
+$\sin\prs{\theta} = 0$
+ואז
+\begin{align*}
+\rho_\theta = \pmat{\cos\prs{\theta} & 0 \\ 0 & \cos\prs{\theta}}
+\end{align*}
+והמטריצה לכסינה כמטריצה אלכסונית. נבחר למשל
+$P = I$
+ונקבל כי
+\[D \coloneqq P^{-1} \rho_\theta P = \rho_\theta = \pmat{\cos\prs{\theta} & 0 \\ 0 & \cos\prs{\theta}}\]
+אלכסונית.
+
+\item כאשר
+$\sin\prs{\theta} = 0$,
+המטריצה
+$\rho_\theta$
+עדיין לכסינה באותו אופן.
+
+כאשר
+$\sin\prs{\theta} \neq 0$,
+נקבל הפעם שני ערכים עצמיים
+$\cos\prs{\theta} \pm i \sin\prs{\theta}$
+שונים, כל אחד מריבוי אלגברי
+$1$.
+כיוון שהריבוי הגיאומטרי של ערך עצמי שווה לפחות
+$1$
+ואינו גדול מהריבוי האלגברי, נקבל כי הריבויים הגיאומטריים של הערכים העצמיים גם הם שווים
+$1$.
+נמצא וקטורים עצמיים.
+
+\begin{itemize}
+\item עבור הערך העצמי
+$x_1 = \cos\prs{\theta} + i \sin\prs{\theta}$,
+הוקטורים העצמיים הם הוקטורים בגרעין של
+\[\text{.} x_1 I - \rho_\theta = \pmat{x_1 - \cos\prs{\theta} & \sin\prs{\theta} \\ -\sin\prs{\theta} & x_1 - \cos\prs{\theta}} = \pmat{i \sin\prs{\theta} & \sin\prs{\theta} \\ -\sin\prs{\theta} & i \sin\prs{\theta}}\]
+זאת מטריצה שהעמודה הראשונה שלה שווה לעמודה השנייה כפול
+$i$,
+ולכן דרגתה
+$1$,
+והוקטור
+$\pmat{1 \\ -i}$
+הינו וקטור עצמי שלה עם ערך עצמי
+$0$,
+ולכן וקטור עצמי של
+$\rho_\theta$
+עם ערך עצמי
+$x_1$.
+הראנו כי הריבוי הגיאומטרי שווה
+$1$,
+ולכן וקטור עצמי זה פורש את כל המרחב העצמי (שהינו ממימד $1$)
+ונקבל כי
+\begin{align*}
+\text{.} V^{\rho_\theta}_{x_1} = \Span\prs{\pmat{1 \\ -i}}
+\end{align*}
+
+\item עבור הערך העצמי
+$x_2 = \cos\prs{\theta} - i \sin\prs{\theta}$,
+הוקטורים העצמיים הם הוקטורים בגרעין של
+\begin{align*}
+\text{.} x_2 I - \rho_\theta = \pmat{-i\sin\prs{\theta} & \sin\prs{\theta} \\ -\sin\prs{\theta} & -i \sin\prs{\theta}}
+\end{align*}
+זאת מטריצה שהעמודה הראשונה שללה שווה לעמודה השנייה כפול
+$-i$
+ולכן דרגתה
+$1$
+והוקטור
+$\pmat{1 \\ i}$
+הוא וקטור עצמי שלה עם ערך עצמי
+$0$
+ובאותו אופן כמו עם הערך העצמי הקודם,
+\[\text{.} V_{x_2}^{\rho_\theta} = \Span\prs{\pmat{1 \\ i}}\]
+\end{itemize}
+נקבל בסך הכל כי
+$\mcal{B} \coloneqq \prs{\pmat{1 \\ -i}, \pmat{i \\ i}}$
+בסיס של
+$V$
+המורכב מוקטורים עצמיים של
+$\rho_\theta$.
+אז
+\[D \coloneqq \brs{T_{\rho_\theta}}_{\mcal{B}} = \diag\prs{x_1, x_2}\]
+ומתקיים
+\begin{align*}
+D = \prs{M^{\mcal{B}}_{\mcal{E}}}^{-1} \brs{T_{\rho_\theta}}_{\mcal{E}} M^{\mcal{B}}_{\mcal{E}}
+\end{align*}
+לפי נוסחת מעבר בסיס. לכן אם נסמן
+\begin{align*}
+P \coloneqq M^{\mcal{B}}_{\mcal{E}} = \pmat{1 & 1 \\ -i & i}
+\end{align*}
+נקבל כי
+\begin{align*}
+D = P^{-1} \rho_B P
+\end{align*}
+מטריצה אלכסונית.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+תהי
+\begin{align*}
+\text{.} A = \pmat{-3 & -4 & -6 & -3 & -3 & 0 \\ -2 & -3 & -4 & -3 & -3 & 0 \\ 3 & 3 & 5 & 3 & 3 & 0 \\ -1 & 2 & 1 & 2 & 0 & 0 \\ 2 & 1 & 3 & 0 & 2 & 0 \\ 3 & 3 & 3 & 3 & 3 & 2} \in \Mat_6\prs{\mbb{C}}
+\end{align*}
+
+מיצאו את הערכים העצמיים של
+$A$
+ועבור כל אחד מהם מיצאו ריבוי אלגברי וגיאומטרי.
+\end{exercisechap}
+
+\begin{solution}
+נחשב ראשית את הפולינום האופייני של
+$A$.
+
+\begin{align*}
+p_A\prs{x} &= \det\prs{xI - A}
+\\&=
+\det\pmat{x +3 & 4 & 6 & 3 & 3 & 0 \\
+2 & x+3 & 4 & 3 & 3 & 0 \\
+-3 & -3 & x-5 & -3 & -3 & 0 \\
+1 & -2 & -1 & x-2 & 0 & 0 \\
+-2 & -1 & -3 & 0 & x-2 & 0 \\
+-3 & -3 & -3 & -3 & -3 & x-2}
+\\&=
+\prs{x-2} \pmat{x +3 & 4 & 6 & 3 & 3 \\
+2 & x+3 & 4 & 3 & 3 \\
+-3 & -3 & x-5 & -3 & -3 \\
+1 & -2 & -1 & x-2 & 0\\
+-2 & -1 & -3 & 0 & x-2}
+\\&= \ldots
+\\ \text{.} \hphantom{p_A\prs{x}} &= \prs{x-2} \prs{x^5 - 3x^4 + x^3 + x^2 + 4}
+\end{align*}
+ניתן לראות כי
+$2$
+הינו ערך עצמי של
+$A$,
+כי הוא שורש של
+$p_A\prs{x}$.
+נחשב את הריבוי שלו
+$r_a\prs{2}$,
+ששווה לערך
+$i \in \mbb{N}$
+המינימלי עבורו
+$p_A\prs{x}^{\prs{i}}\prs{2} \neq 0$,
+כאשר
+$f^{\prs{k}}$
+הינה הנגזרת ה־%
+$k$-ית
+של
+$f$.
+מתקיים
+\begin{align*}
+p_A\prs{x} &= x^6 - 5x^5 + 7x^4 - x^3 -2x^2 + 4x - 8
+\\
+p_A'\prs{x} &= 6x^5 - 25x^4 + 28x^3 - 3x^2 -4x + 4
+\\
+p_A'\prs{2} &= 6 \cdot 32 - 20 \cdot 16 + 28 \cdot 8 - 3 \cdot 4 - 4 \cdot 2 + 4 = 0
+\\
+p_A''\prs{x} &= 30x^4 - 100x^3 + 84 x^2 - 6x - 4
+\\
+p_A''\prs{2} &= 30\cdot 16 - 100\cdot 8 + 84 \cdot 4 - 6 \cdot 2 - 4 = 0
+\\
+p_A'''\prs{x} &= 120 x^3 - 300 x^2 + 168 x - 6
+\\
+p_A'''\prs{2} &= 120 \cdot 8 - 300 \cdot 4 + 168 \cdot 2 - 6 = 90 \neq 0
+\end{align*}
+ולכן
+$r_a\prs{2} = 3$.
+נקבל כי
+$\prs{x-2}^3 = x^3 - 6x^2 + 12x - 8$
+מחלק את
+$p_A\prs{x}$
+וכדי למצוא ערכים עצמיים נוספים נבצע חילוק פולינומים.
+
+בכל שלב נכפול את הפולינום בו אנו מחלקות במונום מתאים כך שהכפל יהיה בעל אותו גורם מוביל כמו הפולינום שקיבלנו לאחר חיסור בשלב הקודם, ולאחר מכן נחסר זאת מהפולינום שקיבלנו בשלב הקודם. נסכום את המונומים המתאימים כדי לקבל את המנה, כאשר אם נשארנו עם פולינום מדרגה קטנה יותר מזה שאנו מחלקות בו, הוא יהיה שארית החלוקה.
+
+\begin{center}
+\polylongdiv{x^6-5x^5+7x^4-x^3-2x^2+4x-8}{x^3-6x^2+12x-8}
+\end{center}
+
+לכן
+\[p_A\prs{x} = \prs{x-2}^3 \prs{x^3 + x^2 + x + 1}\]
+וניתן לראות כי
+$-1$
+שורש של
+$x^3 + x^2 + x + 1$
+(הוא שורש של כל פולינום ממעלה אי־זוגית שכל מקדמיו
+$1$)ץ
+נבצע חילוק פולינומים נוסף
+
+\begin{center}
+\polylongdiv{x^3+x^2+x+1}{x+1}
+\end{center}
+
+ולכן
+\[p_A\prs{x} = \prs{x-2}^3 \prs{x+1} \prs{x^2 + 1} = \prs{x-2}^3 \prs{x+1} \prs{x + i} \prs{x - i}\]
+ונקבל כי הערכים העצמיים הם
+$2$
+מריבוי אלגברי
+$3$,
+ו־%
+$-1, i, -i$
+כל אחד מריבוי אלגברי
+$1$.
+
+כיוון שהריבוי הגיאומטרי תמיד גדול או שווה ל־%
+$1$
+וקטן או שווה לריבוי האלגברי, נקבל כי
+$r_g\prs{-1} = r_g\prs{i} = r_g\prs{-i} = 1$
+ולכן נותר למצוא את הריבוי הגיאומטרי של
+$2$,
+ששווה לדרגת המטריצה
+$A - 2I$.
+נחשב דרגה זאת.
+
+\begin{align*}
+A - 2I &=
+\pmat{-5 & -4 & -6 & -3 & -3 & 0 \\
+-2 & -5 & -4 & -3 & -3 & 0 \\
+3 & 3 & 3 & 3 & 3 & 0 \\
+-1 & 2 & 1 & 0 & 0 & 0 \\
+2 & 1 & 3 & 0 & 0 & 0 \\
+3 & 3 & 3 & 3 & 3 & 0}
+\\& \xrightarrow{C_5 \mapsto C_5 - C_4}
+\pmat{-5 & -4 & -6 & -3 & 0 & 0 \\
+-2 & -5 & -4 & -3 & 0 & 0 \\
+3 & 3 & 3 & 3 & 0 & 0 \\
+-1 & 2 & 1 & 0 & 0 & 0 \\
+2 & 1 & 3 & 0 & 0 & 0 \\
+3 & 3 & 3 & 3 & 0 & 0}
+\\& \xrightarrow{\substack{C_1 \mapsto C_1 - C_4 \\ C_2 \mapsto C_2 - C_4 \\ C_3 \mapsto C_3 - C_4}}
+\pmat{-2 & -1 & -3 & -3 & 0 & 0 \\
+1 & -2 & -1 & -3 & 0 & 0 \\
+0 & 0 & 0 & 3 & 0 & 0 \\
+-1 & 2 & 1 & 0 & 0 & 0 \\
+2 & 1 & 3 & 0 & 0 & 0 \\
+0 & 0 & 0 & 3 & 0 & 0}
+\\& \xrightarrow{C_3 \mapsto C_3 - C_1 - C_2}
+\pmat{-2 & -1 & 0 & -3 & 0 & 0 \\
+1 & -2 & 0 & -3 & 0 & 0 \\
+0 & 0 & 0 & 3 & 0 & 0 \\
+-1 & 2 & 0 & 0 & 0 & 0 \\
+2 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 3 & 0 & 0}
+\end{align*}
+וניתן לראות מכאן כי
+$\rank\prs{A-2I} = 3$,
+לכן
+$r_g\prs{2} = 3$.
+
+\end{solution}
+
 \printbibliography
 \end{document}
