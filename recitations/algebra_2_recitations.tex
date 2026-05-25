@@ -2485,5 +2485,182 @@ $r_g\prs{2} = 3$.
 
 \end{solution}
 
+\begin{exercisechap}
+\begin{enumerate}
+\item תהיינה
+$A,B \in \Mat_n\prs{\FF}$
+ונניח כי
+$B$
+לכסינה ועם
+$n$
+ערכים עצמיים שונים
+$\lambda_1, \ldots, \lambda_n$,
+וכי
+$AB = BA$.
+
+הוכיחו כי
+$A$
+לכסינה.
+
+\item הוכיחו כי
+\begin{align*}
+B = \pmat{0 & 1 & 0 & \cdots & 0 \\ 0 & 0 & 1 & \ddots & \vdots \\ \vdots & \ddots & \ddots & \ddots & 0 \\ 0 & \ddots & \ddots & 0 & 1 \\ 1 & 0 & \cdots & \cdots & 0} \in \Mat_n\prs{\CC}
+\end{align*}
+הינה לכסינה, מיצאו
+$P \in \Mat_n\prs{\CC}$
+עבורה
+$P^{-1} B P$
+אלכסונית,
+והראו כי כל מטריצה
+$A \in \Mat_n\prs{\CC}$
+עבורה
+$AB = BA$
+גם היא לכסינה.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נרצה להשתמש בהגדרה של ערכים עצמיים, ולכן נרצה וקטורים עצמיים מתאימים.
+יהי
+$\mcal{B} \coloneqq \prs{v_1, \ldots, v_n}$
+בסיס של
+$\FF^מ$
+עבורו
+$B v_i = \lambda_i$
+לכל
+$i \in [n]$.
+
+אז, לכל
+$i \in [n]$,
+\begin{align*}
+\text{.} BA v_i = AB v_i = \lambda_i A v_i
+\end{align*}
+אם
+$A v_i = 0$
+נקבל כי
+$v_i$
+וקטור עצמי של
+$A$
+עם ערך עצמי
+$0$,
+ואחרת נקבל כי
+$A v_i$
+וקטור עצמי של
+$B$
+עם ערך עצמי
+$\lambda_i$,
+אך כיוון ש־%
+$V^B_{\lambda_i} = \Span\prs{v_i}$
+נקבל כי
+$A v_i \in \Span\prs{v_i}$.
+כלומר, קיים
+$\mu_i \in \FF$
+עבורו
+$A v_i = \mu_i v_i$,
+ולכן
+$v_i$
+וקטור עצמי של
+$A$
+עם ערך עצמי
+$\mu_i$.
+נקבל בסך הכל כי כל
+$v_i$
+הוא וקטור עצמי של
+$A$,
+ולכן
+$\mcal{B}$
+בסיס מלכסן גם של
+$A$.
+
+\item
+נחפש את הערכים העצמיים האפשריים של
+$B$.
+יהי
+$\lambda \in \CC$
+ערך עצמי. אז קיים
+\begin{align*}
+v = \pmat{v_1 \\ \vdots \\ v_{n-1}} \in \CC^n
+\end{align*}
+עבורו
+\begin{align*}
+\lambda v = Bv = \pmat{v_2 \\ v_3 \\ \vdots \\ v_n \\ v_1}
+\end{align*}
+ולאחר כפל משמאל
+$n$
+פעמים ב־%
+$B$
+נקבל
+\begin{align*}
+\text{.} \lambda^n v = B^n v = v
+\end{align*}
+לכן
+$\lambda^n = 1$
+ולכן
+\[\text{.} \lambda \in \set{\mathrm{cis}\prs{\frac{2 \pi k}{n}}}{k \in [n]}\]
+נראה שאכן כל ערך בקבוצה זאת הוא ערך עצמי, ונקבל
+$n$
+ערכים עצמיים שונים. אכן הערך
+\[\lambda_k \coloneqq \mathrm{cis}\prs{\frac{2 \pi k}{n}}\]
+הוא ערך עצמי עם וקטור עצמי
+\[u_k \coloneqq \pmat{1 \\ \lambda_k \\ \vdots \\ \lambda_k^{n-1}}\]
+שכן
+\begin{align*}
+\text{.} A u_k = \pmat{\lambda_k \\ \vdots \\ \lambda_k^{n-1} \\ 1} = \lambda_k \pmat{1 \\ \lambda_k \\ \vdots \\ \lambda_k^{n-1}} = \lambda_k u_k
+\end{align*}
+
+כעת, כדי למצוא
+$P \in \Mat_n\prs{\CC}$
+עבורה
+$P^{-1} B P$
+אלכסונית, ניקח מטריצה שעמודותיה הן איברי הבסיס
+$\mcal{B} \coloneqq \prs{u_1, \ldots, u_n}$.
+כדי לראות זאת, נשים לב כי
+\begin{align*}
+\brs{T_B}_{\mcal{B}} = \diag\prs{\lambda_1, \ldots, \lambda_n}
+\end{align*}
+ונקבל לפי נוסחאת מעבר בסיס כי
+\begin{align*}
+\diag\prs{\lambda_1, \ldots, \lambda_n} &= \brs{T_B}_{\mcal{B}}
+\\
+\\&=
+\prs{M^{\mcal{B}}_{\mcal{E}}}^{-1} \brs{T_B}_{\mcal{E}} M^{\mcal{B}}_{\mcal{E}}
+\end{align*}
+ולאחר סימון
+\begin{align*}
+P \coloneqq M^{\mcal{B}}_{\mcal{E}}
+\end{align*}
+נקבל כי
+\begin{align*}
+P^{-1} B P = \diag\prs{\lambda_1, \ldots, \lambda_n}
+\end{align*}
+אלכסונית, כנדרש.
+
+לבסוף, נציין שכיוון ש־%
+$B$
+לכסינה עם
+$n$
+ערכים עצמיים שונים, לפי הסעיף הראשון כל מטריצה
+$A \in \Mat_n\prs{\CC}$
+המתחלפת איתה גם היא לכסינה.
+
+לפי דרך הפתרון של הסעיף הראשון נראה אפילו כי
+$P^{-1} A P$
+אלכסונית לכל
+$A$
+כזאת.
+\end{enumerate}
+\end{solution}
+
+\begin{remark}
+מטריצות המתחלפות עם המטריצה
+$B$
+מהסעיף הקודם נקראות
+\emph{סירקולנטיות}
+\textenglish{(circulant)}
+ויש להן שימושים באנליזה נומרית וקריפטוגרפיה.
+\end{remark}
+
 \printbibliography
 \end{document}

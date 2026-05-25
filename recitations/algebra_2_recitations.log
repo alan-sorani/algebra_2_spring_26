@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  19 MAY 2026 17:17
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  25 MAY 2026 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1992,13 +1992,15 @@ V$ \TU/Calibri(0)/m/n/10 עבורו $[][]$ מטריצה אלכסונית. []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
+Missing character: There is no מ in font cmmi7!
+[27] [28]
 
-LaTeX Warning: Empty bibliography on input line 2488.
+LaTeX Warning: Empty bibliography on input line 2665.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
 
-[27] (algebra_2_recitations.aux)
+[29] (algebra_2_recitations.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -2018,4 +2020,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  117i,19n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (29 pages).
+Output written on algebra_2_recitations.pdf (31 pages).
