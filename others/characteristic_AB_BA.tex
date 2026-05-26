@@ -1,0 +1,154 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - טענה בנוגע לפולינום אופייני של כפל מטריצות
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+תהיינה
+$A,B \in \Mat_n\prs{\FF}$.
+מתקיים
+\begin{align*}
+\text{.} p_{AB}\prs{x} = p_{BA}\prs{x}
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+ידוע כי
+$\det\prs{XY} = \det\prs{X} \det\prs{Y}$
+לכל מטריצות
+$X,Y \in \Mat_n\prs{\FF}$.
+לפי כך, מתקיים
+\begin{align*}
+p_{AB}\prs{x} \det\prs{A} &=
+\det\prs{xI_n - AB} \det\prs{A}
+\\&=
+\det\prs{\prs{x I_n - AB} A}
+\\&=
+\det\prs{x A - ABA}
+\\&=
+\det\prs{A \prs{x I_n - BA}}
+\\&=
+\det\prs{A} \det\prs{x I_n - BA}
+\\&=
+\det\prs{A} p_{BA}\prs{x}
+\end{align*}
+ולאחר חלוקה ב־%
+$\det\prs{A}$
+נקבל את השוויון הנדרש.
+\end{proof}
+
+נציג הוכחה נוספת.
+
+\begin{proof}
+לפי הגדרת הפולינום האופייני, נרצה להראות כי
+\begin{align*}
+\text{.} \det\prs{x I_n - AB} = \det\prs{xI_n - BA}
+\end{align*}
+ניזכר כי
+\begin{align}\label{eq:det_commutes}
+det\prs{AB} = \det\prs{BA}
+\end{align}
+ונרצה להשתמש בכך, כיוון שמופיעה המטריצה
+$AB$
+באגף שמאל והמטריצה
+$BA$
+באגף ימין.
+
+נוכל לנסות לכתוב את המטריצות שבשני האגפים ככפל של שתי מטריצות. למשל,
+\begin{align*}
+\text{.} x I_n - AB = x I_n \prs{I_n - \frac{1}{x} AB}
+\end{align*}
+אבל, לא נראה שהדטרמיננטה של המטריצה
+$I_n - \frac{1}{x} AB$
+קלה יותר לחישוב מזאת של
+$x I_n - AB$.
+לכן, ניעזר במשוואה
+\eqref{eq:det_commutes}
+בדרך אחרת, על ידי הסתכלות על מטריצות אחרות.
+
+ניזכר כי הדטרמיננטה של מטריצה אלכסונית בלוקים היא מכפלת הדטרמיננטות של הבלוקים. נסמן
+\begin{align*}
+C &\coloneqq \pmat{AB & 0 \\ B & 0}
+\end{align*}
+שהדטרמיננטה שלה היא
+$\det\prs{AB}$.
+נרצה לכתוב דמיון בין
+$C$
+לבין מטריצה משולשת בלוקים שעל האלכסון שלה מופיע הבלוק
+$BA$,
+ואכן
+\begin{align*}
+\pmat{I_n & -A \\ 0 & I_n} C &= \pmat{0 & 0 \\ B & 0}
+\\&= \pmat{0 & 0 \\ B & BA} \pmat{I_n & -A \\ 0 & I_n}
+\end{align*}
+ואז
+$C$
+דומה ל־%
+\begin{align*}
+D \coloneqq \pmat{0 & 0 \\ B & BA}
+\end{align*}
+שכן
+$P^{-1} D P = C$
+עבור
+\[\text{.} P \coloneqq \pmat{I_n & - A \\ 0 & I_n}\]
+
+כיוון שלמטריצות דומות יש אותו פולינום אופייני, נקבל כי
+\begin{align*}
+\text{.} \det\prs{x I_{2n} - C} = \det\prs{x I_{2n} - D}
+\end{align*}
+אגף שמאל שווה
+\begin{align*}
+\det\pmat{x I_n - AB & 0 \\ B & x I_n} = \det\prs{x I_n - AB} \det\prs{x I_n} = x^n \det\prs{x I_n - AB}
+\end{align*}
+ואילו אגף ימין שווה
+\begin{align*}
+\text{,} \det\pmat{x I_n & 0 \\ B & x I_n - BA} = \det\prs{x I_n} \det\prs{x I_n - BA} = x^n \det\prs{x I_n - BA}
+\end{align*}
+ולכן מתקיים
+\begin{align*}
+\text{,} \det\prs{x I_n - AB} = \det\prs{x I_n - BA}
+\end{align*}
+כנדרש.
+\end{proof}
+
+\end{document}

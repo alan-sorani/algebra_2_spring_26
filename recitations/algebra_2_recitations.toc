@@ -16,3 +16,12 @@
 \contentsline {section}{\numberline {2.6}הפולינום האופייני, ולכסינות}{22}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}הגדרות ותכונות בסיסיות}{22}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}תרגילים}{23}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}משפט קיילי־המילטון}{29}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}חזרה}{29}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}תרגילים}{29}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}סכומים ישרים}{33}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}חזרה}{33}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}תרגילים}{33}{subsection.2.8.2}%
+\contentsline {section}{\numberline {2.9}הטלות}{34}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}חזרה}{35}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}תרגילים}{35}{subsection.2.9.2}%

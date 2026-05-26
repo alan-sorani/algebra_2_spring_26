@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  25 MAY 2026 11:53
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  25 MAY 2026 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./hw4.tex
-(hw4.tex
+**./hw5.tex
+(hw5.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1797,8 +1797,8 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 LaTeX Warning: Unused global option(s):
     [openany].
 
-(hw4.aux)
-\openout1 = `hw4.aux'.
+(hw5.aux)
+\openout1 = `hw5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
@@ -1859,9 +1859,9 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 47.
-(hw4.out) (hw4.out)
+(hw5.out) (hw5.out)
 \@outlinefile=\write6
-\openout6 = `hw4.out'.
+\openout6 = `hw5.out'.
 
 
 Package fontspec Info: 
@@ -1961,11 +1961,11 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `hw4.bcf'.
+\openout5 = `hw5.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'hw4.bbl' not found.
-No file hw4.bbl.
+Package biblatex Info: ... file 'hw5.bbl' not found.
+No file hw5.bbl.
 Package biblatex Info: Reference section=0 on input line 47.
 Package biblatex Info: Reference segment=0 on input line 47.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
@@ -1991,28 +1991,28 @@ LaTeX Warning: No \author given.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
 ut line 51.
 \tf@thm=\write7
-\openout7 = `hw4.thm'.
+\openout7 = `hw5.thm'.
 
 [1
 
-] (hw4.aux)
+] (hw5.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `hw4.out' has not changed.
+Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'hw4.run.xml'.
-\openout1 = `hw4.run.xml'.
+Package logreq Info: Writing requests to 'hw5.run.xml'.
+\openout1 = `hw5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47306 strings out of 402983
- 1040308 string characters out of 5448068
- 2059068 words of memory out of 5000000
- 75347 multiletter control sequences out of 15000+600000
+ 47304 strings out of 402983
+ 1040250 string characters out of 5448068
+ 2057080 words of memory out of 5000000
+ 75345 multiletter control sequences out of 15000+600000
  635638 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,13n,121p,1215b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,11n,121p,1215b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on hw4.pdf (1 page).
+Output written on hw5.pdf (1 page).

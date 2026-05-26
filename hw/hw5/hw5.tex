@@ -1,0 +1,140 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 5 \\
+משפט קיילי-המילטון, סכומים ישרים, והטלות
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 4.6.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}%1
+יהי
+$V$
+מרחב וקטורי ממימד
+$n \in \mbb{N}_+$
+מעל שדה
+$\mbb{F}$
+ותהי
+$T \in \endo_{\mbb{F}}\prs{V}$.
+
+\begin{enumerate}
+\item
+יהי
+\[\text{.} \mbb{F}\brs{T} \ceq \set{p\prs{T}}{p \in \mbb{F}\brs{x}} \leq \endo_{\mbb{F}}\prs{V}\]
+ הראו כי
+\[\text{.} \mbb{F}\brs{T} = \spn\prs{I, T, \ldots, T^{n-1}}\]
+
+\item
+מצאו דוגמא עבור
+$S \in \endo_{\mbb{F}}\prs{V}$
+עבורה
+\[\set{I, S, \ldots, S^{n-1}}\]
+קבוצה בלתי־תלויה לינארית. הסיקו שבמקרה זה
+\[\text{.} \dim_{\mbb{F}} \mbb{F}\brs{S} = n\]
+
+\item
+נניח כי
+$T$
+הפיכה. הראו שמתקיים
+$T^{-1} \in \mbb{F}\brs{T}$.
+
+\item נניח כי
+$T$
+הפיכה ונסמן
+\[\text{.} \mbb{F}\prs{T} \ceq \set{\sum_{i=-m}^m a_i T^i}{\substack{m \in \mbb{N} \\ \forall i: a_i \in \mbb{F}}} \leq \endo_{\mbb{F}}\prs{V}\]
+הראו כי לכל
+$S_1, S_2 \in \mbb{F}\brs{T}$
+מתקיים
+$S_1 \circ S_2 \in \mbb{F}\brs{T}$
+והסיקו שמתקיים
+$\mbb{F}\brs{T} = \mbb{F}\prs{T}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} %2
+\begin{enumerate}
+\item תהי
+$T \in \endo_{\mbb{C}}\prs{\mbb{C}^4}$
+שהערכים העצמיים שלה הם
+$3,5,8$.
+הראו כי
+\[\text{.} \prs{T - 3I}^2\prs{T - 5I}^2 \prs{T - 8I}^2 = 0\]
+\item תהי
+$T \in \endo_{\mbb{C}}\prs{V}$
+הטלה ויהיו
+\[\text{.} m \ceq \dim \ker \prs{T}, \quad n \ceq \dim \im \prs{T}\]
+הראו כי
+\[\text{.} p_T\prs{x} = x^m \prs{x-1}^n\]
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} %3
+יהי
+$V = \Mat_n\prs{\FF}$
+ויהיו
+\begin{align*}
+V_{\mrm{sym}} &\coloneqq \set{A \in V}{A^t = A} \\
+\text{.} V_{\mrm{antisym}} &\coloneqq \set{p \in V}{A^t = -A}
+\end{align*}
+\begin{enumerate}
+\item
+הראו כי
+\[\text{.}V = V_{\mrm{sym}} \oplus V_{\mrm{antisym}}\]
+\item
+מיצאו את ההטלה על
+$V_{\mrm{sym}}$
+במקביל ל־%
+$V_{\mrm{antisym}}$.
+\item
+נניח כי
+$n = 2$,
+ויהי
+\[\mcal{E} \coloneqq \prs{E_{1,1}, E_{1,2}, E_{2,1}, E_{2,2}}\]
+הבסיס הסטנדרטי של
+$V$.
+מיצאו את המטריצה המייצגת של ההטלה מהסעיף הקודם לפי
+$\mcal{E}$.
+\end{enumerate}
+\end{exercise}
+
+\end{document}

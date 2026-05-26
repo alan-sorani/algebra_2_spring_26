@@ -2420,7 +2420,7 @@ $-1$
 שורש של
 $x^3 + x^2 + x + 1$
 (הוא שורש של כל פולינום ממעלה אי־זוגית שכל מקדמיו
-$1$)ץ
+$1$)
 נבצע חילוק פולינומים נוסף
 
 \begin{center}
@@ -2661,6 +2661,981 @@ $B$
 \textenglish{(circulant)}
 ויש להן שימושים באנליזה נומרית וקריפטוגרפיה.
 \end{remark}
+
+\section{משפט קיילי־המילטון}
+
+\subsection{חזרה}
+
+\begin{theorem}[קיילי־המילטון]
+יהי
+$T \in \End_\FF\prs{V}$.
+אז
+$p_T\prs{T} = 0$.
+\end{theorem}
+
+ממשפט קיילי־המילטון נובע שתמיד יש
+$q \in \FF\brs{x}$
+מתוקן עבורו
+$q\prs{T} = 0$.
+ניתן להסתכל על פולינום כזה ממעלה מינימלית, וראינו בהרצאה כי הוא יחיד.
+
+\begin{proposition} \label{proposition:min-pol}
+יהי
+$T \in \End_\FF\prs{V}$.
+קיים ויחיד פולינום מתוקן
+$m\prs{x} \in \FF\brs{x}$
+עבורו
+\begin{enumerate}
+\item $m\prs{T} = 0$.
+\item $m\prs{x} \mid p\prs{x}$
+לכל
+$p \in \FF\brs{x}$
+המקיים
+$p\prs{T} = 0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{definition}[פולינום מינימלי]
+עבור אופרטור
+$T \in \End_\FF\prs{V}$,
+הפולינום מהטענה מסומן
+$m_T$
+ונקרא
+\emph{הפולינום המינימלי של
+$T$}.
+\end{definition}
+
+\begin{proposition}\label{proposition:min-pol-roots}
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$\lambda \in \FF$.
+אז
+$\lambda$
+שורש של
+$m_T\prs{x}$
+אם ורק אם הוא ערך עצמי של
+$T$.
+\end{proposition}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\CC$
+ויהי
+$T \in \End_\CC\prs{V}$
+עבורו
+\begin{align*}
+\text{.} p_T\prs{x} = x^4 + 3x^2 - 4
+\end{align*}
+
+\begin{enumerate}
+\item הוכיחו כי
+$T$
+הפיך.
+
+\item מיצאו את
+$T^{-1}$
+כתלות ב־%
+$T$.
+
+\item מיצאו את הפולינום האופייני של
+$T^{-1}$.
+
+\item מיצאו את הפולינומים המינימליים של
+$T, T^{-1}$. 
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+ניזכר כי הערכים העצמיים של
+$T$
+הם שורשי
+$p_T$
+ונשים לב כי
+$p_T\prs{0} = 1 \neq 0$.
+לכן
+$0$
+אינו ערך עצמי של
+$T$,
+ולכן
+$T$
+הפיך.
+
+\item
+לפי קיילי־המילטון, מתקיים
+\begin{align*}
+\text{.} T^4 + 3T^2 - 4\id_V = p_T\prs{T} = 0
+\end{align*}
+נכפול את שני האגפים ב־%
+$T^{-1}$
+ונעביר אגפים, ונקבל
+\begin{align*}
+\text{,} 4T^{-1} = T^3 + 3T
+\end{align*}
+ולאחר חלוקה
+\begin{align*}
+\text{.} T^{-1} = \frac{1}{4} \prs{T^3 + 3T}
+\end{align*}
+
+\item
+לפי טענה מאלגברה א', אם
+$\lambda_1, \ldots, \lambda_4$
+הערכים העצמיים של
+$T$
+כולל ריבויים, הערכים העצמיים של
+$T^{-1}$
+הם
+$\lambda_1^{-1}, \ldots, \lambda_4^{-1}$.
+
+נמצא ערכים עצמיים של
+$T$
+בעזרת
+$p_T\prs{x}$.
+מתקיים
+\begin{align*}
+p_T\prs{x} = \prs{x^2}^2 + 3x^2 - 4
+\end{align*}
+נסמן
+$y = x^2$
+ואז
+\begin{align*}
+\text{.} p_T\prs{x} = y^2 + 3y - 4
+\end{align*}
+זה מתאפס כאשר
+\begin{align*}
+y = \frac{-6 \pm \sqrt{9 + 16}}{2}
+\end{align*}
+כלומר כאשר
+$y \in \set{-4, 1}$.
+אז
+$p_T\prs{x} = 0$
+עבור
+$x \in \set{-2i, 2i, -1, 1}$.
+כיוון שזה פולינום מתוקן ממעלה
+$4$
+נקבל כי
+\[\text{,} p_T\prs{x} = \prs{x + 2i} \prs{x - 2i} \prs{x + 1} \prs{x - 1}\]
+וכי הערכים העצמיים של
+$T$
+הם
+$-2i, 2i, -1, 1$.
+אז הערכים העצמיים של
+$T^{-1}$
+הם
+$-\frac{1}{2i}, \frac{1}{2i}, -1, 1$
+או באופן שקול
+$\frac{1}{2}i, - \frac{1}{2}i, -1, 1$.
+נקבל בסך הכל כי
+\begin{align*}
+\text{.} p_{T^{-1}}\prs{x} = \prs{x - \frac{1}{2}i}\prs{x + \frac{1}{2}i}\prs{x+1}\prs{x-1} = x^4 - \frac{3}{4} x^2 - \frac{1}{4}
+\end{align*}
+
+\item
+יהי
+$S \in \End_\FF\prs{V}$
+כלשהו.
+
+לפי טענה
+\ref{proposition:min-pol},
+הפולינום המינימלי של $S$ מחלק את הפולינום האופייני, ולפי
+\ref{proposition:min-pol-roots}
+כל שורש של
+$p_S\prs{x}$
+הוא גם שורש של
+$m_S\prs{x}$.
+
+לכן אם
+\begin{align*}
+p_S\prs{x} = \prod_{i \in [k]} \prs{x - \lambda_i}^{r_i}
+\end{align*}
+עבור
+$\lambda_i$
+שונים, קיימים
+$1 \leq s_i \leq r_i$
+עבורם
+\begin{align*}
+\text{.} m_S\prs{x} = \prod_{i \in [k]} \prs{x - \lambda_i}^{s_i}
+\end{align*}
+
+נחזור כעת לדיון ב־%
+$T, T^{-1}$.
+הפולינומים האופיינים של שניהם מתפרקים כמכפלות של גורמים לינאריים שונים (כלומר, $r_i = 1$ לכל $i$), ולכן הפולינומים המינימליים שלהם חייבים להיות שווים בדיוק לאלו האופייניים (כי
+$1 \leq s_i \leq r_i = 1$
+גורר
+$s_i = 1 = r_i$).
+
+לכן
+$m_T\prs{x} = p_T\prs{x}$
+וגם
+$m_{T^{-1}}\prs{x} = p_{T^{-1}}\prs{x}$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_\RR\prs{\RR^4}$
+עם פולינום מינימלי
+\begin{align*}
+\text{.} m_T\prs{x} = x \prs{x-1}^2
+\end{align*}
+
+מיצאו את כל האפשרויות לפולינום האופייני של
+$T$.
+עבור כל אחת, מיצאו אופרטור עבורו מתקבל הפולינום האופייני המתאים.
+\end{exercisechap}
+
+\begin{solution}
+ידוע כי הפולינום המינימלי מחלק את הפולינום האופייני, וכי כל שורש של הפולינום האופייני הוא גם שורש של הפולינום המינימלי. לכן
+\begin{align*}
+p_T\prs{x} = x^{r_1} \prs{x-1}^{r_2}
+\end{align*}
+עבור
+$r_1 \geq 1$
+ועבור
+$r_2 \geq 2$.
+אבל, דרגת הפולינום האופייני היא
+$\dim\prs{\RR^4} = 4$,
+ולכן
+\begin{align*}
+\text{.} p_T\prs{x} \in \set{x^2 \prs{x-1}^2, x \prs{x-1}^3}
+\end{align*}
+
+נראה ששתי האופציות האלו אכן יתכנו.
+
+\begin{enumerate}
+\item
+נמצא ראשית
+$T_1 \in \End_\RR\prs{\RR^4}$
+עבורו
+$p_{T_1}\prs{x} = x^2 \prs{x-1}^2$
+וגם
+$m_{T_1} = x \prs{x-1}^2$.
+לצורך פשטות, נסתכל על
+$T_1 = T_{A_1}$
+עבור
+$A_1 \in \Mat_4\prs{\RR}$,
+שכן אז
+$p_{T_1} = p_{A_1}, m_{T_1} = m_{A_1}$.
+נרצה שלמטריצה
+$A_1$
+יהיו ערכים עצמיים
+$0, 1$
+כל אחד מריבוי אלגברי
+$2$.
+ניקח מטריצה מהצורה
+\begin{align*}
+A_1 &= \pmat{0 & * & * & * \\ 0 & 0 & * & * \\ 0 & 0 & 1 & * \\ 0 & 0 & 0 & 1}
+\end{align*}
+ואז אלו אכן הערכים העצמיים כאיברי האלכסון של מטריצה משולשת עליונה.
+כעת נבחר את שאר המקדמים כך שיתקיים
+\[ \text{.} m_T\prs{A_1} = A_1 \prs{A_1 - I_4}^2 = 0\]
+כדי לפשט את החישוב, נרצה ש־%
+$A_1$
+תהיה אלכסונית בלוקים מהצורה
+\begin{align*}
+\text{.} A_1 = \pmat{0 & a & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & b \\ 0 & 0 & 0 & 1}
+\end{align*}
+אז
+\begin{align*}
+A_1 \prs{A_1 - I_4}^2 &=
+\pmat{0 & a & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & b \\ 0 & 0 & 0 & 1}
+\pmat{-1 & a & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 0 & b \\ 0 & 0 & 0 & 0}^2
+\\&=
+\pmat{0 & a & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & b \\ 0 & 0 & 0 & 1}
+\pmat{1 & -2a & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0}
+\end{align*}
+וכדי שזה יתאפס ניקח
+$a = 0$.
+
+כדי ש־%
+$m_T\prs{x}$
+יהיה אכן מינימלי כפולינום עבורו
+$m_T\prs{A_1} = 0$,
+נבחר
+$b \neq 0$,
+למשל
+$b = 1$,
+שכן אחרת גם
+$A_1 \prs{A_1 - I_4} = 0$.
+נקבל כי
+\begin{align*}
+\text{.} A_1 = \pmat{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1}
+\end{align*}
+אז אכן
+$m_T\prs{A_1} = 0$
+וכן
+\begin{align*}
+A_1 \prs{A_1 - I} &= \pmat{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1} \pmat{-1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0} \neq 0
+\\
+\prs{A_1 - I}^2 &= \pmat{0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1}^2 \neq 0
+\end{align*}
+כאשר שתי המטריצות שונות מאפס כי
+\[\pmat{1 & 1 \\ 0 & 1} \pmat{0 & 1 \\ 0 & 0}, \pmat{1 & 1 \\ 0 & 1}^2 \neq 0\]
+ככפל של מטריצה הפיכה במטריצה שונה מאפס.
+
+נקבל בסך הכל כי
+$m_T\prs{A_1} = 0$
+וכי אף פולינום ממעלה קטנה יותר אינו מתאפס ב־%
+$A_1$,
+ולכן
+$m_{A_1} = m_T$,
+כנדרש.
+
+\item
+נחפש כעת, באותו אופן, מטריצה מהצורה
+\begin{align*}
+A_2 = \pmat{0 & 0 & 0 & 0 \\ 0 & 1 & * & * \\ 0 & 0 & 1 & * \\ 0 & 0 & 0 & 1}
+\end{align*}
+עבורה
+$m_T\prs{A_2} = 0$
+אבל
+\begin{align*}
+\text{.} A_2 \prs{A_2 - I_4}^2, \prs{A_2 - I_4}^3 \neq 0
+\end{align*}
+נסמן
+\begin{align*}
+J \coloneqq \pmat{1 & a & b \\ 0 & 1 & c \\ 0 & 0 & 1}
+\end{align*}
+וניקח
+\begin{align*}
+\text{.} A_2 = \pmat{0 & 0 \\ & 0 & J}
+\end{align*}
+אז
+\begin{align*}
+m_T\prs{A_2} &= A_2 \prs{A_2 - I_4}^3
+\\&=
+\pmat{0 & 0 \\ 0 & \prs{J-I_4}^עב3}
+\\&=
+0
+\end{align*}
+לכל בחירה של
+$a,b,c$
+ובנוסף
+\begin{align*}
+\prs{A_2 - I_4}^3 = \pmat{-1 & 0 \\ 0 & \prs{J - I_3}^3} \neq 0
+\end{align*}
+לכל בחירה של
+$a,b,c$.
+
+נותר לנו לבחור
+$a,b,c \in \RR$
+עבורם
+\begin{align*}
+\text{,} A_2 \prs{A_2 - I_4}^2 \neq 0
+\end{align*}
+כלומר עבורם
+$\prs{J-I_3}^2 \neq 0$,
+או באופן שקול
+\begin{align*}
+\text{.} \pmat{0 & a & b \\ 0 & 0 & c \\ 0 & 0 & 0}^2 = \pmat{0 & 0 & ac \\ 0 & 0 & 0 \\ 0 & 0 & 0} \neq 0
+\end{align*}
+קיבלנו את התנאי
+$a,c \neq 0$
+ולכן ניקח למשל
+$a=c=1, b=0$
+ונקבל
+\begin{align*}
+A_2 = \pmat{0 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1}
+\end{align*}
+עבורה
+$m_{A_2} = m_T$.
+\end{enumerate}
+\end{solution}
+
+\begin{remark}
+בתרגיל האחרון, מצאנו מטריצות עם בלוקים מהצורה
+\begin{align*}
+\text{.} \pmat{\lambda & 1 & 0 & \cdots & 0 \\ 0 & \lambda & 1 & \ddots & \vdots \\ \vdots & \ddots & \ddots & \ddots & 0 \\ \vdots & \ddots & \ddots & \lambda & 1 \\ 0 & \cdots & \cdots & 0 & \lambda}
+\end{align*}
+
+נראה בהמשך כי כל מטריצה דומה למטריצה עם בלוקים כאלו על האלכסון, הנקראת
+\emph{צורת ז'ורדן}
+של המטריצה.
+לא כל מטריצה ניתן ללכסן, אך לכל מטריצה יש צורת ז'ורדן, וצורת ז'ורדן של מטריצה לכסינה היא המטריצה האלכסונית שדומה לה.
+\end{remark}
+
+\section{סכומים ישרים}
+
+\subsection{חזרה}
+
+\begin{definition}[סכום ישר]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\mbb{F}$
+ויהיו
+$V_1, \ldots, V_k \leq V$
+תת־מרחבים.
+נזכיר כי
+\begin{align*}
+\text{.} V_1 + \ldots + V_k \coloneqq \set{v_1 + \ldots + v_k}{\forall i \in [k] \colon v_i \in V_i}
+\end{align*}
+נגיד שהסכום הזה הוא
+\emph{סכום ישר}
+אם כל
+$v \in V_1 + \ldots + V_k$
+ניתן לכתיבה
+$v = v_1 + \ldots + v_k$
+\emph{בצורה יחידה}
+עבור
+$v_i \in V_i$.
+במקרה זה נסמן את הסכום
+$\bigoplus_{i \in [k]} V_i = V_1 \oplus \ldots \oplus V_k$.
+\end{definition}
+
+\begin{remark}
+באופן שקול, הסכום
+$V_1 + \ldots + V_k$
+ישר אם ורק אם
+$v_1 + \ldots + v_k = 0$
+עבור
+$v_i \in V_i$
+גורר
+$v_i = 0$
+לכל
+$i \in [k]$.
+\end{remark}
+
+\begin{proposition}
+יהי
+$V$
+מרחב וקטורי כלשהו מעל שדה
+$\FF$
+ויהיו
+$V_1, \ldots, V_m \leq V$
+תת־מרחבים של
+$V$.
+התנאים הבאים שקולים.
+
+\begin{enumerate}
+\item הסכום
+$V_1 + \ldots + V_m$
+ישר.
+
+\item לכל בחירה של
+$v_i \in V_i$
+עבורם
+$v_1 + \ldots + v_m = 0$
+מתקיים
+$v_i = 0$
+לכל
+$i \in [m]$.
+
+\item לכל
+$i \in [m]$
+מתקיים
+\begin{align*}
+\text{.} V_i \cap \prs{\sum_{j \in [m] \setminus \set{i}} V_j} = \set{0}
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+יהי
+$V$
+מרחב וקטורי כלשהו מעל שדה
+$\FF$
+ויהיו
+$V_1, \ldots, V_m \leq V$.
+התנאים הבאים שקולים.
+
+\begin{enumerate}
+\item $V = V_1 \oplus \ldots \oplus V_m$.
+\item לכל בחירת בסיסים
+$\mcal{B}_i$
+לכל
+$V_i$,
+הקבוצה הסדורה
+$\mcal{B}_1 \cup \ldots \cup \mcal{B}_m$
+היא בסיס של
+$V$.
+\item
+קיימים בסיסים
+$\mcal{B}_i$
+של כל
+$V_i$
+עבורם
+$\mcal{B}_1 \cup \ldots \cup \mcal{B}_m$
+בסיס של
+$V$.
+\end{enumerate}
+\end{proposition}
+
+\begin{corollary}
+יהי
+$V = \bigoplus_{i \in [m]} V_i$.
+אז
+\begin{align*}
+\text{.} \dim \prs{V} = \sum_{i \in [n]} \dim \prs{V_i}
+\end{align*}
+\end{corollary}
+
+\subsection{תרגילים}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי מעל
+$\mbb{F}$
+ויהי
+$U \leq V$
+עם בסיס
+$\mcal{B}$.
+יהי
+$\mcal{C}$
+בסיס של
+$V$.
+
+\emph{משלים ישר של
+$U$}
+הוא תת־מרחב
+$W \leq V$
+עבורו
+$U \oplus W = V$.
+
+\begin{enumerate}
+\item הראו שניתן להשלים את
+$\mcal{B}$
+לבסיס של
+$V$
+על ידי הוספת וקטורים מ־%
+$\mcal{C}$.
+
+\item הסיקו שקיים משלים ישר
+$W$
+של
+$U$
+עם בסיס של וקטורים מ־%
+$\mcal{C}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item נסמן
+$n = \dim\prs{V}$
+ונוכיח את הטענה באינדוקציה על
+$m \coloneqq n - \abs{\mcal{B}}$.
+
+עבור
+$m = 0$
+מתקיים
+$\abs{\mcal{B}} = n$
+ולכן
+$U = V$.
+נניח שהטענה נכונה לכל
+$k < m$
+ונוכיח אותה עבור
+$m$.
+
+אם
+$\mcal{C} \subseteq U$
+מתקיים
+\[V = \Span\prs{\mcal{C}} \subseteq \Span\prs{U} = U\]
+בסתירה להנחה. לכן קיים
+$c \in \mcal{C} \setminus U$.
+אז
+$\mcal{B} \cup \prs{c}$
+קבוצה בלתי תלויה לינארית כי
+$c$
+אינו צירוף של וקטורי
+$\mcal{B}$.
+נגדיר
+$U' \coloneqq \Span\prs{\mcal{B} \cup \prs{c}}$
+ומהנחת האינדוקציה ניתן להשלים את
+$\mcal{B} \cup \prs{c}$
+לבסיס של
+$V$
+על ידי וקטורים
+$c_2, \ldots, c_m$
+מ־%
+$C$.
+אז
+$c, c_2, \ldots, c_m \in \mcal{C}$
+משלימים את
+$B$
+לבסיס של
+$V$,
+כנדרש.
+
+\item בסימונים של הסעיף הקודם,
+$\mcal{B} \cup \prs{c, c_2, \ldots, c_m}$
+בסיס של
+$V$.
+נסמן
+$\mcal{D} \coloneqq \prs{c, c_2, \ldots, c_m}$
+וגם
+$W \coloneqq \Span\prs{\mcal{D}}$.
+אז
+$V = U \oplus W$
+כי
+$\mcal{B},\mcal{D}$
+בסיסים של
+$U,W$
+כך ש־%
+$\mcal{B} \cup \mcal{D}$
+בסיס של
+$V$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+ יהי
+$V = \mbb{R}_3\brs{x}$,
+ותהיינה
+\begin{align*}
+\mcal{B} &= \pmat{1 + x, x + x^2} \\
+\mcal{C} &= \pmat{1,x,x^2,x^3}
+\end{align*}
+קבוצות סדורות של וקטורים מ־%
+$V$.
+יהי
+$U = \Span\prs{B}$.
+
+\begin{enumerate}
+\item מצאו משלים 
+ישר
+$W$
+של
+$U$
+ובסיס עבור
+$W$
+שמורכב מוקטורים ב־%
+$\mcal{C}$.
+
+\item האם
+$W$
+שמצאתם יחיד? הוכיחו/הפריכו.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item נשלים את
+$\mcal{B}$
+לבסיס של
+$V$
+על ידי הוספת וקטורים מ־%
+$\mcal{C}$.
+נוסיף את
+$1 \notin U$
+כדי לקבל
+$\mcal{B}' = \pmat{1 + x, x + x^2, 1}$
+ואז את
+$x^3 \notin \Span\prs{\mcal{B}'}$
+כדי לקבל בסיס
+$\mcal{B}'' = \pmat{1 + x, x + x^2, 1, x^3}$
+של
+$V$.
+
+נסמן
+$\mcal{D} \coloneqq \prs{1, x^3}$
+וניקח
+$W = \Span\prs{\mcal{D}}$.
+אז
+$\mcal{B}'' = \mcal{B} \cup \mcal{D}$
+ולכן
+$V = U \oplus W$,
+כנדרש.
+
+\item לא.
+למשל, יכולנו לקחת
+\[\mcal{B}' = \pmat{1 + x, x + x^2, x^2}\]
+ואז
+\[\text{.} \mcal{B}'' = \pmat{1 + x, x + x^2, x^2, x^3}\]
+במקרה זה היינו מקבלות משלים ישר
+$\Span\prs{x^2, x^3}$,
+ששונה מ־%
+$W$.
+\end{enumerate}
+\end{solution}
+
+\section{הטלות}
+
+כאשר יש לנו סכום ישר
+$V = \bigoplus_{i \in [m]} V_i$,
+ניתן לכתוב כל
+$v \in V$
+בצורה יחידה
+$v = v_1 + \ldots + v_m$
+עבור
+$v_i \in V_i$.
+הגיוני אז לחשוב על ההעתקה שמחזירה רק את הרכיב
+$v_i$
+בסכום.
+
+\begin{definition}
+יהי
+$V$
+מרחב וקטורי כלשהו ויהיו
+$V_1, \ldots, V_m \leq V$
+עבורם
+$V = \bigoplus_{i \in [n]} V_i$.
+ההעתקה
+\begin{align*}
+P_i \coloneq V &\to V \\
+\sum_{j \in [m]} v_j &\mapsto v_i
+\end{align*}
+כאשר
+$v_j \in V_j$
+לכל
+$j \in [m]$,
+נקראת
+\emph{ההטלה על
+$V_i$
+במקביל לסכום
+$\bigoplus_{j \in [m] \setminus \set{i}} V_j$}.
+\end{definition}
+
+\begin{remark}
+ניתן להגדיר זאת ראשית עבור סכום ישר של שני מרחבים כדי לקבל אינטואיציה לטרמינולוגיה.
+
+אם
+$V = U \oplus W$,
+ההטלה על
+$U$
+במקביל ל־%
+$W$,
+שנסמנה
+$P_{U,W}$
+היא ההעתקה עבורה
+$P_{U,W}\prs{u+w} = u$
+לכל
+$u \in U, w \in W$.
+
+במקרה הכללי, נוכל לקחת
+$U = V_i$
+וגם
+$W = \bigoplus_{j \in [m] \setminus \set{i}} V_j$
+ולקבל
+$V = U \oplus W$
+ואז ההטלה
+$P_i$
+היא בדיוק ההטלה על
+$U$
+במקביל ל־%
+$W$.
+\end{remark}
+
+נשים לב שמתקיים
+$P_i^2 = P_i$
+לכל הטלה כנ"ל.
+
+\begin{definition}
+יהי
+$V$
+מרחב וקטורי כללי.
+אופרטור
+$T \in \End\prs{V}$
+נקרא
+\emph{הטלה}
+אם
+$P^2 = P$.
+\end{definition}
+
+\begin{proposition}
+תהי
+$T \in \End\prs{V}$
+הטלה.
+אז
+$V = \ker\prs{T} \oplus \im\prs{T}$
+וגם
+$T$
+ההטלה על
+$\im\prs{T}$
+במקביל ל־%
+$\ker\prs{T}$.
+\end{proposition}
+
+\subsection{חזרה}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\mbb{F}$.
+
+הראו כי
+$T \in \End_{\mbb{F}}\prs{V}$
+הטלה אם ורק אם קיים בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+\[\text{.} \brs{T}_{\mcal{B}} = \pmat{0 & & & & & \\ & \ddots & & & & \\ & & 0 & & & \\ & & & 1 & & \\ & & & & \ddots & \\ & & & & & 1}\] 
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$T$
+הטלה. במקרה זה
+$V = \ker\prs{T} \oplus \im\prs{T}$.
+עבור בסיסים
+\begin{align*}
+\mcal{C} &= \prs{c_1, \ldots, c_m} \\
+\mcal{D} &= \prs{d_{m+1}, \ldots, d_\ell}
+\end{align*}
+של
+$\ker\prs{T}, \im\prs{T}$
+בהתאמה, נקבל כי
+$\mcal{C} \cup \mcal{D}$
+בסיס של
+$V$.
+לכל
+$c_i \in \mcal{C}$
+מתקיים
+$T\prs{c_i} = 0$,
+לכן
+$\dim\prs{\ker\prs{T}}$
+העמודות הראשונות של
+$\brs{T}_{\mcal{C} \cup \mcal{D}}$
+הן עמודות אפסים.
+לכל
+$d_i \in \mcal{D}$
+יש
+$u_i \in V$
+עבורו
+\[\text{,} d_i = T\prs{u_i} = T^2\prs{u_i} = T\prs{T\prs{u_i}} = T\prs{d_i}\]
+לכן
+\[\brs{T\prs{d_i}}_{\mcal{C} \cup \mcal{D}} = \brs{d_i}_{\mcal{C} \cup \mcal{D}} = e_i\]
+ולכן העמודה ה־%
+$i$
+עבור
+$i \geq m$
+היא
+$e_i$,
+ונקבל את הנדרש.
+
+להיפך, נניח שקיים בסיס
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+כנ"ל. אז
+$\brs{T^2}_\mcal{B} = \brs{T}_{\mcal{B}}^2 = \brs{T}_\mcal{B}$
+ולכן
+$T^2 = T$
+ונקבל כי
+$T$
+הטלה.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V = \CC_n\brs{x}$
+ותהי
+\begin{align*}
+P \colon V &\to V \\
+\text{.} \hphantom{l} p\prs{x} &\mapsto p\prs{1}
+\end{align*}
+
+\begin{enumerate}
+\item הוכיחו כי
+$P$
+הטלה.
+
+\item
+נניח מעתה כי
+$n = 3$.
+מיצאו תת־מרחבים
+$U,W \leq V$
+עבורם
+$P = P_{U,W}$.
+
+\item מיצאו בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+\[\brs{P}_{\mcal{B}} = \pmat{0_m & 0 \\ 0 & I_k}\]
+עבור ערכים כלשהם
+$m,k \in \NN$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item יהי
+$p \in V$.
+מתקיים
+$P^2\prs{p} = P\prs{p\prs{1}}$
+אך
+$p\prs{1}$
+פולינום קבוע ולכן גם
+$P\prs{p\prs{1}} = p\prs{1} = P\prs{p}$.
+קיבלנו כי
+$P^2\prs{p} = P\prs{p}$,
+ולכן
+$P$
+הטלה.
+
+\item
+ניזכר כי
+$P$
+הינה ההטלה על
+$\im\prs{P}$
+במקביל ל־%
+$\ker\prs{P}$.
+ניקח
+$U = \im\prs{P}, W = \ker\prs{P}$
+ונחשב אותם.
+
+מתקיים
+\begin{align*}
+\im\prs{P} = \set{p\prs{1}}{p \in V} = \Span\prs{1}
+\end{align*}
+כיוון שכל איבר בתמונה הינו פולינום קבוע, ולכל פולינום קבוע
+$c$
+מתקיים
+$c = P\prs{c} \in \im\prs{P}$.
+
+בנוגע לגרעין, מתקיים
+\begin{align*}
+\text{.} \ker\prs{P} = \set{p \in V}{p\prs{1} = 0}
+\end{align*}
+ממשפט המימדים, מתקיים
+\[\dim \ker\prs{P} + \dim \im\prs{P} = \dim V = 4\]
+ולכן מימד הגרעין הוא
+$3$.
+נשים לב כי
+$\set{x-1, x^2-1, x^3-1}$
+קבוצה בלתי־תלויה לינארית המוכלת בגרעין, ולכן
+\begin{align*}
+\text{.} \ker\prs{P} = \Span\prs{x-1, x^2 - 1, x^3 - 1}
+\end{align*}
+
+\textbf{הערה:} ניתן למצוא את הגרעין ישירות בעזרת פתירת מערכת משוואות הומוגנית המתאימה למטריצה מייצגת של
+$P$.
+נסו לעשות זאת בעצמכן אם לא ברור לכן איך.
+
+\item
+ראינו כי
+$\prs{1}$
+בסיס של
+$W$
+וכי
+$\prs{x-1, x^2 - 1, x^3 - 1}$
+בסיס של
+$U$.
+
+מאחת הטענות על הטלות, מתקיים
+$V = W \oplus V$.
+מטענה על תנאים שקולים לסכומים ישרים נקבל כי
+\[\mcal{B} \coloneqq \prs{1} \cup \prs{x-1, x^2 - 1, x^3 - 1} = \prs{1, x-1, x^2 - 1, x^3 - 1}\]
+הינו בסיס של
+$V$.
+מהגדרת מטריצה מייצגת, נקבל כי
+\begin{align*}
+\text{,} \brs{P}_{\mcal{B}} = \diag\prs{0, 1, 1, 1}
+\end{align*}
+כנדרש.
+\end{enumerate}
+\end{solution}
 
 \printbibliography
 \end{document}
