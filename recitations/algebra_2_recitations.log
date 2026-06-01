@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUN 2026 11:22
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUN 2026 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1998,7 +1998,7 @@ Missing character: There is no מ in font cmmi7!
 [30
 
 ] [31]
-Overfull \hbox (11.2681pt too wide) in paragraph at lines 2972--2979
+Overfull \hbox (11.2681pt too wide) in paragraph at lines 2973--2980
 []\TU/Calibri(0)/m/n/10 לפי טענה, הערכים העצמיים של $\OML/cmm/m/it/10 T$ \TU/Ca
 libri(0)/m/n/10 הם שורשי הפולינום המינימלי, לכן הערכים העצמיים השונים של $\OML/
 cmm/m/it/10 T$ \TU/Calibri(0)/m/n/10 הם $\OML/cmm/m/it/10 ^^U[]; [] ; ^^U[]$\TU
@@ -2012,11 +2012,11 @@ Missing character: There is no ע in font cmmi7!
 Missing character: There is no ב in font cmmi10!
 [34]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 3291.
+put line 3292.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 3302.
+ut line 3303.
  [35]
-Overfull \hbox (10.25139pt too wide) in paragraph at lines 3440--3456
+Overfull \hbox (10.25139pt too wide) in paragraph at lines 3441--3457
 [][][]\TU/Calibri(0)/m/n/10 נשלים את $\OMS/cmsy/m/n/10 B$ \TU/Calibri(0)/m/n/10
  לבסיס של $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 על ידי הוספת וקטורים מ־$\O
 MS/cmsy/m/n/10 C$\TU/Calibri(0)/m/n/10 . נוסיף את $\OT1/cmr/m/n/10 1 [] \OML/cm
@@ -2025,14 +2025,14 @@ m/m/it/10 U$ \TU/Calibri(0)/m/n/10 כדי לקבל $\OMS/cmsy/m/n/10 B[] \OT1/cm
  []
 
 [36] [37] [38] [39]
-Overfull \hbox (11.03181pt too wide) in paragraph at lines 4285--4293
+Overfull \hbox (11.03181pt too wide) in paragraph at lines 4286--4294
 [][]\TU/Calibri(0)/m/n/10 מהסעיף הקודם, נקבל כי המרחבים ה־$\OML/cmm/m/it/10 S$ 
 \TU/Calibri(0)/m/n/10 שמורים הם המרחבים ה־$\OML/cmm/m/it/10 T$\TU/Calibri(0)/m/
 n/10 ־שמורים, שהינם אלו מהצורה $[][] []$[]
  []
 
 
-LaTeX Warning: Empty bibliography on input line 4324.
+LaTeX Warning: Empty bibliography on input line 4325.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
