@@ -2662,6 +2662,8 @@ $B$
 ויש להן שימושים באנליזה נומרית וקריפטוגרפיה.
 \end{remark}
 
+\chapter{הכנות למשפט ז'ורדן}
+
 \section{משפט קיילי־המילטון}
 
 \subsection{חזרה}
@@ -2875,6 +2877,112 @@ $m_T\prs{x} = p_T\prs{x}$
 וגם
 $m_{T^{-1}}\prs{x} = p_{T^{-1}}\prs{x}$.
 \end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב סוף־מימדי מעל
+$\FF$
+ויהי
+$T \in \End_\FF\prs{V}$.
+הראו כי
+$T$
+לכסין
+אם ורק אם קיימים
+$\lambda_1, \ldots, \lambda_k \in \FF$
+שונים עבורם
+\begin{align*}
+\text{.} m_T\prs{x} = \prod_{i \in [k]} \prs{x - \lambda_i}
+\end{align*}
+
+היעזרו בעובדה הבאה, שניתן להוכיח באינדוקציה על
+$k \in [k]$:
+
+אם
+$\lambda_1, \ldots, \lambda_k \in \FF$
+שונים, מתקיים
+\begin{align*}
+\text{.} \ker\prs{\prod_{i \in [k]} \prs{T - \lambda_i \id_V}} = \bigoplus_{i \in [k]} \ker\prs{T - \lambda_i \id_V}
+\end{align*}
+\end{exercisechap}
+
+\begin{solution}
+\begin{itemize}
+\item
+נניח כי
+$T$
+לכסין. אז קיים בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+\begin{align*}
+\brs{T}_{\mcal{B}} = \lambda_1 I_{m_1} \oplus \ldots \oplus \lambda_k I_{m_k}
+\end{align*}
+כאשר
+$\lambda_1, \ldots, \lambda_k$
+הערכים העצמיים השונים של
+$T$
+וכאשר
+\begin{align*}
+A_1 \oplus \ldots \oplus A_k
+\end{align*}
+הוא סימון למטריצה אלכסונית בלוקים עם בלוקים
+$A_1, \ldots, A_k$
+על האלכסון.
+
+נסמן
+\begin{align*}
+p\prs{x} = \prod_{i \in [k]} \prs{x - \lambda_i}
+\end{align*}
+ונקבל כי
+\begin{align*}
+p\prs{T} &= \prod_{i \in [k]} \prs{T - \lambda_i \id_V}
+\\&=
+\prs{0 \oplus \prs{\lambda_2 - \lambda_1} I_{m_2} \oplus \ldots \oplus \prs{\lambda_k - \lambda_1} I_{m_k}} \circ
+\\&\hphantom{=.}
+\prs{\prs{\lambda_1 - \lambda_2} I_{m_1} \oplus 0 \oplus \ldots \oplus \prs{\lambda_k - \lambda_2} I_{m_k}} \circ
+\\&\hphantom{lalalalalalalalalalala} \vdots
+\\&\hphantom{=.}
+\prs{\prs{\lambda_1 - \lambda_k} I_{m_1} \oplus \ldots \oplus \prs{\lambda_{k-1} - \lambda_k} I_{m_{k-1}} \oplus 0}
+\\&=
+0
+\end{align*}
+לפי טענה על פולינומים מינימליים נקבל כי
+$m_T\prs{x} \mid p\prs{x}$,
+ולכן
+$m_T\prs{x}$
+מתפרק כמכלפת גורמים לינאריים שונים, כנדרש.
+
+\item
+נניח כי
+\[\text{.} m_T\prs{x} = \prod_{i \in [k]} \prs{x - \lambda_i}\]
+לפי טענה, הערכים העצמיים של
+$T$
+הם שורשי הפולינום המינימלי, לכן הערכים העצמיים השונים של
+$T$
+הם
+$\lambda_1, \ldots, \lambda_n$.
+
+כעת, מתקיים
+\begin{align*}
+m_T\prs{T} = \prod_{i \in [k]} \prs{T - \lambda_i \id_V} = 0
+\end{align*}
+ואז
+\begin{align*}
+V &= \ker\prs{\prod_{i \in [k]} \prs{T - \lambda_i \id_V}}
+\\&= \bigoplus_{i \in [k]} \ker\prs{T - \lambda_i \id_V}
+\\&= V_{\lambda_i}
+\end{align*}
+וקיבלנו ש־%
+$V$
+הוא סכום ישר של המרחבים העצמיים של
+$T$,
+מה ששקול לכך ש־%
+$T$
+לכסין.
+\end{itemize}
 \end{solution}
 
 \begin{exercisechap}
@@ -3811,6 +3919,88 @@ $T$
 $\mbb{R}$.
 \end{solution}
 
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\FF$,
+יהי
+$T \in \End_\FF\prs{V}$
+ויהי
+$W \leq V$
+תת־מרחב
+$T$%
+־שמור.
+
+הראו כי
+\[\text{.} m_{\left. T \right|_W}\prs{x} \mid m_T\prs{x}\]
+\end{exercisechap}
+
+\begin{solution}
+לפי טענה מההרצאה, לכל
+$S \in \End_\FF\prs{V}$,
+אם
+$q\prs{x} \in \FF\brs{x}$
+מקיים
+$q\prs{S} = 0$,
+מתקיים
+$m_S\prs{x} \mid q\prs{x}$.
+לכן די להראות כי
+\begin{align*}
+\text{.} m_T\prs{\left. T \right|_W} = 0
+\end{align*}
+אכן, לכל
+$w \in W$
+מתקיים
+\begin{align*}
+m_T\prs{\left. T \right|_W}\prs{w}
+&=
+m_T\prs{T}\prs{w}
+= 0
+\end{align*}
+כיוון ש־%
+$m_T\prs{T} = 0$
+לפי ההגדרה.
+לכן
+\begin{align*}
+m_T\prs{\left. T \right|_W} = 0
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\FF$,
+יהי
+$T \in \End_\FF\prs{V}$
+אופרטור לכסין
+ויהי
+$W \leq V$
+תת־מרחב
+$T$%
+-שמור.
+
+הראו כי
+$\left. T \right|_W$
+גם הוא לכסין.
+\end{exercisechap}
+
+\begin{solution}
+ראינו בתרגיל קודם כי אופרטור הינו לכסין אם ורק אם הפולינום המינימלי שלו מתפרק כמכלפת גורמים לינאריים שונים.
+
+לכן
+$m_T\prs{x}$
+מתפרק כמכלפת גורמים לינאריים שונים. אבל, מהתרגיל הקודם
+$m_{\left. T \right|_W} \mid m_T\prs{x}$
+ולכן גם
+$m_{\left. T \right|_W}$
+מתפרק כמכפלת גורמים לינאריים שונים, ואז
+$\left. T \right|_W$
+גם הוא לכסין.
+\end{solution}
+
 \begin{notation}
 עבור מטריצות ריבועיות
 $A_1, \ldots, A_k$
@@ -3863,7 +4053,7 @@ $T\prs{v_i} = \lambda_i v_i \in V_i$,
 $T\prs{v_i} \in W_i$.
 נראה שאלו כל האפשרויות לתת־מרחבים שמורים.
 
-ראינו בהרצאה כי אם
+ראינו כי אם
 $W$
 הינו
 $T$%
@@ -3954,7 +4144,7 @@ $S$%
 $\mbb{F}^n$.
 
 \item
-הראו כי
+הסיקו כי
 $S$
 הינו אי־פריד.
 \end{enumerate}
@@ -4116,142 +4306,6 @@ $W_1 = \mbb{F}^n, W_2 = \set{0}$
 ובמקרה השני
 $W_2 = \mbb{F}^n, W_1 = \set{0}$,
 ובכל מקרה הפירוק הינו טריוויאלי.
-\end{enumerate}
-\end{solution}
-
-\begin{exercisechap}
-\begin{enumerate}
-\item תהי
-$A \in \Mat_n\prs{\mbb{R}}$.
-הוכיחו כי אם ל־%
-$T_A$
-אין תת־מרחב שמור ממימד
-$1$,
-יש לו תת־מרחב שמור ממימד
-$2$.
-
-\item נניח כי
-$A \in \Mat_n\prs{\mbb{C}}$
-מטריצה שכל מקדמיה ממשיים. הוכיחו כי אם
-$\lambda$
-ערך עצמי של
-$T_A$
-אז
-$\bar{\lambda}$
-גם ערך עצמי של
-$T_A$.
-\end{enumerate}
-\end{exercisechap}
-
-\begin{solution}
-עבור מטריצה
-$A = \prs{a_{i,j}} \in \Mat_{n, m}$
-נגדיר
-\[\bar{A} = \prs{\bar{a}_{i,j}}\]
-את המטריצה שמקדמיה הם המספרים הצמודים לאלו ב־%
-$A$.
-נשים לב כי עבור שתי מטריצות
-$A \in \Mat_{m,n}\prs{\mbb{C}}$
-ו־%
-$B \in \Mat_{n,\ell}\prs{\mbb{C}}$,
-מתקיים
-\begin{align*}
-\prs{\overline{AB}}_{i,j} &= \overline{\sum_{k = 1}^n a_{i,k} b_{k,j}}
-\\&= \sum_{k=1}^n \overline{a_{i,k}} \overline{b_{k,j}}
-\\&= \prs{\abs{A} \abs{B}}_{i,j}
-\end{align*}
-ולכן
-$\overline{AB} = \bar{A} \bar{B}$.
-
-\begin{enumerate}
-\item
-תת־מרחב
-$T_A$%
-־שמור ממימד
-$1$
-הוא מהצורה
-$\Span_{\mbb{R}}\prs{v}$
-עבור וקטור עצמי
-$v$
-של
-$T_A$.
-לכן מההנחה, אין ל־%
-$T_A$
-וקטורים עצמיים.
-
-אבל, אפשר לחשוב על
-$A$
-כעל מטריצה ב־%
-$\Mat_n\prs{\mbb{C}}$
-שנסמנה
-$\tilde{A}$.
-אז ל־%
-$T_{\tilde{A}} \in \End_{\mbb{C}}\prs{\mbb{C}^n}$
-יש וקטור עצמי כאופרטור מעל
-$\mbb{C}$.
-יהי
-$v \in \mbb{C}^n$
-וקטור עצמי של
-$T_{\tilde{A}}$
-עם ערך עצמי
-$\lambda = \alpha + i \beta$,
-ונכתוב
-\[v = \pmat{u_1 + i w_1 \\ \vdots \\ u_n + i w_n} = u + iw\]
-כאשר
-$u,w \in \mbb{C}^n$
-וקטורים עם מקדמים ממשיים. נוכל לחשוב עליהם כחיים ב־%
-$\mbb{R}^n$.
-אז
-\begin{align*}
-Au + iAw &= A\prs{u + iw}
-\\&= Av
-\\&= \lambda v
-\\&= \prs{\alpha + i \beta} \prs{u + iw}
-\\&= \alpha u + \alpha i w + \beta i u - \beta w
-\\&= \prs{\alpha u - \beta w} + i\prs{\alpha w + \beta u}
-\end{align*}
-כאשר
-$Au, Aw \in \mbb{R}^n$.
-אז, נוכל להשוות מקדמים ולקבל
-\begin{align*}
-T_A\prs{u} &= Au = \alpha u - \beta w \in \Span\prs{u,w} \\
-\text{.} T_A\prs{w} &= Aw =  \alpha w + \beta u \in \Span\prs{u,w}
-\end{align*}
-לכן
-$\Span\prs{u,w}$
-הינו תת־מרחב
-$L_A$%
-־שמור של
-$\mbb{R}^n$.
-
-\item אם
-$\lambda$
-ממשי אין מה להוכיח כי
-$\lambda = \bar{\lambda}$.
-נניח אם כן כי
-$\lambda = \alpha + i\beta$
-עבור
-$\beta \neq 0$.
-נסמן ב־%
-$v = u + iw$
-וקטור עצמי של
-$A$
-עם ערך עצמי
-$\lambda$,
-כאשר
-$u,w \in \mbb{C}^n$
-עם מקדמים ממשיים.
-אז
-\begin{align*}
-\bar{A}\bar{v} = \overline{Av} = \overline{\lambda v} = \bar{\lambda} \bar{v}
-\end{align*}
-ולכן
-$\bar{v}$
-וקטור עצמי של
-$A$
-עם ערך עצמי
-$\bar{\lambda}$,
-כנדרש.
 \end{enumerate}
 \end{solution}
 

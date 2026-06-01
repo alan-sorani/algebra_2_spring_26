@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUN 2026 09:31
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUN 2026 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1993,18 +1993,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
 Missing character: There is no מ in font cmmi7!
-[27] [28] [29] [30] [31]
+[27] [28] [29]
+פרק 3.
+[30
+
+] [31]
+Overfull \hbox (11.2681pt too wide) in paragraph at lines 2960--2967
+[]\TU/Calibri(0)/m/n/10 לפי טענה, הערכים העצמיים של $\OML/cmm/m/it/10 T$ \TU/Ca
+libri(0)/m/n/10 הם שורשי הפולינום המינימלי, לכן הערכים העצמיים השונים של $\OML/
+cmm/m/it/10 T$ \TU/Calibri(0)/m/n/10 הם $\OML/cmm/m/it/10 ^^U[]; [] ; ^^U[]$\TU
+/Calibri(0)/m/n/10 . []
+ []
+
+[32] [33]
 Missing character: There is no ע in font cmmi7!
 Missing character: There is no ב in font cmmi10!
 Missing character: There is no ע in font cmmi7!
 Missing character: There is no ב in font cmmi10!
-[32]
+[34]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 3171.
+put line 3279.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 3182.
- [33]
-Overfull \hbox (10.25139pt too wide) in paragraph at lines 3320--3336
+ut line 3290.
+ [35]
+Overfull \hbox (10.25139pt too wide) in paragraph at lines 3428--3444
 [][][]\TU/Calibri(0)/m/n/10 נשלים את $\OMS/cmsy/m/n/10 B$ \TU/Calibri(0)/m/n/10
  לבסיס של $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 על ידי הוספת וקטורים מ־$\O
 MS/cmsy/m/n/10 C$\TU/Calibri(0)/m/n/10 . נוסיף את $\OT1/cmr/m/n/10 1 [] \OML/cm
@@ -2012,38 +2024,37 @@ m/m/it/10 U$ \TU/Calibri(0)/m/n/10 כדי לקבל $\OMS/cmsy/m/n/10 B[] \OT1/cm
 10 = []$[]
  []
 
-[34] [35] [36] [37]
-Overfull \hbox (11.03181pt too wide) in paragraph at lines 4083--4091
+[36] [37] [38] [39]
+Overfull \hbox (11.03181pt too wide) in paragraph at lines 4273--4281
 [][]\TU/Calibri(0)/m/n/10 מהסעיף הקודם, נקבל כי המרחבים ה־$\OML/cmm/m/it/10 S$ 
 \TU/Calibri(0)/m/n/10 שמורים הם המרחבים ה־$\OML/cmm/m/it/10 T$\TU/Calibri(0)/m/
 n/10 ־שמורים, שהינם אלו מהצורה $[][] []$[]
  []
 
-[38]
 
-LaTeX Warning: Empty bibliography on input line 4258.
+LaTeX Warning: Empty bibliography on input line 4312.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
 
-[39] (algebra_2_recitations.aux)
+[40] (algebra_2_recitations.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 80B9A63E14A860041CA9B1236396F274;4161.
+(rerunfilecheck)             Checksum: CDC184E898624C4990578D0796874638;4351.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44175 strings out of 402983
- 929781 string characters out of 5448068
- 2002539 words of memory out of 5000000
- 72193 multiletter control sequences out of 15000+600000
+ 44176 strings out of 402983
+ 929792 string characters out of 5448068
+ 2001745 words of memory out of 5000000
+ 72194 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,19n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (41 pages).
+Output written on algebra_2_recitations.pdf (42 pages).
