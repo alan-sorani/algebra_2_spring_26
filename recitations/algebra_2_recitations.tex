@@ -2897,13 +2897,25 @@ $\lambda_1, \ldots, \lambda_k \in \FF$
 \end{align*}
 
 היעזרו בעובדה הבאה, שניתן להוכיח באינדוקציה על
-$k \in [k]$:
+$k \in \NN$.
 
 אם
 $\lambda_1, \ldots, \lambda_k \in \FF$
 שונים, מתקיים
 \begin{align*}
 \text{.} \ker\prs{\prod_{i \in [k]} \prs{T - \lambda_i \id_V}} = \bigoplus_{i \in [k]} \ker\prs{T - \lambda_i \id_V}
+\end{align*}
+
+כדי להוכיח את הטענה עבור
+$k=2$,
+מיצאו
+$\alpha, \beta \in \FF$
+עבורם
+\[\forall v \in V: v = \alpha \prs{T - \lambda_1 \id_V}\prs{v} + \beta \prs{T - \lambda_2 \id_V}\prs{v}\]
+כאשר
+\begin{align*}
+\prs{T - \lambda_1 \id_V}\prs{v} &\in \ker\prs{T - \lambda_2 \id_V} \\
+\text{.} \prs{T - \lambda_2 \id_V}\prs{v} &\in \ker\prs{T - \lambda_1 \id_V}
 \end{align*}
 \end{exercisechap}
 
