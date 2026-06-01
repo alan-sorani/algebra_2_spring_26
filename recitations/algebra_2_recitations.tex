@@ -3637,5 +3637,623 @@ $V$.
 \end{enumerate}
 \end{solution}
 
+\section{מרחבים שמורים}
+
+נרצה להבין אופרטורים לינאריים דרך הבנה של צמצום שלהם לתת־מרחבים קטנים יותר.
+אם
+$T \in \End_{\mbb{F}}\prs{V}$,
+נוכל תמיד לצמצם את המקור כדי לקבל העתקה לינארית
+$\left. T \right|_{W} \colon W \to V$,
+אבל לא נוכל ללמוד מספיק כאשר הצמצום אינו אופרטור. לכן נרצה לצמצם גם את הטווח, מה שמוביל להגדרה הבאה.
+
+\begin{definition}[מרחב שמור]
+יהי
+$T \in \End_{\mbb{F}}\prs{V}$
+ויהי
+$U \leq V$.
+נגיד כי
+$U$
+הינו
+\emph{$T$%
+־שמור} (או
+\emph{$T$%
+־אינווריאנטי}
+אם
+$T\prs{U} \subseteq U$.
+\end{definition}
+
+\begin{definition}
+במקרה ש־%
+$W$
+מרחב
+$T$%
+־שמור, נוכל להסתכל על הצמצום
+$\left. T \right|_W \colon W \to W$
+שמוגדר על ידי
+$\left. T \right|_W \prs{w} = T\prs{w}$.
+\end{definition}
+
+\begin{remark}
+שימו לב שהסימון הוא אותו סימון כמו הצמצום של המקור, אך במסגרת הקורס צמצום אופרטורים יתייחס לזה שבהגדרה אלא אם כן יצוין מפורשות אחרת.
+\end{remark}
+
+\begin{exercisechap}
+יהיו
+$V$
+מרחב וקטורי
+מעל
+$\mbb{F}$,
+יהיו
+$P,T \in \End_{\mbb{F}}\prs{V}$
+כאשר
+$P$
+איזומורפיזם.
+יהי
+$W \leq V$.
+
+הראו כי
+$W$
+הינו
+$T$%
+־שמור אם ורק אם
+$P^{-1}\prs{W}$
+הינו
+$P^{-1} \circ T \circ P$%
+־שמור.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$W$
+הינו
+$T$%
+־שמור ויהי
+$v \in P^{-1}\prs{W}$.
+נרצה להראות כי
+$P^{-1} \circ T \circ P \prs{v} \in P^{-1}\prs{W}$.
+יהי
+$w \in W$
+עבורו
+$v = P^{-1}\prs{w}$.
+אז
+\begin{align*}
+P^{-1} \circ T \circ P \prs{v} &= P^{-1} \circ T \circ P \circ P^{-1}\prs{W}
+\\&= P^{-1} \circ T \prs{w}
+\end{align*}
+כאשר
+$T\prs{w} \in W$
+כי
+$W$
+הוא
+$T$%
+־שמור. נקבל כי
+$P^{-1} \circ T \circ P \prs{v} \in P^{-1}\prs{W}$.
+
+בכיוון השני, נניח כי
+$U \coloneqq P^{-1}\prs{W}$
+הינו
+$P^{-1} \circ T \circ P$%
+־שמור.
+נגדיר
+$S = P^{-1} \circ T \circ P$,
+וגם
+$Q = P^{-1}$.
+אז
+$T = Q^{-1} \circ T \circ Q$
+וגם
+$W = P\prs{P^{-1}\prs{W}} = P\prs{U} = Q^{-1}\prs{U}$.
+מהכיוון הראשון, נקבל כי
+$W$
+הינו
+$\prs{Q^{-1} \circ T \circ Q}$%
+־שמור, כלומר
+$T$%
+־שמור.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$\mbb{C}$
+כמרחב וקטורי ממשי ויהי
+\begin{align*}
+T \colon \mbb{C} &\to \mbb{C} \\
+\text{.} \hphantom{lala} z &\mapsto iz
+\end{align*}
+מצאו את התת־מרחבים ה־%
+$T$%
+־שמורים של
+$\mbb{C}$
+והסיקו כי
+$T$
+אינו לכסין מעל
+$\mbb{R}$.
+\end{exercisechap}
+
+\begin{solution}
+$\mbb{C}, \set{0}$
+תת־מרחבים
+$T$%
+־שמורים.
+
+נניח כי
+$W \leq \mbb{C}$
+מרחב
+$T$%
+־שמור נוסף. אז
+$\dim_{\mbb{R}}\prs{W} = 1$
+ולכן יש
+\[z_0 \in \mbb{C}^\times \ceq \set{z \in \mbb{C}}{z \neq 0}\]
+עבורו
+$W = \spn\set{z_0}$.
+נקבל
+$T\prs{z_0} \in W$
+לכן
+$T\prs{z_0} = c z_0$
+עבור
+$c \in \mbb{R}$.
+אבל
+$c z_0 = i z_0$
+גורר
+$c = i$
+בסתירה.
+
+תת־מרחבים $T$־שמורים $1$־מימדיים של
+$\mbb{C}$
+הם
+$\Span_{\mbb{R}}\prs{v}$
+עבור
+$v$
+וקטור עצמי של
+$T$.
+ לכן אין ל־%
+$T$
+וקטורים עצמיים, ולכן הוא אינו לכסין מעל
+$\mbb{R}$.
+\end{solution}
+
+\begin{notation}
+עבור מטריצות ריבועיות
+$A_1, \ldots, A_k$
+נסמן
+\[\text{.} A_1 \oplus \ldots \oplus A_k = \pmat{A_1 & & \\ & \ddots & \\ & & A_k}\]
+\end{notation}
+
+\begin{exercisechap}
+יהי
+$V = \mbb{C}^n$
+ותהי
+\[T \colon V \to V\]
+עם
+\[\brs{T}_E = \lambda_1 I_{m_1} \oplus \ldots \oplus \lambda_k I_{m_k}\]
+עבור
+$\lambda_i \neq \lambda_j$
+לכל
+$i \neq j$.
+נסמן
+$n_i = m_1 + \ldots + m_{i-1} + 1$.
+מצאו את כל התת־מרחבים ה־%
+$T$%
+־שמורים של
+$V$.
+\end{exercisechap}
+
+\begin{solution}
+ראשית, אם
+$W \leq V_i \coloneqq \Span\prs{e_{n_i}, \ldots, e_{n_i + m_i - 1}}$,
+נקבל כי
+$T\prs{w} = \lambda_i w \in W$
+לכל
+$w \in W$.
+לכן כל תת־מרחב כזה הינו
+$T$%
+־שמור.
+גם סכום של תת־מרחבים כאלה יהיה
+$T$%
+־שמור כי אם
+$v_i \in W_i \coloneqq W \cap V_i$
+לכל
+$i \in [k]$
+אז
+\[T\prs{v_1 + \ldots + v_k} = T\prs{v_1} + \ldots + T\prs{v_k}\]
+כאשר
+$T\prs{v_i} \in W$
+וגם
+$T\prs{v_i} = \lambda_i v_i \in V_i$,
+כלומר
+$T\prs{v_i} \in W_i$.
+נראה שאלו כל האפשרויות לתת־מרחבים שמורים.
+
+ראינו בהרצאה כי אם
+$W$
+הינו
+$T$%
+־שמור, אז
+$\left. T \right|_W$
+הינו לכסין.
+לכן,
+$W$
+סכום ישר של המרחבים העצמיים של
+$\left. T \right|_W$.
+לכל ערך עצמי
+$\lambda$,
+המרחב העצמי
+$W_{\lambda}$
+של
+$\left. T \right|_W$
+הוא החיתוך
+$V_\lambda \cap W$
+כאשר
+$V_\lambda$
+המרחב העצמי של
+$T$.
+כיוון שעבור אופרטור לכסין המרחב שווה לסכום ישר של המרחבים העצמיים, נקבל כי
+\begin{align*}
+\text{,} W = \bigoplus_{i \in [k]} W_{\lambda_i} = \bigoplus_{i \in [k]} W \cap V_{\lambda_i}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{definition}[בלוק ז'ורדן]
+יהי
+$\lambda \in \mbb{F}$.
+נגדיר
+\emph{בלוק ז'ורדן מגודל
+$m$
+עם ערך עצמי
+$\lambda$}
+בתור
+\begin{align*}
+\text{.} J_m\prs{\lambda} \coloneqq \pmat{\lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda} \in \Mat_m\prs{\mbb{F}}
+\end{align*}
+\end{definition}
+
+\begin{definition}[אופרטור אי־פריד]
+אופרטור
+$T \in \End_{\mbb{F}}\prs{V}$
+נקרא
+\emph{אי־פריד}
+אם לכל
+$U,W \leq V$
+שהינם
+$T$%
+־שמורים ועבורם
+$U \oplus W = V$,
+בהכרח
+$U = V, W = \set{0}$
+או
+$U = \set{0}, W = V$.
+\end{definition}
+
+\begin{exercisechap}\label{exercise:jordan_invariant}
+\begin{enumerate}
+\item יהי
+$T = T_{J_n\prs{0}} \in \End\prs{\mbb{F}^n}$.
+מיצאו את המרחבים ה־%
+$T$
+שמורים של
+$\mbb{F}^n$.
+
+\item יהי
+$N \in \End_{\mbb{F}}\prs{V}$
+ויהי
+$\lambda \in \mbb{F}$.
+הראו שהמרחבים ה־%
+$S$
+־שמורים של
+$V$
+הם המרחבים ה־%
+$\prs{N + \lambda \id_V}$
+־שמורים של
+$V$.
+
+\item יהי
+$S = T_{J_n\prs{\lambda}} \in \End_{\mbb{F}^n}$.
+הסיקו מה המרחבים ה־%
+$S$%
+־שמורים של
+$\mbb{F}^n$.
+
+\item
+הראו כי
+$S$
+הינו אי־פריד.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נשים לב כי
+\begin{align*}
+\set{0} & \\
+\ker\prs{T} &= \Span\prs{e_1} \\
+\im\prs{T} &= \Span\prs{e_1, \ldots, e_{n-1}} \\
+V &= \Span\prs{e_1, \ldots, e_n}
+\end{align*}
+כולם
+$T$%
+־שמורים, כיוון שמרחב האפס, הגרעין, התמונה, והמרחב כולו תמיד
+$T$%
+־שמורים.
+גם, מתקיים
+\begin{align*}
+\forall i > 1 \colon T\prs{e_i} &= e_{i-1} \in \Span\prs{e_1, \ldots, e_i} \\
+T\prs{e_1} &= 0
+\end{align*}
+ולכן כל מרחב מהצורה
+$\Span\prs{e_1, \ldots, e_i}$
+עבור
+$i \in \set{0, \ldots, n}$
+הינו
+$T$%
+־שמור.
+נרצה להראות שהמרחבים ה־%
+$T$%
+־שמורים הם בדיוק אלו מהצורה
+הזאת.
+
+יהי
+$W \leq \mbb{F}^n$
+מרחב
+$T$%
+־שמור, ויהי
+$k \in \set{0, \ldots, n}$
+המקסימלי עבורו
+$\Span\prs{e_1, \ldots, e_k} \subseteq W$
+(יש כזה
+$k$
+כיוון שעבור
+$k = 0$
+נקבל
+$\set{0} \subseteq W$).
+נרצה להראות כי
+$W = \Span\prs{e_1, \ldots, e_k}$.
+
+אחרת, קיים וקטור
+$v = \sum_{i \in \brs{\ell}} \alpha_i e_i \in W$
+עם
+$\ell > k$
+וגם
+$\alpha_\ell \neq 0$.
+אם
+$\ell = k+1$
+נקבל כי
+$\alpha_i e_i \in W$
+לכל
+$i < \ell$
+ולכן
+\[\alpha_\ell e_\ell = v - \sum_{i \in [\ell - 1]} \in W\]
+וכיוון ש־%
+$\alpha_\ell \neq 0$
+אז
+$e_{k+1} = e_\ell \in W$.
+במקרה זה
+$e_1, \ldots, e_{k+1} \in W$
+ולכן
+$\Span\prs{e_1, \ldots, e_{k+1}} \subseteq W$
+בסתירה להנחה.
+
+באופן כללי, מתקיים
+$T^i\prs{v} \in W$
+לכל
+$i$.
+כדי שיתקיים
+$T^i\prs{e_\ell} = e_{k+1}$
+צריך לקחת
+$\ell - i = k+1$
+כלומר
+$i = \ell - \prs{k+1}$.
+אז
+\begin{align*}
+T^{\ell - \prs{k+1}} \prs{v} &= \sum_{i \in \brs{\ell}} \alpha_i T^{\ell - \prs{k+1}}\prs{e_i}
+\\&= \sum_{i = \ell - k}^{\ell} \alpha_i e_{i - \ell + k + 1}
+\\&= \sum_{j = 1}^{k+1} \alpha_{j+\ell-k-1} e_j \in W
+\end{align*}
+ונקבל את הנדרש מהמקרה הקודם
+$\ell = k+1$.
+
+\item
+יהי
+$W \leq V$
+תת־מרחב
+$N$%
+־שמור. לכל
+$w \in W$
+מתקיים
+\[\prs{N + \lambda \id_V}\prs{w} = N\prs{w} + \lambda w \in W\]
+כיוון ש־%
+$N\prs{w}, \lambda w \in W$.
+לכן
+$W$
+הינו
+$N + \lambda \id_V$%
+־שמור.
+
+אם
+$W \leq V$
+תת־מרחב
+$\prs{N + \lambda \id_V}$%
+־שמור, נקבל מהכיוון הראשון שהוא
+$\prs{N + \lambda \id_V} + \prs{-\lambda}\id_V$%
+־שמור, כלומר
+$N$%
+־שמור.
+
+\item
+מהסעיף הקודם, נקבל כי המרחבים ה־%
+$S$
+שמורים הם המרחבים ה־%
+$T$%
+־שמורים, שהינם אלו מהצורה
+$\Span_{\mbb{F}}\prs{e_1, \ldots, e_i}$
+עבור
+$i \in \set{0, \ldots, n}$.
+
+\item
+נניח כי יש תת־מרחבים
+$S$%
+־שמורים
+$W_1, W_2$
+עבורם
+$\mbb{F}^n = W_1 \oplus W_2$.
+מהסעיף הקודם, יש
+$i,j \in \set{0, \ldots, n}$
+עבורם
+\begin{align*}
+W_1 &= \Span\prs{e_1, \ldots, e_i} \\
+\text{.} W_2 &= \Span\prs{e_1, \ldots, e_j}
+\end{align*}
+כיוון ש־%
+$W_1 \oplus W_2 = \mbb{F}^n$,
+בהכרח
+$e_n \in W_1 + W_2$,
+ולכן
+$i = n$
+או
+$j = n$.
+במקרה הראשון,
+$W_1 = \mbb{F}^n, W_2 = \set{0}$
+ובמקרה השני
+$W_2 = \mbb{F}^n, W_1 = \set{0}$,
+ובכל מקרה הפירוק הינו טריוויאלי.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+\begin{enumerate}
+\item תהי
+$A \in \Mat_n\prs{\mbb{R}}$.
+הוכיחו כי אם ל־%
+$T_A$
+אין תת־מרחב שמור ממימד
+$1$,
+יש לו תת־מרחב שמור ממימד
+$2$.
+
+\item נניח כי
+$A \in \Mat_n\prs{\mbb{C}}$
+מטריצה שכל מקדמיה ממשיים. הוכיחו כי אם
+$\lambda$
+ערך עצמי של
+$T_A$
+אז
+$\bar{\lambda}$
+גם ערך עצמי של
+$T_A$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+עבור מטריצה
+$A = \prs{a_{i,j}} \in \Mat_{n, m}$
+נגדיר
+\[\bar{A} = \prs{\bar{a}_{i,j}}\]
+את המטריצה שמקדמיה הם המספרים הצמודים לאלו ב־%
+$A$.
+נשים לב כי עבור שתי מטריצות
+$A \in \Mat_{m,n}\prs{\mbb{C}}$
+ו־%
+$B \in \Mat_{n,\ell}\prs{\mbb{C}}$,
+מתקיים
+\begin{align*}
+\prs{\overline{AB}}_{i,j} &= \overline{\sum_{k = 1}^n a_{i,k} b_{k,j}}
+\\&= \sum_{k=1}^n \overline{a_{i,k}} \overline{b_{k,j}}
+\\&= \prs{\abs{A} \abs{B}}_{i,j}
+\end{align*}
+ולכן
+$\overline{AB} = \bar{A} \bar{B}$.
+
+\begin{enumerate}
+\item
+תת־מרחב
+$T_A$%
+־שמור ממימד
+$1$
+הוא מהצורה
+$\Span_{\mbb{R}}\prs{v}$
+עבור וקטור עצמי
+$v$
+של
+$T_A$.
+לכן מההנחה, אין ל־%
+$T_A$
+וקטורים עצמיים.
+
+אבל, אפשר לחשוב על
+$A$
+כעל מטריצה ב־%
+$\Mat_n\prs{\mbb{C}}$
+שנסמנה
+$\tilde{A}$.
+אז ל־%
+$T_{\tilde{A}} \in \End_{\mbb{C}}\prs{\mbb{C}^n}$
+יש וקטור עצמי כאופרטור מעל
+$\mbb{C}$.
+יהי
+$v \in \mbb{C}^n$
+וקטור עצמי של
+$T_{\tilde{A}}$
+עם ערך עצמי
+$\lambda = \alpha + i \beta$,
+ונכתוב
+\[v = \pmat{u_1 + i w_1 \\ \vdots \\ u_n + i w_n} = u + iw\]
+כאשר
+$u,w \in \mbb{C}^n$
+וקטורים עם מקדמים ממשיים. נוכל לחשוב עליהם כחיים ב־%
+$\mbb{R}^n$.
+אז
+\begin{align*}
+Au + iAw &= A\prs{u + iw}
+\\&= Av
+\\&= \lambda v
+\\&= \prs{\alpha + i \beta} \prs{u + iw}
+\\&= \alpha u + \alpha i w + \beta i u - \beta w
+\\&= \prs{\alpha u - \beta w} + i\prs{\alpha w + \beta u}
+\end{align*}
+כאשר
+$Au, Aw \in \mbb{R}^n$.
+אז, נוכל להשוות מקדמים ולקבל
+\begin{align*}
+T_A\prs{u} &= Au = \alpha u - \beta w \in \Span\prs{u,w} \\
+\text{.} T_A\prs{w} &= Aw =  \alpha w + \beta u \in \Span\prs{u,w}
+\end{align*}
+לכן
+$\Span\prs{u,w}$
+הינו תת־מרחב
+$L_A$%
+־שמור של
+$\mbb{R}^n$.
+
+\item אם
+$\lambda$
+ממשי אין מה להוכיח כי
+$\lambda = \bar{\lambda}$.
+נניח אם כן כי
+$\lambda = \alpha + i\beta$
+עבור
+$\beta \neq 0$.
+נסמן ב־%
+$v = u + iw$
+וקטור עצמי של
+$A$
+עם ערך עצמי
+$\lambda$,
+כאשר
+$u,w \in \mbb{C}^n$
+עם מקדמים ממשיים.
+אז
+\begin{align*}
+\bar{A}\bar{v} = \overline{Av} = \overline{\lambda v} = \bar{\lambda} \bar{v}
+\end{align*}
+ולכן
+$\bar{v}$
+וקטור עצמי של
+$A$
+עם ערך עצמי
+$\bar{\lambda}$,
+כנדרש.
+\end{enumerate}
+\end{solution}
+
 \printbibliography
 \end{document}

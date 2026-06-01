@@ -25,3 +25,4 @@
 \contentsline {section}{\numberline {2.9}הטלות}{34}{section.2.9}%
 \contentsline {subsection}{\numberline {2.9.1}חזרה}{35}{subsection.2.9.1}%
 \contentsline {subsection}{\numberline {2.9.2}תרגילים}{35}{subsection.2.9.2}%
+\contentsline {section}{\numberline {2.10}מרחבים שמורים}{36}{section.2.10}%
