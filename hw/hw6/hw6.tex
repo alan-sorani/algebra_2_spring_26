@@ -1,0 +1,166 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 6 \\
+הפולינום המינימלי, מרחבים שמורים, ואופרטורים נילפוטנטיים
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 14.6.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+יהי
+$V = \CC_3\brs{x}$
+ויהי
+\begin{align*}
+D \colon V &\to V \\
+\text{.} \hphantom{l} p\prs{x} &\mapsto p\prs{x} + p'\prs{x}
+\end{align*}
+
+מיצאו את הפולינומים האופייני והמינימלי של כל אחד מהאופרטורים הבאים.
+
+\begin{enumerate}
+\item $D$
+\item $D + \id_V$
+\item $D^2$
+\item $D^{-1}$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\FF$,
+ויהי
+$T \in \End_\FF\prs{V}$.
+\begin{enumerate}
+\item תהי
+$P \in \End_\FF\prs{V} \setminus \set{0_V, \id_V}$
+הטלה עבורה
+$TP = PT$.
+הראו כי
+$\im\prs{P}, \ker\prs{P}$
+הינם
+$T$%
+־שמורים והסיקו כי
+$T$
+אופרטור פריד.
+
+\item נניח כי
+$T$
+אופרטור פריד. מיצאו הטלה
+$P \in \End_\FF\prs{V} \setminus \set{0_V, \id_V}$
+עבורה
+$TP = PT$.
+
+\item הסיקו כי $T$ הינו פריד אם ורק אם קיימת הטלה
+$P \in \End_\FF\prs{V} \setminus \set{0_V, \id_V}$
+המתחלפת עם
+$T$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\CC$.
+נסמן ב־%
+$\mathrm{Nil}\prs{V}$
+את אוסף האופרטורים הנלפוטנטיים על
+$V$.
+
+\begin{enumerate}
+\item מיצאו אופרטורים
+$S,T \in \mathrm{Nil}\prs{V}$
+עבורם
+$ST \notin \mathrm{Nil}\prs{V}$.
+
+\item הראו כי אם
+$S,T \in \mathrm{Nil}\prs{V}$
+מתחלפים אז
+$ST \in \mathrm{Nil}\prs{V}$.
+
+\item מיצאו אופרטורים
+$S,T \in \mathrm{Nil}\prs{V}$
+עבורם
+$S+T \notin \mathrm{Nil}\prs{V}$.
+
+\item הראו כי אם
+$S,T \in \mathrm{Nil}\prs{V}$
+מתחלפים אז
+$S+T \in \mathrm{Nil}\prs{V}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי מעל שדה
+$\FF$
+ויהי
+$T \in \End_\FF\prs{V}$
+נילפוטנטי.
+
+\begin{enumerate}
+\item הוכיחו כי
+$\id_V - T$
+הפיך ומיצאו את ההופכי שלו.
+
+\textbf{רמז:}
+מיצאו פולינום
+$p\prs{x}$
+הקשור לאופרטור $\id_V - T$, חישבו על דרך אחרת לכתוב את הביטוי
+$\frac{1}{p\prs{x}}$
+והציבו
+$T$
+בביטוי שקיבלתן.
+
+\item הוכיחו כי
+$\id_V + T$
+הפיך והיעזרו בסעיף הקודם כדי למצוא את
+$\prs{\id_V + T}^{-1}$.
+\end{enumerate}
+\end{exercise}
+
+\end{document}
