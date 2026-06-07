@@ -4322,5 +4322,507 @@ $W_2 = \mbb{F}^n, W_1 = \set{0}$,
 \end{enumerate}
 \end{solution}
 
+\subsection{צורת ז'ורדן}
+
+\begin{definition}[אופרטור הזזה]
+יהי
+$V$
+מרחב וקטורי עם בסיס
+$\mcal{B} \coloneqq \prs{v_1, \ldots, v_n}$.
+אופרטור
+$T \in \End\prs{V}$
+נקרא
+\emph{אופרטור הזזה ביחס ל־%
+$\mcal{B}$}
+אם
+\begin{align*}
+\text{.} T\prs{v_i} = \fcases{v_{i-1} & i > 1 \\ 0 & i = 1}
+\end{align*}
+הוא נקרא
+\emph{אופרטור הזזה}
+אם קיים בסיס שהוא אופרטור הזזה ביחס אליו.
+\end{definition}
+
+\begin{definition}[בלוק ז'ורדן]
+יהי
+$\lambda \in \mbb{F}$.
+נגדיר
+\emph{בלוק ז'ורדן מגודל
+$m$
+עם ערך עצמי
+$\lambda$}
+בתור
+\begin{align*}
+\text{.} J_m\prs{\lambda} \coloneqq \pmat{\lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda} \in \Mat_m\prs{\mbb{F}}
+\end{align*}
+
+מטריצה מהצורה הזאת נקראת
+\emph{בלוק ז'ורדן}.
+\end{definition}
+
+\begin{theorem}[משפט ז'ורדן לאופרטורים]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\FF$
+ויהי
+$T \in \End_\FF\prs{V}$
+כך ש־%
+$p_T\prs{x}$
+מתפצל מעל
+$\FF$.
+אז
+ קיימים
+$V_1, \ldots, V_m \leq V$
+עבורם
+$V = \bigoplus_{i \in [m]} V_i$
+וכך שקיימים אופרטורי הזזה
+$S_i \in V_i$
+וסקלרים
+$\lambda_i \in \FF$
+עבורם
+\[\text{.} \forall i \in [m]: \left. T \right|_{V_i} = S_i + \lambda_i \id_{V_i}\]
+\end{theorem}
+
+\begin{remark}
+לפי ההגדרה, אופרטור
+$S \in \End_\FF\prs{W}$
+הוא אופרטור הזזה אם ורק אם קיים בסיס
+$\mcal{B}$
+של
+$W$
+לפיו
+$\brs{S}_{\mcal{B}} = J_n\prs{0}$.
+
+אז משפט ז'ורדן אומר באופן שקול, שכאשר
+$p_T\prs{x}$
+מתפצל מעל
+$\FF$,
+קיים בסיס
+$\mcal{B}$
+של
+$V$
+וקיימים
+$k_1, \ldots, k_m \in \NN_+$
+וגם
+$\lambda_1, \ldots, \lambda_m \in \NN_+$
+עבורם
+\begin{align*}
+\text{.} \brs{T}_{\mcal{B}} = \bigoplus_{i \in [m]} J_{k_i}\prs{\lambda_i} 
+\end{align*}
+נקרא למטריצה מהצורה הזאת
+\emph{מטריצת ז'ורדן}
+ובמקרה הזה
+\emph{צורת ז'ורדן של
+$T$}.
+\end{remark}
+
+\begin{theorem}[משפט ז'ורדן למטריצות]
+תהי
+$A \in \Mat_n\prs{\FF}$
+כך ש־%
+$p_A\prs{x}$
+מתפצל מעל
+$\FF$.
+אז
+$A$
+דומה למטריצת ז'ורדן ב־%
+$\Mat_n\prs{\FF}$.
+
+בנוסף, מטריצת ז'ורדן זאת יחידה עד כדי שינוי הסדר של הבלוקים.
+\end{theorem}
+
+\begin{proposition}
+יהי
+$T \in \End_\FF\prs{V}$
+עם צורת ז'ורדן.
+מספר הבלוקים עם ערך עצמי
+$\lambda$
+ומגודל
+$r$
+בצורת ז'ורדן של
+$T$
+הוא
+\begin{align*}
+2 \dim \ker\prs{\prs{T - \lambda \id_V}^r} - \dim \ker \prs{\prs{T - \lambda \id_V}^{r+1}} - \dim \ker \prs{\prs{T - \lambda \id_V}^{r-1}}
+\end{align*}
+\end{proposition}
+
+\begin{exercise}
+מצאו את צורת ז'ורדן של המטריצה
+\[\text{.} A = \pmat{1 & 1 & \cdots & 1 & 1 \\ 0 & 1 & \cdots & 1 & 1 \\ 0 & 0 & \ddots & \vdots & \vdots \\ \vdots & \vdots & \ddots & 1 & 1 \\ 0 & 0 & \cdots & 0 & 1} \in M_n\prs{\mbb{C}}\]
+\end{exercise}
+
+\begin{solution}
+המטריצה משולשת עליונה ולכן הערכים העצמיים של
+$A$
+על האלכסון. נקבל כי
+$1$
+הערך העצמי היחיד וכי הוא מריבוי
+$n$.
+הדרגה של
+$A - I$
+היא
+$n-1$
+ולכן הריבוי הגיאומטרי של
+$1$
+הוא
+$1$.
+לכן יש בלוק יחיד בצורת ז'ורדן, ונקבל כי צורת ז'ורדן היא
+$J\prs{A} = J_n\prs{1}$.
+\end{solution}
+
+\begin{exercise}
+חשבו את צורת ז'ורדן
+$J\prs{A}$
+של המטריצה הבאה,
+\[A = \pmat{1 & 0 & 0 & 0 & 0 \\ 1 & - 1 & 0 & 0 & -1 \\ 1 & -1 & 0 & 0 & -1 \\ 0 & 0 & 0 & 0 & -1 \\ -1 & 1 & 0 & 0 & 1}\]
+כאשר נתון כי
+$p_A\prs{x} = x^4\prs{x-1}$.
+\end{exercise}
+
+\begin{solution}
+לפי הפולינום האופייני,
+$1$
+ערך עצמי מריבוי אלגברי
+$1$.
+לכן גם הריבוי הגיאומטרי שלו הוא
+$1$
+ונקבל כי יש בלוק יחיד עם ערך עצמי
+$1$,
+ושגודלו
+$1$.
+
+כמו כן, אנו יודעים כי
+$0$
+ערך עצמי מריבוי אלגברי
+$4$.
+לכן יהיו בלוקי ז'ורדן עם ערך עצמי
+$0$
+שסכום הגדלים שלהם הוא
+$4$.
+ניתן לראות כי
+$r\prs{A} = 3$,
+ולכן יש
+$5 - r\prs{A} = 2$
+וקטורים עצמיים עם ערך עצמי
+$0$.
+אז, $J\prs{A}$
+היא אחת מהמטריצות הבאות.
+\begin{align*}
+J_1 &= \pmat{1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0} = \mrm{diag}\prs{J_1\prs{1}, J_2\prs{0}, J_2\prs{0}} \\
+J_2 &= \pmat{1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0} = \mrm{diag}\prs{J_1\prs{1}, J_1\prs{0}, J_3\prs{0}}
+\end{align*}
+
+כדי למצוא איזו מהמטריצות היא צורת ז'ורדן של
+$A$
+ניעזר בנוסחא לחישוב מספר הבלוקים מגודל נתון.
+מספר הבלוקים מגודל לפחות
+$2$
+הוא
+\[b_2 = \dim \ker\prs{{T_A}^2} - \dim \ker\prs{{L_A}^1}\]
+כאשר ניתן לראות כי
+\[\text{.} \dim \ker\prs{\prs{T_A}^1} = 2\]
+מתקיים
+\[A^2 = \pmat{1 & 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 & 0 \\ 1 & -1 & 0 & 0 & -1 \\ -1 & 0 & 0 & 0 & 0}\]
+ולכן
+\[\text{.} \dim \ker\prs{{T_A}^2} = 3\]
+אז
+$b_2 = 3 - 2 = 1$,
+כלומר יש בלוק אחד עם ערך עצמי
+$0$
+ומגודל לפחות
+$2$.
+זה לא המקרה עבור
+$J_2$
+ולכן נקבל כי צורת ז'ורדן של
+$A$
+היא
+$J_1$.
+\end{solution}
+
+\begin{exercise}
+\begin{enumerate}
+\item האם כל המטריצות
+$A \in M_5\prs{\mbb{C}}$
+המקיימות
+$A^4 \neq 0$
+וגם
+$A^5 = 0$
+הן דומות?
+
+\item האם כל המטריצות
+$A \in M_5\prs{\mbb{C}}$
+המקיימות
+$A^3 \neq 0$
+וגם
+$A^4 = 0$
+הן דומות?
+
+\item האם כל המטריצות
+$A \in M_5\prs{\mbb{C}}$
+המקיימות
+$A^2 \neq 0$
+וגם
+$A^3 = 0$
+הן דומות?
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item התנאי
+$A^4 \neq 0$
+וגם
+$A^5 = 0$
+אומר כי
+\[\text{,}\dim \ker\prs{T_A^5} - \dim \ker\prs{T_A^4} \geq 1\]
+כלומר יש בלוק מגודל לפחות
+$5$.
+לכן
+$A$
+דומה ל־%
+$J_5\prs{0}$,
+ולכן התשובה היא כן.
+\item התנאי
+$A^3 \neq 0$
+וגם
+$A^4 = 0$
+אומר כי
+\[\text{,} \dim \ker\prs{T_A^4} - \dim \ker\prs{T_A^3} \geq 1\]
+ולכן יש בלוק מגודל לפחות
+$4$.
+אבל,
+$A^4 = 0$
+ולכן לא יתכן שיש בלוק ז'ורדן מגודל
+$5$.
+לכן כל
+$A$
+כזאת דומה ל-%
+$\mrm{diag}\prs{J_4\prs{0}, J_1\prs{0}}$,
+והתשובה היא כן.
+\item התנאים
+$A^2 \neq 0, A^3 = 0$
+מראים כי
+\[\text{,} \dim \ker\prs{T_A^3} - \dim \ker\prs{T_A^2} \geq 1\]
+ולכן יש בלוק מגודל לפחות
+$3$.
+אבל,
+\begin{align*}
+\mrm{diag}\prs{J_3\prs{0}, J_2\prs{0}} \\
+\mrm{diag}\prs{J_3\prs{0}, J_1\prs{0}, J_1\prs{0}}
+\end{align*}
+שתיהן עומדות בתנאים, ואינן דומות.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+מצאו צורת ובסיס ז'ורדן עבור
+\begin{align*}
+D \colon \mbb{C}_n\brs{x} &\to \mbb{C}_n\brs{x} \\
+\text{.} \hphantom{lalalala} p &\mapsto p'
+\end{align*}
+\end{exercise}
+
+\begin{solution}
+נשים לב כי
+\begin{align*}
+\im\prs{D} &= \Span\prs{1, x, \ldots, x^{n-1}} \\
+\vdots \\
+\im\prs{D^{n-1}} &= \Span\prs{1} \\
+\im\prs{D^n} &= \set{0}
+\end{align*}
+ובפרט
+$D$
+נילפוטנטית.
+
+ניקח
+$v_1 = x$.
+נחפש וקטור
+$v_2$
+עבורו
+$D\prs{v_2} = v_1$
+ואכן הוקטור
+$x$
+מקיים זאת.
+נמשיך בכל שלב ונמצא וקטור
+$v_{i+1}$
+עבורו
+$D\prs{v_{i+1}} = v_{i}$,
+ונקבל בסיס ז'ורדן
+\[\text{.} \prs{1, x, \frac{x^2}{2}, \frac{x^3}{6}, \ldots, \frac{x^{n-1}}{\prs{n-1}!}, \frac{x^n}{n!}}\]
+\end{solution}
+
+\begin{exercise}
+הראו כי
+\begin{align*}
+\text{.} J_n\prs{\lambda}^r = \pmat{\lambda^r & \pmat{r \\ 1} \lambda^{r-1} & \pmat{r \\ 2} \lambda^{r-2} & \cdots & \\ & \lambda^r & \ddots & & \vdots \\ & & \ddots & \ddots & \pmat{r\\2}\lambda^{r-2} \\ & & & \lambda^r & \pmat{r \\ 1} \lambda^{r-1} \\ & & & & \lambda^r}
+\end{align*}
+\end{exercise}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+J_n\prs{\lambda}^r &= \prs{J_n\prs{0} + \lambda I}^r
+\end{align*}
+כאשר
+$J_n\prs{0}, \lambda I$
+מתחלפות כי
+$\lambda I$
+סקלרית.
+נקבל מהבינום של ניוטון כי
+\begin{align*}
+J_n\prs{\lambda}^r = \lambda^r I + \binom{r}{1} \lambda^{r-1} J_n\prs{0} + \binom{r}{2} \lambda^{r-2} J_n\prs{0}^2 + \ldots
+\end{align*}
+כאשר
+$J_n\prs{0}^k$
+היא מטריצה עם אפסים פרט ל־%
+$1$
+באלכסון ה־%
+$k$
+מעל האלכסון הראשי.
+לכן
+\begin{align*}
+\text{,} J_n\prs{\lambda}^r = \pmat{\lambda^r & \pmat{r \\ 1} \lambda^{r-1} & \pmat{r \\ 2} \lambda^{r-2} & \cdots & \\ & \lambda^r & \ddots & & \vdots \\ & & \ddots & \ddots & \pmat{r\\2}\lambda^{r-2} \\ & & & \lambda^r & \pmat{r \\ 1} \lambda^{r-1} \\ & & & & \lambda^r}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercise}
+תהי
+\[\text{.} A \ceq \pmat{2 & 4 & 0 \\ -1 & -2 & 0 \\ 8 & 7 & 9} \in \Mat_3\prs{\mbb{C}}\]
+חשבו את
+$A^{2026}$.
+\end{exercise}
+
+\begin{solution}
+נסמן
+$V = \mbb{C}^3$
+ונמצא בסיס ז'ורדן
+$B$
+עבור
+$A$.
+אז נקבל
+$P \in \Mat_3\prs{\mbb{C}}$
+עבורה
+$J \ceq P A P^{-1}$
+מטריצת ז'ורדן, ואז
+\begin{align*}
+A^{2026} &= \prs{P^{-1}JP}^{2026}
+= P^{-1}J^{2026}P
+\end{align*}
+כאשר מהחישוב הנ"ל נדע לחשב את
+$J^{2026}$.
+
+\begin{description}
+\item[ערכים עצמיים:]
+ניתן לראות כי
+$9$
+ערך עצמי של
+$A$
+כי
+$A e_3 = 9 e_3$.
+נסמן ב־%
+$\lambda_1, \lambda_2$
+את הערכים העצמיים הנוספים ונקבל
+\begin{align*}
+\lambda_1 + \lambda_2 + 9 = \tr\prs{A} = 9 \\
+9 \lambda_1 \lambda_2 = \det\prs{A} = 9\prs{-4+4} = 0
+\end{align*}
+לכן
+$\lambda_1 = \lambda_2 = 0$.
+
+נקבל כי
+$9$
+ערך עצמי מריבוי אלגברי
+$1$
+וכי
+$0$
+ערך עצמי מריבוי אלגברי
+$2$.
+בפרט,
+$\prs{e_3}$
+שרשרת ז'ורדן עבור הערך העצמי
+$9$.
+\item[שרשרת ז'ורדן עבור
+$\lambda = 0$:]
+מתקיים
+\begin{align*}
+A^2 = \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 81 & 81 & 81}
+\end{align*}
+ולכן
+\begin{align*}
+\ker\prs{T_A^2} &= \Span\prs{e_1 - e_2, e_1 - e_3} \\
+\im\prs{T_A} &= \Span\prs{\pmat{2 \\ -1 \\ 8}, e_3} \\\text{.} \im\prs{T_A^2} &= \Span\prs{e_3}
+\end{align*}
+מתוך הגרעין
+$\ker\prs{T_A^2}$,
+שנקרא
+\emph{המרחב העצמי המוכלל של
+$0$
+כערך עצמי של
+$A$}
+נסתכל על בסיס לתמונה
+\[\im\prs{T_A} \cap \ker\prs{T_A^2}\]
+של
+\begin{align*}
+\text{.} \left. T_A \right|_{\ker\prs{T_A^2}}
+\end{align*}
+נחפש וקטור
+\[x \prs{e_1 - e_2} + y \prs{e_1 - e_3} = \pmat{x \\ y - x \\ -y}\]
+בתמונה, וכיוון שבתמונה נמצא כל וקטור מהצורה
+\begin{align*}
+\pmat{2 \\ -1 \\ \alpha}
+\end{align*}
+עבור
+$\alpha \in \CC$,
+נוכל לקחת
+$y = 1$
+ואז
+$v = \pmat{2 \\ -1 \\ -1}$.
+נחפש
+$u \in \ker\prs{T_A^2}$
+עבורו
+$A u = v$.
+נכתוב
+\[u = a \prs{e_1 - e_2} + b \prs{e_1 - e_3}\]
+ואז
+\begin{align*}
+\text{.} Au = a \pmat{-2 \\ 1 \\ 1} + b \pmat{2 \\ -1 \\ -1}
+\end{align*}
+ניקח
+$a = 0, b = 1$
+ונקבל כי
+$u = e_1 - e_3$
+עונה על הנדרש.
+
+נקבל שרשרת ז'ורדן
+\[\text{.} \prs{A\prs{e_1 - e_3}, e_1 - e_3} = \prs{2e_1 - e_2 - e_3, e_1 - e_3}\]
+
+\item[מסקנה:]
+קיבלנו
+\[B \ceq \prs{2e_1 - e_2 - e_3, e_1 - e_3, e_3}\]
+עבורו
+\[\brs{T_A}_B = J \ceq \pmat{0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9}\]
+ולכן
+\begin{align*}
+\text{.} A &= \brs{T_A}_E
+= \brs{\id_V}^{B}_E \brs{T_A}_B \brs{\id_V}^E_B
+\end{align*}
+נסמן
+\[P \ceq \brs{\id_V}^B_E = \pmat{2 & 1 & 0 \\ -1 & 0 & 0 \\ -1 & -1 & 1}\]
+שעמודותיה הן וקטורי הבסיס
+$B$,
+ונקבל
+\[\text{.} A = P J P^{-1}\]
+אז
+\begin{align*}
+A^{2026} &= P J^{2026} P^{-1}
+\\&= \pmat{2 & 1 & 0 \\ -1 & 0 & 0 \\ -1 & -1 & 1} \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9^{2026}} \pmat{0 & -1 & 0 \\ 1 & 2 & 0 \\ 1 & 1 & 1}
+\\ \text{.} \hphantom{A^{2026}} &= \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 9^{2026} & 9^{2026} & 9^{2026}}
+\end{align*}
+\end{description}
+\end{solution}
+
 \printbibliography
 \end{document}

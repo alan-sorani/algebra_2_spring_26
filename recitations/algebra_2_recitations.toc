@@ -27,3 +27,4 @@
 \contentsline {subsection}{\numberline {3.3.1}חזרה}{37}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}תרגילים}{37}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}מרחבים שמורים}{38}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}צורת ז'ורדן}{41}{subsection.3.4.1}%
