@@ -1,0 +1,243 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 7 \\
+צורת ז'ורדן
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 18.6.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise} %0
+יהי
+$\FF$
+שדה ויהיו
+$\lambda \in \FF, n \in \NN_+$.
+\begin{enumerate}
+\item
+ הראו כי
+\[\text{.} m_{J_n\prs{\lambda}} = \prs{x - \lambda}^n\]
+
+\item הסיקו כי אם
+$T \in \End_\FF\prs{V}$
+אופרטור שהפולינום האופייני שלו מתפצל מעל
+$\FF$,
+ושהערכים העצמיים השונים שלו הם
+$\lambda_1, \ldots, \lambda_m$,
+מתקיים
+\begin{align*}
+m_T\prs{x} = \prod_{i \in [m]} \prs{x - \lambda_i}^{k_i}
+\end{align*}
+כאשר
+$k_i$
+גודל בלוק ז'ורדן המקסימלי עם ערך עצמי
+$\lambda_i$
+בצורת ז'ורדן של
+$T$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} %1
+יהי
+$n \in \NN_+$
+ותהיינה
+$A,B \in \Mat_n\prs{\CC}$
+עבורן
+\begin{align*}
+p_A\prs{x} &= p_B\prs{x} \\
+\text{.} m_A\prs{x} &= m_B\prs{x}
+\end{align*}
+הוכיחו או הפריכו את הטענות הבאות. עבור אלו שאינן נכונות, מיצאו דוגמה נגדית.
+
+\begin{enumerate}
+\item
+$A,B$
+דומות אם
+$n=3$.
+
+\item
+$A,B$
+דומות אם
+$n=4$.
+
+\item
+$A,B$
+דומות אם
+$n=5$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}%2
+\begin{enumerate}
+\item מצאו את צורת ז'ורדן של
+$J_n\prs{\lambda}^{-1}$
+עבור
+$\lambda \in \mbb{C}\setminus\set{0}$
+ועבור
+$n \in \mbb{N}_+$.
+
+\item תהי
+$A \in M_n\prs{\mbb{C}}$
+הפיכה.
+מצאו את צורת ז'ורדן של
+$A^{-1}$
+כתלות בזאת של
+$A$.
+
+\item מצאו תנאי הכרחי ומספיק על הבלוקים בצורת ז'ורדן של
+$A \in M_n\prs{\mbb{C}}$
+כך שיתקיים
+$A \sim A^{-1}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+תהיינה
+\begin{align*}
+A_1 &\coloneqq \pmat{1 & -2 & 2 \\ 2 & -1 & 2 \\ 2 & -2 & 3}, \quad 
+A_2 \coloneqq \pmat{1 & 2 & 2 \\ 2 & 1 & 2 \\ 2 & 2 & 3}, \quad
+A_3 \coloneqq \pmat{1 & 2 & -2 \\ 2 & 1 & -2 \\ 2 & 2 & -3}
+\end{align*}
+מטריצות ב־%
+$\Mat_3\prs{\RR}$,
+ויהי
+$v_0 = \pmat{3 \\ 4 \\ 5}$.
+
+נגיד כי וקטור
+$v = \pmat{a \\ b \\ c} \in \NN_+^3$
+הוא
+\emph{שלשה פיתגורית}
+אם
+\[\text{,} f\prs{v} \coloneqq a^2 + b^2 - c^2 = 0\]
+וכי וקטור כזה הוא
+\emph{שלשה פיתגורית פרימיטיבית}
+אם בנוסף המחלק המשותף המקסימלי של
+$a,b,c$
+הוא
+$1$,
+ו־%
+$b$
+זוגי. (יכולנו לחלופין לדרוש כי $a$ זוגי. בדיוק אחד מהם זוגי כי אחרת הסכום $a^2 + b^2$ הינו זוגי אך לא מתחלק ב־%
+$4$
+ואז אין
+$c \in \NN_+$
+עבורו
+$c^2 = a^2 + b^2$).
+
+\begin{enumerate}
+\item מתקיים כי אם
+$v \in \RR^3$
+שלשה פיתגורית, גם
+$A_i v$
+שלשה פיתגורית, וגם כי אם
+$v \in \RR^3$
+פרימיטיבית, גם
+$A_i v$
+פרימיטיבית.
+הראו זאת עבור
+$i = 1$
+והסיקו כי
+$A_1^k v_0$
+שלשה פיתגורית פרימיטיבית לכל
+$k \in \NN$.
+
+\textbf{רמז:}
+עבור פרימיטיביות, הראו שמקדמי המטריצה
+$A_1^{-1}$
+שלמים (אין צורך לחשב אותה לשם כך), והיעזרו בה.
+
+\item ידוע כי $1$ ערך עצמי של
+$A_1$
+ושל
+$A_3$,
+וכי
+$-1$
+ערך עצמי של
+$A_2$.
+
+הראו כי
+$A_2, A_3$
+לכסינות, ומיצאו מטריצה
+$P \in \Mat_3\prs{\RR}$
+הפיכה, ומטריצת ז'ורדן
+$J \in \Mat_3\prs{\RR}$
+כך שמתקיים
+$P A_1 P = J$.
+
+\item ידוע כי כל שלשה פיתגורית פרימיטיבת מתקבלת על ידי כפל משמאל של
+$v_0$
+במטריצות מבין
+$A_1, A_2, A_3$.
+כלומר, קבוצת השלשות הפיתרגוריות הפרימיטיביות היא
+\[\text{.} \set{\prs{\prod_{j \in [k]} A_{i_j}} v_0}{\substack{k \in \NN \\ \forall j \in [k]: i_j \in [3]}}\]
+
+הראו כי הקבוצה
+$\set{A_1^k v_0}{k \in \NN}$
+היא בדיוק קבוצת השלשות הפיתגוריות הפרימיטיביות
+$\pmat{a \\ b \\ c}$
+עבורן
+$c = b+1$,
+וחשבו את
+$A_1^k v_0$
+כדי למצוא קבוצה זאת.
+\end{enumerate}
+\end{exercise}
+
+\begin{remark}
+מצאנו בעצם בתרגיל את כל המשולשים הישרי־זווית עם צלעות מאורכים שלמים, כך שאורך היתר גדול ב־%
+$1$
+מאורך אחת הצלעות.
+\end{remark}
+
+\begin{remark}
+כדי להראות שקבוצת השלשות הפיתרוגיות הפרימיטיביות היא זאת שכתבנו, ניתן להראות כי עבור שלשה פרימיטיבית
+$v = \pmat{a \\ b \\ c} \neq v_0$,
+בדיוק אחד מבין הוקטורים
+$A_i^{-1} v$
+הוא בעל מקדמים שלמים, וכי הוא מהווה שלשה פיתגורית פרימיטיבית.
+
+ניתן להראות זאת כתרגיל, אך צריך להראות שחלק מכך שמתקיים
+$a + b < \frac{3}{2} c$
+מה שנדע להראות בהמשך הקורס בעזרת מכפלות פנימיות.
+\end{remark}
+
+\end{document}
