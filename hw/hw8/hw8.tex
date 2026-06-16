@@ -1,0 +1,139 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 8 \\
+צורת ז'ורדן
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 25.6.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{exercise}
+עבור ההעתקות הבאות $f_i$, קיבעו האם $f_i$ מכפלה פנימית. הוכיחו את קביעתכן.
+
+\begin{enumerate}
+\item
+\begin{align*}
+f_3 \colon \Mat_n\prs{\mbb{R}} \times \Mat_n\prs{\mbb{R}} &\to \mbb{R} \\
+\prs{A,B} &\mapsto \tr\prs{B^t A}
+\end{align*}
+
+\item
+\begin{align*}
+f_3 \colon \Mat_n\prs{\mbb{C}} \times \Mat_n\prs{\mbb{C}} &\to \mbb{C} \\
+\prs{A,B} &\mapsto \tr\prs{B^t A}
+\end{align*}
+
+\item
+\begin{align*}
+f_4 \colon \mbb{R}_{\leq n}\brs{x} \times \mbb{R}_{\leq n}\brs{x} &\to \mbb{R} \\
+\prs{f,g} &\mapsto f\prs{0} g\prs{0} + \ldots + f\prs{n} g\prs{n}
+\end{align*}
+
+\item
+\begin{align*}
+f_5 \colon \mbb{C}_{\leq n}\brs{x} \times \mbb{C}_{\leq n}\brs{x} &\to \mbb{C} \\
+\prs{f,g} &\mapsto f\prs{0} g\prs{0} + \ldots + f\prs{n} g\prs{n}
+\end{align*}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+היעזרו באי־שוויון קושי־שוורץ כדי להראות שמתקיים
+\[\text{.} \forall x,y,z \in \mbb{R}_+ \colon x + y + z \leq 2 \prs{\frac{x^2}{y+z} + \frac{y^2}{x+z} + \frac{z^2}{x+y}}\]
+\textbf{רמז:}
+חישבו כיצד לפרש את אגף ימין בעזרת נורמה.
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V = \mbb{R}_2\brs{x}$
+ותהיינה
+\begin{align*}
+\trs{f,g}_1 &= \int_0^1 f\prs{x} g\prs{x} \diff x \\
+\trs{f,g}_2 &= f\prs{-1} g\prs{-1} + f\prs{0} g\prs{0} + f\prs{1} g\prs{1}
+\end{align*}
+שתי מכפלות פנימיות על
+$V$.
+יהי
+\[\text{.} W = \set{f \in V}{f\prs{x} = f\prs{-x}} \leq V\]
+\begin{enumerate}
+\item 
+מיצאו בסיס
+$B = \prs{w_1, \ldots, w_m}$
+של
+$W$
+והשלימו אותו לבסיס
+$C$
+של
+$V$.
+בצעו את תהליך גרם־שמידט על
+$C$
+לפי כל אחת מהמכפלות הפנימיות כדי לקבל בסיסים אורתונורמליים לפיהן.
+
+\item
+היעזרו בבסיסים שמצאתן בסעיף הקודם כדי למצוא
+את
+\[W^\perp \coloneqq \set{v \in V}{\forall w \in W: \trs{v,w} = 0}\]
+לפי כל אחת מהמכפלות הפנימיות.
+
+\item
+מיצאו את ההטלה
+$P_W$
+על
+$W$
+במקביל ל־%
+$W^\perp$
+לפי כל אחת מהמכפלות הפנימיות.
+הטלה זאת נקראת
+\emph{ההטלה האורתוגונלית על
+$W$}
+(לפי המכפלה הפנימית המתאימה) ונראה בהמשך כי
+$P_W\prs{v}$
+הוא הוקטור הקרוב ביותר ל־%
+$v$
+ב־%
+$W$.
+\end{enumerate}
+\end{exercise}
+
+\end{document}
