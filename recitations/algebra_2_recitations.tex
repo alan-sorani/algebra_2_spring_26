@@ -5653,7 +5653,9 @@ $d\prs{A, W} = \frac{1}{\sqrt{2}}$.
 \end{enumerate}
 \end{solution}
 
-\section{משפט ההצגה של ריס}
+\chapter{אופרטורים על מרחבי מכפלה פנימית}
+
+\section{המרחב הדואלי, ומשפט ההצגה של ריס}
 
 \begin{definition}[המרחב הדואלי]
 יהי
@@ -5836,6 +5838,555 @@ $a = -\frac{15}{8}$.
 אז
 \[\text{.} C = \norm{g} = \sqrt{\int_{-1}^1 \prs{-\frac{15}{8} x^2 - \frac{9}{8}}^2} \diff x = \frac{27}{4}\]
 \end{enumerate}
+\end{solution}
+
+\section{ההעתקה הצמודה}
+
+\begin{theorem}[ההעתקה הצמודה]
+יהיו
+$V,W$
+מרחבי מכפלה פנימית סוף־מימדיים ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+קיימת העתקה יחידה
+$T^* \in \Hom_{\mbb{F}}\prs{W,V}$
+עבורה
+\begin{align*}
+\trs{T\prs{v}, w}_W = \trs{v, T^*\prs{w}}_V
+\end{align*}
+לכל
+$v \in V$
+ולכל
+$w \in W$.
+
+היא נקראת
+\emph{ההעתקה הצמודה}
+של
+$T$.
+\end{theorem}
+
+\begin{theorem}
+יהיו
+$\prs{V, \trs{\cdot, \cdot}_V}, \prs{W, \trs{\cdot, \cdot}_W}$
+מרחבי מכפלה פנימית סוף מימדיים עם בסיסים אורתונורמליים
+$B,C$
+בהתאמה, ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+אז
+$\brs{T^*}^C_B = \prs{\brs{T}^B_C}^*$.
+\end{theorem}
+
+כעת, אם
+$T \in \End_{\mbb{F}}\prs{V}$,
+יש לנו דרכים שונות לחשב את
+$T^*$.
+נוכל לנחש איזה אופרטור יקיים
+$\trs{Tv, w} = \trs{v, T^* w}$
+לכל
+$v,w \in V$,
+על ידי מניפולציות של הצגת המכפלה הפנימית.
+נוכל גם לכתוב את
+$T^*$
+בצורה כללית ולפתור מערכת משוואות.
+לבסוף, נוכל לקחת בסיס אורתונורמלי
+$B$,
+כדי שיתקיים
+$\brs{T^*}_B = \overline{\brs{T}_B}^t$,
+ואז לשחזר את
+$T^*$
+מהמטריצה המייצגת.
+נראה דוגמאות לחישוב בכל אחת מהדרכים.
+
+\begin{exercisechap}
+יהי
+$V = \mbb{R}_2\brs{x}$
+עם המכפלה הפנימית
+\[\text{.} \trs{f,g} = \int_{-1}^1 f\prs{x} \bar{g}\prs{x} \diff x\]
+יהי
+$D \in \End_{\mbb{R}}\prs{V}$
+אופרטור הגזירה.
+מיצאו את
+$D^*$.
+\end{exercisechap}
+
+\begin{solution}
+כדי להראות
+$D^* = S$
+די להראות כי
+$\trs{Df,g} = \trs{f,Dg}$
+עבור
+$f,g$
+בבסיס נתון, מלינאריות.
+נחשב מה צריך להיות
+$D^*$
+לפי הבסיס
+$\prs{1,x,x^2}$.
+יהי
+$g\prs{x} = ax^2 + bx + c$.
+נחשב את מכפלת
+$D\prs{g}$
+עם
+$1$
+\begin{align*}
+    0 &= \trs{0,g} \\&= \trs{D\prs{1}, g} \\&= \trs{1, D^*\prs{g}} \\&= \int_{-1}^1 D^*\prs{g}\prs{x} \diff x
+\end{align*}
+עם
+$x$
+\begin{align*}
+        \frac{2a}{3} + 2c &= \left. \frac{ax^3}{3} + \frac{bx^2}{2} + cx \right|_{-1}^1 \\&= \int_{-1}^1 ax^2 + bx + c \diff x \\&= \trs{1,g} \\&= \trs{D\prs{x}, g} \\&= \trs{x, D^*\prs{g}} \\&= \int_{-1}^1 x D^*\prs{g}\prs{x} \diff x
+\end{align*}
+ועם
+$x^2$
+\begin{align*}
+        \frac{4b}{3} &= \left. \frac{2ax^4}{4} + \frac{2bx^3}{3} + \frac{2cx^2}{2} \right|_{-1}^1 \\&= 2 \int_{-1}^1 ax^3 + bx^2 + cx \diff x \\&= \trs{2x,g} \\&= \trs{D\prs{x^2}, g} \\&= \trs{x^2, D^*\prs{g}} \\&= \int_{-1}^1 x^2 D^*\prs{g}\prs{x} \diff x
+\end{align*}
+
+נכתוב
+$D^*\prs{g} = \alpha x^2 + \beta x + \gamma$
+ונקבל
+\begin{align*}
+    0 &= \int_{-1}^1 \alpha x^2 + \beta x + \gamma \diff x = \frac{2 \alpha}{3} + 2 \gamma \\
+    \frac{2a}{3} + c &= \int_{-1}^1 \alpha x^3 + \beta x^2 + \gamma x \diff x = \frac{2\beta}{3} \\
+    \frac{4b}{3} &= \int_{-1}^1 \alpha x^4 + \beta x^3 + \gamma x^2 \diff x = \left. \frac{\alpha x^5}{5} + \frac{\beta x^4}{4} + \frac{\gamma x^3}{3} \right|_{-1}^1 = \frac{2 \alpha}{5} + \frac{2 \gamma}{3}
+\end{align*}
+מהמשוואה הראשונה,
+$\gamma = -\frac{\alpha}{3}$.
+אז מהמשוואה השלישית,
+$\frac{4b}{3} = \frac{2 \alpha}{5} - \frac{2 \alpha}{9}$
+כלומר
+\[4b = \prs{\frac{6}{5} - \frac{2}{3}}\alpha = \prs{\frac{18}{15} - \frac{10}{15}}\alpha = \frac{8 \alpha}{15}\]
+כלומר
+$b = \frac{2 \alpha}{15}$
+כלומר
+$\alpha = \frac{15}{2} b$.
+נקבל כי
+$\gamma = -\frac{5}{2}$
+ומהמשוואה השנייה כי
+$\beta = a + \frac{3c}{2}$.
+לכן
+\[\text{.} D^*\prs{ax^2 + bx + c} = \frac{15}{2} b x^2 + \prs{a + \frac{3c}{2}}x - \frac{5}{2}\]
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V = \Mat_n\prs{\mbb{C}}$
+עם המכפלה הפנימית
+$\trs{A,B} = \tr\prs{B^*, A}$,
+ויהי
+\begin{align*}
+    \Phi \colon V &\to V \\
+    \text{.} \hphantom{lala} A &\mapsto A^t
+\end{align*}
+חשבו את
+$\Phi^*$.
+\end{exercisechap}
+
+\begin{solution}
+נוכל לחשב ישירות,
+\begin{align*}
+    \trs{\Phi\prs{A},B} &= \trs{A^t, B} \\&= \tr\prs{B^* A^t} \\&= \overline{\tr\prs{\overline{B^* A^t}}} \\&= \overline{\tr\prs{B^t A^*}} \\&= \overline{\tr\prs{A^* B^t}} \\&= \overline{\trs{B^t, A}} \\&= \trs{A, B^t} \\&= \trs{A, \Phi\prs{B}}
+\end{align*}
+ולכן
+$\Phi^* = \Phi$.
+
+נוכל לחשב זאת גם בעזרת מטריצה מייצגת בבסיס אורתונורמלי.
+נסמן ב־%
+$E_{i,j}$
+מטריצה עבורה
+$\prs{E_{i,j}}_{k,\ell} = \delta_{i,k} \delta_{j,\ell}$.
+כלומר, זאת מטריצה עם
+$0$
+בכל המקדמים חוץ מזה בשורה ה־%
+$i$
+והעמודה ה־%
+$j$.
+אז בבסיס
+\[B \coloneqq \prs{E_{1,1}, \ldots, E_{n,n}, E_{1,2}, E_{2,1}, E_{1,3}, E_{3,1} \ldots, E_{n-1, n} E_{n,n-1}}\]
+נקבל כי
+\begin{align*}
+    \text{.} \brs{\Phi}_B &= I_n \oplus \pmat{0 & 1 \\ 1 & 0} \oplus \ldots \oplus \pmat{0 & 1 \\ 1 & 0}
+\end{align*}
+כיוון ש־%
+$B$
+בסיס אורתונורמלי
+נקבל כי
+$\brs{\Phi^*}_B = \overline{\brs{\Phi}_B}^t$.
+אך
+$\brs{\Phi}_B$
+מטריצה ממשית סימטרית, ולכן
+$\brs{\Phi^*}_B = \brs{\Phi}_B$
+ואז
+$\Phi^* = \Phi$.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית מעל
+$\FF$
+ממימד
+$n \in \NN$
+ויהי
+$T \in \End_\FF\prs{V}$.
+
+\begin{enumerate}
+\item הראו כי
+\begin{align*}
+\text{.} \ker\prs{T^* T} = \ker\prs{T}
+\end{align*}
+
+\item הראו כי
+\begin{align*}
+\text{.} \im\prs{T^* T} = \im\prs{T^*}
+\end{align*}
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item יהי
+$v \in \ker\prs{T}$.
+אז
+\[\prs{T^* T}\prs{v} = T^*\prs{T\prs{v}} = T^*\prs{0} = 0\]
+ולכן
+$v \in \ker\prs{T^* T}$
+ונקבל כי
+$\ker\prs{T} \subseteq \ker\prs{T^* T}$.
+
+יהי
+$v \in \ker\prs{T^* T}$.
+אז
+$T^*T\prs{v} = 0$.
+נקבל כי
+\begin{align*}
+\trs{T^* T\prs{v}, v} = 0
+\end{align*}
+אבל
+\begin{align*}
+\trs{T^* T \prs{v}, v} = \trs{T\prs{v}, T\prs{v}}
+\end{align*}
+מהגדרת
+$T^*$.
+לכן
+\begin{align*}
+\trs{T\prs{v}, T\prs{v}} = 0
+\end{align*}
+ומחיוביות המכפלה הפנימית נקבל כי
+$T\prs{v}$.
+לכן
+$\ker\prs{T^* T} \subseteq \ker\prs{T}$,
+ובסך הכל נקבל שוויון.
+
+\item ראינו בהרצאה שמתקיים
+\begin{align*}
+\im\prs{S} = \ker\prs{S^*}^\perp
+\end{align*}
+לכל
+$S \in \End_\FF\prs{V}$.
+לכן
+\begin{align*}
+\im\prs{T^* T} &= \ker\prs{\prs{T^* T}^*}^\perp
+\\&=
+\ker\prs{T^* \prs{T^*}^*}^\perp
+\\&=
+\ker\prs{T^* T}^\perp
+\\&=
+\ker\prs{T}^\perp
+\end{align*}
+כאשר בשוויון האחרון השתמשנו בסעיף הקוד.
+
+
+ראינו גם שלכל
+$S \in \End_\FF\prs{V}$
+מתקיים
+$\ker\prs{S} = \im\prs{S^*}^\perp$
+ולכן נקבל כי
+\begin{align*}
+\ker\prs{T}^\perp = \im\prs{T^*}
+\end{align*}
+ובסך הכל נקבל
+\begin{align*}
+\text{.} \im\prs{T^* T} = \im\prs{T^*}
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \FF$
+מעל
+$\FF$.
+
+הוכיחו כי
+$T \in \End_\FF\prs{V}$
+הינו נורמלי אם ורק אם קיימים
+$A,B \in \End_\FF\prs{V}$
+צמודים לעצמם ומתחלפים עבורם
+\begin{align*}
+\text{.} T = A + iB
+\end{align*}
+\end{exercisechap}
+
+\begin{solution}
+נניח תחילה כי קיימים
+$A,B \in \End_\FF\prs{V}$
+צמודים לעצמם ומתחלפים עבורם
+$T = A+iB$.
+אז
+\begin{align*}
+T^* T &= \prs{A+iB}^* \prs{A + iB}
+\\&=
+\prs{A^* - iB^*} \prs{A + iB}
+\\&=
+\prs{A - iB} \prs{A + iB}
+\\&=
+\prs{A + iB} \prs{A - iB}
+\\&=
+\prs{A + iB} \prs{A^* - iB^*}
+\\&=
+\prs{A + iB} \prs{A + iB}^*
+\\&=
+T T^*
+\end{align*}
+ולכן
+$T$
+נורמלי.
+
+מצד שני, נניח כי
+$T$
+נורמלי, ונרצה למצוא
+$A,B$
+כנ"ל.
+ניזכר בפירוק של מטריצה כסכום של מטריצה סימטרית ואנטי־סימטרית, ונכתוב
+\begin{align*}
+T &= \frac{T + T^*}{2} + \frac{T - T^*}{2}
+\\&= \frac{T + T^*}{2} + i \cdot \frac{T - T^*}{2i}
+\end{align*}
+נסמן
+\begin{align*}
+A &= \frac{T + T^*}{2} \\
+B &= \frac{T - T^*}{2i}
+\end{align*}
+ונראה שהם צמודים־לעצמם ומתחלפים.
+ראשית, כיוון שלכל
+$S \in \End_\FF\prs{V}, \alpha \in \FF$
+מתקיים
+$\prs{\alpha S}^* = \bar{\alpha} S^*$,
+נקבל כי
+\begin{align*}
+A^* &= \frac{1}{2} \prs{T + T^*}^* = \frac{1}{2} \prs{T^* + \prs{T^*}^*} = \frac{1}{2} \prs{T^* + T} = A \\
+\text{.} B^* &= -\frac{1}{2i} \prs{T^* - \prs{T^*}^*} = -\frac{1}{2i} \cdot -\prs{T - T^*} = B
+\end{align*}
+לכן
+$A,B$
+צמודים לעצמם.
+הם גם מתחלפים כי
+\begin{align*}
+AB &= \prs{\frac{T + T^*}{2}}\prs{\frac{T - T^*}{2i}}
+\\&= -\frac{1}{4i} \prs{T^2 - TT^* + T^*T -\prs{T^*}^2}
+\\&= \prs{\frac{T - T^*}{2i}}\prs{\frac{T + T^*}{2}}
+\\\text{.} \hphantom{AB} &= BA
+\end{align*}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \FF$
+מעל
+$\FF$
+ויהי
+$T \in \End_\FF\prs{V}$.
+
+הוכיחו כי
+$U \leq V$
+הינו
+$T$%
+-שמור אם ורק אם
+$U^\perp$
+הינו
+$T^*$%
+־שמור.
+\end{exercisechap}
+
+\begin{solution}
+יהי
+$U \leq V$
+תת־מרחב
+$T$%
+־שמור. כדי להראות כי
+$U^\perp$
+הינו
+$T^*$%
+־שמור, ניקח
+$v \in U^\perp$
+ונראה כי
+$T^*\prs{v} \in U^\perp$.
+כלומר, ניקח
+$u \in U$
+ונראה כי
+$T^*\prs{v} \perp u$.
+אכן, כיוון ש־%
+$U$
+הינו
+$T$%
+־שמור, מתקיים
+$T\prs{u} \in U$,
+וכיוון ש־%
+$v \in U^\perp$
+נקבל כי
+\begin{align*}
+\text{.} \trs{T^*\prs{v}, u} = \trs{v, T\prs{u}} = 0
+\end{align*}
+
+מצד שני, נניח כי
+$U^\perp$
+הינו
+$T^*$%
+־שמור ונראה כי
+$U$
+הינו
+$T$%
+־שמור.
+
+נסמן
+$S = T^*$
+וגם
+$W = U^\perp$.
+אז מההנחה
+$W$
+הוא
+$S$%
+־שמור, ולכן מהכיוון הראשון
+$W^\perp = \prs{U^\perp}^\perp = U$
+הוא
+$S^* = \prs{T^*}^* = T$%
+־שמור, כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \FF$
+מעל
+$\FF$
+ותהי
+$P \in \End_\FF\prs{V}$
+הטלה.
+
+הראו שהתנאים הבאים שקולים.
+
+\begin{enumerate}
+\item $P$ צמודה לעצמו.
+\item $P$ נורמלית.
+\item קיים
+$U \leq V$
+עבורו
+$P = P_U$
+ההטלה האורתוגונלית על
+$U$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{itemize}
+\item נניח כי
+$P$
+צמודה לעצמה. אז
+$P^* = P$
+ובפרט
+$P, P^*$
+מתחלפות. לכן
+$P$
+נורמלית.
+
+\item נניח כי
+$P$
+נורמלית ונראה כי
+$P = P_U$
+כאשר
+$U \coloneqq \im\prs{P}$.
+ההטלה
+$P_U$
+היא ההטלה על
+$U$
+במקביל ל־%
+$U^\perp$,
+וההטלה
+$P$
+היא ההטלה על
+$U$
+במקביל ל־%
+$\ker\prs{P}$,
+לכן די להראות כי
+$\ker\prs{P} = \im\prs{P}^\perp$.
+
+אנו יודעות כי
+\begin{align*}
+\ker\prs{P^*} = \im\prs{P}^\perp
+\end{align*}
+ולכן נותר להראות כי
+$\ker\prs{P} = \ker\prs{P^*}$.
+ניזכר בתרגיל קודם בו ראינו כי לכל אופרטור
+$T$
+מתקיים
+\begin{align*}
+\ker\prs{T^* T} = \ker\prs{T}
+\end{align*}
+ונקבל כי
+\begin{align*}
+\ker\prs{P} = \ker\prs{P^* P} = \ker\prs{P P^*} = \ker\prs{P^*}
+\end{align*}
+כנדרש.
+
+\item נניח לבסוף כי
+$P = P_U$
+ונראה כי
+$P$
+צמודה לעצמה.
+
+$P$
+ההטלה על התמונה במקביל לגרעין ובמקביל למרחב הניצב לתמונה, ולכן
+\begin{align*}
+\text{.} \ker\prs{P} = \im\prs{P}^\perp
+\end{align*}
+נסמן
+$W = \ker\prs{P} = U^\perp$,
+יהיו
+$v_1, v_2 \in V$,
+ונכתוב
+$v_i = u_i + w_i$
+עבור
+$u_i \in U, w_i \in W$.
+אז
+\begin{align*}
+\trs{P\prs{v_1}, v_2} &= \trs{u_1, v_2}
+\\&= \trs{u_1, u_2 + w_2}
+\\&= \trs{u_1, u_2} + \cancelto{0}{\trs{u_1, w_2}}
+\\&= \trs{u_1, u_2}
+\end{align*}
+ומצד שני
+\begin{align*}
+\trs{v_1, P\prs{v_2}} &= \trs{v_1, u_2}
+\\&= \trs{u_1 + w_1, u_2}
+\\&= \trs{u_1, u_2} + \cancelto{0}{\trs{w_1, u_2}}
+\\&= \trs{u_1, u_2}
+\end{align*}
+ולכן בסך הכל
+\begin{align*}
+\text{.} \trs{P\prs{v_1}, v_2} = \trs{v_1, P\prs{v_2}}
+\end{align*}
+כיוון שזה מתקיים לכל
+$v_1, v_2 \in V$,
+נקבל לפי הגדרת
+$P^*$
+כי
+$P^* = P$,
+כנדרש.
+\end{itemize}
 \end{solution}
 
 \printbibliography

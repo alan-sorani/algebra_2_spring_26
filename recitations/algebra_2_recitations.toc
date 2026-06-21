@@ -33,4 +33,6 @@
 \contentsline {section}{\numberline {4.1}מוטיבציה}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}מכפלות פנימיות}{47}{section.4.2}%
 \contentsline {section}{\numberline {4.3}בסיסים אורתונורמליים והמרחב הניצב}{49}{section.4.3}%
-\contentsline {section}{\numberline {4.4}משפט ההצגה של ריס}{53}{section.4.4}%
+\contentsline {chapter}{\numberline {5}אופרטורים על מרחבי מכפלה פנימית}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}המרחב הדואלי, ומשפט ההצגה של ריס}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}ההעתקה הצמודה}{56}{section.5.2}%
