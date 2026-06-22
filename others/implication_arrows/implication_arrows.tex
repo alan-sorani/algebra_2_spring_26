@@ -1,0 +1,50 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - חצי גרירה והיכן למצוא אותם
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+בבדיקת תרגילים בקורסים שונים בטכניון, ניתן לראות בעיה נפוצה מאוד בנוגע לחוסר הבנה כיצד להשתמש בחצי גרירה.
+
+התשובה הקצרה ביותר בנוגע לאופן השימוש בחצי גרירה, היא שרצוי לא להשתמש בחצי גרירה.
+
+\end{document}
