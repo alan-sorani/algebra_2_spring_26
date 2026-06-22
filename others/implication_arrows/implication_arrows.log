@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  22 JUN 2026 10:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  22 JUN 2026 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1554,58 +1554,232 @@ Package siunitx Info: Option "group-digits = false" has been deprecated in
 (siunitx)             Use "group-digits = none" as a replacement.
 
 
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.s
+ty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+ (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks70
+\verbatim@line=\toks71
+\verbatim@in@stream=\read3
+) (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces
+.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box102
+\tcb@upperbox=\box103
+\tcb@lowerbox=\box104
+\tcb@phantombox=\box105
+\c@tcbbreakpart=\count595
+\c@tcblayer=\count596
+\c@tcolorbox@number=\count597
+\l__tcobox_tmpa_box=\box106
+\l__tcobox_tmpa_dim=\dimen335
+\tcb@temp=\box107
+\tcb@temp=\box108
+\tcb@temp=\box109
+\tcb@temp=\box110
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.c
+ode.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
+\c@tcbrastercolumn=\count598
+\c@tcbrasterrow=\count599
+\c@tcbrasternum=\count600
+\c@tcbraster=\count601
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.co
+de.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.ima
+ge.sty
+Package: tikzfill.image 2026/04/23 v1.2.0 Image filling library for TikZ
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryf
+ill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2026/04/23 v1.2.0 Image filling library
+\l__tikzfill_tmpa_dim=\dimen336
+\l__tikzfill_tmpb_dim=\dimen337
+\l__tikzfill_img_box=\box111
+))
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjig
+saw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+))
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakabl
+e.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box112
+\tcb@totalupperbox=\box113
+\tcb@totallowerbox=\box114
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.co
+de.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems
+.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.
+code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
+\tcbfitdim=\dimen338
+\tcb@lowerfitdim=\dimen339
+\tcb@upperfitdim=\dimen340
+\tcb@cur@hbadness=\count602
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings
+utf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.9.0'
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings
+.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count603
+\lst@gtempboxa=\box115
+\lst@token=\toks72
+\lst@length=\count604
+\lst@currlwidth=\dimen341
+\lst@column=\count605
+\lst@pos=\count606
+\lst@lostspace=\dimen342
+\lst@width=\dimen343
+\lst@newlines=\count607
+\lst@lineno=\count608
+\lst@maxwidth=\dimen344
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count609
+\lst@skipnumbers=\count610
+\lst@framebox=\box116
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\listings-xetex-b
+idi.def
+File: listings-xetex-bidi.def 2025/01/03 v1.6 bidi adaptations for listings pac
+kage for XeTeX engine
+)
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings
+core.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessi
+ng.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count611
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
+Library `listings` is loaded instead. on input line 29.
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbexternal
+.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.9.0'
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbmagazine
+.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.9.0'
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbvignette
+.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.9.0'
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryfadings.code.tex
+File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbposter.c
+ode.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
+))
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\tcolorbox-xetex-
+bidi.def
+File: tcolorbox-xetex-bidi.def 2018/11/11 v0.2 bidi adaptations for tcolorbox p
+ackage for XeTeX engine
+)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count595
+\lrq@indent=\count612
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count596
-\c@listtotal=\count597
-\c@listcount=\count598
-\c@liststart=\count599
-\c@liststop=\count600
-\c@citecount=\count601
-\c@citetotal=\count602
-\c@multicitecount=\count603
-\c@multicitetotal=\count604
-\c@instcount=\count605
-\c@maxnames=\count606
-\c@minnames=\count607
-\c@maxitems=\count608
-\c@minitems=\count609
-\c@citecounter=\count610
-\c@maxcitecounter=\count611
-\c@savedcitecounter=\count612
-\c@uniquelist=\count613
-\c@uniquename=\count614
-\c@refsection=\count615
-\c@refsegment=\count616
-\c@maxextratitle=\count617
-\c@maxextratitleyear=\count618
-\c@maxextraname=\count619
-\c@maxextradate=\count620
-\c@maxextraalpha=\count621
-\c@abbrvpenalty=\count622
-\c@highnamepenalty=\count623
-\c@lownamepenalty=\count624
-\c@maxparens=\count625
-\c@parenlevel=\count626
-\blx@tempcnta=\count627
-\blx@tempcntb=\count628
-\blx@tempcntc=\count629
-\c@blx@maxsection=\count630
-\blx@maxsegment@0=\count631
-\blx@notetype=\count632
-\blx@parenlevel@text=\count633
-\blx@parenlevel@foot=\count634
-\blx@sectionciteorder@0=\count635
-\blx@sectionciteorderinternal@0=\count636
-\blx@entrysetcounter=\count637
-\blx@biblioinstance=\count638
+\c@tabx@nest=\count613
+\c@listtotal=\count614
+\c@listcount=\count615
+\c@liststart=\count616
+\c@liststop=\count617
+\c@citecount=\count618
+\c@citetotal=\count619
+\c@multicitecount=\count620
+\c@multicitetotal=\count621
+\c@instcount=\count622
+\c@maxnames=\count623
+\c@minnames=\count624
+\c@maxitems=\count625
+\c@minitems=\count626
+\c@citecounter=\count627
+\c@maxcitecounter=\count628
+\c@savedcitecounter=\count629
+\c@uniquelist=\count630
+\c@uniquename=\count631
+\c@refsection=\count632
+\c@refsegment=\count633
+\c@maxextratitle=\count634
+\c@maxextratitleyear=\count635
+\c@maxextraname=\count636
+\c@maxextradate=\count637
+\c@maxextraalpha=\count638
+\c@abbrvpenalty=\count639
+\c@highnamepenalty=\count640
+\c@lownamepenalty=\count641
+\c@maxparens=\count642
+\c@parenlevel=\count643
+\blx@tempcnta=\count644
+\blx@tempcntb=\count645
+\blx@tempcntc=\count646
+\c@blx@maxsection=\count647
+\blx@maxsegment@0=\count648
+\blx@notetype=\count649
+\blx@parenlevel@text=\count650
+\blx@parenlevel@foot=\count651
+\blx@sectionciteorder@0=\count652
+\blx@sectionciteorderinternal@0=\count653
+\blx@entrysetcounter=\count654
+\blx@biblioinstance=\count655
 \labelnumberwidth=\skip86
 \labelalphawidth=\skip87
 \biblabelsep=\skip88
@@ -1614,12 +1788,12 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibinitsep=\skip91
 \bibparsep=\skip92
 \bibhang=\skip93
-\blx@bcfin=\read3
+\blx@bcfin=\read4
 \blx@bcfout=\write5
 \blx@langwohyphens=\language79
-\c@mincomprange=\count639
-\c@maxcomprange=\count640
-\c@mincompwidth=\count641
+\c@mincomprange=\count656
+\c@maxcomprange=\count657
+\c@mincompwidth=\count658
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1630,74 +1804,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count642
-\c@savedafterword=\count643
-\c@annotator=\count644
-\c@savedannotator=\count645
-\c@author=\count646
-\c@savedauthor=\count647
-\c@bookauthor=\count648
-\c@savedbookauthor=\count649
-\c@commentator=\count650
-\c@savedcommentator=\count651
-\c@editor=\count652
-\c@savededitor=\count653
-\c@editora=\count654
-\c@savededitora=\count655
-\c@editorb=\count656
-\c@savededitorb=\count657
-\c@editorc=\count658
-\c@savededitorc=\count659
-\c@foreword=\count660
-\c@savedforeword=\count661
-\c@holder=\count662
-\c@savedholder=\count663
-\c@introduction=\count664
-\c@savedintroduction=\count665
-\c@namea=\count666
-\c@savednamea=\count667
-\c@nameb=\count668
-\c@savednameb=\count669
-\c@namec=\count670
-\c@savednamec=\count671
-\c@translator=\count672
-\c@savedtranslator=\count673
-\c@shortauthor=\count674
-\c@savedshortauthor=\count675
-\c@shorteditor=\count676
-\c@savedshorteditor=\count677
-\c@labelname=\count678
-\c@savedlabelname=\count679
-\c@institution=\count680
-\c@savedinstitution=\count681
-\c@lista=\count682
-\c@savedlista=\count683
-\c@listb=\count684
-\c@savedlistb=\count685
-\c@listc=\count686
-\c@savedlistc=\count687
-\c@listd=\count688
-\c@savedlistd=\count689
-\c@liste=\count690
-\c@savedliste=\count691
-\c@listf=\count692
-\c@savedlistf=\count693
-\c@location=\count694
-\c@savedlocation=\count695
-\c@organization=\count696
-\c@savedorganization=\count697
-\c@origlocation=\count698
-\c@savedoriglocation=\count699
-\c@origpublisher=\count700
-\c@savedorigpublisher=\count701
-\c@publisher=\count702
-\c@savedpublisher=\count703
-\c@language=\count704
-\c@savedlanguage=\count705
-\c@origlanguage=\count706
-\c@savedoriglanguage=\count707
-\c@pageref=\count708
-\c@savedpageref=\count709
+\c@afterword=\count659
+\c@savedafterword=\count660
+\c@annotator=\count661
+\c@savedannotator=\count662
+\c@author=\count663
+\c@savedauthor=\count664
+\c@bookauthor=\count665
+\c@savedbookauthor=\count666
+\c@commentator=\count667
+\c@savedcommentator=\count668
+\c@editor=\count669
+\c@savededitor=\count670
+\c@editora=\count671
+\c@savededitora=\count672
+\c@editorb=\count673
+\c@savededitorb=\count674
+\c@editorc=\count675
+\c@savededitorc=\count676
+\c@foreword=\count677
+\c@savedforeword=\count678
+\c@holder=\count679
+\c@savedholder=\count680
+\c@introduction=\count681
+\c@savedintroduction=\count682
+\c@namea=\count683
+\c@savednamea=\count684
+\c@nameb=\count685
+\c@savednameb=\count686
+\c@namec=\count687
+\c@savednamec=\count688
+\c@translator=\count689
+\c@savedtranslator=\count690
+\c@shortauthor=\count691
+\c@savedshortauthor=\count692
+\c@shorteditor=\count693
+\c@savedshorteditor=\count694
+\c@labelname=\count695
+\c@savedlabelname=\count696
+\c@institution=\count697
+\c@savedinstitution=\count698
+\c@lista=\count699
+\c@savedlista=\count700
+\c@listb=\count701
+\c@savedlistb=\count702
+\c@listc=\count703
+\c@savedlistc=\count704
+\c@listd=\count705
+\c@savedlistd=\count706
+\c@liste=\count707
+\c@savedliste=\count708
+\c@listf=\count709
+\c@savedlistf=\count710
+\c@location=\count711
+\c@savedlocation=\count712
+\c@organization=\count713
+\c@savedorganization=\count714
+\c@origlocation=\count715
+\c@savedoriglocation=\count716
+\c@origpublisher=\count717
+\c@savedorigpublisher=\count718
+\c@publisher=\count719
+\c@savedpublisher=\count720
+\c@language=\count721
+\c@savedlanguage=\count722
+\c@origlanguage=\count723
+\c@savedoriglanguage=\count724
+\c@pageref=\count725
+\c@savedpageref=\count726
 \shorthandwidth=\skip94
 \shortjournalwidth=\skip95
 \shortserieswidth=\skip96
@@ -1729,19 +1903,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count710
-\c@textcitetotal=\count711
-\c@textcitemaxnames=\count712
-\c@biburlbigbreakpenalty=\count713
-\c@biburlbreakpenalty=\count714
-\c@biburlnumpenalty=\count715
-\c@biburlucpenalty=\count716
-\c@biburllcpenalty=\count717
+\c@textcitecount=\count727
+\c@textcitetotal=\count728
+\c@textcitemaxnames=\count729
+\c@biburlbigbreakpenalty=\count730
+\c@biburlbreakpenalty=\count731
+\c@biburlnumpenalty=\count732
+\c@biburlucpenalty=\count733
+\c@biburllcpenalty=\count734
 \biburlbigskip=\muskip22
 \biburlnumskip=\muskip23
 \biburlucskip=\muskip24
 \biburllcskip=\muskip25
-\c@smartand=\count718
+\c@smartand=\count735
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1755,8 +1929,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard
 .bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count719
-\c@bbx:relatedtotal=\count720
+\c@bbx:relatedcount=\count736
+\c@bbx:relatedtotal=\count737
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1797,32 +1971,34 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 LaTeX Warning: Unused global option(s):
     [openany].
 
-No file implication_arrows.aux.
+(implication_arrows.aux)
 \openout1 = `implication_arrows.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1857,12 +2033,10 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 43.
+Package hyperref Info: Link coloring ON on input line 58.
+(implication_arrows.out) (implication_arrows.out)
 \@outlinefile=\write6
 \openout6 = `implication_arrows.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 Package fontspec Info: 
@@ -1871,58 +2045,58 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 43.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 43.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 43.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 43.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 43.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 43.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 43.
-LaTeX Font Info:    Redeclaring math accent \check on input line 43.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 43.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 43.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 43.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 43.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 43.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 58.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 58.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 58.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 58.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 58.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 58.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 58.
+LaTeX Font Info:    Redeclaring math accent \check on input line 58.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 58.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 58.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 58.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 58.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 43.
+(Font)              `operators' in the math version `normal' on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 43.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 58.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 43.
+(Font)              `operators' in the math version `bold' on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 43.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 43.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 43.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 43.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 43.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 43.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 58.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 43.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 43.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 43.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 58.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 43.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 58.
 Package translations Info: no dictionary file `translations-basic-dictionary-he
-brew.trsl' found. on input line 43.
+brew.trsl' found. on input line 58.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tr
 anslations-basic-dictionary-english.trsl
@@ -1930,7 +2104,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 43.
+or `english'. on input line 58.
+\c@lstlisting=\count738
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1956,7 +2131,7 @@ Package biblatex Info: ... file 'hebrew.lbx' not found.
 
 
 Package biblatex Warning: Language 'hebrew' not supported.
-(biblatex)                Using dummy definitions on input line 43.
+(biblatex)                Using dummy definitions on input line 58.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -1967,66 +2142,49 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'implication_arrows.bbl' not found.
 No file implication_arrows.bbl.
-Package biblatex Info: Reference section=0 on input line 43.
-Package biblatex Info: Reference segment=0 on input line 43.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+Package biblatex Info: Reference section=0 on input line 58.
+Package biblatex Info: Reference segment=0 on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
 
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 45
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 60
 .
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+[1
 
-LaTeX Warning: No \author given.
-
+] [2]
 \tf@thm=\write7
 \openout7 = `implication_arrows.thm'.
 
-[1
-
-] (implication_arrows.aux)
+ [3] (implication_arrows.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `implication_arrows.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `implication_arrows.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                implication_arrows
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `implication_arrows.out' has not changed.
+(rerunfilecheck)             Checksum: 37C63EC5F5429DA313FD4C98A30EBF7A;329.
 Package logreq Info: Writing requests to 'implication_arrows.run.xml'.
 \openout1 = `implication_arrows.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47249 strings out of 402983
- 1039373 string characters out of 5448068
- 2035955 words of memory out of 5000000
- 75307 multiletter control sequences out of 15000+600000
- 633404 words of font info for 85 fonts, out of 8000000 for 9000
+ 53744 strings out of 402983
+ 1208165 string characters out of 5448068
+ 2271181 words of memory out of 5000000
+ 81696 multiletter control sequences out of 15000+600000
+ 635654 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,11n,121p,1230b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,27n,121p,1230b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on implication_arrows.pdf (1 page).
+Output written on implication_arrows.pdf (3 pages).
