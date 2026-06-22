@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  21 JUN 2026 23:32
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  22 JUN 2026 07:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2099,7 +2099,7 @@ Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 Here is how much of TeX's memory you used:
  44187 strings out of 402983
  929996 string characters out of 5448068
- 2003774 words of memory out of 5000000
+ 2003773 words of memory out of 5000000
  72205 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
