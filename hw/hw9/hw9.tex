@@ -40,15 +40,156 @@ style=alphabetic,
 אופרטורים על מרחבי מכפלה פנימית
 \\
 \vspace{1cm}
-\large{תאריך הגשה: 25.6.2026}
+\large{תאריך הגשה: 2.7.2026}
 }
 \date{}
 
 \begin{document}
 \maketitle
 
-\begin{exercise}
+\begin{definition}
+אופרטור
+$T$
+על מרחב מכפלה פנימית
+$V$
+נקרא
+\textbf{אורתוגונלי}
+אם
+$T$
+הפיך ומתקיים
+$T^* = T^{-1}$.
+\end{definition}
 
+\begin{exercise}
+יהי
+$V = \Mat_n\prs{\mbb{R}}$
+עם המכפלה הפנימית
+$\trs{X,Y} = \tr\prs{Y^t X}$,
+ותהי
+$B \in V$.
+נגדיר אופרטור
+\begin{align*}
+\Phi_B \colon V &\to V \\
+\text{.} \hphantom{lalala} A &\mapsto BA
+\end{align*}
+
+עבור כל אחד מהסעיפים הבאים, הוכיחו את טענתכן.
+
+\begin{enumerate}
+\item
+חשבו את
+$\Phi_B^*$.
+\item
+עבור אילו מטריצות
+$B$
+האופרטור
+$\Phi_B$
+נורמלי?
+\item
+עבור אילו מטריצות
+$B$
+האופרטור
+$\Phi_B$
+צמוד לעצמו?
+\item
+עבור אילו מטריצות
+$B$
+האופרטור
+$\Phi_B$
+אורתוגונלי?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי, יהי
+$W \leq V$
+תת־מרחב של
+$V$,
+ותהי
+$P_W$
+ההטלה האורתוגונלית על
+$W$.
+הראו כי
+$P_W$
+אורתוגונלית אם ורק אם
+$W = V$.
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי.
+
+\begin{enumerate}
+\item יהי
+$\phi \in V^*$
+ויהי
+$w \in V$
+עבורו
+$\phi\prs{v} = \trs{v, w}$
+לכל
+$v \in V$.
+הוכיחו כי
+\[\text{.} \ker\prs{\phi} = \Span\prs{w}^\perp\]
+
+\item עבור
+$\phi \in V^*$
+ויהי
+$w \in V$
+עבורו
+$\phi\prs{v} = \trs{v,w}$
+לכל
+$v \in V$.
+נגדיר
+\begin{align*}
+\text{.} H_{\phi} \coloneqq \set{v \in V}{\phi\prs{v} = 1}
+\end{align*}
+הוכיחו כי
+\begin{align*}
+H_\phi = \frac{w}{\norm{w}^2} + \Span\prs{w}^\perp
+\end{align*}
+והסיקו כי
+$\frac{w}{\norm{w}^2}$
+הוא הוקטור מהנורמה המינימלית ב־%
+$H_\phi$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V = \RR_2\brs{x}$
+עם המכפלה הפנימית
+\begin{align*}
+\text{.} \trs{p,q} = \int_{-1}^1 p\prs{x} q\prs{x} \diff x
+\end{align*}
+מיצאו את הפולינום
+$r \in V$
+מהנורמה המינימלית עבורו
+$r\prs{1} = 1$.
+\end{exercise}
+
+\begin{exercise} \textbf{(רשות)}
+יהי
+$V = \mcal{C}\brs{-1, 1}$
+המרחב הוקטורי של הפונקציות הרציפות
+$\brs{-1, 1} \to \RR$
+עם המכפלה הפנימית
+\begin{align*}
+\text{.} \trs{f,g} = \int_{-1}^1 f\prs{x} g\prs{x} \diff x
+\end{align*}
+יהי
+$\mathrm{ev}_0 \in V^*$
+המוגדר על ידי
+$\mathrm{ev}_0\prs{f} = f\prs{0}$.
+
+הוכיחו שלא קיים
+$g \in V$
+עבורו
+$\phi\prs{f} = \trs{f,g}$
+לכל
+$f \in V$.
 \end{exercise}
 
 \end{document}
