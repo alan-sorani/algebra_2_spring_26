@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  29 JUN 2026 09:59
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUL 2026 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2079,7 +2079,7 @@ m/n/10 נורמלי, ונרצה למצוא $\OML/cmm/m/it/10 A; B$ \TU/Calibri(0
  []
 
 [58] [59]
-Overfull \hbox (1.64117pt too wide) in paragraph at lines 6469--6479
+Overfull \hbox (1.64117pt too wide) in paragraph at lines 6467--6477
 [][][]\TU/Calibri(0)/m/n/10 מטריצה $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] 
 []$ \TU/Calibri(0)/m/n/10 עבור $\U/msb/m/n/10 F \OT1/cmr/m/n/10 = \U/msb/m/n/10
  R$ \TU/Calibri(0)/m/n/10 (עבור $\U/msb/m/n/10 F \OT1/cmr/m/n/10 = \U/msb/m/n/1
@@ -2087,7 +2087,7 @@ Overfull \hbox (1.64117pt too wide) in paragraph at lines 6469--6479
  []
 
 [60]
-Overfull \hbox (2.68059pt too wide) in paragraph at lines 6523--6538
+Overfull \hbox (2.68059pt too wide) in paragraph at lines 6521--6536
 [][][]\TU/Calibri(0)/m/n/10 מתקיים כי $\OML/cmm/m/it/10 ^^Z[] [] ; ^^Z[] []$ \T
 U/Calibri(0)/m/n/10 הן עמודות $\OML/cmm/m/it/10 A[]$\TU/Calibri(0)/m/n/10 , שהי
 נן בסיס אורתונורמלי של $\U/msb/m/n/10 R[]$\TU/Calibri(0)/m/n/10 . לכן, $\OMS/cm
@@ -2095,14 +2095,14 @@ sy/m/n/10 E \OT1/cmr/m/n/10 = []$ \TU/Calibri(0)/m/n/10 בסיס אורתונו�
  []
 
 
-Overfull \hbox (2.69818pt too wide) in paragraph at lines 6669--6682
+Overfull \hbox (2.69818pt too wide) in paragraph at lines 6667--6680
 [][][]\TU/Calibri(0)/m/it/10 יהי $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/it/10 מר
 חב מכפלה פנימית מרוכב סוף־מימדי, ויהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2$[]
 
  []
 
 [61]
-Overfull \hbox (7.75854pt too wide) in paragraph at lines 6853--6864
+Overfull \hbox (7.75854pt too wide) in paragraph at lines 6851--6862
 [][]\TU/Calibri(0)/m/n/10 בכיוון השני, נניח כי $\OML/cmm/m/it/10 T$ \TU/Calibri
 (0)/m/n/10 נורמלי. ממשפט הפירוק הספקטלי קיים בסיס אורתונורמלי $\OMS/cmsy/m/n/10
  B$ \TU/Calibri(0)/m/n/10 של $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 עבורו $
@@ -2111,7 +2111,7 @@ Overfull \hbox (7.75854pt too wide) in paragraph at lines 6853--6864
 
 [62] [63]
 
-LaTeX Warning: Empty bibliography on input line 7174.
+LaTeX Warning: Empty bibliography on input line 7171.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2121,8 +2121,15 @@ LaTeX Warning: Empty bibliography on input line 7174.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 848A70FF6B7CC49C82952FFA0D96D498;7300.
+
+
+Package rerunfilecheck Warning: File `algebra_2_recitations.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `algebra_2_recitations.out':
+(rerunfilecheck)             Before: 848A70FF6B7CC49C82952FFA0D96D498;7300
+(rerunfilecheck)             After:  90B49D8B9210AD02DCF8DA0A35F3D31F;7158.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
