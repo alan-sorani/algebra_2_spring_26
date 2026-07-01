@@ -1,25 +1,24 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  29 JUN 2026 09:59
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  1 JUL 2026 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./algebra_2_recitations.tex
-(algebra_2_recitations.tex
+**./hw10.tex
+(hw10.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
-File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count271
-\c@chapter=\count272
-\c@section=\count273
-\c@subsection=\count274
-\c@subsubsection=\count275
-\c@paragraph=\count276
-\c@subparagraph=\count277
-\c@figure=\count278
-\c@table=\count279
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
@@ -47,14 +46,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count280
+\inf@bad=\count279
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count281
-\leftroot@=\count282
+\uproot@=\count280
+\leftroot@=\count281
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count283
-\DOTSCASE@=\count284
+\classnum@=\count282
+\DOTSCASE@=\count283
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -67,20 +66,20 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen151
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count285
+\macc@depth=\count284
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count286
+\c@MaxMatrixCols=\count285
 \dotsspace@=\muskip17
-\c@parentequation=\count287
-\dspbrk@lvl=\count288
+\c@parentequation=\count286
+\dspbrk@lvl=\count287
 \tag@help=\toks18
-\row@=\count289
-\column@=\count290
-\maxfields@=\count291
+\row@=\count288
+\column@=\count289
+\maxfields@=\count290
 \andhelp@=\toks19
 \eqnshift@=\dimen152
 \alignsep@=\dimen153
@@ -120,21 +119,21 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count292
-\calc@Bcount=\count293
+\calc@Acount=\count291
+\calc@Bcount=\count292
 \calc@Adimen=\dimen158
 \calc@Bdimen=\dimen159
 \calc@Askip=\skip54
 \calc@Bskip=\skip55
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count294
+\calc@Ccount=\count293
 \calc@Cskip=\skip56
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count295
+\g_MT_multlinerow_int=\count294
 \l_MT_multwidth_dim=\dimen160
 \origjot=\skip57
 \l_MT_shortvdotswithinadjustabove_dim=\dimen161
@@ -159,23 +158,23 @@ Package: expl3 2026-01-19 L3 programming layer (loader)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-x
 etex.def
 File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
-\g__graphics_track_int=\count296
-\g__pdfannot_backend_int=\count297
-\g__pdfannot_backend_link_int=\count298
+\g__graphics_track_int=\count295
+\g__pdfannot_backend_int=\count296
+\g__pdfannot_backend_link_int=\count297
 ))
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count299
-\l__lipsum_a_int=\count300
-\l__lipsum_b_int=\count301
+\g__lipsum_par_int=\count298
+\l__lipsum_a_int=\count299
+\l__lipsum_b_int=\count300
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex
 ))
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count302
-\xs_countb=\count303
+\xs_counta=\count301
+\xs_countb=\count302
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -252,17 +251,17 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen175
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count304
-\c@continuedfloat=\count305
+\c@caption@flags=\count303
+\c@continuedfloat=\count304
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count306
-\Gm@cntv=\count307
-\c@Gm@tempcnt=\count308
+\Gm@cnth=\count305
+\Gm@cntv=\count306
+\c@Gm@tempcnt=\count307
 \Gm@bindingoffset=\dimen176
 \Gm@wd@mp=\dimen177
 \Gm@odd@mp=\dimen178
@@ -327,11 +326,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count309
+\c@section@level=\count308
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count310
+\etb@tempcnta=\count309
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
 .sty
@@ -339,8 +338,8 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen184
-\Hy@linkcounter=\count311
-\Hy@pagecounter=\count312
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
@@ -348,7 +347,7 @@ File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count313
+\Hy@SavedSpaceFactor=\count312
  (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 )
@@ -360,7 +359,7 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count314
+\c@Hy@tempcnt=\count313
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -376,7 +375,7 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count315
+\Fld@menulength=\count314
 \Field@Width=\dimen186
 \Fld@charsize=\dimen187
 Package hyperref Info: Hyper figures OFF on input line 6084.
@@ -386,19 +385,19 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring ON on input line 6102.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count316
-\c@Item=\count317
-\c@Hfootnote=\count318
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
 \pdfm@box=\box56
-\c@Hy@AnnotLevel=\count319
-\HyField@AnnotCount=\count320
-\Fld@listcount=\count321
-\c@bookmark@seq@number=\count322
+\c@Hy@AnnotLevel=\count318
+\HyField@AnnotCount=\count319
+\Fld@listcount=\count320
+\c@bookmark@seq@number=\count321
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
 ilecheck.sty
@@ -507,14 +506,14 @@ yslibraryfiltered.code.tex
 \pgf@yd=\dimen258
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count323
-\c@pgf@countb=\count324
-\c@pgf@countc=\count325
-\c@pgf@countd=\count326
+\c@pgf@counta=\count322
+\c@pgf@countb=\count323
+\c@pgf@countc=\count324
+\c@pgf@countd=\count325
 \t@pgf@toka=\toks29
 \t@pgf@tokb=\toks30
 \t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count327
+\pgf@sys@id@count=\count326
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 .cfg
@@ -534,13 +533,13 @@ File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 sys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
-\pgfsys@objnum=\count328
+\pgfsys@objnum=\count327
 )))
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 syssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count329
-\pgfsyssoftpath@bigbuffer@items=\count330
+\pgfsyssoftpath@smallbuffer@items=\count328
+\pgfsyssoftpath@bigbuffer@items=\count329
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 sysprotocol.code.tex
@@ -557,7 +556,7 @@ l.code.tex)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
 ser.code.tex
 \pgfmath@dimen=\dimen259
-\pgfmath@count=\count331
+\pgfmath@count=\count330
 \pgfmath@box=\box59
 \pgfmath@toks=\toks32
 \pgfmath@stack@operand=\toks33
@@ -585,7 +584,7 @@ ctions.integerarithmetics.code.tex)
 c.code.tex)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
 at.code.tex
-\c@pgfmathroundto@lastzeros=\count332
+\c@pgfmathroundto@lastzeros=\count331
 ))
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
 e.tex)
@@ -625,7 +624,7 @@ File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box60
 \pgf@hbox=\box61
 \pgf@layerbox@main=\box62
-\pgf@picture@serial@count=\count333
+\pgf@picture@serial@count=\count332
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oregraphicstate.code.tex
@@ -660,8 +659,8 @@ File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 oreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen283
-\pgf@sys@shading@range@num=\count334
-\pgf@shadingcount=\count335
+\pgf@sys@shading@range@num=\count333
+\pgf@shadingcount=\count334
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oreimage.code.tex
@@ -731,7 +730,7 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
 braryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count336
+\pgf@plot@mark@count=\count335
 \pgfplotmarksize=\dimen288
 )
 \tikz@lastx=\dimen289
@@ -746,19 +745,19 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@figbox@bg=\box66
 \tikz@tempbox=\box67
 \tikz@tempbox@bg=\box68
-\tikztreelevel=\count337
-\tikznumberofchildren=\count338
-\tikznumberofcurrentchild=\count339
-\tikz@fig@count=\count340
+\tikztreelevel=\count336
+\tikznumberofchildren=\count337
+\tikznumberofcurrentchild=\count338
+\tikz@fig@count=\count339
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
 lematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count341
-\pgfmatrixcurrentcolumn=\count342
-\pgf@matrix@numberofcolumns=\count343
+\pgfmatrixcurrentrow=\count340
+\pgfmatrixcurrentcolumn=\count341
+\pgf@matrix@numberofcolumns=\count342
 )
-\tikz@expandcount=\count344
+\tikz@expandcount=\count343
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarytopaths.code.tex
@@ -792,7 +791,7 @@ ledecorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen300
 \pgfdecoratedinputsegmentremainingdistance=\dimen301
 \pgf@decorate@distancetomove=\dimen302
-\pgf@decorate@repeatstate=\count345
+\pgf@decorate@repeatstate=\count344
 \pgfdecorationsegmentamplitude=\dimen303
 \pgfdecorationsegmentlength=\dimen304
 )
@@ -805,87 +804,87 @@ ikz/libraries\tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 \l__tikzsymbols_Moai_thickness_dim=\dimen305
-\l__tikzsymbols_Kochtopf_nr_arguments_int=\count346
-\l__tikzsymbols_Bratpfanne_nr_arguments_int=\count347
-\l__tikzsymbols_Schneebesen_nr_arguments_int=\count348
-\l__tikzsymbols_Sieb_nr_arguments_int=\count349
-\l__tikzsymbols_Purierstab_nr_arguments_int=\count350
-\l__tikzsymbols_Dreizack_nr_arguments_int=\count351
-\l__tikzsymbols_Backblech_nr_arguments_int=\count352
-\l__tikzsymbols_Ofen_nr_arguments_int=\count353
-\l__tikzsymbols_Pfanne_nr_arguments_int=\count354
-\l__tikzsymbols_Herd_nr_arguments_int=\count355
-\l__tikzsymbols_Saftpresse_nr_arguments_int=\count356
-\l__tikzsymbols_Schussel_nr_arguments_int=\count357
-\l__tikzsymbols_Schaler_nr_arguments_int=\count358
-\l__tikzsymbols_Reibe_nr_arguments_int=\count359
-\l__tikzsymbols_Flasche_nr_arguments_int=\count360
-\l__tikzsymbols_Nudelholz_nr_arguments_int=\count361
-\l__tikzsymbols_Knoblauchpresse_nr_arguments_int=\count362
-\l__tikzsymbols_Sadey_nr_arguments_int=\count363
-\l__tikzsymbols_dSadey_nr_arguments_int=\count364
-\l__tikzsymbols_Changey_nr_arguments_int=\count365
-\l__tikzsymbols_dChangey_nr_arguments_int=\count366
-\l__tikzsymbols_cChangey_nr_arguments_int=\count367
-\l__tikzsymbols_dcChangey_nr_arguments_int=\count368
-\l__tikzsymbols_Annoey_nr_arguments_int=\count369
-\l__tikzsymbols_dAnnoey_nr_arguments_int=\count370
-\l__tikzsymbols_Smiley_nr_arguments_int=\count371
-\l__tikzsymbols_dSmiley_nr_arguments_int=\count372
-\l__tikzsymbols_Laughey_nr_arguments_int=\count373
-\l__tikzsymbols_dLaughey_nr_arguments_int=\count374
-\l__tikzsymbols_Neutrey_nr_arguments_int=\count375
-\l__tikzsymbols_dNeutrey_nr_arguments_int=\count376
-\l__tikzsymbols_Winkey_nr_arguments_int=\count377
-\l__tikzsymbols_oldWinkey_nr_arguments_int=\count378
-\l__tikzsymbols_dWinkey_nr_arguments_int=\count379
-\l__tikzsymbols_olddWinkey_nr_arguments_int=\count380
-\l__tikzsymbols_Sey_nr_arguments_int=\count381
-\l__tikzsymbols_dSey_nr_arguments_int=\count382
-\l__tikzsymbols_Xey_nr_arguments_int=\count383
-\l__tikzsymbols_dXey_nr_arguments_int=\count384
-\l__tikzsymbols_Innocey_nr_arguments_int=\count385
-\l__tikzsymbols_wInnocey_nr_arguments_int=\count386
-\l__tikzsymbols_dInnocey_nr_arguments_int=\count387
-\l__tikzsymbols_Cooley_nr_arguments_int=\count388
-\l__tikzsymbols_dCooley_nr_arguments_int=\count389
-\l__tikzsymbols_Tongey_nr_arguments_int=\count390
-\l__tikzsymbols_dTongey_nr_arguments_int=\count391
-\l__tikzsymbols_Nursey_nr_arguments_int=\count392
-\l__tikzsymbols_dNursey_nr_arguments_int=\count393
-\l__tikzsymbols_Vomey_nr_arguments_int=\count394
-\l__tikzsymbols_dVomey_nr_arguments_int=\count395
-\l__tikzsymbols_Walley_nr_arguments_int=\count396
-\l__tikzsymbols_rWalley_nr_arguments_int=\count397
-\l__tikzsymbols_dWalley_nr_arguments_int=\count398
-\l__tikzsymbols_drWalley_nr_arguments_int=\count399
-\l__tikzsymbols_Cat_nr_arguments_int=\count400
-\l__tikzsymbols_SchrodingersCat_nr_arguments_int=\count401
-\l__tikzsymbols_Ninja_nr_arguments_int=\count402
-\l__tikzsymbols_dNinja_nr_arguments_int=\count403
-\l__tikzsymbols_Sleepey_nr_arguments_int=\count404
-\l__tikzsymbols_dSleepey_nr_arguments_int=\count405
-\l__tikzsymbols_Maskey_nr_arguments_int=\count406
-\l__tikzsymbols_NiceReapey_nr_arguments_int=\count407
-\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count408
-\l__tikzsymbols_Person_nr_arguments_int=\count409
-\l__tikzsymbols_Heart_nr_arguments_int=\count410
-\l__tikzsymbols_dHeart_nr_arguments_int=\count411
-\l__tikzsymbols_HeartBroken_nr_arguments_int=\count412
-\l__tikzsymbols_Candle_nr_arguments_int=\count413
-\l__tikzsymbols_Fire_nr_arguments_int=\count414
-\l__tikzsymbols_Coffeecup_nr_arguments_int=\count415
-\l__tikzsymbols_Chair_nr_arguments_int=\count416
-\l__tikzsymbols_Bed_nr_arguments_int=\count417
-\l__tikzsymbols_Tribar_nr_arguments_int=\count418
-\l__tikzsymbols_Moai_nr_arguments_int=\count419
-\l__tikzsymbols_Snowman_nr_arguments_int=\count420
-\l__tikzsymbols_BasicTree_nr_arguments_int=\count421
-\l__tikzsymbols_WorstTree_nr_arguments_int=\count422
-\l__tikzsymbols_Springtree_nr_arguments_int=\count423
-\l__tikzsymbols_Summertree_nr_arguments_int=\count424
-\l__tikzsymbols_Autumntree_nr_arguments_int=\count425
-\l__tikzsymbols_Wintertree_nr_arguments_int=\count426
+\l__tikzsymbols_Kochtopf_nr_arguments_int=\count345
+\l__tikzsymbols_Bratpfanne_nr_arguments_int=\count346
+\l__tikzsymbols_Schneebesen_nr_arguments_int=\count347
+\l__tikzsymbols_Sieb_nr_arguments_int=\count348
+\l__tikzsymbols_Purierstab_nr_arguments_int=\count349
+\l__tikzsymbols_Dreizack_nr_arguments_int=\count350
+\l__tikzsymbols_Backblech_nr_arguments_int=\count351
+\l__tikzsymbols_Ofen_nr_arguments_int=\count352
+\l__tikzsymbols_Pfanne_nr_arguments_int=\count353
+\l__tikzsymbols_Herd_nr_arguments_int=\count354
+\l__tikzsymbols_Saftpresse_nr_arguments_int=\count355
+\l__tikzsymbols_Schussel_nr_arguments_int=\count356
+\l__tikzsymbols_Schaler_nr_arguments_int=\count357
+\l__tikzsymbols_Reibe_nr_arguments_int=\count358
+\l__tikzsymbols_Flasche_nr_arguments_int=\count359
+\l__tikzsymbols_Nudelholz_nr_arguments_int=\count360
+\l__tikzsymbols_Knoblauchpresse_nr_arguments_int=\count361
+\l__tikzsymbols_Sadey_nr_arguments_int=\count362
+\l__tikzsymbols_dSadey_nr_arguments_int=\count363
+\l__tikzsymbols_Changey_nr_arguments_int=\count364
+\l__tikzsymbols_dChangey_nr_arguments_int=\count365
+\l__tikzsymbols_cChangey_nr_arguments_int=\count366
+\l__tikzsymbols_dcChangey_nr_arguments_int=\count367
+\l__tikzsymbols_Annoey_nr_arguments_int=\count368
+\l__tikzsymbols_dAnnoey_nr_arguments_int=\count369
+\l__tikzsymbols_Smiley_nr_arguments_int=\count370
+\l__tikzsymbols_dSmiley_nr_arguments_int=\count371
+\l__tikzsymbols_Laughey_nr_arguments_int=\count372
+\l__tikzsymbols_dLaughey_nr_arguments_int=\count373
+\l__tikzsymbols_Neutrey_nr_arguments_int=\count374
+\l__tikzsymbols_dNeutrey_nr_arguments_int=\count375
+\l__tikzsymbols_Winkey_nr_arguments_int=\count376
+\l__tikzsymbols_oldWinkey_nr_arguments_int=\count377
+\l__tikzsymbols_dWinkey_nr_arguments_int=\count378
+\l__tikzsymbols_olddWinkey_nr_arguments_int=\count379
+\l__tikzsymbols_Sey_nr_arguments_int=\count380
+\l__tikzsymbols_dSey_nr_arguments_int=\count381
+\l__tikzsymbols_Xey_nr_arguments_int=\count382
+\l__tikzsymbols_dXey_nr_arguments_int=\count383
+\l__tikzsymbols_Innocey_nr_arguments_int=\count384
+\l__tikzsymbols_wInnocey_nr_arguments_int=\count385
+\l__tikzsymbols_dInnocey_nr_arguments_int=\count386
+\l__tikzsymbols_Cooley_nr_arguments_int=\count387
+\l__tikzsymbols_dCooley_nr_arguments_int=\count388
+\l__tikzsymbols_Tongey_nr_arguments_int=\count389
+\l__tikzsymbols_dTongey_nr_arguments_int=\count390
+\l__tikzsymbols_Nursey_nr_arguments_int=\count391
+\l__tikzsymbols_dNursey_nr_arguments_int=\count392
+\l__tikzsymbols_Vomey_nr_arguments_int=\count393
+\l__tikzsymbols_dVomey_nr_arguments_int=\count394
+\l__tikzsymbols_Walley_nr_arguments_int=\count395
+\l__tikzsymbols_rWalley_nr_arguments_int=\count396
+\l__tikzsymbols_dWalley_nr_arguments_int=\count397
+\l__tikzsymbols_drWalley_nr_arguments_int=\count398
+\l__tikzsymbols_Cat_nr_arguments_int=\count399
+\l__tikzsymbols_SchrodingersCat_nr_arguments_int=\count400
+\l__tikzsymbols_Ninja_nr_arguments_int=\count401
+\l__tikzsymbols_dNinja_nr_arguments_int=\count402
+\l__tikzsymbols_Sleepey_nr_arguments_int=\count403
+\l__tikzsymbols_dSleepey_nr_arguments_int=\count404
+\l__tikzsymbols_Maskey_nr_arguments_int=\count405
+\l__tikzsymbols_NiceReapey_nr_arguments_int=\count406
+\l__tikzsymbols_Strichmaxerl_nr_arguments_int=\count407
+\l__tikzsymbols_Person_nr_arguments_int=\count408
+\l__tikzsymbols_Heart_nr_arguments_int=\count409
+\l__tikzsymbols_dHeart_nr_arguments_int=\count410
+\l__tikzsymbols_HeartBroken_nr_arguments_int=\count411
+\l__tikzsymbols_Candle_nr_arguments_int=\count412
+\l__tikzsymbols_Fire_nr_arguments_int=\count413
+\l__tikzsymbols_Coffeecup_nr_arguments_int=\count414
+\l__tikzsymbols_Chair_nr_arguments_int=\count415
+\l__tikzsymbols_Bed_nr_arguments_int=\count416
+\l__tikzsymbols_Tribar_nr_arguments_int=\count417
+\l__tikzsymbols_Moai_nr_arguments_int=\count418
+\l__tikzsymbols_Snowman_nr_arguments_int=\count419
+\l__tikzsymbols_BasicTree_nr_arguments_int=\count420
+\l__tikzsymbols_WorstTree_nr_arguments_int=\count421
+\l__tikzsymbols_Springtree_nr_arguments_int=\count422
+\l__tikzsymbols_Summertree_nr_arguments_int=\count423
+\l__tikzsymbols_Autumntree_nr_arguments_int=\count424
+\l__tikzsymbols_Wintertree_nr_arguments_int=\count425
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd
 .code.tex
@@ -1035,132 +1034,124 @@ Package: ntheorem 2011/08/15 1.33
 \thm@topsep=\skip80
 \thm@topsepadd=\skip81
 Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count427
-\c@currNonectr=\count428
+\c@endNonectr=\count426
+\c@currNonectr=\count427
 \mysavskip=\skip82
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
 \thm@amstmpdepth=\dimen321
 \tagwidth=\dimen322
 )
-\c@currproofctr=\count429
-\c@endproofctr=\count430
-\c@proof=\count431
-\c@currtheoremxctr=\count432
-\c@endtheoremxctr=\count433
-\c@theoremx=\count434
-\c@currtheoremstarredctr=\count435
-\c@endtheoremstarredctr=\count436
-\c@theoremstarred=\count437
-\c@currlemmactr=\count438
-\c@endlemmactr=\count439
-\c@currcorollaryctr=\count440
-\c@endcorollaryctr=\count441
-\c@currpropositionctr=\count442
-\c@endpropositionctr=\count443
-\c@currpropositionstarredctr=\count444
-\c@endpropositionstarredctr=\count445
-\c@propositionstarred=\count446
-\c@currconjecturectr=\count447
-\c@endconjecturectr=\count448
-\c@currcriterionctr=\count449
-\c@endcriterionctr=\count450
-\c@currassertionctr=\count451
-\c@endassertionctr=\count452
-\c@currfactctr=\count453
-\c@endfactctr=\count454
-\c@currhypothesisctr=\count455
-\c@endhypothesisctr=\count456
-\c@currdefinitionxctr=\count457
-\c@enddefinitionxctr=\count458
-\c@currdefinitionstarredctr=\count459
-\c@enddefinitionstarredctr=\count460
-\c@definitionstarred=\count461
-\c@currconditionctr=\count462
-\c@endconditionctr=\count463
-\c@curraxiomctr=\count464
-\c@endaxiomctr=\count465
-\c@axiom=\count466
-\c@currpostulatectr=\count467
-\c@endpostulatectr=\count468
-\c@currpropertyctr=\count469
-\c@endpropertyctr=\count470
-\c@currterminologyxctr=\count471
-\c@endterminologyxctr=\count472
-\c@currterminologystarredctr=\count473
-\c@endterminologystarredctr=\count474
-\c@terminologystarred=\count475
-\c@currproblemctr=\count476
-\c@endproblemctr=\count477
-\c@currexamplectr=\count478
-\c@endexamplectr=\count479
-\c@currexercisectr=\count480
-\c@endexercisectr=\count481
-\c@exercise=\count482
-\c@currexercisexctr=\count483
-\c@endexercisexctr=\count484
-\c@exercisex=\count485
-\c@currexercisechapctr=\count486
-\c@endexercisechapctr=\count487
-\c@exercisechap=\count488
-\c@curralgorithmxctr=\count489
-\c@endalgorithmxctr=\count490
-\c@curralgorithmstarredctr=\count491
-\c@endalgorithmstarredctr=\count492
-\c@algorithmstarred=\count493
-\c@currquestionctr=\count494
-\c@endquestionctr=\count495
-\c@question=\count496
-\c@currassumptionctr=\count497
-\c@endassumptionctr=\count498
-\c@currremarkxctr=\count499
-\c@endremarkxctr=\count500
-\c@remarkx=\count501
-\c@currremarkctr=\count502
-\c@endremarkctr=\count503
-\c@currnotectr=\count504
-\c@endnotectr=\count505
-\c@currobservationctr=\count506
-\c@endobservationctr=\count507
-\c@currnotationctr=\count508
-\c@endnotationctr=\count509
-\c@currclaimctr=\count510
-\c@endclaimctr=\count511
-\c@currsummaryctr=\count512
-\c@endsummaryctr=\count513
-\c@summary=\count514
-\c@curracknowledgementctr=\count515
-\c@endacknowledgementctr=\count516
-\c@currcasectr=\count517
-\c@endcasectr=\count518
-\c@case=\count519
-\c@curroptionctr=\count520
-\c@endoptionctr=\count521
-\c@option=\count522
-\c@currconclusionctr=\count523
-\c@endconclusionctr=\count524
-\c@conclusion=\count525
-\c@currsolutionctr=\count526
-\c@endsolutionctr=\count527
-\c@solution=\count528
-\c@currmotivationctr=\count529
-\c@endmotivationctr=\count530
-\c@motivation=\count531
-\c@currnotationstarredctr=\count532
-\c@endnotationstarredctr=\count533
-\c@notationstarred=\count534
-\c@currexms_rawctr=\count535
-\c@endexms_rawctr=\count536
-\c@exms_raw=\count537
-\c@currexrs_rawctr=\count538
-\c@endexrs_rawctr=\count539
-\c@exrs_raw=\count540
-)
-(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/polynom\polynom.sty
-Package: polynom 2017/07/17 0.19 (CH,HA)
-\pld@currstage=\count541
-)
-(C:/localtexmf\tex/latex/hebrewdoc\hebrewdoc.sty
+\c@currproofctr=\count428
+\c@endproofctr=\count429
+\c@proof=\count430
+\c@currtheoremxctr=\count431
+\c@endtheoremxctr=\count432
+\c@theoremx=\count433
+\c@currtheoremstarredctr=\count434
+\c@endtheoremstarredctr=\count435
+\c@theoremstarred=\count436
+\c@currlemmactr=\count437
+\c@endlemmactr=\count438
+\c@currcorollaryctr=\count439
+\c@endcorollaryctr=\count440
+\c@currpropositionctr=\count441
+\c@endpropositionctr=\count442
+\c@currpropositionstarredctr=\count443
+\c@endpropositionstarredctr=\count444
+\c@propositionstarred=\count445
+\c@currconjecturectr=\count446
+\c@endconjecturectr=\count447
+\c@currcriterionctr=\count448
+\c@endcriterionctr=\count449
+\c@currassertionctr=\count450
+\c@endassertionctr=\count451
+\c@currfactctr=\count452
+\c@endfactctr=\count453
+\c@currhypothesisctr=\count454
+\c@endhypothesisctr=\count455
+\c@currdefinitionxctr=\count456
+\c@enddefinitionxctr=\count457
+\c@currdefinitionstarredctr=\count458
+\c@enddefinitionstarredctr=\count459
+\c@definitionstarred=\count460
+\c@currconditionctr=\count461
+\c@endconditionctr=\count462
+\c@curraxiomctr=\count463
+\c@endaxiomctr=\count464
+\c@axiom=\count465
+\c@currpostulatectr=\count466
+\c@endpostulatectr=\count467
+\c@currpropertyctr=\count468
+\c@endpropertyctr=\count469
+\c@currterminologyxctr=\count470
+\c@endterminologyxctr=\count471
+\c@currterminologystarredctr=\count472
+\c@endterminologystarredctr=\count473
+\c@terminologystarred=\count474
+\c@currproblemctr=\count475
+\c@endproblemctr=\count476
+\c@currexamplectr=\count477
+\c@endexamplectr=\count478
+\c@currexercisectr=\count479
+\c@endexercisectr=\count480
+\c@exercise=\count481
+\c@currexercisexctr=\count482
+\c@endexercisexctr=\count483
+\c@exercisex=\count484
+\c@curralgorithmxctr=\count485
+\c@endalgorithmxctr=\count486
+\c@curralgorithmstarredctr=\count487
+\c@endalgorithmstarredctr=\count488
+\c@algorithmstarred=\count489
+\c@currquestionctr=\count490
+\c@endquestionctr=\count491
+\c@question=\count492
+\c@currassumptionctr=\count493
+\c@endassumptionctr=\count494
+\c@currremarkxctr=\count495
+\c@endremarkxctr=\count496
+\c@remarkx=\count497
+\c@currremarkctr=\count498
+\c@endremarkctr=\count499
+\c@currnotectr=\count500
+\c@endnotectr=\count501
+\c@currobservationctr=\count502
+\c@endobservationctr=\count503
+\c@currnotationctr=\count504
+\c@endnotationctr=\count505
+\c@currclaimctr=\count506
+\c@endclaimctr=\count507
+\c@currsummaryctr=\count508
+\c@endsummaryctr=\count509
+\c@summary=\count510
+\c@curracknowledgementctr=\count511
+\c@endacknowledgementctr=\count512
+\c@currcasectr=\count513
+\c@endcasectr=\count514
+\c@case=\count515
+\c@curroptionctr=\count516
+\c@endoptionctr=\count517
+\c@option=\count518
+\c@currconclusionctr=\count519
+\c@endconclusionctr=\count520
+\c@conclusion=\count521
+\c@currsolutionctr=\count522
+\c@endsolutionctr=\count523
+\c@solution=\count524
+\c@currmotivationctr=\count525
+\c@endmotivationctr=\count526
+\c@motivation=\count527
+\c@currnotationstarredctr=\count528
+\c@endnotationstarredctr=\count529
+\c@notationstarred=\count530
+\c@currexms_rawctr=\count531
+\c@endexms_rawctr=\count532
+\c@exms_raw=\count533
+\c@currexrs_rawctr=\count534
+\c@endexrs_rawctr=\count535
+\c@exrs_raw=\count536
+) (C:/localtexmf\tex/latex/hebrewdoc\hebrewdoc.sty
 Package: hebrewdoc 2018/10/05 Hebrew Macros
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
@@ -1180,17 +1171,17 @@ Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 ex.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count542
-\l__fontspec_language_int=\count543
-\l__fontspec_strnum_int=\count544
-\l__fontspec_tmp_int=\count545
-\l__fontspec_tmpa_int=\count546
-\l__fontspec_tmpb_int=\count547
-\l__fontspec_tmpc_int=\count548
-\l__fontspec_em_int=\count549
-\l__fontspec_emdef_int=\count550
-\l__fontspec_strong_int=\count551
-\l__fontspec_strongdef_int=\count552
+\l__fontspec_script_int=\count537
+\l__fontspec_language_int=\count538
+\l__fontspec_strnum_int=\count539
+\l__fontspec_tmp_int=\count540
+\l__fontspec_tmpa_int=\count541
+\l__fontspec_tmpb_int=\count542
+\l__fontspec_tmpc_int=\count543
+\l__fontspec_em_int=\count544
+\l__fontspec_emdef_int=\count545
+\l__fontspec_strong_int=\count546
+\l__fontspec_strongdef_int=\count547
 \l__fontspec_tmpa_dim=\dimen323
 \l__fontspec_tmpb_dim=\dimen324
 \l__fontspec_tmpc_dim=\dimen325
@@ -1200,7 +1191,7 @@ Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg
 )))
-\l_xpg_alias_keyvals_int=\count553
+\l_xpg_alias_keyvals_int=\count548
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-lat
 ex.ldf
@@ -1239,17 +1230,17 @@ plain TeX and LaTeX
 Package: biditools 2025/12/19 v2.9 Programming tools for bidi package
 \@bidi@envbody=\toks57
 \@bidi@emptytoks=\toks58
-\bidi@poscount=\count554
-\bidi@tempcountb=\count555
+\bidi@poscount=\count549
+\bidi@tempcountb=\count550
 \bidi@temptoksa=\toks59
 \bidi@temptoksb=\toks60
-\bidi@dummies=\count556
+\bidi@dummies=\count551
 \bidi@are@these@correct=\toks61
 \bidi@toks@lista=\toks62
 \bidi@toks@listb=\toks63
-\bidi@stack@length=\count557
+\bidi@stack@length=\count552
 \bidi@empty@stack=\toks64
-\bidi@looprepeat@depth=\count558
+\bidi@looprepeat@depth=\count553
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2026-03-07 v2.37 Module abspage for zref (HO)
@@ -1263,12 +1254,12 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count559
+\c@abspage=\count554
 Package zref Info: New property: abspage on input line 67.
 )
 \@bidi@copyins@=\insert252
-\bidi@typesethour=\count560
-\bidi@typesetminute=\count561
+\bidi@typesethour=\count555
+\bidi@typesetminute=\count556
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\latex-xetex-bidi
 .def
@@ -1279,19 +1270,19 @@ LaTeX Info: Redefining \centerline on input line 317.
 LaTeX Info: Redefining \leftline on input line 326.
 LaTeX Info: Redefining \rightline on input line 327.
 LaTeX Info: Redefining \underline on input line 335.
-\bidi@column@check@number=\count562
+\bidi@column@check@number=\count557
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\footnote-xetex-b
 idi.def
 File: footnote-xetex-bidi.def 2025/09/30 v1.6 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count563
+\c@footdir@label=\count558
 \footdir@toks=\toks66
 )
-(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\book-xetex-bidi.
-def
-File: book-xetex-bidi.def 2025/12/19 v1.6 bidi adaptations for standard book cl
-ass for XeTeX engine
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\article-xetex-bi
+di.def
+File: article-xetex-bidi.def 2025/09/30 v1.2 bidi adaptations for standard arti
+cle class for XeTeX engine
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\amsmath-xetex-bi
 di.def
@@ -1366,7 +1357,7 @@ de-xetex-bidi.def
 File: pgfcorescopes.code-xetex-bidi.def 2015/11/14 v0.1 bidi adaptations for pg
 f package for XeTeX engine
 ))
-\bidi@digits=\count564
+\bidi@digits=\count559
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -1381,17 +1372,17 @@ m hebcal.sty in Babel)
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\cal-util.
 def
-\c@tmpA=\count565
-\c@tmpB=\count566
-\c@tmpC=\count567
-\c@tmpD=\count568
-\c@tmpE=\count569
-\c@tmpF=\count570
+\c@tmpA=\count560
+\c@tmpB=\count561
+\c@tmpC=\count562
+\c@tmpD=\count563
+\c@tmpE=\count564
+\c@tmpF=\count565
 )
-\hebrewday=\count571
-\hebrewmonth=\count572
-\hebrewyear=\count573
-\@common=\count574
+\hebrewday=\count566
+\hebrewmonth=\count567
+\hebrewyear=\count568
+\@common=\count569
 )
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\babel-heb
 rewalph.def
@@ -1462,12 +1453,12 @@ Package: stylish 2018/10/05 Stylish Book Design
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count575
-\csq@gtype=\count576
-\csq@glevel=\count577
-\csq@qlevel=\count578
-\csq@maxlvl=\count579
-\csq@tshold=\count580
+\csq@reset=\count570
+\csq@gtype=\count571
+\csq@glevel=\count572
+\csq@qlevel=\count573
+\csq@maxlvl=\count574
+\csq@tshold=\count575
 \csq@ltx@everypar=\toks67
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
@@ -1493,87 +1484,142 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@outerparindent=\dimen327
 \enit@toks=\toks68
 \enit@inbox=\box91
-\enit@count@id=\count581
-\enitdp@description=\count582
+\enit@count@id=\count576
+\enitdp@description=\count577
 ))
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.st
 y
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count583
+\c@subfigure=\count578
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count584
+\c@subtable=\count579
 )
-(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-04-15 v3.5.4 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count580
+\l__siunitx_number_exponent_fixed_int=\count581
+\l__siunitx_number_min_decimal_int=\count582
+\l__siunitx_number_min_integer_int=\count583
+\l__siunitx_number_round_precision_int=\count584
+\l__siunitx_number_lower_threshold_int=\count585
+\l__siunitx_number_upper_threshold_int=\count586
+\l__siunitx_number_group_first_int=\count587
+\l__siunitx_number_group_size_int=\count588
+\l__siunitx_number_group_min_int=\count589
+\l__siunitx_number_group_minimum_int=\count590
+\l__siunitx_compound_count_int=\count591
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/translations\translat
+ions.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
 )
+\l__siunitx_table_tmp_box=\box92
+\l__siunitx_table_tmp_dim=\dimen328
+\l__siunitx_table_column_width_dim=\dimen329
+\l__siunitx_table_integer_box=\box93
+\l__siunitx_table_decimal_box=\box94
+\l__siunitx_table_uncert_box=\box95
+\l__siunitx_table_before_box=\box96
+\l__siunitx_table_after_box=\box97
+\l__siunitx_table_before_dim=\dimen330
+\l__siunitx_table_carry_dim=\dimen331
+\l__siunitx_unit_tmp_int=\count592
+\l__siunitx_unit_position_int=\count593
+\l__siunitx_unit_total_int=\count594
+\l__siunitx_sexagesimal_tmp_dim=\dimen332
+\l__siunitx_sexagesimal_marker_box=\box98
+\l__siunitx_sexagesimal_unit_box=\box99
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen333
+\ar@mcellbox=\box100
+\extrarowheight=\dimen334
+\NC@list=\toks69
+\extratabsurround=\skip84
+\backup@length=\skip85
+\ar@cellbox=\box101
+)
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/bidi\array-xetex-bidi
+.def
+File: array-xetex-bidi.def 2025/12/06 v0.8 bidi adaptations for array package f
+or XeTeX engine
+))
+
+Package siunitx Info: Option "group-digits = false" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "group-digits = none" as a replacement.
+
+
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count585
+\lrq@indent=\count595
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count586
-\c@listtotal=\count587
-\c@listcount=\count588
-\c@liststart=\count589
-\c@liststop=\count590
-\c@citecount=\count591
-\c@citetotal=\count592
-\c@multicitecount=\count593
-\c@multicitetotal=\count594
-\c@instcount=\count595
-\c@maxnames=\count596
-\c@minnames=\count597
-\c@maxitems=\count598
-\c@minitems=\count599
-\c@citecounter=\count600
-\c@maxcitecounter=\count601
-\c@savedcitecounter=\count602
-\c@uniquelist=\count603
-\c@uniquename=\count604
-\c@refsection=\count605
-\c@refsegment=\count606
-\c@maxextratitle=\count607
-\c@maxextratitleyear=\count608
-\c@maxextraname=\count609
-\c@maxextradate=\count610
-\c@maxextraalpha=\count611
-\c@abbrvpenalty=\count612
-\c@highnamepenalty=\count613
-\c@lownamepenalty=\count614
-\c@maxparens=\count615
-\c@parenlevel=\count616
-\blx@tempcnta=\count617
-\blx@tempcntb=\count618
-\blx@tempcntc=\count619
-\c@blx@maxsection=\count620
-\blx@maxsegment@0=\count621
-\blx@notetype=\count622
-\blx@parenlevel@text=\count623
-\blx@parenlevel@foot=\count624
-\blx@sectionciteorder@0=\count625
-\blx@sectionciteorderinternal@0=\count626
-\blx@entrysetcounter=\count627
-\blx@biblioinstance=\count628
-\labelnumberwidth=\skip84
-\labelalphawidth=\skip85
-\biblabelsep=\skip86
-\bibitemsep=\skip87
-\bibnamesep=\skip88
-\bibinitsep=\skip89
-\bibparsep=\skip90
-\bibhang=\skip91
+\c@tabx@nest=\count596
+\c@listtotal=\count597
+\c@listcount=\count598
+\c@liststart=\count599
+\c@liststop=\count600
+\c@citecount=\count601
+\c@citetotal=\count602
+\c@multicitecount=\count603
+\c@multicitetotal=\count604
+\c@instcount=\count605
+\c@maxnames=\count606
+\c@minnames=\count607
+\c@maxitems=\count608
+\c@minitems=\count609
+\c@citecounter=\count610
+\c@maxcitecounter=\count611
+\c@savedcitecounter=\count612
+\c@uniquelist=\count613
+\c@uniquename=\count614
+\c@refsection=\count615
+\c@refsegment=\count616
+\c@maxextratitle=\count617
+\c@maxextratitleyear=\count618
+\c@maxextraname=\count619
+\c@maxextradate=\count620
+\c@maxextraalpha=\count621
+\c@abbrvpenalty=\count622
+\c@highnamepenalty=\count623
+\c@lownamepenalty=\count624
+\c@maxparens=\count625
+\c@parenlevel=\count626
+\blx@tempcnta=\count627
+\blx@tempcntb=\count628
+\blx@tempcntc=\count629
+\c@blx@maxsection=\count630
+\blx@maxsegment@0=\count631
+\blx@notetype=\count632
+\blx@parenlevel@text=\count633
+\blx@parenlevel@foot=\count634
+\blx@sectionciteorder@0=\count635
+\blx@sectionciteorderinternal@0=\count636
+\blx@entrysetcounter=\count637
+\blx@biblioinstance=\count638
+\labelnumberwidth=\skip86
+\labelalphawidth=\skip87
+\biblabelsep=\skip88
+\bibitemsep=\skip89
+\bibnamesep=\skip90
+\bibinitsep=\skip91
+\bibparsep=\skip92
+\bibhang=\skip93
 \blx@bcfin=\read3
 \blx@bcfout=\write5
 \blx@langwohyphens=\language79
-\c@mincomprange=\count629
-\c@maxcomprange=\count630
-\c@mincompwidth=\count631
+\c@mincomprange=\count639
+\c@maxcomprange=\count640
+\c@mincompwidth=\count641
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1584,88 +1630,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count632
-\c@savedafterword=\count633
-\c@annotator=\count634
-\c@savedannotator=\count635
-\c@author=\count636
-\c@savedauthor=\count637
-\c@bookauthor=\count638
-\c@savedbookauthor=\count639
-\c@commentator=\count640
-\c@savedcommentator=\count641
-\c@editor=\count642
-\c@savededitor=\count643
-\c@editora=\count644
-\c@savededitora=\count645
-\c@editorb=\count646
-\c@savededitorb=\count647
-\c@editorc=\count648
-\c@savededitorc=\count649
-\c@foreword=\count650
-\c@savedforeword=\count651
-\c@holder=\count652
-\c@savedholder=\count653
-\c@introduction=\count654
-\c@savedintroduction=\count655
-\c@namea=\count656
-\c@savednamea=\count657
-\c@nameb=\count658
-\c@savednameb=\count659
-\c@namec=\count660
-\c@savednamec=\count661
-\c@translator=\count662
-\c@savedtranslator=\count663
-\c@shortauthor=\count664
-\c@savedshortauthor=\count665
-\c@shorteditor=\count666
-\c@savedshorteditor=\count667
-\c@labelname=\count668
-\c@savedlabelname=\count669
-\c@institution=\count670
-\c@savedinstitution=\count671
-\c@lista=\count672
-\c@savedlista=\count673
-\c@listb=\count674
-\c@savedlistb=\count675
-\c@listc=\count676
-\c@savedlistc=\count677
-\c@listd=\count678
-\c@savedlistd=\count679
-\c@liste=\count680
-\c@savedliste=\count681
-\c@listf=\count682
-\c@savedlistf=\count683
-\c@location=\count684
-\c@savedlocation=\count685
-\c@organization=\count686
-\c@savedorganization=\count687
-\c@origlocation=\count688
-\c@savedoriglocation=\count689
-\c@origpublisher=\count690
-\c@savedorigpublisher=\count691
-\c@publisher=\count692
-\c@savedpublisher=\count693
-\c@language=\count694
-\c@savedlanguage=\count695
-\c@origlanguage=\count696
-\c@savedoriglanguage=\count697
-\c@pageref=\count698
-\c@savedpageref=\count699
-\shorthandwidth=\skip92
-\shortjournalwidth=\skip93
-\shortserieswidth=\skip94
-\shorttitlewidth=\skip95
-\shortauthorwidth=\skip96
-\shorteditorwidth=\skip97
-\locallabelnumberwidth=\skip98
-\locallabelalphawidth=\skip99
-\localshorthandwidth=\skip100
-\localshortjournalwidth=\skip101
-\localshortserieswidth=\skip102
-\localshorttitlewidth=\skip103
-\localshortauthorwidth=\skip104
-\localshorteditorwidth=\skip105
+\c@afterword=\count642
+\c@savedafterword=\count643
+\c@annotator=\count644
+\c@savedannotator=\count645
+\c@author=\count646
+\c@savedauthor=\count647
+\c@bookauthor=\count648
+\c@savedbookauthor=\count649
+\c@commentator=\count650
+\c@savedcommentator=\count651
+\c@editor=\count652
+\c@savededitor=\count653
+\c@editora=\count654
+\c@savededitora=\count655
+\c@editorb=\count656
+\c@savededitorb=\count657
+\c@editorc=\count658
+\c@savededitorc=\count659
+\c@foreword=\count660
+\c@savedforeword=\count661
+\c@holder=\count662
+\c@savedholder=\count663
+\c@introduction=\count664
+\c@savedintroduction=\count665
+\c@namea=\count666
+\c@savednamea=\count667
+\c@nameb=\count668
+\c@savednameb=\count669
+\c@namec=\count670
+\c@savednamec=\count671
+\c@translator=\count672
+\c@savedtranslator=\count673
+\c@shortauthor=\count674
+\c@savedshortauthor=\count675
+\c@shorteditor=\count676
+\c@savedshorteditor=\count677
+\c@labelname=\count678
+\c@savedlabelname=\count679
+\c@institution=\count680
+\c@savedinstitution=\count681
+\c@lista=\count682
+\c@savedlista=\count683
+\c@listb=\count684
+\c@savedlistb=\count685
+\c@listc=\count686
+\c@savedlistc=\count687
+\c@listd=\count688
+\c@savedlistd=\count689
+\c@liste=\count690
+\c@savedliste=\count691
+\c@listf=\count692
+\c@savedlistf=\count693
+\c@location=\count694
+\c@savedlocation=\count695
+\c@organization=\count696
+\c@savedorganization=\count697
+\c@origlocation=\count698
+\c@savedoriglocation=\count699
+\c@origpublisher=\count700
+\c@savedorigpublisher=\count701
+\c@publisher=\count702
+\c@savedpublisher=\count703
+\c@language=\count704
+\c@savedlanguage=\count705
+\c@origlanguage=\count706
+\c@savedoriglanguage=\count707
+\c@pageref=\count708
+\c@savedpageref=\count709
+\shorthandwidth=\skip94
+\shortjournalwidth=\skip95
+\shortserieswidth=\skip96
+\shorttitlewidth=\skip97
+\shortauthorwidth=\skip98
+\shorteditorwidth=\skip99
+\locallabelnumberwidth=\skip100
+\locallabelalphawidth=\skip101
+\localshorthandwidth=\skip102
+\localshortjournalwidth=\skip103
+\localshortserieswidth=\skip104
+\localshorttitlewidth=\skip105
+\localshortauthorwidth=\skip106
+\localshorteditorwidth=\skip107
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1683,19 +1729,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count700
-\c@textcitetotal=\count701
-\c@textcitemaxnames=\count702
-\c@biburlbigbreakpenalty=\count703
-\c@biburlbreakpenalty=\count704
-\c@biburlnumpenalty=\count705
-\c@biburlucpenalty=\count706
-\c@biburllcpenalty=\count707
+\c@textcitecount=\count710
+\c@textcitetotal=\count711
+\c@textcitemaxnames=\count712
+\c@biburlbigbreakpenalty=\count713
+\c@biburlbreakpenalty=\count714
+\c@biburlnumpenalty=\count715
+\c@biburlucpenalty=\count716
+\c@biburllcpenalty=\count717
 \biburlbigskip=\muskip22
 \biburlnumskip=\muskip23
 \biburlucskip=\muskip24
 \biburllcskip=\muskip25
-\c@smartand=\count708
+\c@smartand=\count718
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1709,8 +1755,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard
 .bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count709
-\c@bbx:relatedtotal=\count710
+\c@bbx:relatedcount=\count719
+\c@bbx:relatedtotal=\count720
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1746,29 +1792,34 @@ Package biblatex Info: ... and expl3
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-exp
 l3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (algebra_2_recitations.aux)
-\openout1 = `algebra_2_recitations.aux'.
+))
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Warning: Unused global option(s):
+    [openany].
+
+(hw10.aux)
+\openout1 = `hw10.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1789,13 +1840,13 @@ Package caption Info: End \AtBeginDocument code.
 * \textheight=731.23584pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-45.43198pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
-* \headsep=18.06749pt
+* \headsep=25.0pt
 * \topskip=10.0pt
-* \footskip=25.29494pt
+* \footskip=30.0pt
 * \marginparwidth=56.9055pt
-* \marginparsep=7.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
@@ -1807,10 +1858,10 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 69.
-(algebra_2_recitations.out) (algebra_2_recitations.out)
+Package hyperref Info: Link coloring ON on input line 47.
+(hw10.out) (hw10.out)
 \@outlinefile=\write6
-\openout6 = `algebra_2_recitations.out'.
+\openout6 = `hw10.out'.
 
 
 Package fontspec Info: 
@@ -1819,56 +1870,66 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 69.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 69.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 69.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 69.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 69.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 69.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 69.
-LaTeX Font Info:    Redeclaring math accent \check on input line 69.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 69.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 69.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 69.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 69.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 47.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 47.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 47.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 47.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 47.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 47.
+LaTeX Font Info:    Redeclaring math accent \check on input line 47.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 47.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 47.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 47.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 69.
+(Font)              `operators' in the math version `normal' on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 69.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 69.
+(Font)              `operators' in the math version `bold' on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 69.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 69.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 69.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 69.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 69.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 69.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 47.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 69.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 69.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 69.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 47.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 69.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 47.
+Package translations Info: no dictionary file `translations-basic-dictionary-he
+brew.trsl' found. on input line 47.
+
+(C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tr
+anslations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 47.
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
 
@@ -1894,38 +1955,31 @@ Package biblatex Info: ... file 'hebrew.lbx' not found.
 
 
 Package biblatex Warning: Language 'hebrew' not supported.
-(biblatex)                Using dummy definitions on input line 69.
+(biblatex)                Using dummy definitions on input line 47.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `algebra_2_recitations.bcf'.
+\openout5 = `hw10.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'algebra_2_recitations.bbl' not found.
-No file algebra_2_recitations.bbl.
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
-File: images/front.png Graphic file (type bmp)
-<images/front.png>
-
-Overfull \hbox (6.82864pt too wide) in paragraph at lines 72--72
- [][][][][] 
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+Package biblatex Info: ... file 'hw10.bbl' not found.
+No file hw10.bbl.
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 72
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49
 .
 
 (C:\Users\tealeaf\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1934,206 +1988,34 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 LaTeX Warning: No \author given.
 
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
+ut line 56.
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
+ut line 69.
 [1
 
-
-
-] (algebra_2_recitations.toc)
-\tf@toc=\write7
-\openout7 = `algebra_2_recitations.toc'.
-
- [2
-
-] [1
-
-] [2
-
 ]
-פרק 1.
-Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
-input line 117.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 141.
-Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
-ut line 168.
-Package hyperref Info: bookmark level for unknown exercisechap defaults to 0 on
- input line 195.
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 208.
-Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
-ut line 225.
-[3
+\tf@thm=\write7
+\openout7 = `hw10.thm'.
 
-]
-Package hyperref Info: bookmark level for unknown solution defaults to 0 on inp
-ut line 273.
- [4] [5] [6]
-פרק 2.
-[7
-
-] [8] [9] [10] [11] [12] [13] [14]
-File: images/cramer.png Graphic file (type bmp)
-<images/cramer.png>
- [15] [16]
-Overfull \hbox (3.59714pt too wide) in paragraph at lines 1406--1412
-[]\TU/Calibri(0)/m/n/10 כאשר שתי הדטרמיננטות הראשונות הן מכפלות איברי האלכסון כ
-דטרמיננטות של מטריצות משולשות עליונות, והדטרמיננטה[]
- []
-
-[17] [18] [19] [20]
-Overfull \hbox (4.52214pt too wide) in paragraph at lines 1872--1883
-[][][]\TU/Calibri(0)/m/n/10 אופרטור $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [] [
-]$ \TU/Calibri(0)/m/n/10 נקרא \TU/Calibri(0)/m/it/10 לכסין \TU/Calibri(0)/m/n/1
-0 אם קיים בסיס $\OMS/cmsy/m/n/10 B$ \TU/Calibri(0)/m/n/10 של $\OML/cmm/m/it/10 
-V$ \TU/Calibri(0)/m/n/10 עבורו $[][]$ מטריצה אלכסונית. []
- []
-
-[21] [22] [23] [24] [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-Missing character: There is no מ in font cmmi7!
-[27] [28] [29]
-פרק 3.
-[30
-
-] [31]
-Overfull \hbox (11.2681pt too wide) in paragraph at lines 2973--2980
-[]\TU/Calibri(0)/m/n/10 לפי טענה, הערכים העצמיים של $\OML/cmm/m/it/10 T$ \TU/Ca
-libri(0)/m/n/10 הם שורשי הפולינום המינימלי, לכן הערכים העצמיים השונים של $\OML/
-cmm/m/it/10 T$ \TU/Calibri(0)/m/n/10 הם $\OML/cmm/m/it/10 ^^U[]; [] ; ^^U[]$\TU
-/Calibri(0)/m/n/10 . []
- []
-
-[32] [33]
-Missing character: There is no ע in font cmmi7!
-Missing character: There is no ב in font cmmi10!
-Missing character: There is no ע in font cmmi7!
-Missing character: There is no ב in font cmmi10!
-[34]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 3292.
- [35]
-Overfull \hbox (10.25139pt too wide) in paragraph at lines 3441--3457
-[][][]\TU/Calibri(0)/m/n/10 נשלים את $\OMS/cmsy/m/n/10 B$ \TU/Calibri(0)/m/n/10
- לבסיס של $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 על ידי הוספת וקטורים מ־$\O
-MS/cmsy/m/n/10 C$\TU/Calibri(0)/m/n/10 . נוסיף את $\OT1/cmr/m/n/10 1 [] \OML/cm
-m/m/it/10 U$ \TU/Calibri(0)/m/n/10 כדי לקבל $\OMS/cmsy/m/n/10 B[] \OT1/cmr/m/n/
-10 = []$[]
- []
-
-[36] [37] [38] [39]
-Overfull \hbox (11.03181pt too wide) in paragraph at lines 4286--4294
-[][]\TU/Calibri(0)/m/n/10 מהסעיף הקודם, נקבל כי המרחבים ה־$\OML/cmm/m/it/10 S$ 
-\TU/Calibri(0)/m/n/10 שמורים הם המרחבים ה־$\OML/cmm/m/it/10 T$\TU/Calibri(0)/m/
-n/10 ־שמורים, שהינם אלו מהצורה $[][] []$[]
- []
-
-[40] [41] [42] [43] [44] [45] [46
-
-]
-פרק 4.
-[47
-
-] [48]
-Overfull \hbox (8.23172pt too wide) in paragraph at lines 5022--5030
-[][][]\TU/Calibri(0)/m/n/10 יהי $[]$ מרחב נורמי. \TU/Calibri(0)/m/it/10 המטריקה
- המושרית \TU/Calibri(0)/m/n/10 על $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 הי
-א $\OML/cmm/m/it/10 d [] \OT1/cmr/m/n/10 = []$\TU/Calibri(0)/m/n/10 . []
- []
-
-[49] [50]
-Overfull \hbox (0.7929pt too wide) in paragraph at lines 5486--5497
-[][][]\TU/Calibri(0)/m/it/10 יהי $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/it/10 מר
-חב מכפלה פנימית, יהי $\OML/cmm/m/it/10 W \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 
-V$\TU/Calibri(0)/m/it/10 , תהי $\OML/cmm/m/it/10 P[]$ \TU/Calibri(0)/m/it/10 הה
-טלה האורתוגונלית[]
- []
-
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 5501.
-[51]
-Overfull \hbox (21.88327pt too wide) in paragraph at lines 5574--5584
-[]\TU/Calibri(0)/m/n/10 בסיס אורתונורמלי של $\OML/cmm/m/it/10 W$ \TU/Calibri(0)
-/m/n/10 וכי $[] []$ בסיס אורתונורמלי של $\OML/cmm/m/it/10 W[]$\TU/Calibri(0)/m/
-n/10 . אז, $\OML/cmm/m/it/10 W[]$ \TU/Calibri(0)/m/n/10 מרחב המטריצות האנטיסימט
-ריות. []
- []
-
-[52] [53]
-פרק 5.
-[54
-
-] [55]
-Overfull \hbox (15.28702pt too wide) in paragraph at lines 5868--5876
-[][][]\TU/Calibri(0)/m/it/10 יהיו $[] \OML/cmm/m/it/10 ; []$ \TU/Calibri(0)/m/i
-t/10 מרחבי מכפלה פנימית סוף מימדיים עם בסיסים אורתונורמליים $\OML/cmm/m/it/10 B
-; C$ \TU/Calibri(0)/m/it/10 בהתאמה,[]
- []
-
-[56] [57]
-Overfull \hbox (2.30356pt too wide) in paragraph at lines 6156--6162
-[][]\TU/Calibri(0)/m/n/10 מצד שני, נניח כי $\OML/cmm/m/it/10 T$ \TU/Calibri(0)/
-m/n/10 נורמלי, ונרצה למצוא $\OML/cmm/m/it/10 A; B$ \TU/Calibri(0)/m/n/10 כנ"ל. 
-ניזכר בפירוק של מטריצה כסכום של מטריצה סימטרית ואנטי־סימטרית,[]
- []
-
-[58] [59]
-Overfull \hbox (1.64117pt too wide) in paragraph at lines 6469--6479
-[][][]\TU/Calibri(0)/m/n/10 מטריצה $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] 
-[]$ \TU/Calibri(0)/m/n/10 עבור $\U/msb/m/n/10 F \OT1/cmr/m/n/10 = \U/msb/m/n/10
- R$ \TU/Calibri(0)/m/n/10 (עבור $\U/msb/m/n/10 F \OT1/cmr/m/n/10 = \U/msb/m/n/1
-0 C$\TU/Calibri(0)/m/n/10 ) נקראת \TU/Calibri(0)/m/it/10 אורתוגונלית[]
- []
-
-[60]
-Overfull \hbox (2.68059pt too wide) in paragraph at lines 6523--6538
-[][][]\TU/Calibri(0)/m/n/10 מתקיים כי $\OML/cmm/m/it/10 ^^Z[] [] ; ^^Z[] []$ \T
-U/Calibri(0)/m/n/10 הן עמודות $\OML/cmm/m/it/10 A[]$\TU/Calibri(0)/m/n/10 , שהי
-נן בסיס אורתונורמלי של $\U/msb/m/n/10 R[]$\TU/Calibri(0)/m/n/10 . לכן, $\OMS/cm
-sy/m/n/10 E \OT1/cmr/m/n/10 = []$ \TU/Calibri(0)/m/n/10 בסיס אורתונורמלי[]
- []
-
-
-Overfull \hbox (2.69818pt too wide) in paragraph at lines 6669--6682
-[][][]\TU/Calibri(0)/m/it/10 יהי $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/it/10 מר
-חב מכפלה פנימית מרוכב סוף־מימדי, ויהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2$[]
-
- []
-
-[61]
-Overfull \hbox (7.75854pt too wide) in paragraph at lines 6853--6864
-[][]\TU/Calibri(0)/m/n/10 בכיוון השני, נניח כי $\OML/cmm/m/it/10 T$ \TU/Calibri
-(0)/m/n/10 נורמלי. ממשפט הפירוק הספקטלי קיים בסיס אורתונורמלי $\OMS/cmsy/m/n/10
- B$ \TU/Calibri(0)/m/n/10 של $\OML/cmm/m/it/10 V$ \TU/Calibri(0)/m/n/10 עבורו $
-[][] \OT1/cmr/m/n/10 = [] []$[]
- []
-
-[62] [63]
-
-LaTeX Warning: Empty bibliography on input line 7174.
-
-\tf@thm=\write8
-\openout8 = `algebra_2_recitations.thm'.
-
-[64] (algebra_2_recitations.aux)
+ [2] (hw10.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 848A70FF6B7CC49C82952FFA0D96D498;7300.
-Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
-\openout1 = `algebra_2_recitations.run.xml'.
+Package rerunfilecheck Info: File `hw10.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'hw10.run.xml'.
+\openout1 = `hw10.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44188 strings out of 402983
- 930009 string characters out of 5448068
- 2004857 words of memory out of 5000000
- 72206 multiletter control sequences out of 15000+600000
- 638499 words of font info for 123 fonts, out of 8000000 for 9000
+ 47309 strings out of 402983
+ 1040409 string characters out of 5448068
+ 2064104 words of memory out of 5000000
+ 75350 multiletter control sequences out of 15000+600000
+ 635638 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 117i,20n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,15n,121p,1216b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (66 pages).
+Output written on hw10.pdf (2 pages).
