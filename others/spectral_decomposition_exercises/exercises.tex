@@ -1,0 +1,199 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - תרגילי חזרה על פירוק ספקטרלי
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+לאורך הגיליון, יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \NN_+$
+מעל
+$\CC$
+ויהי
+$T \in \End_\CC\prs{V}$.
+
+נזכיר כי
+$\sigma\prs{T}$
+היא קבוצת הערכים העצמיים של
+$T$
+וגם
+$r_\sigma\prs{T} = \max_{\lambda \in \sigma\prs{T}} \abs{\lambda}$.
+
+\begin{exercise}
+\begin{enumerate}
+\item יהי
+$z = i r \in \CC$
+עבור
+$r \in \RR$
+עם
+$\abs{r} \leq 1$.
+
+מיצאו
+$w \in \CC$
+עם
+$\abs{w} = 1$
+עבורו
+$z = \frac{w - \bar{w}}{2}$.
+
+\item נניח כי
+$T = i R$
+עבור
+$R \in \End_\CC\prs{V}$
+הרמיטי עם
+$r_\sigma\prs{R} \leq 1$.
+
+מיצאו אופרטור אוניטרי
+$S \in \End_\CC\prs{V}$
+עבורו
+$T = \frac{S - S^*}{2}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+אופרטור
+$A \in \End_\FF\prs{V}$
+נקרא
+\emph{אנטי־הרמיטי}
+אם
+$A^* = -A$.
+
+\begin{enumerate}
+\item
+הוכיחו כי
+$z \in \CC$
+מקיים
+$\bar{z} = -z$
+אם ורק אם קיים
+$r \in \RR$
+עבורו
+$z = ir$.
+
+\item הוכיחו כי
+$T$
+אנטי־הרמיטי אם ורק אם קיים אופרטור הרמיטי
+$R \in \End_\CC\prs{V}$
+עבורו
+$T = iR$.
+
+\item תהיינה
+\begin{align*}
+I &\coloneqq \set{ir}{r \in \RR} \subseteq \CC \\
+\text{.} C &\coloneqq \set{z}{\substack{z \in \CC \\ \abs{z} = 1 \\ z \neq 1}}
+\end{align*}
+הוכיחו כי
+\begin{align*}
+f \colon I &\to C \\
+z &\mapsto \frac{z-1}{z+1}
+\end{align*}
+מוגדרת היטב והפיכה, ומיצאו את ההופכית שלה.
+
+\item תהי
+\begin{align*}
+\mcal{I} \coloneqq \set{T \in \End_\CC\prs{V}}{T^* = -T} \subseteq \End_\CC\prs{V}
+\end{align*}
+ותהי
+$\mcal{C}$
+קבוצת האופרטורים האוניטריים על
+$V$
+ש־%
+$1$
+אינו ערך עצמי שלהם.
+נגדיר
+\begin{align*}
+F \colon \mcal{I} &\to \mcal{C} \\
+\text{.} \hphantom{lala} T &\mapsto \prs{T-\id_V}\prs{T + \id_V}^{-1}
+\end{align*}
+הוכיחו כי
+$F$
+מוגדרת היטב והפיכה, ומיצאו את ההופכית שלה.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\begin{enumerate}
+\item יהי
+$z \in \CC \setminus \set{0}$.
+הוכיחו כי
+$\abs{\frac{z}{\sqrt{\bar{z} z}}} = 1$.
+
+\item נניח כי
+$T$
+נורמלי והפיך. הוכיחו כי
+\begin{align*}
+T \prs{\sqrt{T^* T}}^{-1}
+\end{align*}
+מוגדר־היטב ואוניטרי.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\begin{enumerate}
+\item 
+יהי
+$z \in \CC$.
+הוכיחו כי קיימים
+$r \in \RR_+$
+ו־%
+$u \in \CC$
+עבורו
+$\abs{u} = 1$
+כך שמתקיים
+$z = ur$.
+
+\item 
+נניח כי
+$T$
+נורמלי. הוכיחו כי קיימים אופרטורים
+$U,R \in \End_\CC\prs{V}$
+כך ש־%
+$U$
+אוניטרי ו־%
+$R$
+חיובי וכך שמתקיים
+$T = UR$.
+
+זאת גירסה חלשה יותר של פירוק פולארי מזאת שראינו בהרצאה.
+\end{enumerate}
+\end{exercise}
+
+\end{document}
