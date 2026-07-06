@@ -36,180 +36,33 @@ style=alphabetic,
 % Title  %
 %%%%%%%%%%
 \title{
-אלגברה ב' - גיליון תרגילי בית 10 \\
-עוד אופרטורים על מרחבי מכפלה פנימית, ומשפט הפירוק הספקטרלי
+אלגברה ב' - גיליון תרגילי בית 11 \\
+פירוק לערכים סינגולריים, פירוק פולארי, ותבניות בילינאריות
 \\
 \vspace{1cm}
-\large{תאריך הגשה: 9.7.2026}
+\large{תאריך הגשה: 16.7.2026}
 }
 \date{}
 
 \begin{document}
 \maketitle
 
-\textbf{לאורך הגיליון, נניח כי
+\begin{exercise}
+יהי
 $V$
-מרחב וקטורי סוף־מימדי מעל שדה
-$\FF$.}
-
-\begin{notation}
-עבור
-$T \in \End_\FF\prs{V}$
-נסמן ב־%
-$\sigma\prs{T}$
-את קבוצת הערכים העצמיים של
-$T$
-ונסמן
-\begin{align*}
-\text{.} r_\sigma\prs{T} \coloneqq \max_{\lambda \in \sigma\prs{T}} \abs{\lambda}
-\end{align*}
-\end{notation}
-
-\begin{exercise}
-יהי
-$T \in \End_\CC\prs{V}$
-נורמלי
-ויהיו
-$p,q \in \CC\brs{x}$
-כך שהאופרטור
-$q\prs{T}$
-הפיך.
-נסמן
-$S = p\prs{T} q\prs{T}^{-1}$.
-
-הוכיחו כי
-\begin{align*}
-\sigma\prs{S} = \set{\frac{p\prs{\lambda}}{q\prs{\lambda}}}{\lambda \in \sigma\prs{T}}
-\end{align*}
-וכי לכל
-$\lambda' \in \sigma\prs{S}$
-מתקיים
-\begin{align*}
-r^S_a\prs{\lambda'} = \sum_{\substack{\lambda \in \sigma\prs{T} \\ \frac{p\prs{\lambda}}{q\prs{\lambda}} = \lambda'}} r_a^T\prs{\lambda} \\
-\text{.} r^S_g\prs{\lambda'} = \sum_{\substack{\lambda \in \sigma\prs{T} \\ \frac{p\prs{\lambda}}{q\prs{\lambda}} = \lambda'}} r_g^T\prs{\lambda}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-יהי
-$T \in \End_{\mbb{C}}\prs{V}$
-נורמלי, ונניח כי
-$3,4$
-ערכים עצמיים של
-$T$.
-הראו שיש
-$v \in V$
-עבורו
-$\norm{v} = \sqrt{2}$
-וגם
-$\norm{Tv} = 5$.
-\end{exercise}
-
-\begin{exercise}
-יהי
-$T \in \End_{\mbb{C}}\prs{V}$
+מרחב וקטורי סוף־מימדי מעל
+$\CC$
 ויהי
-$a \in \mbb{C}$
-עבורו
-$\abs{a} \neq 1$.
-
-\begin{enumerate}
-\item הראו כי אם
-$T^* = aT$
-אז
-$T = 0$.
-
-\item נניח כי
-$T$
-נורמלי, ויהי
-$S = T - a T^*$.
-הוכיחו כי
-$\ker\prs{T} = \ker\prs{S}$.
-\end{enumerate}
-\end{exercise}
-
-\begin{exercise}
-\begin{enumerate}
-\item
-יהי
-$T \in \End_\CC\prs{V}$
-הרמיטי עם
-$r_\sigma\prs{T} \leq 1$.
-מיצאו
-$S \in \End_\CC\prs{V}$
-אוניטרי עבורו
-\begin{align*}
-\text{.} T = \frac{S + S^*}{2}
-\end{align*}
-
-\item יהי
 $T \in \End_\CC\prs{V}$.
-הוכיחו כי
-$T$
-ניתן לכתיבה כצירוף לינארי של ארבעה אופרטורים אוניטריים.
-\end{enumerate}
+
+הוכיחו שקיימת איזומטריה
+$S \in \End_\CC\prs{V}$
+עבורה
+\[\text{.} T = \sqrt{T^* T} S\]
 \end{exercise}
 
 \begin{exercise}
-\textbf{שיקוף}
-ב־%
-$\RR^n$
-הוא אופרטור
-$T$
-כך שקיים
-$v \in V$
-עבורו
-$T\prs{v} = -v$
-וגם
-$T\prs{w} = w$
-לכל
-$w \in \Span\prs{v}^\perp$.
-נסמנו
-$R_v$
-ונסמן גם
-$R \coloneqq R_{e_1}$.
 
-\begin{enumerate}
-\item תהי
-$\theta \in \RR$,
-תהי
-\begin{align*}
-A_\theta \coloneqq \pmat{\cos\prs{\theta} & -\sin\prs{\theta} \\ \sin\prs{\theta} & \cos\prs{\theta}}
-\end{align*}
-ויהי
-$\rho_\theta \coloneqq T_{A_\theta}$
-אופרטור הכפל משמאל ב־%
-$A_\theta$.
-
-מיצאו
-$v \in V$
-עבורו
-$\rho_\theta = R_v \circ R$
-והסיקו כי כל אופרטור אורתוגונלי על
-$\RR^2$
-הוא הרכבה של לכל היותר שני שיקופים.
-
-\item
-יהי
-$T \in \End_\RR\prs{\RR^3}$
-אורתוגונלי. הראו שקיים בסיס
-$\mcal{B}$
-של
-$\RR^3$,
-שקיימת
-$\lambda \in \set{\pm 1}$
-ושקיימת
-$O \in \Mat_2\prs{\RR}$
-אורתוגונלית עבורם מתקיים
-\begin{align*}
-\text{.} \brs{T}_{\mcal{B}} = \pmat{\lambda & 0_{1 \times 2} \\ 0_{2 \times 1} & O}
-\end{align*}
-\item הוכיחו כי כל אופרטור אורתוגונלי
-$T \in \End_\RR\prs{\RR^3}$
-הוא הרכבה של לכל היותר
-$3$
-שיקופים.
-\end{enumerate}
 \end{exercise}
 
 \end{document}

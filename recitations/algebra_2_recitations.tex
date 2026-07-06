@@ -7389,12 +7389,12 @@ $T_A \in \Hom_{\mbb{F}}\prs{\mbb{F}^n, \mbb{F}^m}$
 \ref{corollary:matrix-svd}.
 \end{remark}
 
-\begin{exercise}
+\begin{exercisechap}
 מצאו פירוק לערכים סינגולריים עבור המטריצה
 \begin{align*}
 \text{.} A = \pmat{2 & -1 \\ 2 & 2} \in \Mat_2\prs{\mbb{R}}
 \end{align*}
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 \begin{enumerate}
@@ -7461,19 +7461,19 @@ $A^* A$.
 ננרמל את הוקטורים כדי לקבל בסיס אורתונורמלי של וקטורים עצמיים של
 $A^* A$,
 \begin{align*}
-\text{.} B = \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}, \frac{1}{\sqrt{5}} \pmat{1 \\ -2}}
+\text{.} \mcal{B} = \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}, \frac{1}{\sqrt{5}} \pmat{1 \\ -2}}
 \end{align*}
 וניקח גם
 \begin{align*}
-C &= \prs{\frac{1}{\sigma_1} A \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}}, \frac{1}{\sigma_2} A \prs{\frac{1}{\sqrt{5}}\pmat{1 \\ -2}}}
+\mcal{C} &= \prs{\frac{1}{\sigma_1} A \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}}, \frac{1}{\sigma_2} A \prs{\frac{1}{\sqrt{5}}\pmat{1 \\ -2}}}
 \\&= \prs{\frac{1}{3 \sqrt{5}} \pmat{3 \\ 6}, \frac{1}{2 \sqrt{5}} \pmat{4 \\ -2}}
-\\&= \pmat{\frac{1}{\sqrt{5}} \pmat{1 \\ 2}, \frac{1}{\sqrt{5}} \pmat{2 & - 1}}
+\\&= \pmat{\frac{1}{\sqrt{5}} \pmat{1 \\ 2}, \frac{1}{\sqrt{5}} \pmat{2 \\ - 1}}
 \end{align*}
 שהינו בסיס אורתונורמלי של
 $\mbb{R}^2$.
 
 \item
-$C$
+$\mcal{C}$
 כבר הינו בסיס אורתונורמלי של
 $\mbb{R}^2$
 כי לא היה לנו
@@ -7485,32 +7485,32 @@ $A$.
 \[A = U \Sigma V^*\]
 עבור
 \begin{align*}
-V &= M^B_E = \frac{1}{\sqrt{5}} \pmat{2 & 1 \\ 1 & -2} \\
-U &= M^C_E = \frac{1}{\sqrt{5}} \pmat{1 & 2 \\ 2 & -1} \\
+V &= M^\mcal{B}_\mcal{E} = \frac{1}{\sqrt{5}} \pmat{2 & 1 \\ 1 & -2} \\
+U &= M^\mcal{C}_\mcal{E} = \frac{1}{\sqrt{5}} \pmat{1 & 2 \\ 2 & -1} \\
 \text{.} \Sigma &= \pmat{\sigma_1 & 0 \\ 0 & \sigma_2} = \pmat{3 & 0 \\ 0 & 2}
 \end{align*}
 \end{enumerate}
 \end{solution}
 
-\begin{exercise}
+\begin{exercisechap}
 מה יקרה אם נחשב בעזרת האלגוריתם פירוק לערכים סינגולריים עבור אופרטור נורמלי?
 באילו מקרים האלגוריתם יתן
-$B = C$?
-\end{exercise}
+$\mcal{B} = \mcal{C}$?
+\end{exercisechap}
 
 \begin{solution}
 ניקח בסיס
-$B = \prs{v_1, \ldots, v_n}$
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
 עבורו
-$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$,
+$\brs{T}_\mcal{B} = \diag\prs{\lambda_1, \ldots, \lambda_n}$,
 ואז
-\[\text{,} \brs{T^* T}_B = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n} \diag\prs{\lambda_1, \ldots, \lambda_n} = \diag\prs{\abs{\lambda_1}^2, \ldots, \abs{\lambda_n}^2}\]
+\[\text{,} \brs{T^* T}_\mcal{B} = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n} \diag\prs{\lambda_1, \ldots, \lambda_n} = \diag\prs{\abs{\lambda_1}^2, \ldots, \abs{\lambda_n}^2}\]
 \end{solution}
 וכן
-$\sqrt{\brs{T^* T}_B} = \diag\prs{\abs{\lambda_1}, \ldots, \abs{\lambda_n}}$.
+$\sqrt{\brs{T^* T}_\mcal{B}} = \diag\prs{\abs{\lambda_1}, \ldots, \abs{\lambda_n}}$.
 אז החישוב שלנו מראה
 \begin{align*}
-\text{.} C \coloneqq \prs{u_1, \ldots, u_n} = \prs{\frac{1}{\abs{\lambda_1}} T\prs{v_1}, \ldots, \frac{1}{\abs{\lambda_n}} T\prs{v_n}}
+\text{.} \mcal{C} \coloneqq \prs{u_1, \ldots, u_n} = \prs{\frac{1}{\abs{\lambda_1}} T\prs{v_1}, \ldots, \frac{1}{\abs{\lambda_n}} T\prs{v_n}}
 \end{align*}
 כעת,
 $T\prs{v_i} = \lambda_i v_i$
@@ -7523,19 +7523,19 @@ $\lambda_i$
 ממשי אי־שלילי.
 
 לכן האלגוריתם יתן
-$B = C$
+$\mcal{B} = \mcal{C}$
 אם ורק אם כל הערכים העצמיים של
 $T$
 הינם ממשיים אי־שליליים. כלומר, אם ורק אם
 $T$
 מוגדר אי־שלילית.
 
-\begin{exercise}
+\begin{exercisechap}
 הוכיחו או הפריכו: הערכים הסינגולריים של
 $T^2$
 הם ריבועי הערכים הסינגולריים של
 $T$.
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 הטענה איננה נכונה, למשל עבור
@@ -7554,7 +7554,7 @@ $\prs{0,1}$
 $A^t A = \pmat{0 & 0 \\ 0 & 1}$.
 \end{solution}
 
-\begin{exercise}
+\begin{exercisechap}
 תהיינה
 $A,B,U \in \Mat_n\prs{\mbb{F}}$
 עבור
@@ -7567,7 +7567,7 @@ $A$
 הראו כי
 $B$
 מוגדרת חיובית.
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 ראשית,
@@ -7661,7 +7661,7 @@ $R \coloneqq \prs{\eta^\mcal{B}_\mcal{B}}^{-1}\prs{\tilde{R}}$
 את האופרטורים המיוצגים על ידי
 $\tilde{U}, \tilde{R}$
 לפי הבסיס
-$B$.
+$\mcal{B}$.
 
 אז
 $U$
@@ -7676,20 +7676,20 @@ $\brs{R}_\mcal{B} = \tilde{R}$
 כזה.
 \end{enumerate}
 
-\begin{exercise}
+\begin{exercisechap}
 מיצאו את הפירוק הפולארי עבור האופרטור הבא.
 \begin{align*}
 T \colon \mbb{R}^3 &\to \mbb{R}^3 \\
 \pmat{x \\ y \\ z} &\mapsto \pmat{z \\ 2x \\ 3y}
 \end{align*}
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 מתקיים
 \begin{align*}
-\brs{T}_E &= \pmat{0 & 0 & 1 \\ 2 & 0 & 0 \\ 0 & 3 & 0} \\
-\brs{T^*}_E &= \pmat{0 & 2 & 0 \\ 0 & 0 & 3 \\ 1 & 0 & 0} \\
-\brs{T^* T}_E &= \pmat{4 & 0 & 0 \\ 0 & 9 & 0 \\ 0 & 0 & 1}
+\brs{T}_\mcal{E} &= \pmat{0 & 0 & 1 \\ 2 & 0 & 0 \\ 0 & 3 & 0} \\
+\brs{T^*}_\mcal{E} &= \pmat{0 & 2 & 0 \\ 0 & 0 & 3 \\ 1 & 0 & 0} \\
+\brs{T^* T}_\mcal{E} &= \pmat{4 & 0 & 0 \\ 0 & 9 & 0 \\ 0 & 0 & 1}
 \end{align*}
 ולכן הערכים הסינגולריים של
 $T$
@@ -7711,13 +7711,13 @@ $B$
 \end{align*}
 אז
 \begin{align*}
-\text{.} \brs{T}_E = W \Sigma V^*
+\text{.} \brs{T}_\mcal{\mcal{E}} = W \Sigma V^*
 \end{align*}
 עבור
 \begin{align*}
 \Sigma &= \pmat{3&0&0\\0&2&0\\0&0&1} \\
-V &= M^B_E = \pmat{0&1&0\\1&0&0\\0&0&1}\\
-\text{.} W &= M^C_E = \pmat{0&0&1\\0&1&0\\1&0&0}
+V &= M^\mcal{B}_\mcal{E} = \pmat{0&1&0\\1&0&0\\0&0&1}\\
+\text{.} W &= M^\mcal{C}_\mcal{E} = \pmat{0&0&1\\0&1&0\\1&0&0}
 \end{align*}
 
 נקבל כי

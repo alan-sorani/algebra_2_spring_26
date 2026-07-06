@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  6 JUL 2026 11:11
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  6 JUL 2026 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2109,10 +2109,13 @@ Overfull \hbox (7.75854pt too wide) in paragraph at lines 6851--6862
 [][] \OT1/cmr/m/n/10 = [] []$[]
  []
 
-[62] [63] [64] [65]
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 7393.
- [66] [67]
+[62] [63] [64] [65] [66]
+Overfull \hbox (7.42047pt too wide) in paragraph at lines 7496--7499
+[][][]\TU/Calibri(0)/m/n/10 מה יקרה אם נחשב בעזרת האלגוריתם פירוק לערכים סינגול
+ריים עבור אופרטור נורמלי? באילו מקרים האלגוריתם[]
+ []
+
+[67]
 Overfull \hbox (6.34125pt too wide) in paragraph at lines 7586--7597
 [][][]\TU/Calibri(0)/m/n/10 באותו אופן, מטריצה הדומה אורתוגונלית (אוניטרית) למט
 ריצה מוגדרת חיובית/אי־חיובית/שלילית הינה חיובית/[]
@@ -2150,10 +2153,10 @@ Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44194 strings out of 402983
- 930126 string characters out of 5448068
+ 44191 strings out of 402983
+ 930049 string characters out of 5448068
  2005885 words of memory out of 5000000
- 72212 multiletter control sequences out of 15000+600000
+ 72209 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
