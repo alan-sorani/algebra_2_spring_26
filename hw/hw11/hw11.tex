@@ -62,7 +62,130 @@ $S \in \End_\CC\prs{V}$
 \end{exercise}
 
 \begin{exercise}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\CC$
+ויהי
+$T \in \End_\CC\prs{V}$.
+יהיו
+$s$
+ו־%
+$S$
+הערכים הסינגולריים הכי קטן והכי גדול של
+$T$,
+בהתאמה.
+\begin{enumerate}
+\item הראו כי
+\[\text{.} \forall v \in V: s \norm{v} \leq \norm{T\prs{v}} \leq S \norm{S}\]
+\item הראו כי
+$s \leq \abs{\lambda} \leq S$
+לכל ערך עצמי
+$\lambda$
+של
+$T$.
+\end{enumerate}
+\end{exercise}
 
+\begin{exercise}[שימוש של פירוק לערכים סינגולריים]
+עבור מטריצה אלכסונית
+$D = \diag\prs{\lambda_1, \ldots, \lambda_n}$
+נגדיר
+\begin{align*}
+D^\dagger \coloneqq \diag\prs{\lambda_1', \ldots, \lambda_n'}
+\end{align*}
+כאשר
+\begin{align*}
+\text{.} \lambda_i' = \fcases{\lambda_i^{-1} & \lambda_i \neq 0 \\ 0 & \lambda_i = 0}
+\end{align*}
+עבור
+$A \in \Mat_n\prs{\FF}$
+נגדיר
+\[A^\dagger \coloneqq V \Sigma^\dagger U^*\]
+כאשר
+\[A = U \Sigma V^*\]
+הפירוק של
+$A$
+לערכים סינגולריים.
+
+המטריצה
+$A^\dagger$
+נקראת
+\emph{הופכית מור-פנרוז של
+$A$}
+ויש לה שימושים בפתרון מערכות משוואות. נראה שבמספר מובנים היא מתנהגת באופן הדומה להופכית של
+$A$.
+
+\begin{enumerate}
+\item הוכיחו כי
+$\prs{A^\dagger}^\dagger = A$.
+
+\item הוכיחו כי
+$A A^\dagger A = A$.
+
+\item הוכיחו כי
+$A^\dagger A A^\dagger = A^\dagger$.
+
+\item הוכיחו כי
+$A A^\dagger, A^\dagger A$
+שתיהן מטריצות חיוביות. כלומר, ש־%
+$T_{A A^\dagger}, T_{A^\dagger A}$
+אופרטורים חיוביים.
+
+\item הוכיחו כי כאשר
+$A$
+הפיכה מתקיים
+$A^\dagger = A^{-1}$.
+\end{enumerate}
+\end{exercise}
+
+\vspace{10pt}
+
+\textbf{שימו לב שיש תרגיל נוסף בעמוד הבא.}
+
+\newpage
+
+\begin{exercise}
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי מעל
+$\RR$,
+ותהי
+$f$
+תבנית בילינארית על
+$V$.
+
+\begin{enumerate}
+\item
+יהי
+$\mcal{B} \coloneqq \prs{v_1, \ldots, v_n}$
+בסיס של
+$V$
+ויהי
+$\mcal{B}^* \coloneqq \prs{v_1^*, \ldots, v_n^*}$
+בסיס של
+$V^*$
+כאשר
+\begin{align*}
+\text{.} v_j^* \prs{\sum_{i \in [n]} \alpha_i v_i} = \alpha_j v_j
+\end{align*}
+
+הוכיחו כי
+\begin{align*}
+\text{.} \forall u,v \in V: f\prs{u,v} = \sum_{i,j \in [n]} f\prs{v_i, v_j} v_i^*\prs{u} v_j^*\prs{v}
+\end{align*}
+
+\item הסיקו כי כל תבנית בילינארית
+$f$
+על
+$V$
+היא מהצורה
+\begin{align*}
+f\prs{u,v} = \sum_{i \in [j]} \phi_i\prs{u} \psi_i\prs{v}
+\end{align*}
+עבור
+$\phi_i, \psi_i \in V^*$.
+\end{enumerate}
 \end{exercise}
 
 \end{document}
