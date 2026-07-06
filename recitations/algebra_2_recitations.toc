@@ -38,3 +38,8 @@
 \contentsline {section}{\numberline {5.2}ההעתקה הצמודה}{56}{section.5.2}%
 \contentsline {section}{\numberline {5.3}איזומטריות ואופרטורים אוניטריים ואורתוגונליים}{60}{section.5.3}%
 \contentsline {section}{\numberline {5.4}אופרטורים נורמליים וצמודים לעצמם, ומשפט הפירוק הספקטרלי}{61}{section.5.4}%
+\contentsline {section}{\numberline {5.5}פירוק לערכים סינגולריים ופירוק פולארי}{65}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}פירוק לערכים סינגולריים}{65}{subsection.5.5.1}%
+\contentsline {subsubsection}{מציאת פירוק פולארי}{68}{section*.4}%
+\contentsline {part}{III\hspace {1em}תבניות בילינאריות וריבועיות}{70}{part.3}%
+\contentsline {chapter}{\numberline {6}תבניות בילינאריות}{71}{chapter.6}%

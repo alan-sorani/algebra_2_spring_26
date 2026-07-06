@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  2 JUL 2026 15:23
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  6 JUL 2026 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1938,15 +1938,15 @@ LaTeX Warning: No \author given.
 
 
 
-] (algebra_2_recitations.toc)
+] (algebra_2_recitations.toc [2
+
+])
 \tf@toc=\write7
 \openout7 = `algebra_2_recitations.toc'.
 
- [2
+ [3] [4
 
-] [1
-
-] [2
+] [1] [2
 
 ]
 פרק 1.
@@ -2109,31 +2109,53 @@ Overfull \hbox (7.75854pt too wide) in paragraph at lines 6851--6862
 [][] \OT1/cmr/m/n/10 = [] []$[]
  []
 
-[62] [63]
+[62] [63] [64] [65]
+Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
+ut line 7393.
+ [66] [67]
+Overfull \hbox (6.34125pt too wide) in paragraph at lines 7586--7597
+[][][]\TU/Calibri(0)/m/n/10 באותו אופן, מטריצה הדומה אורתוגונלית (אוניטרית) למט
+ריצה מוגדרת חיובית/אי־חיובית/שלילית הינה חיובית/[]
+ []
 
-LaTeX Warning: Empty bibliography on input line 7171.
+
+Overfull \hbox (9.5422pt too wide) in paragraph at lines 7602--7608
+[][][]\TU/Calibri(0)/m/it/10 יהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [][] []
+$ \TU/Calibri(0)/m/it/10 אופרטור על מרחב מכפלה פנימית סוף־מימדי. יש איזומטריה[]
+
+ []
+
+[68] [69] [70
+
+]
+פרק 6.
+[71
+
+] [72]
+
+LaTeX Warning: Empty bibliography on input line 7978.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
 
-[64] (algebra_2_recitations.aux)
+[73] (algebra_2_recitations.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 90B49D8B9210AD02DCF8DA0A35F3D31F;7158.
+(rerunfilecheck)             Checksum: 88B995F80AFE23732B27D35F8E767BF0;8222.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44187 strings out of 402983
- 929996 string characters out of 5448068
- 2004703 words of memory out of 5000000
- 72205 multiletter control sequences out of 15000+600000
+ 44194 strings out of 402983
+ 930126 string characters out of 5448068
+ 2005885 words of memory out of 5000000
+ 72212 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (66 pages).
+Output written on algebra_2_recitations.pdf (77 pages).

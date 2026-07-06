@@ -7168,5 +7168,812 @@ $\Phi, \Psi$
 \end{enumerate}
 \end{solution}
 
+\section{פירוק לערכים סינגולריים ופירוק פולארי}
+
+\subsection{פירוק לערכים סינגולריים}
+
+יהי
+$T \in \End_\mbb{F}\prs{V}$
+עבור
+$V$
+מרחב מכפלה פנימית. ראינו כי
+$T$
+צמוד לעצמו (נורמלי) אם ורק אם קיים בסיס אורתונורמלי של
+$V$
+שמלכסן את
+$T$.
+ראינו כי אופרטורים כלליים מקיימים תכונה דומה.
+
+\begin{definition}[ערכים סינגולריים]
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי מעל
+$\FF$
+ויהי
+$T \in \End_\FF\prs{V}$.
+
+הערכים העצמיים של
+$\sqrt{T^* T}$,
+שראינו שהם ממשיים וחיוביים, הינם
+\emph{הערכים הסינוגלריים של
+$T$}.
+\end{definition}
+
+המשפט הבא מסביר את החשיבות של הערכים הסינגולריים, אשר אנלוגיים לערכים עצמיים במובן מסוים. כפי שעבור
+$T$
+צמוד לעצמו (נורמלי) קיים בסיס אורתונורמלי
+$\mcal{B}$
+עבורו
+$\brs{T}_{\mcal{B}}$,
+לאופרטור כללי יש שני בסיסים אורתונורמליים
+$\mcal{B}, \mcal{C}$
+כך ש־%
+$\brs{T}^{\mcal{B}}_{\mcal{C}}$
+אלכסונית.
+
+\begin{theorem}[פירוק לערכים סינגולריים]
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי, ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+קיימים בסיסים אורתונורמליים
+\begin{align*}
+\mcal{B} &\coloneqq \prs{u_1, \ldots, u_n} \\
+\mcal{C} &\coloneqq \prs{u_1', \ldots, u_n'}
+\end{align*}
+של
+$V$
+עבורם
+\begin{align*}
+\text{.} \forall v \in V: T\prs{v} = \sum_{i \in [n]} s_i \trs{v, u_i} u_i'
+\end{align*}
+\end{theorem}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי, ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+קיימים בסיסים אורתונורמליים
+$\mcal{B}, \mcal{C}$
+של
+$V$
+עבורם
+\[\text{.} \brs{T}^{\mcal{B}}_{\mcal{C}} = \diag\prs{s_1, \ldots, s_n}\]
+\end{exercisechap}
+
+\begin{solution}
+ניקח את
+$\mcal{B}, \mcal{C}$
+מהפירוק לערכים סינגולריים של
+$T$.
+אז לכל
+$j \in [n]$
+מתקיים
+\begin{align*}
+T\prs{u_j} &= \sum_{i \in [n]} s_i \trs{u_j, u_i} u_j'
+\\&= s_i \trs{u_i, u_i} u_i'
+\\ \text{.} \hphantom{T\prs{u_j}} &= s_i u_i'
+\end{align*}
+
+אז העמודה ה־%
+$j$
+של
+$\brs{T}^{\mcal{B}}_{\mcal{C}}$
+היא
+\begin{align*}
+\text{.} \brs{T\prs{u_j}}_{\mcal{C}} = \brs{s_i u_i'}_{\mcal{C}} = s_i e_i
+\end{align*}
+ולכן
+\[\text{,} \brs{T}^{\mcal{B}}_{\mcal{C}} = \diag\prs{s_1, \ldots, s_n}\]
+כנדרש.
+\end{solution}
+
+\begin{corollary}[פירוק לערכים סינגולריים של מטריצה] \label{corollary:matrix-svd}
+תהי
+$A \in \Mat_{n}\prs{\mbb{F}}$
+עבור
+$\mbb{F} \in \set{\mbb{R}, \mbb{C}}$.
+מהמשפט, קיימים בסיסים אורתונורמליים
+$B,C$
+עבורם
+$\Sigma \coloneqq \brs{T_A}^B_C$
+אלכסונית מלבנית.
+אז
+\[\text{.} A = \brs{T_A}_E = M^C_E \brs{T_A}^B_C M^E_B = \brs{T_A}_E = M^C_E \Sigma M^E_B\]
+המטריצות
+$U \coloneqq M^C_E, V \coloneqq M^B_E$
+הינן אורתוגונליות (אוניטריות) כיוון שעמודותיהן הן בסיסים אורתונורמליים.
+אז
+$M^E_B = V^{-1} = V^*$
+ונקבל כי
+$A = U \Sigma V^*$.
+\end{corollary}
+
+\begin{definition}[אופרטור מוגדר חיובית]
+אופרטור
+$T \in \End\prs{V}$
+על מרחב מכפלה פנימית סוף־מימדי נקרא
+\emph{מוגדר חיובית}
+אם הוא צמוד לעצמו (הרמיטי) וגם
+$\trs{Tv, v} \geq 0$
+לכל
+$v \in V$.
+\end{definition}
+
+\begin{remark}
+באופן דומה נגדיר אופרטור מוגדר חיובית לחלוטין%
+\slash%
+שלילית%
+\slash
+שלילית לחלוטין.
+\end{remark}
+
+\begin{proposition}
+אופרטור צמוד לעצמו (נורמלי) הינו מוגדר חיובית אם ורק אם כל הערכים העצמיים שלו (ממשיים) אי־שליליים.
+\end{proposition}
+
+\newpage
+
+נתאר כעת איך למצוא בסיסים
+$\mcal{B},\mcal{C}$
+כנ"ל.
+נסמן
+$n \coloneqq \dim \prs{V}$.
+
+\begin{enumerate}
+\item
+כעת נמצא את הערכים העצמיים $\lambda_i$ של $T^* T$. נסמן
+$\sigma_i = \sqrt{\lambda_i}$
+ונסדר אותם מהגדול לקטן
+$\sigma_1 \geq \sigma_2 \geq \ldots \geq \sigma_n$.
+
+\item
+ניקח
+$\mcal{B} = \prs{v_1, \ldots, v_n}$
+בסיס אורתונורמלי של וקטורים עצמיים מתאימים של
+$T^* T$
+(שקיים לפי פירוק ספקטרלי).
+
+יהי
+$k \in \brs{n}$
+המקסימלי עבורו
+$\lambda_k > 0$.
+נגדיר
+$\mcal{C}' = \prs{\frac{1}{\sigma_1} T\prs{v_1}, \ldots, \frac{1}{\sigma_k} T\prs{v_k}}$.
+
+אז אכן מתקיים
+$T\prs{v_i} = \sigma_i u_i$
+וגם
+\begin{align*}
+\trs{\frac{1}{\sigma_i} T\prs{v_i}, \frac{1}{\sigma_j} T\prs{v_j}}
+&=
+\frac{1}{\sigma_i \sigma_j} \trs{T\prs{v_i}, T\prs{v_j}}
+\\&=
+\frac{1}{\sigma_i \sigma_j} \trs{T^* T\prs{v_i}, v_j}
+\\&=
+\frac{\lambda_i}{\sigma_i \sigma_j} \trs{v_i, v_j}
+\\&=
+\frac{\lambda_i}{\sigma_i \sigma_j} \delta_{i,j}
+\\&=
+\frac{\lambda_i}{\sigma_i^2} \delta_{i,j}
+\\ \text{.} \hphantom{\trs{\frac{1}{\sigma_i} T\prs{v_i}, \frac{1}{\sigma_j} T\prs{v_j}}} &=
+\delta_{i,j}
+\end{align*}
+
+\item
+נשלים את
+$C'$
+לבסיס אורתונורמלי
+$C$
+של
+$V$.
+
+לכל
+$i > k$
+מתקיים
+\[\text{.} \norm{T\prs{v_i}}^2 = \trs{Tv_i, Tv_i} = \trs{T^* T v_i, v_i} = 0\]
+לכן
+$T\prs{v_i} = 0$
+ולא משנה באיזו דרך נשלים לבסיס אורתונורמלי.
+\end{enumerate}
+
+\begin{remark}
+כדי למצוא את הפירוק
+$A = U \Sigma V^*$
+של מטריצה
+$A \in \Mat_{m,n}\prs{\mbb{F}}$,
+נמצא את הפירוק לערכים סינגולריים של
+$T_A \in \Hom_{\mbb{F}}\prs{\mbb{F}^n, \mbb{F}^m}$
+ונעבוד לפי התיאור במסקנה
+\ref{corollary:matrix-svd}.
+\end{remark}
+
+\begin{exercise}
+מצאו פירוק לערכים סינגולריים עבור המטריצה
+\begin{align*}
+\text{.} A = \pmat{2 & -1 \\ 2 & 2} \in \Mat_2\prs{\mbb{R}}
+\end{align*}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item נמצא את הערכים סינגולריים.
+
+מתקיים
+\begin{align*}
+A^* &= A^t = \pmat{2 & 2 \\ -1 & 2}
+\end{align*}
+ואז
+\begin{align*}
+\text{.} A^* A = \pmat{8 & 2 \\ 2 & 5}
+\end{align*}
+אם
+$\lambda_1, \lambda_2$
+הערכים העצמיים של
+$A^* A$
+נקבל כי
+\begin{align*}
+\lambda_1 + \lambda_2 &= \tr\prs{A^* A} = 8 + 5 = 13 \\
+\lambda_1 \cdot \lambda_2 &= \det\prs{A^* A} = 40 - 4 = 36
+\end{align*}
+ולכן הערכים העצמיים של
+$A^* A$
+הם
+$4,9$.
+ולכן הערכים הסינגולריים של
+$A$
+הם
+$\sigma_1 = \sqrt{9} = 3, \sigma_2 = \sqrt{4} = 2$.
+
+\item
+נמצא בסיס אורתונורמלי של וקטורים עצמיים של
+$A^* A$.
+
+נתחיל במציאת וקטור עצמי עבור הערך העצמי
+$9$.
+מתקיים
+\[A^* A - 9I = \pmat{-1 & 2 \\ 2 & -4}\]
+ונשים לב כי העמודה השנייה היא
+$-2$
+כפול העמודה הראשונה. אז
+$A^* A \pmat{2 \\ 1} = 0$
+ולכן
+$\pmat{2 \\ 1}$
+וקטור עצמי עם ערך עצמי
+$9$.
+
+עבור הערך העצמי
+$4$,
+נחשב
+\[A^* A - 4I = \pmat{4 & 2 \\ 2 & 1}\]
+ונשים לב כי העמודה הראשונה שווה לפעמיים העמודה השנייה. לכן
+$A^* A \pmat{1 \\ -2} = 0$
+ולכן
+$\pmat{1 \\ -2}$
+וקטור עצמי עבור הערך העצמי
+$4$.
+
+נקבל בסיס
+$\prs{\pmat{2 \\ 1}, \pmat{1 \\ -2}}$
+של וקטורים עצמיים של
+$A^* A$.
+ננרמל את הוקטורים כדי לקבל בסיס אורתונורמלי של וקטורים עצמיים של
+$A^* A$,
+\begin{align*}
+\text{.} B = \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}, \frac{1}{\sqrt{5}} \pmat{1 \\ -2}}
+\end{align*}
+וניקח גם
+\begin{align*}
+C &= \prs{\frac{1}{\sigma_1} A \prs{\frac{1}{\sqrt{5}} \pmat{2 \\ 1}}, \frac{1}{\sigma_2} A \prs{\frac{1}{\sqrt{5}}\pmat{1 \\ -2}}}
+\\&= \prs{\frac{1}{3 \sqrt{5}} \pmat{3 \\ 6}, \frac{1}{2 \sqrt{5}} \pmat{4 \\ -2}}
+\\&= \pmat{\frac{1}{\sqrt{5}} \pmat{1 \\ 2}, \frac{1}{\sqrt{5}} \pmat{2 & - 1}}
+\end{align*}
+שהינו בסיס אורתונורמלי של
+$\mbb{R}^2$.
+
+\item
+$C$
+כבר הינו בסיס אורתונורמלי של
+$\mbb{R}^2$
+כי לא היה לנו
+$0$
+בתור ערך סינגולרי של
+$A$.
+
+נקבל בסך הכל כי
+\[A = U \Sigma V^*\]
+עבור
+\begin{align*}
+V &= M^B_E = \frac{1}{\sqrt{5}} \pmat{2 & 1 \\ 1 & -2} \\
+U &= M^C_E = \frac{1}{\sqrt{5}} \pmat{1 & 2 \\ 2 & -1} \\
+\text{.} \Sigma &= \pmat{\sigma_1 & 0 \\ 0 & \sigma_2} = \pmat{3 & 0 \\ 0 & 2}
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+מה יקרה אם נחשב בעזרת האלגוריתם פירוק לערכים סינגולריים עבור אופרטור נורמלי?
+באילו מקרים האלגוריתם יתן
+$B = C$?
+\end{exercise}
+
+\begin{solution}
+ניקח בסיס
+$B = \prs{v_1, \ldots, v_n}$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$,
+ואז
+\[\text{,} \brs{T^* T}_B = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n} \diag\prs{\lambda_1, \ldots, \lambda_n} = \diag\prs{\abs{\lambda_1}^2, \ldots, \abs{\lambda_n}^2}\]
+\end{solution}
+וכן
+$\sqrt{\brs{T^* T}_B} = \diag\prs{\abs{\lambda_1}, \ldots, \abs{\lambda_n}}$.
+אז החישוב שלנו מראה
+\begin{align*}
+\text{.} C \coloneqq \prs{u_1, \ldots, u_n} = \prs{\frac{1}{\abs{\lambda_1}} T\prs{v_1}, \ldots, \frac{1}{\abs{\lambda_n}} T\prs{v_n}}
+\end{align*}
+כעת,
+$T\prs{v_i} = \lambda_i v_i$
+ונקבל כי
+$u_i = \frac{\lambda_i}{\abs{\lambda_i}} v_i$.
+אז
+$u_i = v_i$
+אם ורק אם
+$\lambda_i$
+ממשי אי־שלילי.
+
+לכן האלגוריתם יתן
+$B = C$
+אם ורק אם כל הערכים העצמיים של
+$T$
+הינם ממשיים אי־שליליים. כלומר, אם ורק אם
+$T$
+מוגדר אי־שלילית.
+
+\begin{exercise}
+הוכיחו או הפריכו: הערכים הסינגולריים של
+$T^2$
+הם ריבועי הערכים הסינגולריים של
+$T$.
+\end{exercise}
+
+\begin{solution}
+הטענה איננה נכונה, למשל עבור
+$A = \pmat{0 & 1 \\ 0 & 0}$.
+אכן, הערכים הסינגוליים של
+$A^2$
+הם
+$\prs{0,0}$
+כי
+$A^2 = 0$,
+אבל הערכים הסינגולריים של
+$A$
+הם
+$\prs{0,1}$
+כי
+$A^t A = \pmat{0 & 0 \\ 0 & 1}$.
+\end{solution}
+
+\begin{exercise}
+תהיינה
+$A,B,U \in \Mat_n\prs{\mbb{F}}$
+עבור
+$U$
+אורתוגונלית (אוניטרית) המקיימת
+$B = U^* A U$,
+ונניח כי
+$A$
+מוגדרת חיובית.
+הראו כי
+$B$
+מוגדרת חיובית.
+\end{exercise}
+
+\begin{solution}
+ראשית,
+$B$
+אורתוגונלית (אוניטרית) כמפכלה של כאלה.
+כעת, לכל
+$v \in V$
+מתקיים
+$\trs{Bv, v} = \trs{U^* A U v, v} = \trs{A \prs{U v}, U v}$
+כאשר ביטוי זה הינו אי־שלילי כי
+$A$
+מוגדרת אי־שלילית.
+\end{solution}
+
+\begin{remark}
+באותו אופן, מטריצה הדומה אורתוגונלית (אוניטרית) למטריצה מוגדרת
+חיובית%
+\slash%
+אי־חיובית%
+\slash%
+שלילית הינה
+חיובית%
+\slash%
+אי־חיובית%
+\slash%
+שלילית.
+\end{remark}
+
+נעבור כעת למשפט פירוק נוסף שנובע מהפירוק לערכים סינגולריים.
+
+\begin{theorem}[פירוק פולארי לאופרטורים]
+יהי
+$T \in \End_{\mbb{F}}\prs{V}$
+אופרטור על מרחב מכפלה פנימית סוף־מימדי. יש איזומטריה
+$S \in \End_{\mbb{F}}\prs{V}$
+עבורה
+$T = S \sqrt{T^* T}$.
+\end{theorem}
+
+\begin{theorem}[פירוק פולארי למטריצות]
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$.
+יש מטריצה
+$U \in \Mat_n\prs{\mbb{F}}$
+אורתוגונלית (אוניטרית) ומטריצה
+$R \in \Mat_n\prs{\mbb{F}}$
+מוגדרת אי־‏שלילית עבורן
+$A = UR$.
+\end{theorem}
+
+\subsubsection{מציאת פירוק פולארי}
+
+\begin{enumerate}
+\item
+כדי למצוא פירוק פולארי עבור מטריצות, ניעזר בפירוק הפולארי
+$A = U \Sigma V^*$.
+נשים לב כי
+$\Sigma$
+הינה מוגדרת חיובית, וכדי להיעזר בכך נכתוב
+\[\text{.} A = U V^* V \Sigma V^* = \prs{U V^*} \prs{V \Sigma V^*}\]
+אז
+$U V^*$
+אורתוגונלית (אוניטרית) כמכפלת מטריצות אורתוגונליות (אוניטריות), ו־%
+$V \Sigma V^*$
+מוגדרת חיובית כי היא דומה אוניטרית למטריצה אלכסונית חיובית.
+אם
+$A$
+הפיכה, גם
+$A^* A$
+הפיכה ולכן גם
+$\Sigma = \sqrt{A^* A}$.
+אז היא מוגדרת חיובית ולכן גם
+$V \Sigma V^*$
+מוגדרת חיובית.
+
+\item
+עבור אופרטור
+$T \in \End_{\mbb{F}}\prs{V}$,
+ניקח מייצגת לפי בסיס אורתונורמלי
+$\mcal{B}$
+ונכתוב
+$\brs{T}_\mcal{B} = \tilde{U} \tilde{R}$
+עבור
+$\tilde{U}$
+אורתוגונלי (אוניטרי) ועבור
+$\tilde{R}$
+מוגדר חיובית. נסמן ב־%
+$U \coloneqq \prs{\eta^\mcal{B}_\mcal{B}}^{-1}\prs{\tilde{U}}$
+ו־%
+$R \coloneqq \prs{\eta^\mcal{B}_\mcal{B}}^{-1}\prs{\tilde{R}}$
+את האופרטורים המיוצגים על ידי
+$\tilde{U}, \tilde{R}$
+לפי הבסיס
+$B$.
+
+אז
+$U$
+אורתוגונלי (אוניטרי) כי
+$\brs{U}_\mcal{B} = \tilde{U}$
+כזה ו־%
+$R$
+מוגדר אי־שלילית (או מוגדר חיובית, אם
+$T$
+הפיך) כי
+$\brs{R}_\mcal{B} = \tilde{R}$
+כזה.
+\end{enumerate}
+
+\begin{exercise}
+מיצאו את הפירוק הפולארי עבור האופרטור הבא.
+\begin{align*}
+T \colon \mbb{R}^3 &\to \mbb{R}^3 \\
+\pmat{x \\ y \\ z} &\mapsto \pmat{z \\ 2x \\ 3y}
+\end{align*}
+\end{exercise}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+\brs{T}_E &= \pmat{0 & 0 & 1 \\ 2 & 0 & 0 \\ 0 & 3 & 0} \\
+\brs{T^*}_E &= \pmat{0 & 2 & 0 \\ 0 & 0 & 3 \\ 1 & 0 & 0} \\
+\brs{T^* T}_E &= \pmat{4 & 0 & 0 \\ 0 & 9 & 0 \\ 0 & 0 & 1}
+\end{align*}
+ולכן הערכים הסינגולריים של
+$T$
+הם
+$3,2,1$.
+
+יש לנו בסיס אורתונורמלי
+$B = \prs{e_2, e_1, e_3}$
+של וקטורים עצמיים.
+כדי לקבל את הבסיס השני, נפעיל את
+$T$
+על וקטורי
+$B$
+ונחלק בערכים הסינגולריים.
+נקבל בסיס אורתונורמלי
+\begin{align*}
+\text{.} \mcal{C} &= \pmat{\frac{1}{3} T\prs{e_2}, \frac{1}{2} T\prs{e_1}, T\prs{e_3}}
+= \prs{e_3, e_2, e_1}
+\end{align*}
+אז
+\begin{align*}
+\text{.} \brs{T}_E = W \Sigma V^*
+\end{align*}
+עבור
+\begin{align*}
+\Sigma &= \pmat{3&0&0\\0&2&0\\0&0&1} \\
+V &= M^B_E = \pmat{0&1&0\\1&0&0\\0&0&1}\\
+\text{.} W &= M^C_E = \pmat{0&0&1\\0&1&0\\1&0&0}
+\end{align*}
+
+נקבל כי
+\begin{align*}
+\brs{T}_\mcal{E} = \prs{WV^*} \prs{V \Sigma V^*}
+\end{align*}
+כאשר
+\begin{align*}
+W V^* &= \pmat{0&0&1\\1&0&0\\0&1&0} \\
+\text{.} V \Sigma V^* &= \pmat{2&0&0\\0&3&0\\0&0&1}
+\end{align*}
+אז, כאשר
+\begin{align*}
+\rho^\mcal{B}_\mcal{B} \colon \hom_RR\prs{\RR^3} &\to \hom_\RR\prs{\RR^3} \\
+S &\mapsto \brs{S}_\mcal{B}
+\end{align*}
+ועבור
+\begin{align*}
+U &\coloneqq \prs{\rho^\mcal{E}_\mcal{E}}^{-1}\prs{W V^*} = T_{W V^*} \\
+R &\coloneqq \prs{\rho^\mcal{E}_\mcal{E}}^{-1}\prs{V \Sigma V^*} = T_{V \Sigma V^*}
+\end{align*}
+נקבל כי
+$T = UR$.
+\end{solution}
+
+\part{תבניות בילינאריות וריבועיות}
+
+\chapter{תבניות בילינאריות}
+
+\begin{definition}[תבנית בילינארית]
+יהי
+$V$
+מרחב וקטורי. תבנית בילינארית
+$f$
+על
+$V$
+היא העתקה
+$f \colon V \to V$
+שהינה לינארית בשני הרכיבים.
+\end{definition}
+
+\begin{remark}
+מעל
+$\mbb{C}$
+עוסקות לעתים בתבניות ססקווילינאריות ("אחת־וחצי לינאריות") במקום בתבניות בילינאריות.
+
+למשל, מכפלה פנימית מעל
+$\CC$
+אינה בילינארית כי היא אינה לינארית ברכיב השני, אך היא ססקווילינארית.
+\end{remark}
+
+\begin{exercisechap}
+קיבעו אילו מההעתקות הבאות הן תבניות בילינאריות. הוכיחו את קביעתכן.
+
+\begin{enumerate}
+\item
+\begin{align*}
+f \colon \RR^n \times \RR^n &\to \RR \\
+\prs{u,v} &\mapsto u^t A v
+\end{align*}
+עבור
+$A \in \Mat_n\prs{\RR}$.
+
+\item
+\begin{align*}
+\det \colon \RR^2 \times \RR^2 &\to \RR \\
+\prs{u,v} &\mapsto \det\pmat{\vert & \vert \\ u & v \\ \vert & \vert}
+\end{align*}
+
+\item
+יהי
+$V$
+מרחב וקטורי סוף מימדי מעל
+$\FF$.
+לכל
+$\phi, \psi \in V^*$
+הפונקציה
+$f\prs{u,v} = \phi\prs{u} \psi\prs{v}$
+היא תבנית בילינאריות על
+$V$.
+
+\item כל תבנית בילינארית על
+$V$
+סוף־מימדי מעל
+$\FF$
+היא מהצורה שבסעיף הקודם.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item כן.
+יהיו
+$u,v,w \in V$
+ו־%
+$\alpha \in \FF$.
+אז
+\begin{align*}
+f\prs{u + \alpha v, w} &= \prs{u + \alpha v}^t A w
+\\&= \prs{u^t + \alpha v^t} A w
+\\&= u^t A w + \alpha v^t A w
+\\&= f\prs{u, w} + \alpha f\prs{v,w}
+\end{align*}
+כאשר בשוויון השלישי השתמשנו בדיסטריביוטיביות של כפל מטריצות.
+
+באותו אופן מתקיים
+\begin{align*}
+f\prs{w, u + \alpha v} &= w^t A \prs{u + \alpha v}
+\\&= w^t A u + \alpha w^t A v
+\\&= f\prs{w, u} + \alpha f\prs{w, v}
+\end{align*}
+כנדרש.
+
+\item כן.
+ראינו שהדטרמיננטה הינה לינארית בכל אחת מהעמודות.
+
+\item יהיו
+$u,v,w \in V$
+ו־%
+$\alpha \in \FF$.
+אז
+\begin{align*}
+f\prs{u + \alpha v, w} &= \phi\prs{u + \alpha v} \psi\prs{w}
+\\&= \prs{\phi\prs{u} + \alpha \phi\prs{v}} \psi\prs{w}
+\\&= \phi\prs{u} \psi\prs{w} + \alpha \phi\prs{v} \psi\prs{w}
+\\&= f\prs{u, w} + \alpha f\prs{v, w}
+\end{align*}
+ובאותו אופן
+\begin{align*}
+f\prs{w, u+\alpha v} &= \phi\prs{w} \psi\prs{u + \alpha v}
+\\&= \phi\prs{w} \prs{\psi\prs{u} + \alpha \psi\prs{v}}
+\\&= \phi\prs{w} \psi\prs{u} + \alpha \phi\prs{w} \psi\prs{v}
+\\&= f\prs{w, u} + \alpha f\prs{w,v}
+\end{align*}
+כנדרש.
+
+\item לא. יהי
+$V = \RR^3$
+עם המכפלה הפנימית הסטנדרטית
+ונניח כי קיימים
+$\phi, \psi \in V^*$
+עבורם
+$\trs{u,v} = \phi\prs{u} \psi\prs{v}$
+לכל
+$u,v \in V$.
+
+לפי משפט ריס, קיימים
+$w_1, w_2 \in V$
+עבורם
+$\phi\prs{v} = \trs{v, w_1}$
+וגם
+$\psi\prs{v} = \trs{v, w_2}$
+לכל
+$v \in V$.
+אז
+\begin{align*}
+\text{.} \forall u,v \in V: \trs{u,v} = \phi\prs{u} \psi\prs{v} = \trs{u, w_1} \trs{u, w_2}
+\end{align*}
+אז לכל
+$v \in \Span\prs{w_1, w_2}^\perp$
+מתקיים
+\begin{align*}
+\trs{v, v} = \trs{v, w_1} \trs{v, w_2} = 0
+\end{align*}
+ולכן
+$\Span\prs{w_1, w_2}^\perp = 0$
+בסתירה לכך ש־%
+$\Span\prs{w_1, w_2} \neq V$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\FF$,
+יהי
+$\mathrm{Bil}_\FF\prs{V}$
+אוסף התבניות הבילינאריות על
+$V$
+ויהיו
+$f,g \in \mathrm{Bil}_\FF\prs{V}$
+ו־%
+$\alpha \in \FF$.
+
+הוכיחו או הפריכו את הטענות הבאות. עבור הטענות שאינן נכונות, מיצאו דוגמה נגדית.
+
+\begin{enumerate}
+\item $f+g \in \Bil_\FF\prs{V}$.
+
+\item $fg \in \Bil_\FF\prs{V}$.
+
+\item $\alpha f \in \Bil_\FF\prs{V}$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+בכל אחד מהסעיפים הבאים ניקח
+$u,v,w \in V$
+ו־%
+$\beta \in \FF$
+ונבדוק אם
+\begin{align*}
+h\prs{u + \beta v, w} &= h\prs{u, w} + \beta h\prs{v,w} \\
+h\prs{w, u+\beta v} &= h\prs{w, u} + \beta h\prs{w,v}
+\end{align*}
+עבור הפונקציה המתאימה
+$h$
+שבסעיף.
+\begin{enumerate}
+\item
+מתקיים
+\begin{align*}
+\prs{f+g}\prs{u + \beta v, w} &= f\prs{u + \beta v, w} + g\prs{u + \beta v, w}
+\\&=
+f\prs{u, w} + \beta f\prs{v, w} + g\prs{u, w} + \beta g\prs{v,w}
+\\&=
+\prs{f\prs{u, w} + g\prs{u,w}} + \beta \prs{f\prs{v,w} + g\prs{v,w}}
+\\&=
+\prs{f+g}\prs{u, w} + \beta \prs{f+g}\prs{v,w}
+\end{align*}
+ובאותו אופן בדיוק
+\begin{align*}
+\text{.} \prs{f+g}\prs{w, u+\beta v} = \prs{f+g}\prs{w, u} + \beta \prs{f+g}\prs{w, v}
+\end{align*}
+לכן
+$f+g \in \mathrm{Bil}_\FF\prs{V}$.
+
+\item הטענה אינה נכונה. ניקח את
+$V = \RR^2$
+ואת
+$f = g$
+להיות המכפלה הסטנדרטית על
+$V$.
+אז
+\[f\prs{2 e_1, e_1} = g\prs{2 e_1, e_1} = 2\]
+ואז
+\[fg\prs{2 e_1, e_1} = \prs{f\prs{2 e_1, e_1}}^2 = 2^2 = 4\]
+ואילו
+\[\text{.} fg\prs{e_1, e_1} = \prs{f\prs{e_1, e_1}}^2 = 1^2 = 1\]
+\item מתקיים
+\begin{align*}
+\prs{\alpha f}\prs{u+\beta v, w} &= \alpha f\prs{u+\beta v, w}
+\\&=
+\alpha \prs{f\prs{u, w} + \beta f\prs{v, w}}
+\\&=
+\alpha f\prs{u,w} + \alpha \beta f\prs{v,w}
+\\&=
+\prs{\alpha f}\prs{u,w} + \beta \prs{\alpha f}\prs{v,w}
+\end{align*}
+ובאותו אופן בדיוק
+\begin{align*}
+\text{.} \prs{\alpha f}\prs{w, u+\beta v} = \prs{\alpha f}\prs{w, u} + \beta \prs{\alpha f}\prs{w, v}
+\end{align*}
+\end{enumerate}
+\end{solution}
+
 \printbibliography
 \end{document}
