@@ -1,0 +1,184 @@
+\documentclass[a4paper,10pt,twoside,openany]{article}
+
+\usepackage[lang=hebrew]{maths}
+\usepackage{hebrewdoc}
+\usepackage{stylish}
+\usepackage{lipsum}
+\let\bs\blacksquare
+
+\usepackage{siunitx,array}
+\sisetup{table-format=-1.5, group-digits=false}
+\newcolumntype{L}{>{\phantom{$-$}}l}       % prefix some whitespace
+\newcommand\mcL[1]{\multicolumn{1}{L}{#1}} % handy shortcut macro
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%
+% Styling %
+%%%%%%%%%%%%
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%
+% Counters  %
+%%%%%%%%%%%%%
+
+\setcounter{section}{1}     
+            
+%BIBLIOGRAPHY
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+%%%%%%%%%%
+% Title  %
+%%%%%%%%%%
+\title{
+אלגברה ב' - גיליון תרגילי בית 12 \\
+עוד תבניות בילינאריות
+\\
+\vspace{1cm}
+\large{תאריך הגשה: 23.7.2026}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{definition}[מטריצה חיובית לחלוטין]
+מטריצה
+$A \in \FF^n$
+עבור
+$\FF \in \set{\RR, \CC}$
+נקראת
+\emph{חיובית לחלוטין}
+אם
+$A = \bar{A}^t$
+וגם
+$\trs{Av, v} > 0$
+לכל
+$v \in V$.
+\end{definition}
+
+\begin{exercise}
+יהיו
+$v_1, \ldots, v_n \in \mbb{R}^n$.
+הראו כי
+$B \ceq \prs{v_1, \ldots, v_n}$
+בסיס של
+$\mbb{R}^n$
+אם ורק אם למטריצת
+\textenglish{Gram}
+של
+$B$
+\[\mrm{Gr}\prs{B} \ceq \pmat{\trs{v_1, v_1} & \cdots & \trs{v_1, v_n} \\ \vdots & \ddots & \vdots \\ \trs{v_n, v_1} & \cdots & \trs{v_n, v_n}} = \prs{\trs{v_i, v_j}}_{i,j \in \brs{n}}\]
+יש דטרמיננטה חיובית.
+\end{exercise}
+
+\begin{exercise}
+הוכיחו כי עבור
+$A, B \in \Mat_n\prs{\RR}$
+המקיימות
+\begin{align*}
+\forall u,v \in \RR^n: u^t A v = u^t B v
+\end{align*}
+מתקיים
+$A = B$.
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V = \RR^n$
+ותהי
+$f \in \mathbf{B}\prs{V}$
+תבנית בילינארית על
+$V$.
+נזכיר כי ראינו בהרצאה שקיימת מטריצה
+$A \in \Mat_n\prs{\RR}$
+עבורה
+\[\text{.} \forall u,v \in V: f\prs{u,v} = u^t A v\]
+
+\begin{enumerate}
+\item הוכיחו כי
+$f$
+סימטרית אם ורק אם
+$A$
+סימטרית.
+
+\item
+הוכיחו כי
+$A^t = -A$
+אם ורק אם
+$f\prs{v,v} = 0$
+לכל
+$v \in V$.
+
+\item הוכיחו כי
+$A$
+הפיכה אם ורק אם לכל
+$u \in V \setminus \set{0}$
+קיים
+$v \in V$
+עבורו
+$f\prs{u,v} \neq 0$.
+
+\item הוכיחו כי
+$A$
+חיובית לחלוטין אם ורק אם
+$f$
+מכפלה פנימית.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+יהי
+$V = \Mat_n\prs{\RR}$
+ותהי
+\begin{align*}
+f \colon V \times V &\to \RR \\
+\text{.} \hphantom{lala} \prs{A,B} &\mapsto \tr\prs{AB}
+\end{align*}
+
+\begin{enumerate}
+\item הוכיחו כי
+$f$
+תבנית בילינארית סימטרית על
+$V$.
+
+\item
+עבור
+$n = 2$,
+מיצאו בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+$\brs{f}_{\mcal{B}}$
+אלכסונית.
+
+\item
+על ידי שינוי סדר האיברים בבסיס $\mcal{B}$ שמצאתן בסעיף הקודם, וכפל של כל אחד מהם בקבוע, מיצאו בסיס
+$\mcal{C}$
+וקבועים
+$n_+, n_-, n_0 \in \NN$
+(אצלנו
+$0 \in \NN$)
+של
+$V$
+עבורם
+\[\text{.} \brs{f}_{\mcal{C}} = \diag\prs{I_{n_+}, -I_{n_-}, 0_{n_0}}\]
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+תהי
+$A \in \Mat_n\prs{\CC}$
+הפיכה וסימטרית. הוכיחו ש־%
+$A$
+חופפת ל־%
+$I_n$.
+\end{exercise}
+
+\end{document}

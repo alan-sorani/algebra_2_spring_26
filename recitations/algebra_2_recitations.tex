@@ -7747,6 +7747,8 @@ $T = UR$.
 
 \chapter{תבניות בילינאריות}
 
+\section{הגדרות ותכונות בסיסיות}
+
 \begin{definition}[תבנית בילינארית]
 יהי
 $V$
@@ -7757,6 +7759,11 @@ $V$
 היא העתקה
 $f \colon V \to V$
 שהינה לינארית בשני הרכיבים.
+
+מרחב התבניות הבילינאריות על
+$V$
+מסומן
+$\mathbf{B}\prs{V}$.
 \end{definition}
 
 \begin{remark}
@@ -7895,22 +7902,22 @@ $V$
 מרחב וקטורי סוף־מימדי מעל
 $\FF$,
 יהי
-$\mathrm{Bil}_\FF\prs{V}$
+$\mathbf{B}\prs{V}$
 אוסף התבניות הבילינאריות על
 $V$
 ויהיו
-$f,g \in \mathrm{Bil}_\FF\prs{V}$
+$f,g \in \mathbf{B}\prs{V}$
 ו־%
 $\alpha \in \FF$.
 
 הוכיחו או הפריכו את הטענות הבאות. עבור הטענות שאינן נכונות, מיצאו דוגמה נגדית.
 
 \begin{enumerate}
-\item $f+g \in \Bil_\FF\prs{V}$.
+\item $f+g \in \mathbf{B}\prs{V}$.
 
-\item $fg \in \Bil_\FF\prs{V}$.
+\item $fg \in \mathbf{B}\prs{V}$.
 
-\item $\alpha f \in \Bil_\FF\prs{V}$.
+\item $\alpha f \in \mathbf{B}\prs{V}$.
 \end{enumerate}
 \end{exercisechap}
 
@@ -7944,7 +7951,7 @@ f\prs{u, w} + \beta f\prs{v, w} + g\prs{u, w} + \beta g\prs{v,w}
 \text{.} \prs{f+g}\prs{w, u+\beta v} = \prs{f+g}\prs{w, u} + \beta \prs{f+g}\prs{w, v}
 \end{align*}
 לכן
-$f+g \in \mathrm{Bil}_\FF\prs{V}$.
+$f+g \in \mathbf{B}\prs{V}$.
 
 \item הטענה אינה נכונה. ניקח את
 $V = \RR^2$
@@ -7974,6 +7981,503 @@ $V$.
 \end{align*}
 \end{enumerate}
 \end{solution}
+
+\begin{definition}[מטריצה מייצגת של תבנית בילינארית]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי עם בסיס
+$B = \prs{v_1, \ldots, v_n}$,
+ותהי
+$f$
+תבנית בילינארית על
+$V$.
+\emph{המטריצה המייצגת}
+של
+$f$
+לפי
+$B$
+היא
+\begin{align*}
+\text{.} \brs{f}_\mcal{B} &= \pmat{f\prs{v_1, v_1} & \cdots & f\prs{v_1, v_n} \\ \vdots & \ddots & \vdots \\ f\prs{v_n,v_1} & \cdots & f\prs{v_n,v_n}}
+\end{align*}
+\end{definition}
+
+\begin{proposition}\label{proposition:change-of-bases}
+יהיו
+$\mcal{B},\mcal{C}$
+שני בסיסים של אותו מרחב וקטורי סוף־מימדי
+$V$,
+ותהי
+$f$
+תבנית בילינארית על
+$V$.
+אז
+\begin{align*}
+\text{.} \brs{f}_\mcal{B} = \prs{M^\mcal{B}_\mcal{C}}^t \brs{f}_\mcal{C} M^\mcal{B}_\mcal{C}
+\end{align*}
+\end{proposition}
+
+במקרה של אופרטור
+$T$
+על
+$V$
+הקשר בין
+$\brs{T}_\mcal{B}, \brs{T}_\mcal{C}$
+הוא דימיון. המסקנה מראה קשר אחר במקרה של תבניות בילינאריות, שמוביל להגדרה הבאה.
+
+\begin{definition}[מטריצות חופפות]
+מטריצות
+$A,B \in \Mat_n\prs{\mbb{F}}$
+נקראות
+\emph{חופפות}
+אם קיימת
+$P \in \Mat_n\prs{\mbb{F}}$
+\textbf{הפיכה}
+עבורה
+$B = P^t A P$.
+\end{definition}
+
+\begin{corollary}
+המטריצות
+$\brs{f}_\mcal{B}, \brs{f}_\mcal{C}$
+המייצגות תבנית בילינארית לפי בסיסים שונים, הינן חופפות.
+\end{corollary}
+
+\begin{remark}
+ניתן לשחזר את תבנית הבילינארית ממטריצה מייצגת שלה, ולמעשה ההעתקה
+$f \mapsto \brs{f}_\mcal{B}$
+הינה איזומורפיזם בין מרחב התבניות הבילינאריות והמרחב
+$\Mat_n\prs{\mbb{F}}$.
+\end{remark}
+
+\begin{exercise}
+תהיינה
+$A,B,P \in \Mat_n\prs{\mbb{R}}$
+כאשר
+$P$
+הפיכה ומתקיים
+$B = P^t A P$.
+
+הוכיחו או הפריכו את הטענות הבאות.
+\begin{enumerate}
+\item $\det\prs{A} = \det\prs{B}$.
+\item ל־%
+$A,B$
+יש אותם ערכים עצמיים.
+\item $\rank\prs{A} = \rank\prs{B}$.
+\item $A$
+הפיכה אם ורק אם
+$B$
+הפיכה, וכאשר זה מתקיים
+$A^{-1}, B^{-1}$
+חופפות.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item מתקיים
+\[\det\prs{B} = \det\prs{P^t A P} = \det\prs{P^t} \det\prs{A} \det\prs{P}\]
+ולכן יש שוויון אם ורק אם
+$\det\prs{P^t} \det\prs{P} = 1$.
+אבל,
+$\det\prs{P^t} = \det\prs{P}$
+ולכן זה מתקיים אם ורק אם
+$\det\prs{P} \in \set{\pm 1}$.
+זה לא חייב להיות המצב. למשל, נוכל לקחת
+$A = I_n, B = 4I_n, P = 2I_n$.
+
+\item הדוגמא הקודמת מראה שהערכים העצמיים לא נשמרים.
+
+\item הדרגה נשמרת כי
+$P^t, P$
+הפיכות.
+
+\item נניח כי
+$A$
+הפיכה. אז
+$B$
+הפיכה כי הדרגות שלהן שוות.
+נשים לב כי
+\[B^{-1} = \prs{P^t A P}^{-1} = P^{-1} A^{-1} \prs{P^t}^{-1}\]
+ועבור
+$\tilde{P} = \prs{P^t}^{-1}$
+נקבל
+$B^{-1} = \tilde{P}^t A^{-1} \tilde{P}$.
+\end{enumerate}
+\end{solution}
+
+\section{תבניות בילינאריות סימטריות}
+
+\begin{definition}[תבנית בילינארית סימטרית]
+יהי
+$V$
+מרחב מכפלה פנימית ותהי
+$f$
+תבנית בילינארית על
+$V$.
+נגיד כי
+$f$
+\emph{סימטרית}
+אם
+$f\prs{u,v} = f\prs{v,u}$
+לכל
+$u,v \in V$.
+\end{definition}
+
+\begin{theorem}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\FF$
+ממציין שונה מ־$2$
+ותהי
+$f \in \mathbf{B}\prs{V}$
+תבנית בילינארית סימטרית על
+$V$.
+אז
+$f$
+לכסינה.
+\end{theorem}
+
+כדי למצוא בסיס מלכסן עבור תבנית בילינארית
+$f \in \mathbf{B}\prs{V}$
+נוכל למצוא מטריצה
+$D$
+ומטריצה
+$P \in \End_\FF\prs{\FF^{\dim\prs{V}}}$
+הפיכה כך ש־%
+\[D = P^t \brs{f}_\mcal{B} P\]
+עבור בסיס כלשהו
+$\mcal{B}$.
+אז קיים בסיס
+$\mcal{C}$
+עבורו
+$P = M^{\mcal{C}}_{\mcal{B}}$
+ונקבל כי
+\begin{align*}
+D = \prs{M^{\mcal{C}}_\mcal{B}}^t \brs{f}_{\mcal{B}} M^{\mcal{C}}_{\mcal{B}} = \brs{f}_{\mcal{C}}
+\end{align*}
+כנדרש.
+
+נתאר עכשיו איך למצוא מטריצה כזאת
+$P$.
+
+\begin{algorithm}[דירוג סימולטני של מטריצות]
+ניזכר שמטריצה הפיכה
+$P$
+הינה כפל של מטריצות אלמנטריות. כפל משמאל במטריצה אלמנטרית
+$E$
+מתאים לפעולת דירוג על השורות, וכפל ב־%
+$E^t$
+מתאים לפעולת דירוג זהה על העמודות (החלק השני נכון כי מתקיים
+$A E^t = \prs{E A^t}^t$).
+
+נתאר איך להיעזר בכך כדי לקבל שכל מטריצה
+$A \in \Mat_n\prs{\FF}$
+סימטרית
+עבור
+$\FF$
+ממציין
+$\mathrm{Char}\prs{\FF} \neq 2$
+(כלומר,
+$1+1 \neq 0$),
+חופפת למטריצה אלכסונית.
+
+\begin{enumerate}
+\item יהי
+$i = 1$.
+\item אם
+$\prs{A}_{i,i} = 0$,
+נחלק לשני מקרים.
+\begin{enumerate}[label=2.\arabic*]
+\item 
+אם
+$\prs{A}_{i,j} = 0$
+לכל
+$j \in \brs{n}$,
+המטריצה מהצורה
+\begin{align*}
+A = \pmat{0 & 0_{1 \times \prs{n-1}} \\ 0_{\prs{n-1} \times 1} & X}
+\end{align*}
+ואז די לבצע פעולות שידרגו את
+$X$
+למטריצה אלכסונית.
+
+נעבור לשלב
+$4$.
+
+\item
+אם קיים
+$j \in \brs{n}$
+עבורו
+$\prs{A_{i,j}} \neq 0$,
+נוסיף את השורה ה־%
+$j$
+לשורה ה־%
+$i$,
+ולאחר מכן את העמודה ה־%
+$j$
+לעמודה ה־%
+$i$.
+
+למשל, אם התחלנו אם המטריצה
+$A \coloneqq \pmat{0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0}$,
+נדרג
+\begin{align*}
+A &\xrightarrow{R_1 \mapsto R_1 + R_2} \pmat{1 & 1 & 1 \\ 1 & 0 & 1 \\ 0 & 1 & 0}
+\\ &\xrightarrow{C_1 \mapsto C_1 + C_2} \pmat{2 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0}
+\end{align*}
+ונזכור כי פעולת הדירוג התקבלה על ידי הצמדה
+$E A E^t$
+כאשר
+\[\text{.} E = \pmat{1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1}\]
+
+במטריצה החדשה שנסמנה $A$ במקום המטריצה הקודמת, המקדם ה־%
+$\prs{i,i}$
+שונה מאפס.
+
+שימו לב שהמטריצה שהתקבלה אינה המטריצה
+$A$
+שהתחלנו איתה,
+אך לצורך תיאור האלגוריתם, נתייחס אליה בתור
+$A$
+לאורכו.
+\end{enumerate}
+
+\item
+לכל
+$j > i$,
+אם
+$\prs{A}_{j,i} \neq 0$,
+(או באופן שקול
+$\prs{A}_{i,j} \neq 0$),
+נוסיף כפולה של השורה ה־%
+$i$
+לשורה ה־%
+$j$
+שתאפס את המקדם
+$\prs{A}_{j,i}$,
+ולאחר מכן נוסיף את אותה כפולה של העמודה ה־%
+$i$
+לעמודה ה־%
+$j$
+(שתאפס את המקדם
+$\prs{A}_{i,j}$).
+למשל, אם התחלנו עם
+\[A = \pmat{2 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0}\]
+ועבור
+$i=1$,
+נדרג תחילה
+\begin{align*}
+A &\xrightarrow{R_2 \mapsto R_2 - \frac{1}{2} R_1} \pmat{2 & 1 & 1 \\ 0 & -\frac{1}{2} & \frac{1}{2} \\ 1 & 1 & 0}
+\\&\xrightarrow{C_2 \mapsto C_2 - \frac{1}{2} C_1} \pmat{2 & 0 & 1 \\ 0 & -\frac{1}{2} & \frac{1}{2} \\ 1 & \frac{1}{2} & 0} 
+\end{align*}
+ונזכור כי פעולת הדירוג מתקבלת על ידי הצמדה
+$E A E^t$
+כאשר
+\[\text{.} E = \pmat{1 & 0 & 0 \\ -\frac{1}{2} & 1 & 0 \\ 0 & 0 & 0}\]
+לאחר מכן, נעשה אותה דבר כדי לאפס את
+$\prs{A}_{3,1}, \prs{A}_{1,3}$.
+
+\item
+אם
+$i < n$,
+נגדיל את
+$i$
+ב־%
+$1$,
+ונחזור לשלב
+$2$.
+
+\item
+נסמן את המטריצות האלמנטריות שמצאנו במהלך החישוב בתור
+$E_1, \ldots, E_k$
+לפי הסדר. אז, אם
+$A_0$
+המטריצה שהתחלנו איתה, ו־%
+$D$
+המטריצה שקיבלנו בסוף, מתקיים
+\[\text{.} D = E_k \cdot \ldots \cdot E_1 A_0 E_1^t \cdot \ldots \cdot E_k^t\]
+נסמן
+\begin{align*}
+P \coloneqq \prs{E_k \cdot \ldots \cdot E_1}^t = E_1^t \cdot \ldots \cdot E_k^t
+\end{align*}
+ונקבל כי
+\[\text{.} D = P^t A P\]
+\end{enumerate}
+\end{algorithm}
+
+\begin{corollary}
+יהי
+$F$
+שדה ממציין שונה מ־%
+$2$,
+כלומר שדה בו
+$1 + 1 \neq 0$.
+אז, כל מטריצה סימטרית מעל
+$\FF$
+חופפת למטריצה אלכסונית.
+\end{corollary}
+
+\begin{exercise}
+\begin{enumerate}
+    \item תהי
+\[\text{.} A = \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}\]
+מיצאו מטריצה
+$P \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+הפיכה
+עבורה
+$P^t A P$
+אלכסונית.
+
+\item האם יכולנו לקחת מטריצה
+$P'$
+אחרת שתיתן תשובה מתאימה?
+
+\item האם יש מטריצה
+$Q \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+הפיכה עבורה
+$Q^t A Q = I_3$?
+
+\item האם יש מטריצה
+$Q \in \Mat_3\prs{\mbb{Z}/5}$
+הפיכה עבורה
+$Q^t B Q = I_3$
+כאשר
+$B = \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 1}$?
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+\item 
+
+נדרג את
+$A$
+למטריצה אלכסונית כאשר בכל שלב נבצע פעולת דירוג שורה ולאחריה פעולת דירוג עמודה מתאימה.
+
+\begin{align*}
+    A &= \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2}
+    \\&\xrightarrow{R_2 \mapsto R_2 + 2 R_1}
+    \pmat{2 & 1 & 2 \\ 0 & 4 & 0 \\ 2 & 1 & 2}
+    \\&\xrightarrow{C_2 \mapsto C_2 + 2 C_1}
+    \pmat{2 & 0 & 2 \\ 0 & 4 & 0 \\ 2 & 0 & 2}
+    \\&\xrightarrow{R_3 \mapsto R_3 - R_1}
+    \pmat{2 & 0 & 2 \\ 0 & 4 & 0 \\ 0 & 0 & 0}
+    \\&\xrightarrow{C_3 \mapsto C_3 - C_1}
+    \pmat{2 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 0}
+\end{align*}
+
+נקבל כי
+\[P^t = \pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -1 & 0 & 1} \pmat{1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1} = \pmat{1 & 0 & 0 \\ 2 & 1 & 0 \\ -1 & 0 & 1}\]
+מקיימת את הנדרש, ולכן ניקח
+\[\text{.} P = \pmat{1 & 2 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1}\]
+
+\item כן. למשל, יכולנו קודם להחליף את השורות הראשונה והשלישית, ולקבל
+\[\prs{P'}^t = P^t \pmat{0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0} = \pmat{-1 & 0 & 1 \\ 2 & 1 & 0 \\ 1 & 0 & 0} \neq P^t\]
+ואז
+$P' \neq P$.
+
+\item קיבלנו
+$P^t A P = \diag\prs{2,4,0}$
+וזאת אינה מטריצה מדרגה מלאה. דרגה נשמרת תחת חפיפת מטריצות, ולכן לא יתכן שיש
+$Q$
+כנדרש.
+
+\item ננסה דירוג לפי שורה ועמודה.
+\begin{align*}
+    B &= \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 1}
+    \\&\xrightarrow{R_3 \mapsto R_3 - R_1}
+    \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 0 & 4 & 4}
+    \\&\xrightarrow{C_3 \mapsto C_3 - C_1}
+    \pmat{2 & 1 & 0 \\ 1 & 1 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{R_2 \mapsto R_2 + 2 R_1}
+    \pmat{2 & 1 & 0 \\ 0 & 3 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{C_2 \mapsto C_2 + 2 C_1}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{R_3 \mapsto R_3 + 2 R_2}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 4 \\ 0 & 0 & 2}
+    \\&\xrightarrow{C_3 \mapsto C_3 + 2 C_2}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2}
+\end{align*}
+כעת, נוכל לחלק איברים על האלכסון רק בריבוע, כיוון שיש לכפול גם את השורה וגם את העמודה באותו מספר. כיוון ש־%
+$3$
+אינו ריבוע ב־%
+$\mbb{Z}/5\mbb{Z}$
+לא נוכל לקבל ככה את מטריצת היחידה.
+גם, הדטרמיננטה של המטריצה שקיבלנו היא
+$2 \cdot 3 \cdot 2 \equiv 2$.
+הדטרמיננטה של מטריצות חופפות נבדלת בכפל בריבוע, אך לא יתכן
+$2 = a^2 \det\prs{I_3} = a^2$
+כי
+$2$
+אינו ריבוע.
+
+השיטה הזאת לא עובדת תמיד. יתכן מצב בו מטריצה אינה חופפת ליחידה אך כן בעלת דטרמיננטה שהינה ריבוע.
+למשל, המטריצה
+$\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+כזאת.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\mbb{R}$.
+תהי
+$g$
+מכפלה פנימית על
+$V$
+ותהי
+$h$
+תבנית בילינארית סימטרית על
+$V$.
+הוכיחו שקיים בסיס
+$\mcal{B}$
+של
+$V$
+עבורו
+$\brs{g}_\mcal{B}, \brs{h}_\mcal{B}$
+שתיהן אלכסוניות.
+\end{exercise}
+
+\begin{solution}
+נסמן
+$n \coloneqq \dim_{\mbb{R}}\prs{V}$.
+יהי
+$\mcal{E}$
+בסיס אורתונורמלי של
+$V$
+ביחס ל־%
+$g$,
+שקיים לפי גרם־שמידט. אז
+$\brs{g}_\mcal{E} = I_n$.
+כעת,
+$\brs{h}_\mcal{E}$
+סימטרית כי
+$h$
+סימטרית, ולכן יש ממשפט הפירוק הסקפטרלי מטריצה
+$Q \in \Mat_n\prs{\mbb{R}}$
+אורתוגונלית עבורה
+$Q^t \brs{h}_\mcal{E} Q$
+אלכסונית.
+נרצה שיתקיים
+$Q = P^\mcal{B}_\mcal{E}$ עבור בסיס
+$B$,
+ולכן נגדיר
+$B \coloneqq \prs{Q^{-1} v_1, \ldots, Q^{-1} v_n}$
+כאשר
+$E = \prs{v_1, \ldots, v_n}$.
+אז
+\begin{align*}
+\brs{g}_\mcal{B} &= \prs{M^\mcal{B}_\mcal{E}}^t \brs{g}_\mcal{E} P^\mcal{B}_{\mcal{E}} = Q^t \brs{g}_\mcal{E} Q = Q^t I_n Q = Q^t Q = I_n \\
+\brs{h}_\mcal{B} &= \prs{P^\mcal{B}_\mcal{E}}^t \brs{h}_\mcal{E} P^\mcal{B}_\mcal{E} = Q^t \brs{h}_\mcal{E} \mcal{Q}
+\end{align*}
+שתיהן אלכסוניות, כנדרש.
+\end{solution}
+
 
 \printbibliography
 \end{document}

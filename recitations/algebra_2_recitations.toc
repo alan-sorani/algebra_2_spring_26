@@ -43,3 +43,5 @@
 \contentsline {subsubsection}{מציאת פירוק פולארי}{68}{section*.4}%
 \contentsline {part}{III\hspace {1em}תבניות בילינאריות וריבועיות}{70}{part.3}%
 \contentsline {chapter}{\numberline {6}תבניות בילינאריות}{71}{chapter.6}%
+\contentsline {section}{\numberline {6.1}הגדרות ותכונות בסיסיות}{71}{section.6.1}%
+\contentsline {section}{\numberline {6.2}תבניות בילינאריות סימטריות}{74}{section.6.2}%
