@@ -7752,12 +7752,13 @@ $T = UR$.
 \begin{definition}[תבנית בילינארית]
 יהי
 $V$
-מרחב וקטורי. תבנית בילינארית
+מרחב וקטורי
+מעל שדה $\FF$. תבנית בילינארית
 $f$
 על
 $V$
 היא העתקה
-$f \colon V \to V$
+$f \colon V \times V \to \FF$
 שהינה לינארית בשני הרכיבים.
 
 מרחב התבניות הבילינאריות על
@@ -7777,23 +7778,8 @@ $\CC$
 \end{remark}
 
 \begin{exercisechap}
-קיבעו אילו מההעתקות הבאות הן תבניות בילינאריות. הוכיחו את קביעתכן.
-
+הוכיחו או הפריכו כל אחת מהטענות הבאות. עבור הטענות שאינן נכונות, מצאו דוגמה נגדית.
 \begin{enumerate}
-\item
-\begin{align*}
-f \colon \RR^n \times \RR^n &\to \RR \\
-\prs{u,v} &\mapsto u^t A v
-\end{align*}
-עבור
-$A \in \Mat_n\prs{\RR}$.
-
-\item
-\begin{align*}
-\det \colon \RR^2 \times \RR^2 &\to \RR \\
-\prs{u,v} &\mapsto \det\pmat{\vert & \vert \\ u & v \\ \vert & \vert}
-\end{align*}
-
 \item
 יהי
 $V$
@@ -7816,31 +7802,6 @@ $\FF$
 
 \begin{solution}
 \begin{enumerate}
-\item כן.
-יהיו
-$u,v,w \in V$
-ו־%
-$\alpha \in \FF$.
-אז
-\begin{align*}
-f\prs{u + \alpha v, w} &= \prs{u + \alpha v}^t A w
-\\&= \prs{u^t + \alpha v^t} A w
-\\&= u^t A w + \alpha v^t A w
-\\&= f\prs{u, w} + \alpha f\prs{v,w}
-\end{align*}
-כאשר בשוויון השלישי השתמשנו בדיסטריביוטיביות של כפל מטריצות.
-
-באותו אופן מתקיים
-\begin{align*}
-f\prs{w, u + \alpha v} &= w^t A \prs{u + \alpha v}
-\\&= w^t A u + \alpha w^t A v
-\\&= f\prs{w, u} + \alpha f\prs{w, v}
-\end{align*}
-כנדרש.
-
-\item כן.
-ראינו שהדטרמיננטה הינה לינארית בכל אחת מהעמודות.
-
 \item יהיו
 $u,v,w \in V$
 ו־%
@@ -8050,7 +8011,7 @@ $f \mapsto \brs{f}_\mcal{B}$
 $\Mat_n\prs{\mbb{F}}$.
 \end{remark}
 
-\begin{exercise}
+\begin{exercisechap}
 תהיינה
 $A,B,P \in \Mat_n\prs{\mbb{R}}$
 כאשר
@@ -8072,7 +8033,7 @@ $B$
 $A^{-1}, B^{-1}$
 חופפות.
 \end{enumerate}
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 \begin{enumerate}
@@ -8320,7 +8281,7 @@ $\FF$
 חופפת למטריצה אלכסונית.
 \end{corollary}
 
-\begin{exercise}
+\begin{exercisechap}
 \begin{enumerate}
     \item תהי
 \[\text{.} A = \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}\]
@@ -8347,7 +8308,7 @@ $Q^t B Q = I_3$
 כאשר
 $B = \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 1}$?
 \end{enumerate}
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 \begin{enumerate}
@@ -8421,7 +8382,7 @@ $\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
 \end{enumerate}
 \end{solution}
 
-\begin{exercise}
+\begin{exercisechap}
 יהי
 $V$
 מרחב וקטורי סוף־מימדי מעל
@@ -8441,7 +8402,7 @@ $V$
 עבורו
 $\brs{g}_\mcal{B}, \brs{h}_\mcal{B}$
 שתיהן אלכסוניות.
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 נסמן
