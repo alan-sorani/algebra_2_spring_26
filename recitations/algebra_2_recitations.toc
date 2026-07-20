@@ -42,6 +42,12 @@
 \contentsline {subsection}{\numberline {5.5.1}פירוק לערכים סינגולריים}{65}{subsection.5.5.1}%
 \contentsline {subsubsection}{מציאת פירוק פולארי}{68}{section*.4}%
 \contentsline {part}{III\hspace {1em}תבניות בילינאריות וריבועיות}{70}{part.3}%
-\contentsline {chapter}{\numberline {6}תבניות בילינאריות}{71}{chapter.6}%
+\contentsline {chapter}{\numberline {6}תבניות בילינאריות וריבועיות}{71}{chapter.6}%
 \contentsline {section}{\numberline {6.1}הגדרות ותכונות בסיסיות}{71}{section.6.1}%
 \contentsline {section}{\numberline {6.2}תבניות בילינאריות סימטריות}{73}{section.6.2}%
+\contentsline {section}{\numberline {6.3}חוק האינרציה של סילבסטר}{77}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}חזרה}{77}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}תרגילים}{77}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}תבניות ריבועיות}{78}{section.6.4}%
+\contentsline {part}{IV\hspace {1em}תרגילים ממבחנים}{82}{part.4}%
+\contentsline {chapter}{\numberline {7}תרגילים ממבחנים}{83}{chapter.7}%

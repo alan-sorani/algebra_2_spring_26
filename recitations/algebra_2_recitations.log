@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  15 JUL 2026 14:08
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.3.29)  20 JUL 2026 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2138,34 +2138,59 @@ $ \TU/Calibri(0)/m/it/10 אופרטור על מרחב מכפלה פנימית ס
 Package hyperref Info: bookmark level for unknown algorithmx defaults to 0 on i
 nput line 8127.
  [73] [74] [75] [76]
+Overfull \hbox (0.5106pt too wide) in paragraph at lines 8402--8425
+[][][]\TU/Calibri(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []
+$ \TU/Calibri(0)/m/it/10 סימטרית. $\OML/cmm/m/it/10 A$ \TU/Calibri(0)/m/it/10 ח
+ופפת למטריצה יחידה מהצורה $[]$. מטריצה[]
+ []
 
-LaTeX Warning: Empty bibliography on input line 8443.
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
+ine 8438.
+[77]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
+t line 8625.
+ [78] [79]
+Overfull \hbox (36.79474pt too wide) detected at line 8789
+[]
+ []
+
+[80] [81] [82
+
+]
+פרק 7.
+[83
+
+]
+Overfull \hbox (2.73288pt too wide) in paragraph at lines 9029--9040
+[]$[] []$ \TU/Calibri(0)/m/n/10 וכי $[] [] \OT1/cmr/m/n/10 = [] []$\TU/Calibri(
+0)/m/n/10 . ניקח בסיס שמורכב משרשראות ז'ורדן שנפתחות[]
+ []
+
+[84] [85] [86]
+
+LaTeX Warning: Empty bibliography on input line 9354.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
 
-[77] (algebra_2_recitations.aux)
+[87] (algebra_2_recitations.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 93547EE826463D6783EF22CBAB5FDB1D;8716.
+(rerunfilecheck)             Checksum: 8BBFB7DF31E0EA621E434CAEAA7DB5F3;9772.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44199 strings out of 402983
- 930248 string characters out of 5448068
- 2006461 words of memory out of 5000000
- 72217 multiletter control sequences out of 15000+600000
+ 44207 strings out of 402983
+ 930408 string characters out of 5448068
+ 2007597 words of memory out of 5000000
+ 72225 multiletter control sequences out of 15000+600000
  638499 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,20n,121p,1233b,3798s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (81 pages).
+Output written on algebra_2_recitations.pdf (91 pages).

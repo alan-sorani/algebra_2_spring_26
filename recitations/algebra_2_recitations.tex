@@ -7745,7 +7745,7 @@ $T = UR$.
 
 \part{תבניות בילינאריות וריבועיות}
 
-\chapter{תבניות בילינאריות}
+\chapter{תבניות בילינאריות וריבועיות}
 
 \section{הגדרות ותכונות בסיסיות}
 
@@ -8382,6 +8382,495 @@ $\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
 \end{enumerate}
 \end{solution}
 
+\section{חוק האינרציה של סילבסטר}
+
+\subsection{חזרה}
+
+\begin{theorem}[סילבסטר]
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+
+מספר הערכים החיוביים%
+\textbackslash%
+שליליים על האלכסון של מטריצה אלכסונית החופפת ל־%
+$A$
+אינו תלוי בבחירה של אותה מטריצה.
+\end{theorem}
+
+\begin{corollary}
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+$A$
+חופפת למטריצה יחידה מהצורה
+$\pmat{I_{\prs{n_+}} & & \\ & - I_{\prs{n_{-}}} & \\ & & 0_{\prs{n_0}}}$.
+מטריצה זאת נקראת
+\emph{צורת סילבסטר הקנונית של
+$A$}.
+$n_+$
+ו־%
+$n_-$
+נקראים
+\emph{אינדקס האינרציה החיובי והשלילי}
+של
+$A$,
+בהתאמה.
+ההפרש
+$n_+ - n_-$
+נקרא
+\emph{הסיגנטורה}
+של
+$A$.
+\end{corollary}
+
+\begin{remark}
+משפט סילבסטר אומר באופן שקול שלכל תבנית בילינארית סימטרית
+$g$
+קיים בסיס
+$\mcal{C}$
+עבורו
+$\brs{g}_\mcal{C}$
+בצורת סילבסטר.
+\end{remark}
+
+\begin{fact}
+המספר
+$n_+$
+הוא סכום הריבויים האלגבריים של הערכים העצמיים החיוביים של
+$A$,
+המספר
+$n_{-}$
+הוא סכום הריבויים האלגבריים של הערכים העצמיים השליליים, והמספר
+$n_0$
+הוא מימד הגרעין.
+\end{fact}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+\begin{enumerate}
+\item הוכיחו כי
+$A, A^3$
+חופפות.
+\item הוכיחו כי אם
+$A$
+הפיכה, היא חופפת ל־%
+$A^{-1}$.
+\item תהי
+$B \in \Mat_n\prs{\mbb{R}}$
+סימטרית
+ונניח כי
+\begin{align*}
+p_A\prs{x} &= x^2 - 2 \\
+\text{.} p_B\prs{x} &= x^2 + 2x - 3
+\end{align*}
+האם
+$A,B$
+בהכרח חופפות?
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+ל־%
+$A,A^3$
+יש אותם אינדקסיי אינרציה כי הערכים העצמיים של
+$A^3$
+הם
+$\lambda^3$
+עבור
+$\lambda$
+ערך עצמי של
+$A$.
+לכן ל־%
+$A,A^3$
+אותה צורת סילבסטר, ולכן הן חופפות.
+
+\item כמו מקודם, כאשר הערכים העצמיים של
+$A^{-1}$
+הם
+$\frac{1}{\lambda}$
+עבור
+$\lambda$
+ערך עצמי של
+$A$.
+
+\item נמצא שורשים של הפולינומים.
+\begin{align*}
+x^2 - 2 &= \prs{x+\sqrt{2}}\prs{x-\sqrt{2}} \\
+x^2 + 2x - 3 &= x^2 + 3x - \prs{x+3} = \prs{x-1}\prs{x+3}
+\end{align*}
+לכן לכל אחד מהפולינומים ערך עצמי אחד חיובי ואחד שלילי. לכן צורות סילבסטר של
+$A,B$
+שתיהן
+$\pmat{1 & 0 \\ 0 & -1}$
+ולכן הן חופפות.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+מצאו את צורת סילבסטר של
+\[\text{.} A = \pmat{0 & 1 & 1 & \cdots & 1 \\ 1 & 0 & -1 & \cdots & -1 \\ 1 & -1 & 0 & \cdots & -1 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & -1 & -1 & \cdots & 0} \in \Mat_n\prs{\mbb{R}}\]
+\end{exercisechap}
+
+\begin{solution}
+כדי למצוא את צורת סילבסטר, נחפש ערכים עצמיים.
+נשים לב כי
+$1$
+ערך עצמי מריבוי
+$n-1$.
+אז הערך העצמי הנוסף הוא
+$\tr\prs{A} -\prs{n-1}\cdot 1 = -n+1$.
+אם
+$n = 1$
+מתקיים
+$A = \prs{0}$.
+אחרת צורת סילבסטר היא
+$\pmat{I_{n-1} & \\ & -1}$.
+\end{solution}
+
+\begin{algorithm}
+כדי למצוא בסיס
+$\mcal{C}$
+עבורו
+$\brs{g}_\mcal{C}$
+בצורת סילבסטר נבצע את השלבים הבאים.
+
+\begin{enumerate}
+\item נמצא בסיס
+$\tilde{\mcal{C}} = \prs{v_1, \ldots, v_n}$
+של
+$V$
+עבורו
+$\brs{g}_{\tilde{\mcal{C}}}$
+אלכסונית, בעזרת לכסון אורתוגונלי.
+
+\item
+נגדיר
+\[\text{.} u_i = \fcases{\frac{v_i}{\sqrt{\abs{\lambda_i}}} & \lambda_i \neq 0 \\ v_i & \lambda_i = 0}\]
+
+\item על ידי בחירת סדר מתאים של ה־%
+$u_i$
+נקבל בסיס
+$\mcal{C}$
+המקיים את הנדרש.
+\end{enumerate}
+\end{algorithm}
+
+\begin{exercisechap}
+תהי
+$A = \pmat{2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2}$.
+מצאו מטריצה
+$P \in \Mat_3\prs{\mbb{R}}$
+עבורה
+$P^t A P$
+בצורת סילבסטר.
+\end{exercisechap}
+
+\begin{solution}
+נתחיל במציאת ערכים עצמיים של
+$A$.
+נשים לב כי
+$1$
+ערך עצמי של
+$A$
+מריבוי
+$2$.
+הערך העצמי הנוסף הוא
+$\tr\prs{A} - 2\cdot 1 = 4$.
+בסיס מתאים הוא
+$B = \prs{\pmat{1\\1\\1}, \pmat{1\\0\\-1}, \pmat{0\\1\\-1}}$.
+
+נבצע את תהליך גרם־שמידט על כל אחד מהמרחבים העצמיים, כדי לקבל בסיס אורתונורמלי
+\[\text{.} \tilde{C} \ceq \prs{v_1, v_2, v_3} = \prs{\pmat{1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}}, \pmat{1/\sqrt{2} \\ 0 \\ -1/\sqrt{2}}, \pmat{-\sqrt{6}/6 \\ \sqrt{6}/3 \\ -\sqrt{6}/6}}\]
+נחלק את הוקטורים העצמיים ב־%
+$\sqrt{\lambda_i}$
+ונקבל בסיס
+\[\text{.} C \ceq \prs{\pmat{1/2\sqrt{3}\\1/2\sqrt{3}\\1/2\sqrt{3}}, \pmat{1/\sqrt{2} \\ 0 \\ -1/\sqrt{2}}, \pmat{-\sqrt{6}/6 \\ \sqrt{6}/3 \\ -\sqrt{6}/6}}\]
+תהי
+\[P = \pmat{1/2\sqrt{3} & 1/\sqrt{2} & -\sqrt{6}/6 \\ 1/2\sqrt{3} & 0 & \sqrt{6}/3 \\ 1/2\sqrt{3} & -1/\sqrt{2} & -\sqrt{6}/6}\]
+ונקבל כי
+\[P^t A P = I_3\]
+בצורת סילבסטר.
+\end{solution}
+
+\begin{remark}
+לפעמים חישוב הערכים העצמיים יכול להיות מסובך. נוכל בעצם למצוא את צורת סילבסטר ואת הבסיס המתאים לה בלי מציאת המרחבים העצמיים, בעזרת דירוג סימולטני של המטריצה, ולאחר כן חילוק כל שורה ועמודה שהמקדם בהן שונה מאפס.
+\end{remark}
+
+\section{תבניות ריבועיות}
+
+\begin{definition}[תבנית ריבועית]
+יהי
+$V$
+מרחב וקטורי מעל שדה $\FF$.
+\emph{תבנית ריבועית על
+$V$}
+היא פונקציה
+\[q \colon V \to \FF\]
+כך שקיימת
+$f \in \mathbf{B}\prs{V}$
+עבורה
+$q\prs{v} = f\prs{v,v}$
+לכל
+$v \in V$.
+\end{definition}
+
+\begin{example}
+\begin{enumerate}
+\item התבנית
+\begin{align*}
+q\prs{p} = \int_0^1 p\prs{x}^2 \diff x
+\end{align*}
+מעל
+$V = \FF_n\brs{x}$
+היא תבנית ריבועית.
+
+\item התבנית
+\begin{align*}
+q\prs{A} = \mathrm{tr}\prs{A^T A} = \sum_{i,j \in [n]} a_{i,j}^2
+\end{align*}
+והתבנית
+\begin{align*}
+g\prs{A} = \mathrm{tr}\prs{A^2}
+\end{align*}
+הן תבניות ריבועיות על
+$\Mat_n\prs{\FF}$.
+\end{enumerate}
+\end{example}
+
+\begin{example}
+מעל
+$\FF^n$,
+התבניות הריבועיות הן בדיוק הפונקציות הפולינומיאליות שכל המונומים בהן ממעלה
+$2$.
+
+אם
+\[q\prs{\vec{x}} = \sum_{\substack{i,j \in [n] \\ i \leq j}} a_{i, j} x_i x_j\]
+נגדיר
+\begin{align*}
+f\prs{\vec{x}, \vec{y}} = \sum_{i \in [n]} a_{i,i} x_i y_i + \sum_{\substack{i,j \in [n] \\ i \neq j}} \frac{a_{i,j} x_i y_j}{2}
+\end{align*}
+ואז
+\begin{align*}
+f\prs{\vec{x}, \vec{x}} = \sum_{i \in [n]} a_{i,i} x_i y_i + 2 \sum_{\substack{i,j \in [n] \\ i < j}} \frac{a_{i,j} x_i y_j}{2} = \sum_{\substack{i,j \in [n] \\ i \leq j}} a_{i,j} x_i y_i = q\prs{\vec{x}}
+\end{align*}
+כנדרש.
+\end{example}
+
+\begin{exercisechap}
+עבור תבנית ריבועית
+$q$
+על
+$V$,
+עבור
+$f \in \mathbf{V}$
+עבורה
+$q\prs{v} = f\prs{v,v}$
+ועבור
+$\mcal{B}$
+בסיס של
+$V$
+נגדיר
+$\brs{q}_{\mcal{B}} = \brs{f}_{\mcal{B}}$.
+
+יהי
+$V = \RR_2\brs{x}$
+ותהי
+\begin{align*}
+\text{.} q\prs{p} = \int_{-1}^1 x^2 p\prs{x} \diff x
+\end{align*}
+
+\begin{enumerate}
+\item מיצאו
+$f \in \mathbf{V}$
+עבורה
+$q\prs{p} = f\prs{p,p}$
+לכל
+$p \in V$.
+
+\item מיצאו בסיס
+$\mcal{B}$
+של
+$V$
+וערכים
+$n_+, n_, n_0 \in \NN$
+עבורם
+\[\text{.} \brs{q}_{\mcal{B}} = I\prs{n_+, n_-, n_0} \coloneqq I_{n_+} \oplus I_{n_-} \oplus 0_{n_0 \times n_0}\]
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item תהי
+\[\text{.} f\prs{p_1, p_2} = \int_0^1 x^2 p_1\prs{x} p_2\prs{x} \diff x\]
+אז
+$f$
+בילינארית מדיסטריביוטיביות של כפל על חיבור פולינומים מלינאריות האינטגרל, ובבירור סימטרית.
+
+\item יהי
+$\mcal{E} = \prs{1, x, x^2}$
+ונמצא את
+\begin{align*}
+\text{.} \brs{g}_{\mcal{E}} = \brs{f}_{\mcal{E}}
+\end{align*}
+מתקיים
+\begin{align*}
+f\prs{1, 1} &= \int_{-1}^1 x^2 \diff x = \left. \frac{x^3}{3} \right|_{x=-1}^1 = \frac{2}{3} \\
+f\prs{1,x} = f\prs{x,1} &= \int_{-1}^1 x^3 \diff x = 0 \\
+f\prs{1, x^2} = f\prs{x^2, 1} = f\prs{x, x} &= \int_{-1}^1 x^4 \diff x = \left. \frac{x^5}{5} \right|_{x=-1}^1 = \frac{2}{5}  \\
+f\prs{x, x^2} = f\prs{x^2, x} &= \int_{-1}^1 x^5 \diff x = 0 \\
+f\prs{x^2, x^2} &= \int_{-1}^1 x^6 \diff x = \left. \frac{x^7}{7} \right|_{x=-1}^1 = \frac{2}{7}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \brs{g}_{\mcal{E}} = \brs{f}_{\mcal{E}} = \pmat{\frac{2}{3} & 0 & \frac{2}{5} \\ 0 & \frac{2}{5} & 0 \\ \frac{2}{5} & 0 & \frac{2}{7}}
+\end{align*}
+
+נוכל עכשיו למצוא ערכים ווקטורים עצמיים ולחשב בעזרת אלו את הבסיס וצורת סילבסטר הנדרשים, אך באופן כללי לא נדע תמיד למצוא את אלו, ובמקרה זה הערכים העצמיים הם
+$\frac{2}{5}, \frac{50 \pm 2 \sqrt{541}}{105}$
+ווהחישוב יוצא לא הכי נעים.
+
+לכן נדרג סימולטנית את
+$A \coloneqq \brs{g}_{\mcal{E}}$
+כדי למצוא בסיס
+$\mcal{B}$
+וערכים
+$n_+, n_-, n_0$
+כנדרש.
+
+\begin{align*}
+A &\xrightarrow{R_3 \mapsto R_3 - \frac{3}{5} R_1} \pmat{\frac{2}{3} & 0 & \frac{2}{5} \\
+0 & \frac{2}{5} & 0 \\
+0 & 0 & \frac{2}{7} - \frac{6}{25}}
+\xrightarrow{C_3 \mapsto C_3 - \frac{3}{5} C_1}
+\pmat{\frac{2}{3} & 0 & 0 \\
+0 & \frac{2}{5} & 0 \\
+0 & 0 & \frac{8}{175}}
+\\&
+\xrightarrow{R_1 \mapsto \frac{\sqrt{3}}{\sqrt{2}} R_1}
+\pmat{\frac{\sqrt{2}}{\sqrt{3}} & 0 & 0 \\
+0 & \frac{2}{5} & 0 \\
+0 & 0 & \frac{8}{175}}
+\xrightarrow{C_1 \mapsto \frac{\sqrt{3}}{\sqrt{2}} C_1}
+\pmat{1 & 0 & 0 \\
+0 & \frac{2}{5} & 0 \\
+0 & 0 & \frac{8}{175}}
+\\&
+\xrightarrow{R_2 \mapsto \frac{\sqrt{5}}{\sqrt{2}} R_2}
+\pmat{1 & 0 & 0 \\
+0 & \frac{\sqrt{2}}{\sqrt{5}} & 0 \\
+0 & 0 & \frac{8}{175}}
+\xrightarrow{C_2 \mapsto \frac{\sqrt{5}}{\sqrt{2}} C_2}
+\pmat{1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & \frac{8}{175}}
+\\&
+\xrightarrow{R_3 \mapsto \frac{\sqrt{175}}{\sqrt{8}} R_3}
+\pmat{1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & \frac{\sqrt{8}}{\sqrt{175}}}
+\xrightarrow{C_3 \mapsto \frac{\sqrt{175}}{\sqrt{8}} C_3}
+\pmat{1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1}
+\end{align*}
+ניקח
+\begin{align*}
+E_1 \coloneqq \pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -\frac{3}{5} & 0 & 1}, \qquad
+E_2 \coloneqq \pmat{\frac{\sqrt{3}}{\sqrt{2}} & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1}, \qquad
+E_3 \coloneqq \pmat{1 & 0 & 0 \\ 0 & \frac{\sqrt{5}}{\sqrt{2}} & 0 \\ 0 & 0 & 1}, \qquad
+E_4 \coloneqq \pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & \frac{\sqrt{175}}{\sqrt{8}}}
+\end{align*}
+וגם
+\[P = \prs{E_4 E_3 E_2 E_1}^t =
+\pmat{
+	\sqrt{\frac{3}{2}} & 0 & -\frac{3}{5} \cdot \sqrt{\frac{175}{8}} \\
+	0 & \sqrt{\frac{5}{2}} & 0 \\
+	0 & 0 & \sqrt{\frac{175}{8}}
+}
+\]
+ואז
+\begin{align*}
+\text{.} P^t A P = E_4 E_3 E_2 E_1 A E_1^t E_2^t E_3^t E_4^t = I_3
+\end{align*}
+
+נמצא
+$\mcal{B}$
+עבורו
+$P = M^{\mcal{B}}_{\mcal{E}}$
+ואז נקבל כי
+\begin{align*}
+\brs{g}_{\mcal{B}} = \brs{f}_{\mcal{B}} = \prs{M^{\mcal{B}}_{\mcal{E}}}^t \brs{f}_{\mcal{E}} M^{\mcal{B}}_{\mcal{E}} = P^t A P = I_3
+\end{align*}
+וגם
+$\prs{n_+, n_-, n_0} = \prs{3,0,0}$,
+כנדרש.
+
+אם
+$E$
+הבסיס הסטנדרטי של
+$\RR^3$
+וגם
+$B \coloneqq \prs{v_1, v_2, v_3}$
+בסיס של
+$\RR^3$
+שמתקבל מעמודות
+$P$,
+מתקיים
+$P = M^B_E$.
+ניקח בסיס
+\[\mcal{B} \coloneqq \prs{\rho_\mcal{E}^{-1} \prs{v_1}, \rho_{\mcal{E}}^{-1} \prs{v_2}, \rho_\mcal{E}^{-1}\prs{v_3}}\]
+של
+$V$
+כאשר
+\begin{align*}
+\rho_{\mcal{E}} \colon V &\to \RR^3 \\
+v &\mapsto \brs{v}_{\mcal{E}}
+\end{align*}
+ואז
+\begin{align*}
+M^{\mcal{B}}_{\mcal{E}} &= \pmat{\vert & \vert & \vert \\
+\brs{\rho_{\mcal{E}}^{-1}\prs{v_1}}_{\mcal{E}} & \brs{\rho_{\mcal{E}}^{-1} \prs{v_2}} & \brs{\rho_{\mcal{E}}^{-1} \prs{v_3}}
+\\
+\vert & \vert & \vert
+}
+\\&=
+\pmat{\vert & \vert & \vert \\
+\rho_B\prs{\rho_{\mcal{E}}^{-1}\prs{v_1}} & \rho_B\prs{\rho_{\mcal{E}}^{-1}\prs{v_2}} & \rho_B\prs{\rho_{\mcal{E}}^{-1}\prs{v_3}}
+\\
+\vert & \vert & \vert
+}
+\\&=
+\pmat{\vert & \vert & \vert \\
+v_1 & v_2 & v_3 \\
+\vert & \vert & \vert}
+\\&= P
+\end{align*}
+כנדרש.
+
+נותר רק לחשב את
+$\mcal{B}$
+מפורשות. מתקיים לפי ההגדרה כי
+\begin{align*}
+\rho_{\mcal{E}}^{-1} \pmat{a \\ b \\c} = a + bx + c x^2
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \mcal{B} = \pmat{\sqrt{\frac{3}{2}}, \sqrt{\frac{5}{2}} x, \sqrt{\frac{175}{8}} \prs{x^2 - \frac{3}{5}}}
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+\part{תרגילים ממבחנים}
+
+\chapter{תרגילים ממבחנים}
+
 \begin{exercisechap}
 יהי
 $V$
@@ -8439,6 +8928,428 @@ $E = \prs{v_1, \ldots, v_n}$.
 שתיהן אלכסוניות, כנדרש.
 \end{solution}
 
+\begin{exercisechap}
+נתונה המטריצה
+\begin{align*}
+\text{.} A = \pmat{2 & 0 & 1 & -3 \\ 0 & 2 & 10 & 4 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 2} \in \Mat_4\prs{\mbb{C}}
+\end{align*}
+\begin{enumerate}
+\item מצאו את הפולינום האופייני
+$p_A\prs{x}$
+של
+$A$,
+את הפולינום המינימלי
+$m_A\prs{x}$
+של
+$A$,
+צורת ז'ורדן
+$J$
+ומטריצה הפיכה
+$P$
+כך ש־%
+$P^{-1} A P = J$.
+
+\item
+האם קיימת
+$B \in \Mat_4\prs{\mbb{C}}$
+כך ש־%
+$B^2 + 2I = A$?
+נמקו.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+$A$
+משולשת עליונה, לכן הערכים העצמיים שלה על האלכסון. לכן
+$2$
+ערך עצמי יחיד מריבוי אלגברי
+$4$.
+הריבוי האלגברי של ערך עצמי הוא הריבוי שלו כשורש של הפולינום האופייני, לכן נקבל כי
+\begin{align*}
+\text{.} p_A\prs{x} = \prs{x-2}^4
+\end{align*}
+מתקיים
+\begin{align*}
+\rank\prs{A - 2I} = \rank\pmat{0 & 0 & 1 & -3 \\ 0 & 0 & 10 & 4 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0} = 2
+\end{align*}
+לכן הריבוי הגיאומטרי של
+$2$
+כערך עצמי של
+$A$
+הוא
+$ - \rank\prs{A - 2I} = 2$.
+ראינו כי הריבוי הגיאומטרי של ערך עצמי
+$\lambda$
+הוא מספר הבלוקים עם ערך עצמי
+$\lambda$
+בצורת ז'ורדן. לכן צורת ז'ורדן של
+$A$
+היא
+$\diag\prs{J_3\prs{2}, 2}$
+או
+$\diag\prs{J_2\prs{2}, J_2\prs{2}}$.
+מתקיים
+\begin{align*}
+\prs{A - 2I}^2 = \pmat{
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+}
+\end{align*}
+לכן
+$\dim \ker\prs{A - 2I} = 4$.
+ידוע כי מספר הבלוקים מגודל לפחות
+$i$
+עם ערך עצמי
+$\lambda$
+הוא
+\[ \text{,} \dim \ker\prs{\prs{A - \lambda I}^i} - \dim \ker\prs{\prs{A - 2I}^{i-1}}\]
+ולכן מספר הבלוקים מגודל לפחות
+$2$
+עם ערך עצמי
+$2$
+הוא
+\[\text{.} \dim \ker\prs{\prs{A - 2I}^2} - \dim \ker\prs{A} = 4 - 2 = 2\]
+נקבל כי צורת ז'ורדן של
+$A$
+היא
+\[\text{.} J = \diag\prs{J_2\prs{2}, J_2\prs{2}}\]
+ידוע כי הריבוי של
+$\lambda$
+כשורש של הפולינום המינימלי הוא גודל הבלוק המקסימלי עם ערך עצמי
+$\lambda$
+בצורת ז'ורדן של
+$A$,
+לכן
+\[\text{.} m_A\prs{x} = \prs{x-2}^2\]
+
+נותר למצוא
+$P$
+הפיכה עבורה
+$P^{-1} A P = J$.
+לשם כך נמצא בסיס ז'ורדן של
+$T_A$.
+ראינו כי
+$\ker\prs{A - 2I} = \Span\prs{e_1, e_2}$
+וכי
+$\ker\prs{\prs{A - 2I}^2} = \Span\prs{e_1, e_2, e_3, e_4}$.
+ניקח בסיס שמורכב משרשראות ז'ורדן שנפתחות ע"י הוקטורים שהוספנו לבסיס של הגרעין. כלומר,
+\[\text{.} B = \prs{\prs{A - 2I} e_3, e_3, \prs{A - 2I} e_4, e_4} = \prs{\pmat{1 \\ 10 \\ 0 \\ 0}, \pmat{0 \\ 0 \\ 1 \\ 0}, \pmat{-3 \\ 4 \\ 0 \\ 0}, \pmat{0 \\ 0 \\0 \\ 1}}\]
+אז
+$B$
+בסיס ז'ורדן של
+$T_A$
+ולכן
+\[P = M^B_E = \pmat{1 & 0 & -3 & 0 \\ 10 & 0 & 4 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1}\]
+עונה על הנדרש, שכן
+\begin{align*}
+\text{.} P^{-1} A P = M^E_B \brs{T_A}_E M^B_E = \brs{T_A}_B = J
+\end{align*}
+
+\item
+
+קיימת
+$B$
+כזאת אם ורק אם קיימת
+$B$
+עבורה מתקיים
+\begin{align*}
+\text{.} P^{-1} \prs{B^2 + 2 I} P = P^{-1} A P
+\end{align*}
+אבל, אגף שמאל שווה
+$\prs{P^{-1} B P}^2 + I$
+ואגף ימין
+שווה
+$J$.
+נסיק מכך שקיימת
+$B$
+כנ"ל אם ורק אם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$.
+אכן,
+אם קיימת
+$B$
+כנ"ל, ניקח
+$\hat{B} = P^{-1} B P$
+שתקיים את הנדרש, ואם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$,
+ניקח
+$B = P \hat{B} P^{-1}$
+ואז
+$\hat{B} = P^{-1} B P$
+ונקבל כי
+\begin{align*}
+P^{-1} \prs{B^2 + 2 I} P = \prs{P^{-1} B P}^2 + I = J = P^{-1} A P
+\end{align*}
+ולאחר צמצום
+$B^2 + I = A$.
+
+לכן, די לבדוק אם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$.
+אם נמצא
+$\tilde{B} \in \Mat_4\prs{\mbb{C}}$
+עבורה
+$\tilde{B}^2 + 2I \sim J$
+נקבל כי יש
+$Q \in \Mat_4\prs{\mbb{C}}$
+עבורה
+\[\prs{Q^{-1} \tilde{B} Q}^2 + 2I = Q^{-1} \prs{\tilde{B}^2 + 2I} Q = J\]
+ואז נוכל לקחת
+$\hat{B} = Q^{-1} \tilde{B} Q$.
+לכן, כדי להוכיח שהטענה נכונה, די למצוא
+$\tilde{B}$
+עבורה
+$\tilde{B}^2 + 2I \sim J$,
+כלומר מטריצה
+$\tilde{B} \in \Mat_4\prs{\mbb{C}}$
+עבורה צורת ז'ורדן של
+$\tilde{B}^2 + 2I$
+היא
+$\diag\prs{J_2\prs{2}, J_2\prs{2}}$.
+אבל
+$\tilde{B}^2 + 2I \sim J$
+שקול ל־%
+$\tilde{B}^2 \sim J - 2I$
+לכן הנ"ל שקול לכך שצורת ז'ורדן של
+$\tilde{B}^2$
+היא
+$\diag{\J_2\prs{0}, J_2\prs{0}}$.
+
+ניקח
+$\tilde{B} =  J_4\prs{0}$.
+אז
+\[\tilde{B}^2 = \pmat{0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0}\]
+מטריצה מדרגה
+$2$.
+לכן, בצורת ז'ורדן של
+$\tilde{B}^2$
+יש
+$r_g\prs{0} = 4 - \rank\prs{B^2} = 2$
+בלוקים.
+מתקיים
+$\prs{\tilde{B}^2}^2 = J_4\prs{0}^4 = 0$,
+לכן בצורת ז'ורדן של
+$\tilde{B}^2$
+מספר הבלוקים מגודל לפחות
+$2$
+בצורת ז'ורדן של
+$\tilde{B}^2$
+הוא
+\[\text{.} \dim \ker\prs{\prs{\tilde{B}^2}^2} - \dim \ker\prs{\tilde{B}^2} = 4 - 2 = 2\]
+לכן צורת ז'ורדן של
+$\tilde{B}^2$
+היא
+$\diag\prs{J_2\prs{0}, J_2\prs{0}}$,
+כנדרש.
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית מרוכב ממימד סופי ותהיינה
+$S,T \in \endo_{\mbb{C}}\prs{V}$
+אוניטריות.
+הוכיחו או מצאו דוגמא נגדית עבור כל אחד מהסעיפים הבאים.
+
+\begin{enumerate}
+\item $S+T$
+נורמלית.
+\item $S \circ T$
+נורמלית.
+\item אם
+$S,T$
+מתחלפות אז
+$S+T$
+נורמלית.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item מתקיים
+\begin{align*}
+\prs{S+T}^* \circ \prs{S+T} &= \prs{S^* + T^*} \circ \prs{S+T}
+\\&=
+S^* \circ S + S^* \circ T + T^* \circ S + T^* \circ T
+\\&=
+2 \id_V + S^* \circ T + T^* \circ S
+\end{align*}
+וגם
+\begin{align*}
+\prs{S+T} \circ \prs{S+T}^* &= \prs{S + T} \circ \prs{S^* + T^*}
+\\&= S \circ S^* + S \circ T^* + T \circ S^* + T \circ T^*
+\\ \hphantom{\prs{S+T} \circ \prs{S+T}^*} &= 2\id_V + S \circ T^* + T \circ S^*
+\end{align*}
+לכן נרצה לדעת האם בהכרח
+\[\text{.} S^* \circ T + T^* \circ S = S \circ T^* + T \circ S^*\]
+
+כדי למצוא דוגמא נגדית, נצטרך שלפחות אחת מבין
+$S,T$
+לא תהיה צמודה לעצמה.
+ניקח
+\begin{align*}
+S \colon \mbb{C}^2 &\to \mbb{C}^2 \\
+\pmat{x \\ y} &\mapsto \pmat{y \\ x}
+\end{align*}
+וכן
+\begin{align*}
+T \colon \mbb{C}^2 &\to \mbb{C}^2 \\
+\text{.} \pmat{x \\ y} &\mapsto \pmat{\frac{x-y}{\sqrt{2}} \\ \frac{x+y}{\sqrt{2}}}
+\end{align*}
+$E$
+בסיס אורתונורמלי ולכן
+\begin{align*}
+\brs{S^*}_E &= \brs{S}_E^t = \pmat{0 & 1 \\ 1 & 0}^t = \pmat{0 & 1 \\ 1 & 0} = \brs{S}_E
+\end{align*}
+וגם
+\begin{align*}
+\text{.} \brs{T^*}_E &= \brs{T}_E^t = \pmat{1/\sqrt{2} & -1/\sqrt{2} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}^t = \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \neq \brs{T}_E
+\end{align*}
+כעת
+\begin{align*}
+\brs{S^* \circ T + T^* \circ S}_E &=
+\brs{S^*}_E \brs{T}_E + \brs{T^*}_E \brs{S}_E
+\\&=
+\pmat{0 & 1 \\ 1 & 0} \pmat{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \pmat{0 & 1 \\ 1 & 0}
+\\&=
+\pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & - \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & - \frac{1}{\sqrt{2}}}
+\\&= \pmat{\sqrt{2} & \sqrt{2} \\ \sqrt{2} & - \sqrt{2}}
+\end{align*}
+אבל
+\begin{align*}
+\pmat{S \circ T^* + T \circ S^*}_E &= \brs{S}_E \brs{T^*}_E + \brs{T}_E \brs{S^*}_E
+\\&= \pmat{0 & 1 \\ 1 & 0} \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \pmat{0 & 1 \\ 1 & 0}
+\\&=
+\pmat{-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}
+\\&= \pmat{-\sqrt{2} & \sqrt{2} \\ \sqrt{2} & \sqrt{2}}
+\end{align*}
+ואלו מטריצות שונות.
+
+\item מתקיים
+\begin{align*}
+\prs{S \circ T}^* \circ \prs{S \circ T} &= T^* \circ S^* \circ S \circ T
+\\&=
+T^* \circ S \circ S^* \circ T
+\\&=
+T ^* \circ T
+\\&=
+\id_V
+\end{align*}
+לכן
+$S \circ T$
+אוניטרית ובפרט נורמלית.
+
+\item 
+כמו מקודם,
+מתקיים
+\begin{align*}
+\prs{S+T}^* \circ \prs{S+T} &= \prs{S^* + T^*} \circ \prs{S+T}
+\\&=
+S^* \circ S + S^* \circ T + T^* \circ S + T^* \circ T
+\\&=
+2 \id_V + S^* \circ T + T^* \circ S
+\end{align*}
+וגם
+\begin{align*}
+\prs{S+T} \circ \prs{S+T}^* &= \prs{S + T} \circ \prs{S^* + T^*}
+\\&= S \circ S^* + S \circ T^* + T \circ S^* + T \circ T^*
+\\ \hphantom{\prs{S+T} \circ \prs{S+T}^*} &= 2\id_V + S \circ T^* + T \circ S^*
+\end{align*}
+כעת,
+$S,T$
+מתחלפות, לכן גם
+$S^*, T$
+מתחלפות וגם
+$S, T^*$
+מתחלפות, ונקבל שוויון.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \mbb{N}$
+מעל
+$\mbb{R}$.
+יהיו
+$U,W \leq V$
+עבורם
+$V = U \oplus W$.
+עבור
+$v = u + w$
+כאשר
+$u \in U, w \in W$
+נגדיר
+$T\prs{v} = u - w$.
+הניחו כי
+$T$
+לינארית והראו כי
+$T$
+צמודה לעצמה אם ורק אם
+$U \perp W$.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$U \perp W$.
+יהי
+$B$
+בסיס אורתונורמלי ל־%
+$U$
+ויהי
+$C$
+בסיס אורתונורמלי ל־%
+$W$.
+אז
+$D \ceq B \uplus C$
+בסיס אורתונורמלי ל־%
+$V$.
+נקבל כי בבסיס זה
+\[\brs{T}_D = \pmat{\brs{\rest{T}{U}}_B & 0 \\ 0 & \brs{\rest{T}{W}}_C} = \pmat{I_k & 0 \\ 0 & - I_\ell}\]
+עבור
+$k \ceq \dim U, \ell \ceq \dim W$.
+כיוון ש־%
+$D$
+אורתונורמלי, מתקיים
+\begin{align*}
+\text{.} \brs{T^*}_D &= \brs{T}_D^t = \pmat{I_k & 0 \\ 0 & - I_{\ell}}^t = \pmat{I_k & 0 \\ 0 & - I_{\ell}} = \brs{T}_D
+\end{align*}
+לכן,
+$T^* = T$,
+כנדרש.
+
+נניח כעת כי
+$T^* = T$
+ויהיו
+$u \in U$
+ו־%
+$w \in W$.
+מתקיים
+\begin{align*}
+\trs{u,w} &= \trs{Tu, w}
+\\&= \trs{u, T^*  w}
+\\&= \trs{u, T w}
+\\&= \trs{u, -w}
+\\&= -\trs{u,w}
+\end{align*}
+לכן
+$\trs{u,w} = 0$
+ולכן
+$u \perp w$.
+נקבל כי
+$U \perp W$.
+\end{solution}
 
 \printbibliography
 \end{document}
